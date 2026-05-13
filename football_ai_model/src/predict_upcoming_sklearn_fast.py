@@ -10,10 +10,11 @@ from train_1x2_model import (
     PROCESSED_DIR,
     build_dataset,
     fair_odds,
-    find_best_bet,
+    find_best_bet_with_rule,
     over_25_probability,
     read_matches,
     read_upcoming_fixtures,
+    rule_name,
     value_odds,
 )
 
@@ -22,6 +23,7 @@ MODEL_PATH = MODELS_DIR / "sklearn_one_x_two_model.joblib"
 MODEL_META_PATH = MODELS_DIR / "sklearn_one_x_two_model_meta.json"
 OVER_25_MODEL_PATH = MODELS_DIR / "sklearn_over_25_model.joblib"
 OVER_25_META_PATH = MODELS_DIR / "sklearn_over_25_model_meta.json"
+BETTING_RULES_PATH = MODELS_DIR / "betting_rules.json"
 
 
 def rows_to_matrix(rows, feature_names):
@@ -49,7 +51,7 @@ def predict_over_25(model, rows, feature_names):
     return [float(row[positive_index]) for row in probabilities]
 
 
-def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, over_25_threshold=None):
+def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, over_25_threshold=None, rules=None):
     over_25_threshold = threshold if over_25_threshold is None else over_25_threshold
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     path = PROCESSED_DIR / "upcoming_predictions.csv"
@@ -65,12 +67,12 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
             "home_fair_odds", "draw_fair_odds", "away_fair_odds",
             "home_value_odds", "draw_value_odds", "away_value_odds",
             "over_25_probability", "over_25_bookmaker_odds", "over_25_fair_odds", "over_25_value_odds",
-            "predicted_result", "suggested_bet", "suggested_edge",
+            "predicted_result", "suggested_bet", "suggested_edge", "bet_rule", "bet_rule_bets", "bet_rule_roi",
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         for index, (row, probs) in enumerate(zip(rows, probabilities)):
-            best_bet, best_edge = find_best_bet(row, probs, threshold)
+            best_bet, best_edge, bet_rule = find_best_bet_with_rule(row, probs, threshold, rules)
             over_probability = (
                 over_25_probabilities[index]
                 if over_25_probabilities is not None
@@ -117,6 +119,9 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
+                "bet_rule": rule_name(bet_rule),
+                "bet_rule_bets": bet_rule.get("bets", "") if bet_rule else "",
+                "bet_rule_roi": round(float(bet_rule.get("roi", 0.0)), 4) if bet_rule else "",
             })
     print(f"Wrote {path} with {len(rows)} upcoming fixture(s)")
 
@@ -138,19 +143,22 @@ def main():
         over_25_threshold = float(over_meta.get("over_25_bet_threshold", over_meta.get("bet_threshold", threshold)))
     else:
         over_25_threshold = threshold
+    rules = []
+    if BETTING_RULES_PATH.exists():
+        rules = json.loads(BETTING_RULES_PATH.read_text(encoding="utf-8"))
 
     matches = read_matches()
     latest_completed_date = max(match["ParsedDate"] for match in matches)
     fixtures = read_upcoming_fixtures(latest_completed_date)
     if not fixtures:
-        write_upcoming([], [], threshold, over_25_threshold=over_25_threshold)
+        write_upcoming([], [], threshold, over_25_threshold=over_25_threshold, rules=rules)
         return
 
     combined_rows = build_dataset(matches + fixtures)
     upcoming_rows = [row for row in combined_rows if row["season"] == "upcoming"]
     probabilities = predict_rows(model, upcoming_rows, features)
     over_probabilities = predict_over_25(over_model, upcoming_rows, over_features) if over_model else None
-    write_upcoming(upcoming_rows, probabilities, threshold, over_probabilities, over_25_threshold)
+    write_upcoming(upcoming_rows, probabilities, threshold, over_probabilities, over_25_threshold, rules)
 
 
 if __name__ == "__main__":

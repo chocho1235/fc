@@ -7,6 +7,7 @@ const searchEl = document.querySelector("[data-football-search]");
 const leagueEl = document.querySelector("[data-football-league]");
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const valueListEl = document.querySelector("[data-value-list]");
+const ruleListEl = document.querySelector("[data-rule-list]");
 const donutEl = document.querySelector("[data-football-donut]");
 
 let matches = [];
@@ -248,6 +249,7 @@ function decisionHtml(row) {
       <strong>${labelMap[label]} ${percent(probability)}</strong>
       <span>Bookie ${decimal(bookOdds)} · fair ${decimal(fairOdds)}</span>
       <b>${isValue ? `Edge +${percent(row.suggested_edge)}` : `Only bet if ${labelMap[label]} reaches ${decimal(valueOdds)}`}</b>
+      ${isValue && row.bet_rule ? `<small>Qualified by ${escapeHtml(row.bet_rule)} · ${row.bet_rule_bets} bets · ${percent(row.bet_rule_roi)} ROI</small>` : ""}
     </div>
   `;
 }
@@ -381,8 +383,29 @@ function renderValueList(rows) {
       <div>
         <strong>${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</strong>
         <span>${escapeHtml(row.date)} · bookie ${decimal(bookmakerOddsFor(row, row.suggested_bet))} · bet from ${decimal(valueOddsFor(row, row.suggested_bet))}</span>
+        ${row.bet_rule ? `<small>${escapeHtml(row.bet_rule)} · ${row.bet_rule_bets} bets · ${percent(row.bet_rule_roi)} ROI</small>` : ""}
       </div>
       <b>${labelMap[row.suggested_bet]} +${percent(row.suggested_edge)}</b>
+    </article>
+  `).join("");
+}
+
+function renderRuleList(rules) {
+  if (!ruleListEl) return;
+  const visible = (rules || []).slice(0, 6);
+  if (!visible.length) {
+    ruleListEl.innerHTML = `<p class="football-empty">No qualified rules yet.</p>`;
+    return;
+  }
+
+  ruleListEl.innerHTML = visible.map((rule) => `
+    <article class="football-rule">
+      <div>
+        <strong>${escapeHtml(rule.league)} · ${escapeHtml(labelMap[rule.selection] || rule.selection)} · ${escapeHtml(rule.odds_band)}</strong>
+        <span>Edge ${percent(rule.min_edge)}+ · odds ${decimal(rule.min_odds)}-${decimal(rule.max_odds)}</span>
+      </div>
+      <b>${percent(rule.roi)} ROI</b>
+      <small>${rule.bets} bets · ${decimal(rule.profit_units)} units</small>
     </article>
   `).join("");
 }
@@ -428,6 +451,7 @@ async function init() {
     setSummary(data.summary || {});
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);
+    renderRuleList(data.betting_rules || []);
     renderUpcoming();
     renderRows();
     app.dataset.loaded = "true";

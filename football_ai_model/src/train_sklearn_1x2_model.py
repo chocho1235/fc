@@ -15,11 +15,14 @@ from train_1x2_model import (
     DEFAULT_BET_THRESHOLD,
     LABELS,
     MODELS_DIR,
+    ODDS_BANDS,
     PROCESSED_DIR,
     REPORTS_DIR,
     TRAINING_WINDOW_SEASONS,
     average_summary,
     build_dataset,
+    candidate_bets,
+    decimal_return,
     evaluate,
     fair_odds,
     feature_names,
@@ -34,7 +37,10 @@ MODEL_PATH = MODELS_DIR / "sklearn_one_x_two_model.joblib"
 MODEL_META_PATH = MODELS_DIR / "sklearn_one_x_two_model_meta.json"
 OVER_25_MODEL_PATH = MODELS_DIR / "sklearn_over_25_model.joblib"
 OVER_25_META_PATH = MODELS_DIR / "sklearn_over_25_model_meta.json"
+BETTING_RULES_PATH = MODELS_DIR / "betting_rules.json"
 DEFAULT_OVER_25_BET_THRESHOLD = float(os.getenv("OVER_25_BET_THRESHOLD", "0.10") or "0.10")
+MIN_RULE_BETS = int(os.getenv("MIN_RULE_BETS", "20") or "20")
+MIN_RULE_ROI = float(os.getenv("MIN_RULE_ROI", "0.03") or "0.03")
 
 
 def rows_to_matrix(rows, names):
@@ -135,6 +141,87 @@ def evaluate_over_25(rows, probabilities, threshold=DEFAULT_BET_THRESHOLD):
     }
 
 
+def rolling_candidate_rows(test_rows, probabilities):
+    rows = []
+    for row, probs in zip(test_rows, probabilities):
+        for candidate in candidate_bets(row, probs):
+            rows.append({
+                "season": row["season"],
+                "league": row.get("league") or row.get("league_code") or "",
+                "selection": candidate["selection"],
+                "odds_band": candidate["odds_band"],
+                "odds": candidate["odds"],
+                "edge": candidate["edge"],
+                "profit": decimal_return(row["result"], candidate["selection"], candidate["odds"]),
+            })
+    return rows
+
+
+def aggregate_rule(candidates, league, selection, odds_band, min_edge):
+    band = next((item for item in ODDS_BANDS if item["name"] == odds_band), None)
+    matches = []
+    for item in candidates:
+        if league != "all" and item["league"] != league:
+            continue
+        if selection != "all" and item["selection"] != selection:
+            continue
+        if odds_band != "all" and item["odds_band"] != odds_band:
+            continue
+        if item["edge"] < min_edge:
+            continue
+        matches.append(item)
+
+    if not matches:
+        return None
+
+    profit = sum(item["profit"] for item in matches)
+    bets = len(matches)
+    return {
+        "league": league,
+        "selection": selection,
+        "odds_band": odds_band,
+        "min_odds": band["min_odds"] if band else 1.01,
+        "max_odds": band["max_odds"] if band else 100.0,
+        "min_edge": min_edge,
+        "bets": bets,
+        "profit_units": round(profit, 2),
+        "roi": profit / bets if bets else 0.0,
+    }
+
+
+def optimize_betting_rules(candidates):
+    if not candidates:
+        return []
+
+    leagues = sorted({item["league"] for item in candidates if item["league"]})
+    selections = LABELS
+    odds_bands = [item["name"] for item in ODDS_BANDS]
+    rules = []
+
+    for league in [*leagues, "all"]:
+        for selection in selections:
+            for odds_band in [*odds_bands, "all"]:
+                for threshold in BET_THRESHOLDS:
+                    rule = aggregate_rule(candidates, league, selection, odds_band, threshold)
+                    if not rule:
+                        continue
+                    if rule["bets"] >= MIN_RULE_BETS and rule["roi"] >= MIN_RULE_ROI and rule["profit_units"] > 0:
+                        rules.append(rule)
+
+    rules.sort(key=lambda item: (item["roi"], item["profit_units"], item["bets"]), reverse=True)
+    selected = []
+    covered = set()
+    for rule in rules:
+        key = (rule["league"], rule["selection"], rule["odds_band"])
+        if key in covered:
+            continue
+        selected.append(rule)
+        covered.add(key)
+        if len(selected) >= 16:
+            break
+    return selected
+
+
 def season_train_rows(rows, season, seasons):
     previous_seasons = [item for item in seasons if item < season]
     if TRAINING_WINDOW_SEASONS > 0:
@@ -146,6 +233,8 @@ def rolling_backtest(rows, names):
     seasons = sorted({row["season"] for row in rows})
     season_summaries = []
     all_rows = []
+    all_candidates = []
+    latest_rules = []
     for season in seasons[3:]:
         train_rows = season_train_rows(rows, season, seasons)
         test_rows = [row for row in rows if row["season"] == season]
@@ -153,7 +242,9 @@ def rolling_backtest(rows, names):
             continue
         model = train_classifier(train_rows, names)
         probabilities = predict_rows(model, test_rows, names)
-        summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD)
+        rules = optimize_betting_rules(all_candidates)
+        latest_rules = rules
+        summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD, rules=rules)
         threshold_summaries = {
             f"{threshold:.2f}": evaluate(test_rows, probabilities, threshold=threshold)
             for threshold in BET_THRESHOLDS
@@ -165,13 +256,17 @@ def rolling_backtest(rows, names):
             "thresholds": threshold_summaries,
         })
         for row, probs in zip(test_rows, probabilities):
-            best_bet, best_edge = find_best_bet(row, probs, DEFAULT_BET_THRESHOLD)
+            best_bet, best_edge = find_best_bet(row, probs, DEFAULT_BET_THRESHOLD, rules)
             all_rows.append({
                 "season": season,
                 "date": row["date"],
+                "league": row.get("league", ""),
                 "home_team": row["home_team"],
                 "away_team": row["away_team"],
                 "result": row["result"],
+                "home_bookmaker_odds": row["home_odds"],
+                "draw_bookmaker_odds": row["draw_odds"],
+                "away_bookmaker_odds": row["away_odds"],
                 "home_win_probability": round(probs["H"], 4),
                 "draw_probability": round(probs["D"], 4),
                 "away_win_probability": round(probs["A"], 4),
@@ -179,8 +274,11 @@ def rolling_backtest(rows, names):
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
             })
+        all_candidates.extend(rolling_candidate_rows(test_rows, probabilities))
     write_rolling_outputs(season_summaries, all_rows)
-    return season_summaries
+    final_rules = optimize_betting_rules(all_candidates)
+    BETTING_RULES_PATH.write_text(json.dumps(final_rules, indent=2), encoding="utf-8")
+    return season_summaries, latest_rules, final_rules
 
 
 def rolling_over_25_backtest(rows, names):
@@ -262,8 +360,8 @@ def main():
 
     model = train_classifier(train_rows, names)
     probabilities = predict_rows(model, test_rows, names)
-    summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD)
-    rolling_summaries = rolling_backtest(rows, names)
+    rolling_summaries, latest_rules, final_rules = rolling_backtest(rows, names)
+    summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD, rules=latest_rules)
     rolling_average = average_summary(rolling_summaries)
 
     over_model = train_classifier(train_rows, over_names, labels=over_25_labels(train_rows))
@@ -278,6 +376,7 @@ def main():
         over_probabilities,
         bet_threshold=DEFAULT_BET_THRESHOLD,
         over_25_bet_threshold=DEFAULT_OVER_25_BET_THRESHOLD,
+        rules=latest_rules,
     )
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, MODEL_PATH)
@@ -289,6 +388,8 @@ def main():
         "bet_threshold": DEFAULT_BET_THRESHOLD,
         "training_window_seasons": TRAINING_WINDOW_SEASONS or "all",
         "model_type": "sklearn_calibrated_logistic_regression",
+        "rules_path": str(BETTING_RULES_PATH.relative_to(MODELS_DIR)),
+        "active_rules": len(final_rules),
     }, indent=2), encoding="utf-8")
     OVER_25_META_PATH.write_text(json.dumps({
         "labels": ["Under 2.5", "Over 2.5"],
@@ -310,6 +411,7 @@ def main():
         f"Value bets at {DEFAULT_BET_THRESHOLD:.0%}+ edge: {summary['bets']}",
         f"Flat-stake profit: {summary['profit_units']:.2f} units",
         f"ROI: {summary['roi']:.2%}",
+        f"Active betting rules: {len(final_rules)}",
         "",
         "Rolling season backtest",
         f"Seasons tested: {rolling_average['seasons']}",

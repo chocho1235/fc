@@ -5,16 +5,17 @@
     "test_matches": "709",
     "accuracy": "52.33%",
     "log_loss": "0.9909",
-    "value_bets_at_5%+_edge": "94",
-    "flat_stake_profit": "17.04 units",
-    "roi": "18.13%",
+    "value_bets_at_5%+_edge": "72",
+    "flat_stake_profit": "14.01 units",
+    "roi": "19.46%",
+    "active_betting_rules": "16",
     "seasons_tested": "6",
     "rolling_matches": "4509",
     "rolling_accuracy": "53.74%",
     "rolling_log_loss": "0.9793",
-    "rolling_value_bets_at_5%+_edge": "788",
-    "rolling_flat_stake_profit": "35.16 units",
-    "rolling_roi": "4.46%",
+    "rolling_value_bets_at_5%+_edge": "688",
+    "rolling_flat_stake_profit": "35.88 units",
+    "rolling_roi": "5.22%",
     "over_2.5_test_matches": "709",
     "over_2.5_accuracy": "56.56%",
     "over_2.5_log_loss": "0.6819",
@@ -36,7 +37,7 @@
   ],
   "matches": 709,
   "upcoming_matches": 11,
-  "value_bets": 94,
+  "value_bets": 72,
   "latest_matches": [
     {
       "date": "2026-05-01",
@@ -79,7 +80,10 @@
       "over_25_value_odds": "2.19",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-01",
@@ -122,7 +126,10 @@
       "over_25_value_odds": "2.27",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-02",
@@ -165,7 +172,10 @@
       "over_25_value_odds": "2.03",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-02",
@@ -208,7 +218,10 @@
       "over_25_value_odds": "2.01",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-02",
@@ -251,7 +264,10 @@
       "over_25_value_odds": "2.01",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-02",
@@ -294,7 +310,10 @@
       "over_25_value_odds": "2.59",
       "predicted_result": "A",
       "suggested_bet": "A",
-      "suggested_edge": "0.0834"
+      "suggested_edge": "0.0834",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "125",
+      "bet_rule_roi": "0.1618"
     },
     {
       "date": "2026-05-02",
@@ -337,7 +356,10 @@
       "over_25_value_odds": "3.21",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-02",
@@ -380,7 +402,10 @@
       "over_25_value_odds": "1.87",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-02",
@@ -423,7 +448,10 @@
       "over_25_value_odds": "2.79",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-02",
@@ -466,7 +494,10 @@
       "over_25_value_odds": "1.78",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-03",
@@ -509,7 +540,10 @@
       "over_25_value_odds": "2.0",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-03",
@@ -552,7 +586,10 @@
       "over_25_value_odds": "2.16",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-03",
@@ -595,7 +632,10 @@
       "over_25_value_odds": "2.11",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-03",
@@ -638,7 +678,10 @@
       "over_25_value_odds": "2.25",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-03",
@@ -681,7 +724,10 @@
       "over_25_value_odds": "2.01",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-03",
@@ -724,7 +770,10 @@
       "over_25_value_odds": "2.07",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-03",
@@ -767,7 +816,10 @@
       "over_25_value_odds": "3.58",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-04",
@@ -810,7 +862,10 @@
       "over_25_value_odds": "2.01",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0745"
+      "suggested_edge": "0.0745",
+      "bet_rule": "all H short 3%+",
+      "bet_rule_bets": "60",
+      "bet_rule_roi": "0.1542"
     },
     {
       "date": "2026-05-04",
@@ -853,7 +908,10 @@
       "over_25_value_odds": "2.25",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-04",
@@ -896,7 +954,10 @@
       "over_25_value_odds": "3.07",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-08",
@@ -939,7 +1000,10 @@
       "over_25_value_odds": "2.38",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-09",
@@ -982,7 +1046,10 @@
       "over_25_value_odds": "2.04",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-09",
@@ -1025,7 +1092,10 @@
       "over_25_value_odds": "1.94",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-09",
@@ -1068,7 +1138,10 @@
       "over_25_value_odds": "1.79",
       "predicted_result": "H",
       "suggested_bet": "A",
-      "suggested_edge": "0.0606"
+      "suggested_edge": "0.0606",
+      "bet_rule": "Premier League A long 5%+",
+      "bet_rule_bets": "49",
+      "bet_rule_roi": "0.4208"
     },
     {
       "date": "2026-05-09",
@@ -1111,7 +1184,10 @@
       "over_25_value_odds": "1.71",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-09",
@@ -1153,8 +1229,11 @@
       "over_25_fair_odds": "1.81",
       "over_25_value_odds": "2.21",
       "predicted_result": "A",
-      "suggested_bet": "H",
-      "suggested_edge": "0.0556"
+      "suggested_bet": "",
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-09",
@@ -1197,7 +1276,10 @@
       "over_25_value_odds": "1.93",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0603"
+      "suggested_edge": "0.0603",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-05-09",
@@ -1240,7 +1322,10 @@
       "over_25_value_odds": "2.32",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-09",
@@ -1283,7 +1368,10 @@
       "over_25_value_odds": "3.04",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-09",
@@ -1326,7 +1414,10 @@
       "over_25_value_odds": "2.33",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-10",
@@ -1369,7 +1460,10 @@
       "over_25_value_odds": "2.28",
       "predicted_result": "A",
       "suggested_bet": "A",
-      "suggested_edge": "0.0627"
+      "suggested_edge": "0.0627",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "125",
+      "bet_rule_roi": "0.1618"
     },
     {
       "date": "2026-05-10",
@@ -1412,7 +1506,10 @@
       "over_25_value_odds": "2.56",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-10",
@@ -1455,7 +1552,10 @@
       "over_25_value_odds": "2.62",
       "predicted_result": "A",
       "suggested_bet": "A",
-      "suggested_edge": "0.1428"
+      "suggested_edge": "0.1428",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "125",
+      "bet_rule_roi": "0.1618"
     },
     {
       "date": "2026-05-10",
@@ -1498,7 +1598,10 @@
       "over_25_value_odds": "2.29",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-10",
@@ -1541,7 +1644,10 @@
       "over_25_value_odds": "2.52",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-10",
@@ -1584,7 +1690,10 @@
       "over_25_value_odds": "1.5",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-10",
@@ -1627,7 +1736,10 @@
       "over_25_value_odds": "2.26",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-10",
@@ -1670,7 +1782,10 @@
       "over_25_value_odds": "3.4",
       "predicted_result": "A",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-11",
@@ -1713,7 +1828,10 @@
       "over_25_value_odds": "2.64",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-11",
@@ -1756,7 +1874,10 @@
       "over_25_value_odds": "2.37",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     }
   ],
   "upcoming": [
@@ -1800,7 +1921,10 @@
       "over_25_value_odds": "1.78",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-12",
@@ -1842,7 +1966,10 @@
       "over_25_value_odds": "1.84",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-12",
@@ -1884,7 +2011,10 @@
       "over_25_value_odds": "1.98",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0952"
+      "suggested_edge": "0.0952",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "142",
+      "bet_rule_roi": "0.1415"
     },
     {
       "date": "2026-05-13",
@@ -1926,7 +2056,10 @@
       "over_25_value_odds": "1.72",
       "predicted_result": "H",
       "suggested_bet": "A",
-      "suggested_edge": "0.1474"
+      "suggested_edge": "0.1474",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "163",
+      "bet_rule_roi": "0.2098"
     },
     {
       "date": "2026-05-13",
@@ -1968,7 +2101,10 @@
       "over_25_value_odds": "2.23",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0858"
+      "suggested_edge": "0.0858",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "142",
+      "bet_rule_roi": "0.1415"
     },
     {
       "date": "2026-05-13",
@@ -2010,7 +2146,10 @@
       "over_25_value_odds": "1.8",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-13",
@@ -2052,7 +2191,10 @@
       "over_25_value_odds": "1.74",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.1392"
+      "suggested_edge": "0.1392",
+      "bet_rule": "all H long 12%+",
+      "bet_rule_bets": "21",
+      "bet_rule_roi": "0.0962"
     },
     {
       "date": "2026-05-13",
@@ -2094,7 +2236,10 @@
       "over_25_value_odds": "2.27",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-14",
@@ -2136,7 +2281,10 @@
       "over_25_value_odds": "1.9",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0543"
+      "suggested_edge": "0.0543",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "142",
+      "bet_rule_roi": "0.1415"
     },
     {
       "date": "2026-05-14",
@@ -2178,7 +2326,10 @@
       "over_25_value_odds": "2.01",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     },
     {
       "date": "2026-05-14",
@@ -2220,10 +2371,197 @@
       "over_25_value_odds": "1.64",
       "predicted_result": "H",
       "suggested_bet": "",
-      "suggested_edge": ""
+      "suggested_edge": "",
+      "bet_rule": "",
+      "bet_rule_bets": "",
+      "bet_rule_roi": ""
     }
   ],
   "suggested_bets": [
+    {
+      "date": "2026-03-21",
+      "time": "15:15",
+      "season": "2526",
+      "league_code": "SP1",
+      "league": "La Liga",
+      "home_team": "Espanol",
+      "away_team": "Getafe",
+      "result": "A",
+      "context_summary": "No external context supplied",
+      "context_notes": "",
+      "h2h_home_form": "W W L W W",
+      "h2h_away_form": "L L W L L",
+      "home_auto_importance": "0.0",
+      "away_auto_importance": "0.0",
+      "home_motivation": "0.5",
+      "away_motivation": "0.5",
+      "home_lineup_strength": "1.0",
+      "away_lineup_strength": "1.0",
+      "home_key_absences": "0.0",
+      "away_key_absences": "0.0",
+      "home_injury_count": "0.0",
+      "away_injury_count": "0.0",
+      "home_win_probability": "0.4717",
+      "draw_probability": "0.3094",
+      "away_win_probability": "0.2189",
+      "home_bookmaker_odds": "2.4",
+      "draw_bookmaker_odds": "2.92",
+      "away_bookmaker_odds": "3.28",
+      "home_fair_odds": "2.12",
+      "draw_fair_odds": "3.23",
+      "away_fair_odds": "4.57",
+      "home_value_odds": "2.37",
+      "draw_value_odds": "3.86",
+      "away_value_odds": "5.92",
+      "over_25_probability": "0.2859",
+      "over_25_bookmaker_odds": "2.9",
+      "over_25_fair_odds": "3.5",
+      "over_25_value_odds": "5.38",
+      "predicted_result": "H",
+      "suggested_bet": "H",
+      "suggested_edge": "0.0577",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
+    },
+    {
+      "date": "2026-03-21",
+      "time": "17:30",
+      "season": "2526",
+      "league_code": "SP1",
+      "league": "La Liga",
+      "home_team": "Osasuna",
+      "away_team": "Girona",
+      "result": "H",
+      "context_summary": "No external context supplied",
+      "context_notes": "",
+      "h2h_home_form": "L L L W L",
+      "h2h_away_form": "W W W L W",
+      "home_auto_importance": "0.0",
+      "away_auto_importance": "0.0",
+      "home_motivation": "0.5",
+      "away_motivation": "0.5",
+      "home_lineup_strength": "1.0",
+      "away_lineup_strength": "1.0",
+      "home_key_absences": "0.0",
+      "away_key_absences": "0.0",
+      "home_injury_count": "0.0",
+      "away_injury_count": "0.0",
+      "home_win_probability": "0.5058",
+      "draw_probability": "0.2802",
+      "away_win_probability": "0.214",
+      "home_bookmaker_odds": "2.17",
+      "draw_bookmaker_odds": "3.35",
+      "away_bookmaker_odds": "3.29",
+      "home_fair_odds": "1.98",
+      "draw_fair_odds": "3.57",
+      "away_fair_odds": "4.67",
+      "home_value_odds": "2.19",
+      "draw_value_odds": "4.34",
+      "away_value_odds": "6.1",
+      "over_25_probability": "0.5106",
+      "over_25_bookmaker_odds": "1.93",
+      "over_25_fair_odds": "1.96",
+      "over_25_value_odds": "2.44",
+      "predicted_result": "H",
+      "suggested_bet": "H",
+      "suggested_edge": "0.0521",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
+    },
+    {
+      "date": "2026-03-22",
+      "time": "12:00",
+      "season": "2526",
+      "league_code": "E0",
+      "league": "Premier League",
+      "home_team": "Newcastle",
+      "away_team": "Sunderland",
+      "result": "A",
+      "context_summary": "No external context supplied",
+      "context_notes": "Weather: rain 0.0mm, gusts 34.6km/h, snow 0.0cm",
+      "h2h_home_form": "L",
+      "h2h_away_form": "W",
+      "home_auto_importance": "0.0",
+      "away_auto_importance": "0.0",
+      "home_motivation": "0.5",
+      "away_motivation": "0.5",
+      "home_lineup_strength": "1.0",
+      "away_lineup_strength": "1.0",
+      "home_key_absences": "0.0",
+      "away_key_absences": "0.0",
+      "home_injury_count": "0.0",
+      "away_injury_count": "0.0",
+      "home_win_probability": "0.6499",
+      "draw_probability": "0.2091",
+      "away_win_probability": "0.141",
+      "home_bookmaker_odds": "1.65",
+      "draw_bookmaker_odds": "3.89",
+      "away_bookmaker_odds": "5.04",
+      "home_fair_odds": "1.54",
+      "draw_fair_odds": "4.78",
+      "away_fair_odds": "7.09",
+      "home_value_odds": "1.67",
+      "draw_value_odds": "6.29",
+      "away_value_odds": "10.99",
+      "over_25_probability": "0.6499",
+      "over_25_bookmaker_odds": "1.83",
+      "over_25_fair_odds": "1.54",
+      "over_25_value_odds": "1.82",
+      "predicted_result": "H",
+      "suggested_bet": "H",
+      "suggested_edge": "0.0569",
+      "bet_rule": "all H short 3%+",
+      "bet_rule_bets": "60",
+      "bet_rule_roi": "0.1542"
+    },
+    {
+      "date": "2026-04-05",
+      "time": "13:00",
+      "season": "2526",
+      "league_code": "SP1",
+      "league": "La Liga",
+      "home_team": "Getafe",
+      "away_team": "Ath Bilbao",
+      "result": "H",
+      "context_summary": "No external context supplied",
+      "context_notes": "",
+      "h2h_home_form": "D L D L W",
+      "h2h_away_form": "D W D W L",
+      "home_auto_importance": "0.0",
+      "away_auto_importance": "0.0",
+      "home_motivation": "0.5",
+      "away_motivation": "0.5",
+      "home_lineup_strength": "1.0",
+      "away_lineup_strength": "1.0",
+      "home_key_absences": "0.0",
+      "away_key_absences": "0.0",
+      "home_injury_count": "0.0",
+      "away_injury_count": "0.0",
+      "home_win_probability": "0.2714",
+      "draw_probability": "0.2594",
+      "away_win_probability": "0.4692",
+      "home_bookmaker_odds": "2.99",
+      "draw_bookmaker_odds": "2.82",
+      "away_bookmaker_odds": "2.63",
+      "home_fair_odds": "3.68",
+      "draw_fair_odds": "3.85",
+      "away_fair_odds": "2.13",
+      "home_value_odds": "4.52",
+      "draw_value_odds": "4.78",
+      "away_value_odds": "2.39",
+      "over_25_probability": "0.3626",
+      "over_25_bookmaker_odds": "2.98",
+      "over_25_fair_odds": "2.76",
+      "over_25_value_odds": "3.81",
+      "predicted_result": "A",
+      "suggested_bet": "A",
+      "suggested_edge": "0.0818",
+      "bet_rule": "La Liga A mid 3%+",
+      "bet_rule_bets": "91",
+      "bet_rule_roi": "0.1964"
+    },
     {
       "date": "2026-04-11",
       "time": "15:00",
@@ -2265,7 +2603,10 @@
       "over_25_value_odds": "2.2",
       "predicted_result": "A",
       "suggested_bet": "A",
-      "suggested_edge": "0.0596"
+      "suggested_edge": "0.0596",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "125",
+      "bet_rule_roi": "0.1618"
     },
     {
       "date": "2026-04-11",
@@ -2308,7 +2649,10 @@
       "over_25_value_odds": "2.64",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.121"
+      "suggested_edge": "0.121",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-04-12",
@@ -2351,7 +2695,10 @@
       "over_25_value_odds": "2.44",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0702"
+      "suggested_edge": "0.0702",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-04-12",
@@ -2394,7 +2741,10 @@
       "over_25_value_odds": "2.49",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0581"
+      "suggested_edge": "0.0581",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-04-13",
@@ -2437,50 +2787,10 @@
       "over_25_value_odds": "2.13",
       "predicted_result": "H",
       "suggested_bet": "A",
-      "suggested_edge": "0.0676"
-    },
-    {
-      "date": "2026-04-19",
-      "time": "16:30",
-      "season": "2526",
-      "league_code": "E0",
-      "league": "Premier League",
-      "home_team": "Man City",
-      "away_team": "Arsenal",
-      "result": "H",
-      "context_summary": "No external context supplied",
-      "context_notes": "Weather: rain 0.1mm, gusts 28.1km/h, snow 0.0cm",
-      "h2h_home_form": "L D D L D",
-      "h2h_away_form": "W D D W D",
-      "home_auto_importance": "1.0",
-      "away_auto_importance": "1.0",
-      "home_motivation": "0.5",
-      "away_motivation": "0.5",
-      "home_lineup_strength": "1.0",
-      "away_lineup_strength": "1.0",
-      "home_key_absences": "0.0",
-      "away_key_absences": "0.0",
-      "home_injury_count": "0.0",
-      "away_injury_count": "0.0",
-      "home_win_probability": "0.5998",
-      "draw_probability": "0.2142",
-      "away_win_probability": "0.186",
-      "home_bookmaker_odds": "1.82",
-      "draw_bookmaker_odds": "3.6",
-      "away_bookmaker_odds": "4.25",
-      "home_fair_odds": "1.67",
-      "draw_fair_odds": "4.67",
-      "away_fair_odds": "5.38",
-      "home_value_odds": "1.82",
-      "draw_value_odds": "6.09",
-      "away_value_odds": "7.35",
-      "over_25_probability": "0.5401",
-      "over_25_bookmaker_odds": "1.92",
-      "over_25_fair_odds": "1.85",
-      "over_25_value_odds": "2.27",
-      "predicted_result": "H",
-      "suggested_bet": "H",
-      "suggested_edge": "0.0595"
+      "suggested_edge": "0.0676",
+      "bet_rule": "Premier League A long 5%+",
+      "bet_rule_bets": "49",
+      "bet_rule_roi": "0.4208"
     },
     {
       "date": "2026-04-22",
@@ -2523,93 +2833,10 @@
       "over_25_value_odds": "2.07",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0714"
-    },
-    {
-      "date": "2026-04-24",
-      "time": "20:00",
-      "season": "2526",
-      "league_code": "E0",
-      "league": "Premier League",
-      "home_team": "Sunderland",
-      "away_team": "Nott'm Forest",
-      "result": "A",
-      "context_summary": "No external context supplied",
-      "context_notes": "Weather: rain 0.0mm, gusts 26.6km/h, snow 0.0cm",
-      "h2h_home_form": "W",
-      "h2h_away_form": "L",
-      "home_auto_importance": "0.0",
-      "away_auto_importance": "0.0",
-      "home_motivation": "0.5",
-      "away_motivation": "0.5",
-      "home_lineup_strength": "1.0",
-      "away_lineup_strength": "1.0",
-      "home_key_absences": "0.0",
-      "away_key_absences": "0.0",
-      "home_injury_count": "0.0",
-      "away_injury_count": "0.0",
-      "home_win_probability": "0.4292",
-      "draw_probability": "0.2366",
-      "away_win_probability": "0.3342",
-      "home_bookmaker_odds": "2.67",
-      "draw_bookmaker_odds": "3.18",
-      "away_bookmaker_odds": "2.66",
-      "home_fair_odds": "2.33",
-      "draw_fair_odds": "4.23",
-      "away_fair_odds": "2.99",
-      "home_value_odds": "2.64",
-      "draw_value_odds": "5.36",
-      "away_value_odds": "3.52",
-      "over_25_probability": "0.4374",
-      "over_25_bookmaker_odds": "2.13",
-      "over_25_fair_odds": "2.29",
-      "over_25_value_odds": "2.96",
-      "predicted_result": "H",
-      "suggested_bet": "H",
-      "suggested_edge": "0.0558"
-    },
-    {
-      "date": "2026-04-25",
-      "time": "12:30",
-      "season": "2526",
-      "league_code": "E0",
-      "league": "Premier League",
-      "home_team": "Fulham",
-      "away_team": "Aston Villa",
-      "result": "H",
-      "context_summary": "No external context supplied",
-      "context_notes": "Weather: rain 0.0mm, gusts 23.4km/h, snow 0.0cm",
-      "h2h_home_form": "L L L L L",
-      "h2h_away_form": "W W W W W",
-      "home_auto_importance": "0.0",
-      "away_auto_importance": "0.0",
-      "home_motivation": "0.5",
-      "away_motivation": "0.5",
-      "home_lineup_strength": "1.0",
-      "away_lineup_strength": "1.0",
-      "home_key_absences": "0.0",
-      "away_key_absences": "0.0",
-      "home_injury_count": "0.0",
-      "away_injury_count": "0.0",
-      "home_win_probability": "0.4447",
-      "draw_probability": "0.2352",
-      "away_win_probability": "0.3201",
-      "home_bookmaker_odds": "2.67",
-      "draw_bookmaker_odds": "3.5",
-      "away_bookmaker_odds": "2.47",
-      "home_fair_odds": "2.25",
-      "draw_fair_odds": "4.25",
-      "away_fair_odds": "3.12",
-      "home_value_odds": "2.53",
-      "draw_value_odds": "5.4",
-      "away_value_odds": "3.7",
-      "over_25_probability": "0.6072",
-      "over_25_bookmaker_odds": "1.72",
-      "over_25_fair_odds": "1.65",
-      "over_25_value_odds": "1.97",
-      "predicted_result": "H",
-      "suggested_bet": "H",
-      "suggested_edge": "0.067"
+      "suggested_edge": "0.0714",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-04-25",
@@ -2652,7 +2879,10 @@
       "over_25_value_odds": "2.74",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0789"
+      "suggested_edge": "0.0789",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-04-26",
@@ -2695,7 +2925,10 @@
       "over_25_value_odds": "2.35",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0678"
+      "suggested_edge": "0.0678",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-04-26",
@@ -2738,7 +2971,10 @@
       "over_25_value_odds": "1.94",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0672"
+      "suggested_edge": "0.0672",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-04-27",
@@ -2781,7 +3017,10 @@
       "over_25_value_odds": "2.2",
       "predicted_result": "H",
       "suggested_bet": "A",
-      "suggested_edge": "0.0773"
+      "suggested_edge": "0.0773",
+      "bet_rule": "Premier League A long 5%+",
+      "bet_rule_bets": "49",
+      "bet_rule_roi": "0.4208"
     },
     {
       "date": "2026-05-02",
@@ -2824,7 +3063,10 @@
       "over_25_value_odds": "2.59",
       "predicted_result": "A",
       "suggested_bet": "A",
-      "suggested_edge": "0.0834"
+      "suggested_edge": "0.0834",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "125",
+      "bet_rule_roi": "0.1618"
     },
     {
       "date": "2026-05-04",
@@ -2867,7 +3109,10 @@
       "over_25_value_odds": "2.01",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0745"
+      "suggested_edge": "0.0745",
+      "bet_rule": "all H short 3%+",
+      "bet_rule_bets": "60",
+      "bet_rule_roi": "0.1542"
     },
     {
       "date": "2026-05-09",
@@ -2910,50 +3155,10 @@
       "over_25_value_odds": "1.79",
       "predicted_result": "H",
       "suggested_bet": "A",
-      "suggested_edge": "0.0606"
-    },
-    {
-      "date": "2026-05-09",
-      "time": "15:00",
-      "season": "2526",
-      "league_code": "E0",
-      "league": "Premier League",
-      "home_team": "Sunderland",
-      "away_team": "Man United",
-      "result": "D",
-      "context_summary": "No external context supplied",
-      "context_notes": "Weather: rain 5.7mm, gusts 51.5km/h, snow 0.0cm",
-      "h2h_home_form": "L",
-      "h2h_away_form": "W",
-      "home_auto_importance": "0.0",
-      "away_auto_importance": "1.0",
-      "home_motivation": "0.5",
-      "away_motivation": "0.5",
-      "home_lineup_strength": "1.0",
-      "away_lineup_strength": "1.0",
-      "home_key_absences": "0.0",
-      "away_key_absences": "0.0",
-      "home_injury_count": "0.0",
-      "away_injury_count": "0.0",
-      "home_win_probability": "0.3167",
-      "draw_probability": "0.2765",
-      "away_win_probability": "0.4068",
-      "home_bookmaker_odds": "3.93",
-      "draw_bookmaker_odds": "3.7",
-      "away_bookmaker_odds": "1.86",
-      "home_fair_odds": "3.16",
-      "draw_fair_odds": "3.62",
-      "away_fair_odds": "2.46",
-      "home_value_odds": "3.75",
-      "draw_value_odds": "4.41",
-      "away_value_odds": "2.8",
-      "over_25_probability": "0.5535",
-      "over_25_bookmaker_odds": "1.72",
-      "over_25_fair_odds": "1.81",
-      "over_25_value_odds": "2.21",
-      "predicted_result": "A",
-      "suggested_bet": "H",
-      "suggested_edge": "0.0556"
+      "suggested_edge": "0.0606",
+      "bet_rule": "Premier League A long 5%+",
+      "bet_rule_bets": "49",
+      "bet_rule_roi": "0.4208"
     },
     {
       "date": "2026-05-09",
@@ -2996,7 +3201,10 @@
       "over_25_value_odds": "1.93",
       "predicted_result": "H",
       "suggested_bet": "H",
-      "suggested_edge": "0.0603"
+      "suggested_edge": "0.0603",
+      "bet_rule": "La Liga H mid 5%+",
+      "bet_rule_bets": "121",
+      "bet_rule_roi": "0.1157"
     },
     {
       "date": "2026-05-10",
@@ -3039,7 +3247,10 @@
       "over_25_value_odds": "2.28",
       "predicted_result": "A",
       "suggested_bet": "A",
-      "suggested_edge": "0.0627"
+      "suggested_edge": "0.0627",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "125",
+      "bet_rule_roi": "0.1618"
     },
     {
       "date": "2026-05-10",
@@ -3082,7 +3293,188 @@
       "over_25_value_odds": "2.62",
       "predicted_result": "A",
       "suggested_bet": "A",
-      "suggested_edge": "0.1428"
+      "suggested_edge": "0.1428",
+      "bet_rule": "Premier League A all 5%+",
+      "bet_rule_bets": "125",
+      "bet_rule_roi": "0.1618"
+    }
+  ],
+  "betting_rules": [
+    {
+      "league": "Premier League",
+      "selection": "D",
+      "odds_band": "all",
+      "min_odds": 1.01,
+      "max_odds": 100.0,
+      "min_edge": 0.05,
+      "bets": 23,
+      "profit_units": 13.76,
+      "roi": 0.5982608695652174
+    },
+    {
+      "league": "Premier League",
+      "selection": "A",
+      "odds_band": "long",
+      "min_odds": 3.0,
+      "max_odds": 6.0,
+      "min_edge": 0.05,
+      "bets": 63,
+      "profit_units": 37.27,
+      "roi": 0.5915873015873017
+    },
+    {
+      "league": "Premier League",
+      "selection": "D",
+      "odds_band": "long",
+      "min_odds": 3.0,
+      "max_odds": 6.0,
+      "min_edge": 0.05,
+      "bets": 20,
+      "profit_units": 10.38,
+      "roi": 0.5189999999999999
+    },
+    {
+      "league": "all",
+      "selection": "D",
+      "odds_band": "all",
+      "min_odds": 1.01,
+      "max_odds": 100.0,
+      "min_edge": 0.05,
+      "bets": 78,
+      "profit_units": 30.15,
+      "roi": 0.3865384615384615
+    },
+    {
+      "league": "all",
+      "selection": "A",
+      "odds_band": "long",
+      "min_odds": 3.0,
+      "max_odds": 6.0,
+      "min_edge": 0.05,
+      "bets": 88,
+      "profit_units": 28.78,
+      "roi": 0.3270454545454546
+    },
+    {
+      "league": "all",
+      "selection": "D",
+      "odds_band": "long",
+      "min_odds": 3.0,
+      "max_odds": 6.0,
+      "min_edge": 0.05,
+      "bets": 72,
+      "profit_units": 21.86,
+      "roi": 0.3036111111111111
+    },
+    {
+      "league": "La Liga",
+      "selection": "D",
+      "odds_band": "all",
+      "min_odds": 1.01,
+      "max_odds": 100.0,
+      "min_edge": 0.05,
+      "bets": 55,
+      "profit_units": 16.39,
+      "roi": 0.298
+    },
+    {
+      "league": "La Liga",
+      "selection": "D",
+      "odds_band": "long",
+      "min_odds": 3.0,
+      "max_odds": 6.0,
+      "min_edge": 0.05,
+      "bets": 52,
+      "profit_units": 11.48,
+      "roi": 0.22076923076923077
+    },
+    {
+      "league": "Premier League",
+      "selection": "A",
+      "odds_band": "all",
+      "min_odds": 1.01,
+      "max_odds": 100.0,
+      "min_edge": 0.05,
+      "bets": 163,
+      "profit_units": 34.2,
+      "roi": 0.2098159509202454
+    },
+    {
+      "league": "all",
+      "selection": "A",
+      "odds_band": "short",
+      "min_odds": 1.01,
+      "max_odds": 1.75,
+      "min_edge": 0.03,
+      "bets": 21,
+      "profit_units": 4.07,
+      "roi": 0.19380952380952382
+    },
+    {
+      "league": "La Liga",
+      "selection": "H",
+      "odds_band": "short",
+      "min_odds": 1.01,
+      "max_odds": 1.75,
+      "min_edge": 0.03,
+      "bets": 44,
+      "profit_units": 8.34,
+      "roi": 0.18954545454545454
+    },
+    {
+      "league": "La Liga",
+      "selection": "H",
+      "odds_band": "mid",
+      "min_odds": 1.75,
+      "max_odds": 3.0,
+      "min_edge": 0.05,
+      "bets": 142,
+      "profit_units": 20.1,
+      "roi": 0.1415492957746479
+    },
+    {
+      "league": "La Liga",
+      "selection": "A",
+      "odds_band": "mid",
+      "min_odds": 1.75,
+      "max_odds": 3.0,
+      "min_edge": 0.03,
+      "bets": 104,
+      "profit_units": 11.26,
+      "roi": 0.10826923076923078
+    },
+    {
+      "league": "all",
+      "selection": "H",
+      "odds_band": "mid",
+      "min_odds": 1.75,
+      "max_odds": 3.0,
+      "min_edge": 0.05,
+      "bets": 260,
+      "profit_units": 26.16,
+      "roi": 0.10061538461538462
+    },
+    {
+      "league": "all",
+      "selection": "H",
+      "odds_band": "long",
+      "min_odds": 3.0,
+      "max_odds": 6.0,
+      "min_edge": 0.12,
+      "bets": 21,
+      "profit_units": 2.02,
+      "roi": 0.09619047619047622
+    },
+    {
+      "league": "all",
+      "selection": "A",
+      "odds_band": "all",
+      "min_odds": 1.01,
+      "max_odds": 100.0,
+      "min_edge": 0.05,
+      "bets": 226,
+      "profit_units": 20.33,
+      "roi": 0.0899557522123894
     }
   ],
   "probability_average": {

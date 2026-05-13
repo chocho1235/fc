@@ -1,0 +1,178 @@
+[
+  {
+    "league": "Premier League",
+    "selection": "D",
+    "odds_band": "all",
+    "min_odds": 1.01,
+    "max_odds": 100.0,
+    "min_edge": 0.05,
+    "bets": 23,
+    "profit_units": 13.76,
+    "roi": 0.5982608695652174
+  },
+  {
+    "league": "Premier League",
+    "selection": "A",
+    "odds_band": "long",
+    "min_odds": 3.0,
+    "max_odds": 6.0,
+    "min_edge": 0.05,
+    "bets": 63,
+    "profit_units": 37.27,
+    "roi": 0.5915873015873017
+  },
+  {
+    "league": "Premier League",
+    "selection": "D",
+    "odds_band": "long",
+    "min_odds": 3.0,
+    "max_odds": 6.0,
+    "min_edge": 0.05,
+    "bets": 20,
+    "profit_units": 10.38,
+    "roi": 0.5189999999999999
+  },
+  {
+    "league": "all",
+    "selection": "D",
+    "odds_band": "all",
+    "min_odds": 1.01,
+    "max_odds": 100.0,
+    "min_edge": 0.05,
+    "bets": 78,
+    "profit_units": 30.15,
+    "roi": 0.3865384615384615
+  },
+  {
+    "league": "all",
+    "selection": "A",
+    "odds_band": "long",
+    "min_odds": 3.0,
+    "max_odds": 6.0,
+    "min_edge": 0.05,
+    "bets": 88,
+    "profit_units": 28.78,
+    "roi": 0.3270454545454546
+  },
+  {
+    "league": "all",
+    "selection": "D",
+    "odds_band": "long",
+    "min_odds": 3.0,
+    "max_odds": 6.0,
+    "min_edge": 0.05,
+    "bets": 72,
+    "profit_units": 21.86,
+    "roi": 0.3036111111111111
+  },
+  {
+    "league": "La Liga",
+    "selection": "D",
+    "odds_band": "all",
+    "min_odds": 1.01,
+    "max_odds": 100.0,
+    "min_edge": 0.05,
+    "bets": 55,
+    "profit_units": 16.39,
+    "roi": 0.298
+  },
+  {
+    "league": "La Liga",
+    "selection": "D",
+    "odds_band": "long",
+    "min_odds": 3.0,
+    "max_odds": 6.0,
+    "min_edge": 0.05,
+    "bets": 52,
+    "profit_units": 11.48,
+    "roi": 0.22076923076923077
+  },
+  {
+    "league": "Premier League",
+    "selection": "A",
+    "odds_band": "all",
+    "min_odds": 1.01,
+    "max_odds": 100.0,
+    "min_edge": 0.05,
+    "bets": 163,
+    "profit_units": 34.2,
+    "roi": 0.2098159509202454
+  },
+  {
+    "league": "all",
+    "selection": "A",
+    "odds_band": "short",
+    "min_odds": 1.01,
+    "max_odds": 1.75,
+    "min_edge": 0.03,
+    "bets": 21,
+    "profit_units": 4.07,
+    "roi": 0.19380952380952382
+  },
+  {
+    "league": "La Liga",
+    "selection": "H",
+    "odds_band": "short",
+    "min_odds": 1.01,
+    "max_odds": 1.75,
+    "min_edge": 0.03,
+    "bets": 44,
+    "profit_units": 8.34,
+    "roi": 0.18954545454545454
+  },
+  {
+    "league": "La Liga",
+    "selection": "H",
+    "odds_band": "mid",
+    "min_odds": 1.75,
+    "max_odds": 3.0,
+    "min_edge": 0.05,
+    "bets": 142,
+    "profit_units": 20.1,
+    "roi": 0.1415492957746479
+  },
+  {
+    "league": "La Liga",
+    "selection": "A",
+    "odds_band": "mid",
+    "min_odds": 1.75,
+    "max_odds": 3.0,
+    "min_edge": 0.03,
+    "bets": 104,
+    "profit_units": 11.26,
+    "roi": 0.10826923076923078
+  },
+  {
+    "league": "all",
+    "selection": "H",
+    "odds_band": "mid",
+    "min_odds": 1.75,
+    "max_odds": 3.0,
+    "min_edge": 0.05,
+    "bets": 260,
+    "profit_units": 26.16,
+    "roi": 0.10061538461538462
+  },
+  {
+    "league": "all",
+    "selection": "H",
+    "odds_band": "long",
+    "min_odds": 3.0,
+    "max_odds": 6.0,
+    "min_edge": 0.12,
+    "bets": 21,
+    "profit_units": 2.02,
+    "roi": 0.09619047619047622
+  },
+  {
+    "league": "all",
+    "selection": "A",
+    "odds_band": "all",
+    "min_odds": 1.01,
+    "max_odds": 100.0,
+    "min_edge": 0.05,
+    "bets": 226,
+    "profit_units": 20.33,
+    "roi": 0.0899557522123894
+  }
+]

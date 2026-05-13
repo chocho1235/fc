@@ -552,6 +552,13 @@
   color: #92400e;
 }
 
+.football-decision small {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
 .football-decision__label {
   color: #0f766e !important;
   letter-spacing: 0.05em;
@@ -720,12 +727,14 @@
   font-weight: 900;
 }
 
-.football-value-list {
+.football-value-list,
+.football-rule-list {
   display: grid;
   gap: 0.65rem;
 }
 
-.football-value {
+.football-value,
+.football-rule {
   display: grid;
   gap: 0.5rem;
   padding: 0.72rem;
@@ -736,16 +745,25 @@
 
 .football-value strong,
 .football-value span,
-.football-value b {
+.football-value b,
+.football-value small,
+.football-rule strong,
+.football-rule span,
+.football-rule b,
+.football-rule small {
   display: block;
 }
 
-.football-value span {
+.football-value span,
+.football-value small,
+.football-rule span,
+.football-rule small {
   color: #64746c;
   font-size: 0.82rem;
 }
 
-.football-value b {
+.football-value b,
+.football-rule b {
   color: #92400e;
   font-size: 0.9rem;
 }

@@ -22,6 +22,12 @@ ODDS_COLUMNS = [("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A")]
 BET_THRESHOLDS = [0.03, 0.05, 0.08, 0.10, 0.12, 0.15]
 DEFAULT_BET_THRESHOLD = float(os.getenv("BET_THRESHOLD", "0.05") or "0.05")
 TRAINING_WINDOW_SEASONS = int(os.getenv("TRAINING_WINDOW_SEASONS", "5") or "5")
+ODDS_BANDS = [
+    {"name": "short", "min_odds": 1.01, "max_odds": 1.75},
+    {"name": "mid", "min_odds": 1.75, "max_odds": 3.0},
+    {"name": "long", "min_odds": 3.0, "max_odds": 6.0},
+    {"name": "very_long", "min_odds": 6.0, "max_odds": 100.0},
+]
 ENABLE_CONTEXT_FEATURES = os.getenv("ENABLE_CONTEXT_FEATURES", "0") == "1"
 ENABLE_WEATHER_FEATURES = os.getenv("ENABLE_WEATHER_FEATURES", "0") == "1"
 CONTEXT_COLUMNS = [
@@ -737,25 +743,76 @@ def decimal_return(result, selection, odds):
     return -1
 
 
-def find_best_bet(row, probs, threshold):
+def odds_band(odds):
+    for band in ODDS_BANDS:
+        if band["min_odds"] <= odds < band["max_odds"]:
+            return band["name"]
+    return "unknown"
+
+
+def candidate_bets(row, probs):
     odds_by_label = {"H": row["home_odds"], "D": row["draw_odds"], "A": row["away_odds"]}
     market = no_vig_market_probabilities(row)
-    best_bet = None
-    best_edge = 0.0
+    candidates = []
 
     for label in LABELS:
         adjusted_probability = bet_probability(row, probs, label)
         edge = adjusted_probability - market[label]
-        if odds_by_label[label] > 1 and adjusted_probability >= 0.22 and edge > best_edge:
-            best_edge = edge
-            best_bet = label
+        odds = odds_by_label[label]
+        if odds > 1 and adjusted_probability >= 0.22:
+            candidates.append({
+                "selection": label,
+                "odds": odds,
+                "edge": edge,
+                "adjusted_probability": adjusted_probability,
+                "market_probability": market[label],
+                "odds_band": odds_band(odds),
+            })
 
-    if best_bet and best_edge >= threshold:
-        return best_bet, best_edge
-    return None, best_edge
+    return sorted(candidates, key=lambda item: item["edge"], reverse=True)
 
 
-def evaluate(rows, probabilities, threshold=0.08):
+def matching_betting_rule(row, candidate, rules):
+    if not rules:
+        return None
+
+    league = row.get("league") or row.get("league_code") or ""
+    for rule in rules:
+        if rule.get("league") not in ("all", league):
+            continue
+        if rule.get("selection") not in ("all", candidate["selection"]):
+            continue
+        if rule.get("odds_band") not in ("all", candidate["odds_band"]):
+            continue
+        if candidate["odds"] < float(rule.get("min_odds", 1.01)):
+            continue
+        if candidate["odds"] >= float(rule.get("max_odds", 100.0)):
+            continue
+        if candidate["edge"] < float(rule.get("min_edge", 0.0)):
+            continue
+        return rule
+    return None
+
+
+def find_best_bet_with_rule(row, probs, threshold, rules=None):
+    best_edge = 0.0
+    for candidate in candidate_bets(row, probs):
+        best_edge = max(best_edge, candidate["edge"])
+        if candidate["edge"] < threshold:
+            continue
+        rule = matching_betting_rule(row, candidate, rules)
+        if rules and not rule:
+            continue
+        return candidate["selection"], candidate["edge"], rule
+    return None, best_edge, None
+
+
+def find_best_bet(row, probs, threshold, rules=None):
+    best_bet, best_edge, _rule = find_best_bet_with_rule(row, probs, threshold, rules)
+    return best_bet, best_edge
+
+
+def evaluate(rows, probabilities, threshold=0.08, rules=None):
     correct = 0
     bets = []
     losses = []
@@ -766,7 +823,7 @@ def evaluate(rows, probabilities, threshold=0.08):
             correct += 1
 
         odds_by_label = {"H": row["home_odds"], "D": row["draw_odds"], "A": row["away_odds"]}
-        best_bet, _best_edge = find_best_bet(row, probs, threshold)
+        best_bet, _best_edge = find_best_bet(row, probs, threshold, rules)
         if best_bet:
             profit = decimal_return(row["result"], best_bet, odds_by_label[best_bet])
             bets.append(profit)
@@ -785,7 +842,17 @@ def evaluate(rows, probabilities, threshold=0.08):
     }
 
 
-def write_predictions(rows, probabilities, over_25_probabilities=None, bet_threshold=DEFAULT_BET_THRESHOLD, over_25_bet_threshold=None):
+def rule_name(rule):
+    if not rule:
+        return ""
+    league = rule.get("league", "all")
+    selection = rule.get("selection", "all")
+    odds = rule.get("odds_band", "all")
+    edge = float(rule.get("min_edge", 0.0))
+    return f"{league} {selection} {odds} {edge:.0%}+"
+
+
+def write_predictions(rows, probabilities, over_25_probabilities=None, bet_threshold=DEFAULT_BET_THRESHOLD, over_25_bet_threshold=None, rules=None):
     over_25_bet_threshold = bet_threshold if over_25_bet_threshold is None else over_25_bet_threshold
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     path = PROCESSED_DIR / "predictions.csv"
@@ -832,11 +899,14 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
             "predicted_result",
             "suggested_bet",
             "suggested_edge",
+            "bet_rule",
+            "bet_rule_bets",
+            "bet_rule_roi",
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         for index, (row, probs) in enumerate(zip(rows, probabilities)):
-            best_bet, best_edge = find_best_bet(row, probs, bet_threshold)
+            best_bet, best_edge, bet_rule = find_best_bet_with_rule(row, probs, bet_threshold, rules)
             over_probability = (
                 over_25_probabilities[index]
                 if over_25_probabilities is not None
@@ -885,6 +955,9 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
+                "bet_rule": rule_name(bet_rule),
+                "bet_rule_bets": bet_rule.get("bets", "") if bet_rule else "",
+                "bet_rule_roi": round(float(bet_rule.get("roi", 0.0)), 4) if bet_rule else "",
             })
 
 
@@ -896,7 +969,7 @@ def train_and_predict(train_rows, test_rows, names):
     return model, probabilities, stats
 
 
-def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, bet_threshold=DEFAULT_BET_THRESHOLD, over_25_bet_threshold=None):
+def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, bet_threshold=DEFAULT_BET_THRESHOLD, over_25_bet_threshold=None, rules=None):
     over_25_bet_threshold = bet_threshold if over_25_bet_threshold is None else over_25_bet_threshold
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     path = PROCESSED_DIR / "upcoming_predictions.csv"
@@ -942,11 +1015,14 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
             "predicted_result",
             "suggested_bet",
             "suggested_edge",
+            "bet_rule",
+            "bet_rule_bets",
+            "bet_rule_roi",
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         for index, (row, probs) in enumerate(zip(rows, probabilities)):
-            best_bet, best_edge = find_best_bet(row, probs, bet_threshold)
+            best_bet, best_edge, bet_rule = find_best_bet_with_rule(row, probs, bet_threshold, rules)
             over_probability = (
                 over_25_probabilities[index]
                 if over_25_probabilities is not None
@@ -993,6 +1069,9 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
+                "bet_rule": rule_name(bet_rule),
+                "bet_rule_bets": bet_rule.get("bets", "") if bet_rule else "",
+                "bet_rule_roi": round(float(bet_rule.get("roi", 0.0)), 4) if bet_rule else "",
             })
 
 
