@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Football betting model</title>
+    <meta
+      name="description"
+      content="Premier League betting model dashboard showing 1X2, over 2.5, bookmaker odds, injury context, H2H form and value thresholds."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell football-shell">
+      <main class="football-app" data-football-app>
+        <section class="football-hero" aria-labelledby="football-model-title">
+          <div class="football-hero__copy">
+            <p class="football-kicker">Premier League model</p>
+            <h1 id="football-model-title">Football betting command centre</h1>
+            <p>
+              Clear bet/no-bet calls for home win, draw and away win, showing our price, the bookmaker price and the
+              minimum odds needed before a bet becomes worth taking.
+            </p>
+          </div>
+          <div class="football-hero__panel" aria-label="Model status">
+            <div>
+              <span class="football-metric__label">Test season</span>
+              <strong data-summary="test_season">--</strong>
+            </div>
+            <div>
+              <span class="football-metric__label">Accuracy</span>
+              <strong data-summary="accuracy">--</strong>
+            </div>
+            <div>
+              <span class="football-metric__label">ROI</span>
+              <strong data-summary="roi">--</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="football-toolbar" aria-label="Model controls">
+          <label class="football-search">
+            <span>Search teams</span>
+            <input type="search" data-football-search placeholder="Arsenal, Chelsea, Man City" />
+          </label>
+          <div class="football-segments" role="tablist" aria-label="Match filter">
+            <button type="button" class="is-active" data-filter="all">All</button>
+            <button type="button" data-filter="suggested">Value</button>
+            <button type="button" data-filter="home">Home</button>
+            <button type="button" data-filter="draw">Draw</button>
+            <button type="button" data-filter="away">Away</button>
+          </div>
+        </section>
+
+        <section class="football-overview" aria-label="Model overview">
+          <article class="football-stat">
+            <span class="football-stat__label">Test matches</span>
+            <strong data-summary="test_matches">--</strong>
+          </article>
+          <article class="football-stat">
+            <span class="football-stat__label">Log loss</span>
+            <strong data-summary="log_loss">--</strong>
+          </article>
+          <article class="football-stat">
+            <span class="football-stat__label">Value bets</span>
+            <strong data-summary="value_bets_at_8%+_edge">--</strong>
+          </article>
+          <article class="football-stat">
+            <span class="football-stat__label">Flat stake</span>
+            <strong data-summary="flat_stake_profit">--</strong>
+          </article>
+        </section>
+
+        <section class="football-strip" aria-label="Betting workflow">
+          <div><span>1</span><strong>Read the call</strong><small>Bet or pass.</small></div>
+          <div><span>2</span><strong>Check the price</strong><small>Bookie versus fair odds.</small></div>
+          <div><span>3</span><strong>Respect the edge</strong><small>Only bet at or above bet-from odds.</small></div>
+        </section>
+
+        <section class="football-layout">
+          <div class="football-main-stack">
+          <div class="football-board">
+            <div class="football-section-head">
+              <div>
+                <p class="football-kicker">Upcoming</p>
+                <h2>Next fixtures</h2>
+              </div>
+              <p data-upcoming-count>Loading...</p>
+            </div>
+            <div class="football-table-wrap">
+              <table class="football-table">
+                <thead>
+                  <tr>
+                    <th>Fixture</th>
+                    <th>Decision</th>
+                    <th>1X2 odds</th>
+                    <th>Bet builder</th>
+                    <th>Context</th>
+                  </tr>
+                </thead>
+                <tbody data-upcoming-rows></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="football-board">
+            <div class="football-section-head">
+              <div>
+                <p class="football-kicker">Predictions</p>
+                <h2>Latest matches</h2>
+              </div>
+              <p data-football-count>Loading...</p>
+            </div>
+            <div class="football-table-wrap">
+              <table class="football-table">
+                <thead>
+                  <tr>
+                    <th>Fixture</th>
+                    <th>Decision</th>
+                    <th>1X2 odds</th>
+                    <th>Bet builder</th>
+                    <th>Context</th>
+                  </tr>
+                </thead>
+                <tbody data-football-rows></tbody>
+              </table>
+            </div>
+          </div>
+          </div>
+
+          <aside class="football-side" aria-label="Model insight">
+            <div class="football-side__block">
+              <p class="football-kicker">Probability mix</p>
+              <div class="football-donut" data-football-donut>
+                <span data-average="home">--</span>
+              </div>
+              <dl class="football-legend">
+                <div><dt>Home</dt><dd data-average="home">--</dd></div>
+                <div><dt>Draw</dt><dd data-average="draw">--</dd></div>
+                <div><dt>Away</dt><dd data-average="away">--</dd></div>
+              </dl>
+            </div>
+
+            <div class="football-side__block">
+              <p class="football-kicker">Value watch</p>
+              <div data-value-list class="football-value-list"></div>
+            </div>
+
+            <div class="football-side__block">
+              <p class="football-kicker">Over 2.5 model</p>
+              <dl class="football-legend">
+                <div><dt>Rolling accuracy</dt><dd data-summary="over_2.5_rolling_accuracy">--</dd></div>
+                <div><dt>Rolling bets</dt><dd data-summary="over_2.5_rolling_value_bets_at_8%+_edge">--</dd></div>
+                <div><dt>Rolling ROI</dt><dd data-summary="over_2.5_rolling_roi">--</dd></div>
+              </dl>
+            </div>
+
+            <div class="football-side__block">
+              <p class="football-kicker">How to read it</p>
+              <ul class="football-context-list">
+                <li><strong>Bookie</strong> is the current decimal price from the fixture feed.</li>
+                <li><strong>Fair</strong> is the model's break-even price.</li>
+                <li><strong>Bet from</strong> adds the value margin, so lower odds are a pass.</li>
+                <li><strong>Key out</strong> means higher-impact unavailable players.</li>
+                <li><strong>Total out</strong> is wider squad availability and can include lower-impact players.</li>
+                <li><strong>Availability not loaded</strong> means we do not have injury data for that match.</li>
+                <li><strong>Importance</strong> runs low to high; high usually means title, Europe or relegation pressure.</li>
+                <li><strong>Over 2.5</strong> is now a separate calibrated model, but the value-bet sample is still small.</li>
+              </ul>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/football-model-page.js"></script>
+  </body>
+</html>

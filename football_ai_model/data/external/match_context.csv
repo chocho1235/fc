@@ -1,0 +1,1435 @@
+date,home_team,away_team,home_injury_count,away_injury_count,home_key_absences,away_key_absences,home_suspensions,away_suspensions,home_lineup_strength,away_lineup_strength,home_rotation_risk,away_rotation_risk,derby_or_rivalry,home_motivation,away_motivation,weather_severity,away_travel_fatigue,notes
+2022-08-05,Crystal Palace,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,API-Football fixture 867946 | Historical FPL proxy 2022-23 GW1
+2022-08-06,Bournemouth,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,API-Football fixture 867948 | Historical FPL proxy 2022-23 GW1
+2022-08-06,Everton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW1
+2022-08-06,Fulham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,API-Football fixture 867947 | Historical FPL proxy 2022-23 GW1
+2022-08-06,Leeds,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW1
+2022-08-06,Newcastle,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,API-Football fixture 867951 | Historical FPL proxy 2022-23 GW1
+2022-08-06,Tottenham,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW1
+2022-08-07,Leicester,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW1
+2022-08-07,Man United,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW1
+2022-08-07,West Ham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW1
+2022-08-13,Arsenal,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-13,Aston Villa,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-13,Brentford,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-13,Brighton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-13,Man City,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-13,Southampton,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-13,Wolves,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-14,Chelsea,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-14,Nott'm Forest,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-15,Liverpool,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW2
+2022-08-20,Bournemouth,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-20,Crystal Palace,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-20,Everton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-20,Fulham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-20,Leicester,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-20,Tottenham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-21,Leeds,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-21,Newcastle,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-21,West Ham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-22,Man United,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW3
+2022-08-27,Arsenal,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-27,Brentford,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-27,Brighton,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-27,Chelsea,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-27,Liverpool,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-27,Man City,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-27,Southampton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-28,Aston Villa,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-28,Nott'm Forest,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-28,Wolves,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW4
+2022-08-30,Crystal Palace,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-30,Fulham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-30,Leeds,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-30,Southampton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-31,Arsenal,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-31,Bournemouth,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-31,Liverpool,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-31,Man City,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-08-31,West Ham,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-09-01,Leicester,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW5
+2022-09-03,Aston Villa,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-03,Brentford,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-03,Chelsea,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-03,Everton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-03,Newcastle,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-03,Nott'm Forest,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-03,Tottenham,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-03,Wolves,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-04,Brighton,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-09-04,Man United,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW6
+2022-10-01,Arsenal,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW8
+2022-10-01,Bournemouth,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW8
+2022-10-01,Fulham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW8
+2022-10-01,Southampton,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW8
+2022-10-01,West Ham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW8
+2022-10-03,Leicester,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW8
+2022-10-08,Bournemouth,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-08,Brighton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-08,Chelsea,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-08,Man City,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-08,Newcastle,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-09,Arsenal,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-09,Everton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-09,West Ham,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-10,Nott'm Forest,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW9
+2022-10-14,Brentford,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-15,Fulham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-15,Leicester,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-15,Tottenham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-15,Wolves,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-16,Aston Villa,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-16,Leeds,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-16,Liverpool,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-16,Man United,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-16,Southampton,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW10
+2022-10-18,Brighton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-18,Crystal Palace,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-19,Bournemouth,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-19,Brentford,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-19,Liverpool,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-19,Man United,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-19,Newcastle,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-20,Fulham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-20,Leicester,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-22,Chelsea,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-22,Everton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-22,Man City,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW11
+2022-10-22,Nott'm Forest,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-23,Aston Villa,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-23,Leeds,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-23,Tottenham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-23,Wolves,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-24,West Ham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-29,Bournemouth,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-10-29,Brentford,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-10-29,Brighton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-29,Crystal Palace,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-10-29,Fulham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-10-29,Leicester,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-10-29,Liverpool,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW12
+2022-10-29,Newcastle,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-10-30,Arsenal,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-10-30,Man United,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-11-05,Everton,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-05,Leeds,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-05,Man City,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-05,Nott'm Forest,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-05,Wolves,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-06,Aston Villa,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-06,Chelsea,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW13
+2022-11-06,Southampton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-06,Tottenham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-06,West Ham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW14
+2022-11-12,Bournemouth,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-12,Liverpool,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-12,Man City,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-12,Newcastle,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-12,Nott'm Forest,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-12,Tottenham,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-12,West Ham,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-12,Wolves,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-13,Brighton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-11-13,Fulham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-12-26,Arsenal,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-26,Aston Villa,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-26,Brentford,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-26,Crystal Palace,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-26,Everton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-26,Leicester,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-26,Southampton,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-27,Chelsea,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-27,Man United,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-28,Leeds,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW15
+2022-12-30,Liverpool,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2022-12-30,West Ham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2022-12-31,Bournemouth,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2022-12-31,Brighton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW16
+2022-12-31,Fulham,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2022-12-31,Man City,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2022-12-31,Newcastle,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2022-12-31,Wolves,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2023-01-01,Nott'm Forest,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2023-01-01,Tottenham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2023-01-02,Brentford,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-03,Arsenal,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-03,Everton,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-03,Leicester,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-03,Man United,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-04,Aston Villa,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-04,Crystal Palace,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-04,Leeds,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-04,Southampton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-05,Chelsea,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW17
+2023-01-12,Fulham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-13,Aston Villa,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-14,Brentford,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-14,Brighton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-14,Everton,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-14,Man United,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW18
+2023-01-14,Nott'm Forest,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-14,Wolves,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-15,Chelsea,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-15,Newcastle,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-15,Tottenham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-18,Crystal Palace,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW19
+2023-01-19,Man City,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-21,Bournemouth,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-21,Crystal Palace,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-21,Leicester,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-21,Liverpool,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-21,Southampton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-21,West Ham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-22,Arsenal,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-22,Leeds,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-22,Man City,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW20
+2023-01-23,Fulham,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-03,Chelsea,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-04,Aston Villa,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-04,Brentford,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-04,Brighton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-04,Everton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-04,Man United,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-04,Newcastle,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-04,Wolves,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-05,Nott'm Forest,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW21
+2023-02-05,Tottenham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-08,Man United,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-11,Arsenal,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-11,Bournemouth,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-11,Crystal Palace,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-11,Fulham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-11,Leicester,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-11,Southampton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-11,West Ham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-12,Leeds,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-12,Man City,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-13,Liverpool,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW22
+2023-02-15,Arsenal,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-18,Aston Villa,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-18,Brentford,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-18,Brighton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-18,Chelsea,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-18,Everton,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-18,Newcastle,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-18,Nott'm Forest,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-18,Wolves,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW23
+2023-02-19,Man United,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-19,Tottenham,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-24,Fulham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-02-25,Bournemouth,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-02-25,Crystal Palace,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-25,Everton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-25,Leeds,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-25,Leicester,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-25,West Ham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW24
+2023-02-26,Tottenham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-03-01,Arsenal,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-03-01,Liverpool,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-03-04,Arsenal,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-04,Aston Villa,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-03-04,Chelsea,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-03-04,Man City,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-04,Southampton,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW25
+2023-03-04,Wolves,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-05,Nott'm Forest,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-06,Brentford,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-11,Bournemouth,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-11,Crystal Palace,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-11,Everton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-11,Leeds,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-11,Leicester,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-11,Tottenham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-12,Fulham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-12,Man United,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-12,Newcastle,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-12,West Ham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW26
+2023-03-15,Brighton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-15,Southampton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-17,Nott'm Forest,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-18,Aston Villa,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-18,Brentford,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-03-18,Chelsea,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW28
+2023-03-18,Southampton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW28
+2023-03-18,Wolves,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW28
+2023-03-19,Arsenal,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW28
+2023-04-01,Arsenal,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-01,Chelsea,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW28
+2023-04-01,Crystal Palace,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-01,Nott'm Forest,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-02,Newcastle,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW27
+2023-04-02,West Ham,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-03,Everton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-04,Bournemouth,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-04,Chelsea,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-04,Leeds,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-04,Leicester,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-05,Man United,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-08,Aston Villa,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-08,Brentford,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-08,Fulham,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW29
+2023-04-08,Leicester,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-08,Man United,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-08,Southampton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-08,Tottenham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-08,Wolves,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-09,Leeds,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-09,Liverpool,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW30
+2023-04-15,Aston Villa,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-15,Chelsea,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-15,Everton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-15,Man City,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-15,Southampton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-15,Tottenham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-15,Wolves,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-16,Nott'm Forest,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-16,West Ham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-17,Leeds,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW31
+2023-04-21,Arsenal,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-22,Brentford,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-22,Crystal Palace,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-22,Fulham,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-22,Leicester,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-22,Liverpool,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-23,Bournemouth,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-23,Newcastle,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-25,Aston Villa,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-25,Leeds,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-25,Wolves,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-26,Chelsea,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-26,Man City,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-26,Nott'm Forest,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-26,West Ham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW32
+2023-04-27,Everton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-27,Southampton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-27,Tottenham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-29,Brentford,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-04-29,Brighton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-04-29,Crystal Palace,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-04-30,Bournemouth,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-04-30,Fulham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-04-30,Liverpool,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-04-30,Man United,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-04-30,Newcastle,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-05-01,Leicester,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-05-02,Arsenal,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-05-03,Liverpool,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-05-03,Man City,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW34
+2023-05-04,Brighton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW33
+2023-05-06,Bournemouth,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-06,Liverpool,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-06,Man City,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-06,Tottenham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-06,Wolves,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-07,Newcastle,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-07,West Ham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-08,Brighton,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-08,Fulham,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-08,Nott'm Forest,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW35
+2023-05-13,Aston Villa,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-13,Chelsea,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-13,Crystal Palace,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-13,Leeds,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-13,Man United,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-13,Southampton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-14,Arsenal,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-14,Brentford,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-14,Everton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-15,Leicester,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-18,Newcastle,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-20,Bournemouth,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-20,Fulham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-20,Liverpool,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-20,Nott'm Forest,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-20,Tottenham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-20,Wolves,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-21,Brighton,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-21,Man City,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW36
+2023-05-21,West Ham,Leeds,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-22,Newcastle,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-24,Brighton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-25,Man United,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW37
+2023-05-28,Arsenal,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Aston Villa,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Brentford,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Chelsea,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Crystal Palace,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Everton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Leeds,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Leicester,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Man United,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-05-28,Southampton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2022-23 GW38
+2023-08-11,Burnley,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-12,Arsenal,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-12,Bournemouth,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-12,Brighton,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-12,Everton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-12,Newcastle,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-13,Brentford,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-13,Chelsea,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-14,Man United,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW1
+2023-08-19,Fulham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-19,Liverpool,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-19,Man City,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-19,Tottenham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-19,Wolves,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-20,Aston Villa,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-20,West Ham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-21,Crystal Palace,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW2
+2023-08-25,Chelsea,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-26,Arsenal,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-26,Bournemouth,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-26,Brentford,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-26,Brighton,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-26,Everton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-26,Man United,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-27,Burnley,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-08-27,Newcastle,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW3
+2023-09-01,Luton,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-02,Brentford,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-02,Brighton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-02,Burnley,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-02,Chelsea,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-02,Man City,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-03,Arsenal,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-03,Crystal Palace,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-03,Liverpool,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW4
+2023-09-16,Aston Villa,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-16,Fulham,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-16,Man United,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-16,Newcastle,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-16,West Ham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-16,Wolves,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-17,Bournemouth,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-17,Everton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-18,Nott'm Forest,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW5
+2023-09-23,Brentford,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-23,Burnley,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-23,Crystal Palace,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-23,Luton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-23,Man City,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-24,Arsenal,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-24,Brighton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-24,Chelsea,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-24,Liverpool,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW6
+2023-09-30,Aston Villa,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-09-30,Bournemouth,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-09-30,Everton,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-09-30,Man United,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-09-30,Newcastle,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-09-30,Tottenham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-09-30,Wolves,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-10-01,Nott'm Forest,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-10-02,Fulham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-10-03,Luton,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW7
+2023-10-07,Burnley,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-07,Crystal Palace,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-07,Everton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-07,Luton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-07,Man United,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-08,Arsenal,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-08,Brighton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-08,West Ham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-08,Wolves,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW8
+2023-10-21,Bournemouth,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-21,Brentford,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-21,Chelsea,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-21,Liverpool,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-21,Man City,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-21,Newcastle,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-21,Nott'm Forest,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-22,Aston Villa,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-23,Tottenham,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW9
+2023-10-27,Crystal Palace,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-28,Bournemouth,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-28,Chelsea,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-28,Wolves,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-29,Aston Villa,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-29,Brighton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-29,Liverpool,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-29,Man United,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-10-29,West Ham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW10
+2023-11-04,Brentford,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-04,Burnley,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-04,Everton,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-04,Fulham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-04,Man City,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-04,Newcastle,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-05,Luton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-05,Nott'm Forest,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-06,Tottenham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW11
+2023-11-11,Arsenal,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-11,Bournemouth,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-11,Crystal Palace,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-11,Man United,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-11,Wolves,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-12,Aston Villa,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-12,Chelsea,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-12,Liverpool,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-12,West Ham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW12
+2023-11-25,Brentford,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-25,Burnley,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-25,Luton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-25,Man City,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-25,Newcastle,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-25,Nott'm Forest,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-26,Everton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-26,Tottenham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-11-27,Fulham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW13
+2023-12-02,Arsenal,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-02,Brentford,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-02,Newcastle,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-02,Nott'm Forest,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-03,Bournemouth,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-03,Chelsea,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-03,Liverpool,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-03,Man City,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-03,West Ham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW14
+2023-12-05,Luton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-05,Wolves,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-06,Aston Villa,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-06,Brighton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-06,Crystal Palace,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-06,Fulham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-06,Man United,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-07,Everton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-07,Tottenham,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW15
+2023-12-09,Aston Villa,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-09,Brighton,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-09,Crystal Palace,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-09,Man United,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-09,Wolves,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-10,Everton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-10,Fulham,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-10,Luton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-10,Tottenham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW16
+2023-12-15,Nott'm Forest,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-16,Burnley,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-16,Man City,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-16,Newcastle,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-17,Arsenal,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-17,Brentford,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-17,Liverpool,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-17,West Ham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW17
+2023-12-21,Crystal Palace,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-23,Fulham,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-23,Liverpool,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-23,Luton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-23,Nott'm Forest,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-23,Tottenham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-23,West Ham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-24,Wolves,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW18
+2023-12-26,Bournemouth,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-26,Burnley,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-26,Man United,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-26,Newcastle,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-27,Brentford,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-27,Chelsea,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-27,Everton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-28,Arsenal,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-28,Brighton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW19
+2023-12-30,Aston Villa,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2023-12-30,Crystal Palace,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2023-12-30,Luton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2023-12-30,Nott'm Forest,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2023-12-30,Wolves,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2023-12-31,Fulham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2023-12-31,Tottenham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2024-01-01,Liverpool,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2024-01-02,West Ham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW20
+2024-01-12,Burnley,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-13,Chelsea,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-13,Newcastle,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-14,Everton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-14,Man United,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-20,Arsenal,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-20,Brentford,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-21,Bournemouth,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-22,Brighton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW21
+2024-01-30,Aston Villa,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-01-30,Fulham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-01-30,Luton,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-01-30,Nott'm Forest,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-01-31,Liverpool,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-01-31,Man City,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-01-31,Tottenham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-02-01,West Ham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-02-01,Wolves,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-02-03,Brighton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-03,Burnley,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-03,Everton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-03,Newcastle,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-04,Arsenal,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-04,Bournemouth,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-04,Chelsea,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-04,Man United,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW23
+2024-02-05,Brentford,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW22
+2024-02-10,Fulham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-10,Liverpool,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-10,Man City,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-10,Nott'm Forest,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-10,Tottenham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-10,Wolves,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-11,Aston Villa,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-11,West Ham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-12,Crystal Palace,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW24
+2024-02-17,Brentford,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-17,Burnley,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-17,Fulham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-17,Man City,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-17,Newcastle,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-17,Nott'm Forest,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-17,Tottenham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-18,Luton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-19,Everton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-20,Man City,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW25
+2024-02-24,Arsenal,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW26
+2024-02-24,Aston Villa,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW26
+2024-02-24,Bournemouth,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW26
+2024-02-24,Brighton,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW26
+2024-02-24,Crystal Palace,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW26
+2024-02-24,Man United,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW26
+2024-02-26,West Ham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW26
+2024-03-02,Brentford,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-02,Everton,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-02,Fulham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-02,Luton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-02,Newcastle,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-02,Nott'm Forest,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-02,Tottenham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-03,Burnley,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-03,Man City,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW27
+2024-03-09,Arsenal,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-09,Crystal Palace,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-09,Man United,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-09,Wolves,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-10,Aston Villa,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-10,Brighton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-10,Liverpool,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-10,West Ham,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-11,Chelsea,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-13,Bournemouth,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW28
+2024-03-16,Burnley,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW29
+2024-03-16,Fulham,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW29
+2024-03-16,Luton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW29
+2024-03-17,West Ham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW29
+2024-03-30,Aston Villa,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-03-30,Brentford,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-03-30,Chelsea,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-03-30,Newcastle,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-03-30,Nott'm Forest,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-03-30,Tottenham,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-04-02,Bournemouth,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-04-02,Burnley,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-02,Newcastle,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-04-02,Nott'm Forest,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-02,West Ham,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-03,Arsenal,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-03,Brentford,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-03,Man City,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-04,Chelsea,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW30
+2024-04-06,Aston Villa,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-06,Brighton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-06,Crystal Palace,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-06,Everton,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-06,Fulham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-06,Luton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-06,Wolves,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-07,Man United,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW31
+2024-04-07,Tottenham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-13,Bournemouth,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-13,Burnley,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW33
+2024-04-13,Man City,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW33
+2024-04-13,Newcastle,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-13,Nott'm Forest,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW33
+2024-04-14,Arsenal,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW33
+2024-04-14,Liverpool,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-14,West Ham,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW33
+2024-04-15,Chelsea,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW32
+2024-04-20,Luton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-20,Wolves,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW33
+2024-04-21,Aston Villa,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-21,Crystal Palace,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-21,Everton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-21,Fulham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-23,Arsenal,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-24,Crystal Palace,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-24,Everton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-24,Wolves,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW34
+2024-04-25,Brighton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW33
+2024-04-27,Aston Villa,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-27,Everton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-27,Fulham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-27,Man United,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-27,West Ham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-27,Wolves,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-28,Bournemouth,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-28,Nott'm Forest,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-04-28,Tottenham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW35
+2024-05-03,Luton,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-04,Arsenal,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-04,Brentford,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-04,Burnley,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-04,Man City,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-05,Brighton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-05,Chelsea,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-05,Liverpool,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-06,Crystal Palace,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-11,Bournemouth,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-11,Fulham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-11,Newcastle,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW36
+2024-05-11,Nott'm Forest,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-11,Tottenham,Burnley,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-11,West Ham,Luton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-11,Wolves,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-12,Man United,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-13,Aston Villa,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-14,Tottenham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-15,Brighton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-15,Man United,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW37
+2024-05-19,Arsenal,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Brentford,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Brighton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Burnley,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Chelsea,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Crystal Palace,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Liverpool,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Luton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-05-19,Man City,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2023-24 GW38
+2024-08-16,Man United,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-17,Arsenal,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-17,Everton,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-17,Ipswich,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-17,Newcastle,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-17,Nott'm Forest,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-17,West Ham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-18,Brentford,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-18,Chelsea,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-19,Leicester,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW1
+2024-08-24,Aston Villa,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-24,Brighton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-24,Crystal Palace,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-24,Fulham,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-24,Man City,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-24,Southampton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-24,Tottenham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-25,Bournemouth,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-25,Liverpool,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-25,Wolves,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW2
+2024-08-31,Arsenal,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-08-31,Brentford,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-08-31,Everton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-08-31,Ipswich,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-08-31,Leicester,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-08-31,Nott'm Forest,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-08-31,West Ham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-09-01,Chelsea,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-09-01,Man United,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-09-01,Newcastle,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW3
+2024-09-14,Aston Villa,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-14,Bournemouth,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-14,Brighton,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-14,Crystal Palace,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-14,Fulham,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-14,Liverpool,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-14,Man City,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-14,Southampton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-15,Tottenham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-15,Wolves,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW4
+2024-09-21,Aston Villa,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-21,Crystal Palace,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-21,Fulham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-21,Leicester,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-21,Liverpool,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-21,Southampton,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-21,Tottenham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-21,West Ham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-22,Brighton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-22,Man City,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW5
+2024-09-28,Arsenal,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-28,Brentford,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-28,Chelsea,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-28,Everton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-28,Newcastle,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-28,Nott'm Forest,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-28,Wolves,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-29,Ipswich,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-29,Man United,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-09-30,Bournemouth,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW6
+2024-10-05,Arsenal,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-05,Brentford,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-05,Crystal Palace,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-05,Everton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-05,Leicester,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-05,Man City,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-05,West Ham,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-06,Aston Villa,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-06,Brighton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-06,Chelsea,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW7
+2024-10-19,Bournemouth,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-19,Fulham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-19,Ipswich,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-19,Man United,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-19,Newcastle,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-19,Southampton,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-19,Tottenham,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-20,Liverpool,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-20,Wolves,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-21,Nott'm Forest,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW8
+2024-10-25,Leicester,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-26,Aston Villa,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-26,Brentford,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-26,Brighton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-26,Everton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-26,Man City,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-27,Arsenal,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-27,Chelsea,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-27,Crystal Palace,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-10-27,West Ham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW9
+2024-11-02,Bournemouth,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-02,Ipswich,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-02,Liverpool,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-02,Newcastle,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-02,Nott'm Forest,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-02,Southampton,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-02,Wolves,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-03,Man United,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-03,Tottenham,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-04,Fulham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW10
+2024-11-09,Brentford,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-09,Brighton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-09,Crystal Palace,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-09,Liverpool,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-09,West Ham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-09,Wolves,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-10,Chelsea,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-10,Man United,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-10,Nott'm Forest,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-10,Tottenham,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW11
+2024-11-23,Arsenal,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-23,Aston Villa,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-23,Bournemouth,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-23,Everton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-23,Fulham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-23,Leicester,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-23,Man City,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-24,Ipswich,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-24,Southampton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-25,Newcastle,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW12
+2024-11-29,Brighton,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-11-30,Brentford,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-11-30,Crystal Palace,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-11-30,Nott'm Forest,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-11-30,West Ham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-11-30,Wolves,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-12-01,Chelsea,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-12-01,Liverpool,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-12-01,Man United,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-12-01,Tottenham,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW13
+2024-12-03,Ipswich,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-03,Leicester,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-04,Arsenal,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-04,Aston Villa,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-04,Everton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-04,Man City,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-04,Newcastle,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-04,Southampton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-05,Bournemouth,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-05,Fulham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW14
+2024-12-07,Aston Villa,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-07,Brentford,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-07,Crystal Palace,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-07,Man United,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-08,Fulham,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-08,Ipswich,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-08,Leicester,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-08,Tottenham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-09,West Ham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW15
+2024-12-14,Arsenal,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-14,Liverpool,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-14,Newcastle,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-14,Nott'm Forest,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-14,Wolves,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-15,Brighton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-15,Chelsea,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-15,Man City,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-15,Southampton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-16,Bournemouth,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW16
+2024-12-21,Aston Villa,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-21,Brentford,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-21,Crystal Palace,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-21,Ipswich,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-21,West Ham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-22,Everton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-22,Fulham,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-22,Leicester,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-22,Man United,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-22,Tottenham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW17
+2024-12-26,Bournemouth,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-26,Chelsea,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-26,Liverpool,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-26,Man City,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-26,Newcastle,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-26,Nott'm Forest,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-26,Southampton,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-26,Wolves,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-27,Arsenal,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-27,Brighton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW18
+2024-12-29,Crystal Palace,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-29,Everton,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-29,Fulham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-29,Leicester,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-29,Tottenham,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-29,West Ham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-30,Aston Villa,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-30,Ipswich,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2024-12-30,Man United,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2025-01-01,Brentford,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW19
+2025-01-04,Aston Villa,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-04,Bournemouth,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-04,Brighton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-04,Crystal Palace,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-04,Man City,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-04,Southampton,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-04,Tottenham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-05,Fulham,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-05,Liverpool,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-06,Wolves,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW20
+2025-01-14,Brentford,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-14,Chelsea,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-14,Nott'm Forest,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-14,West Ham,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-15,Arsenal,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-15,Everton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-15,Leicester,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-15,Newcastle,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-16,Ipswich,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-16,Man United,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW21
+2025-01-18,Arsenal,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-18,Brentford,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-18,Leicester,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-18,Newcastle,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-18,West Ham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-19,Everton,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-19,Ipswich,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-19,Man United,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-19,Nott'm Forest,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-20,Chelsea,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW22
+2025-01-25,Bournemouth,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-25,Brighton,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-25,Liverpool,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-25,Man City,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-25,Southampton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-25,Wolves,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-26,Aston Villa,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-26,Crystal Palace,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-26,Fulham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-01-26,Tottenham,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW23
+2025-02-01,Bournemouth,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-01,Everton,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-01,Ipswich,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-01,Newcastle,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-01,Nott'm Forest,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-01,Wolves,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-02,Arsenal,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-02,Brentford,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-02,Man United,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-03,Chelsea,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-12,Everton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW24
+2025-02-14,Brighton,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-15,Aston Villa,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-15,Crystal Palace,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-15,Fulham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-15,Leicester,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-15,Man City,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-15,Southampton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-15,West Ham,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-16,Liverpool,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-16,Tottenham,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW25
+2025-02-19,Aston Villa,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-21,Leicester,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-22,Arsenal,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-22,Aston Villa,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-22,Bournemouth,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-22,Everton,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-22,Fulham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-22,Ipswich,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-22,Southampton,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-23,Man City,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-23,Newcastle,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW26
+2025-02-25,Brighton,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-25,Chelsea,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-25,Crystal Palace,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-02-25,Wolves,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-26,Brentford,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-26,Liverpool,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-02-26,Man United,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-26,Nott'm Forest,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-26,Tottenham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-02-27,West Ham,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW27
+2025-03-08,Brighton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-08,Crystal Palace,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-08,Nott'm Forest,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-08,Wolves,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-09,Chelsea,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-09,Man United,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-09,Tottenham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-10,West Ham,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW28
+2025-03-15,Bournemouth,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-03-15,Everton,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-03-15,Ipswich,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-03-15,Man City,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-03-15,Southampton,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-03-16,Arsenal,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-03-16,Fulham,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-03-16,Leicester,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW29
+2025-04-01,Arsenal,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-01,Nott'm Forest,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-01,Wolves,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-02,Bournemouth,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-02,Brighton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-02,Liverpool,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-02,Man City,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-02,Newcastle,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-02,Southampton,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-03,Chelsea,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW30
+2025-04-05,Aston Villa,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-05,Crystal Palace,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-05,Everton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-05,Ipswich,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-05,West Ham,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-06,Brentford,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-06,Fulham,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-06,Man United,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-06,Tottenham,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-07,Leicester,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW31
+2025-04-12,Arsenal,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-12,Brighton,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-12,Man City,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-12,Nott'm Forest,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-12,Southampton,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-13,Chelsea,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-13,Liverpool,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-13,Newcastle,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-13,Wolves,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-14,Bournemouth,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-16,Newcastle,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW32
+2025-04-19,Aston Villa,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-19,Brentford,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-19,Crystal Palace,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-19,Everton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-19,West Ham,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-20,Fulham,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-20,Ipswich,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-20,Leicester,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-20,Man United,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-21,Tottenham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW33
+2025-04-26,Brighton,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-04-26,Chelsea,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-04-26,Newcastle,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-04-26,Southampton,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-04-26,Wolves,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-04-27,Bournemouth,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-04-27,Liverpool,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-05-01,Nott'm Forest,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW34
+2025-05-02,Man City,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-03,Arsenal,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-03,Aston Villa,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-03,Everton,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-03,Leicester,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-04,Brentford,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-04,Brighton,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-04,Chelsea,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-04,West Ham,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-05,Crystal Palace,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW35
+2025-05-10,Bournemouth,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-10,Fulham,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-10,Ipswich,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-10,Southampton,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-10,Wolves,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-11,Liverpool,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-11,Man United,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-11,Newcastle,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-11,Nott'm Forest,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-11,Tottenham,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW36
+2025-05-16,Aston Villa,Tottenham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-16,Chelsea,Man United,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-18,Arsenal,Newcastle,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-18,Brentford,Fulham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-18,Everton,Southampton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-18,Leicester,Ipswich,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-18,West Ham,Nott'm Forest,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-19,Brighton,Liverpool,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-20,Crystal Palace,Wolves,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-20,Man City,Bournemouth,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW37
+2025-05-25,Bournemouth,Leicester,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Fulham,Man City,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Ipswich,West Ham,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Liverpool,Crystal Palace,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Man United,Aston Villa,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Newcastle,Everton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Nott'm Forest,Chelsea,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Southampton,Arsenal,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Tottenham,Brighton,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-05-25,Wolves,Brentford,0,0,0.0,0.0,0,0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,Historical FPL proxy 2024-25 GW38
+2025-08-15,Liverpool,Bournemouth,0,0,0,0,0,0,1.00,1.00,0.00,0.00,0,0.50,0.50,0.349,0.10,"Example row only. Replace these values with real pre-match context before using for live predictions. | Weather: rain 0.0mm, gusts 40.7km/h, snow 0.0cm"
+2025-08-16,Aston Villa,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.236,0.0,"Weather: rain 0.0mm, gusts 35.6km/h, snow 0.0cm"
+2025-08-16,Brighton,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.469,0.0,"Weather: rain 0.0mm, gusts 46.1km/h, snow 0.0cm"
+2025-08-16,Sunderland,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.029,0.0,"Weather: rain 0.0mm, gusts 26.3km/h, snow 0.0cm"
+2025-08-16,Tottenham,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.213,0.0,"Weather: rain 0.1mm, gusts 34.6km/h, snow 0.0cm"
+2025-08-16,Wolves,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.196,0.0,"Weather: rain 0.0mm, gusts 33.8km/h, snow 0.0cm"
+2025-08-17,Chelsea,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.124,0.0,"Weather: rain 0.0mm, gusts 30.6km/h, snow 0.0cm"
+2025-08-17,Man United,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.269,0.0,"Weather: rain 0.0mm, gusts 37.1km/h, snow 0.0cm"
+2025-08-17,Nott'm Forest,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.229,0.0,"Weather: rain 0.0mm, gusts 35.3km/h, snow 0.0cm"
+2025-08-18,Leeds,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.156,0.0,"Weather: rain 0.1mm, gusts 32.0km/h, snow 0.0cm"
+2025-08-22,West Ham,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.084,0.0,"Weather: rain 0.0mm, gusts 28.8km/h, snow 0.0cm"
+2025-08-23,Arsenal,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 22.7km/h, snow 0.0cm"
+2025-08-23,Bournemouth,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.14,0.0,"Weather: rain 0.0mm, gusts 31.3km/h, snow 0.0cm"
+2025-08-23,Brentford,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.036,0.0,"Weather: rain 0.0mm, gusts 26.6km/h, snow 0.0cm"
+2025-08-23,Burnley,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.011,0.0,"Weather: rain 0.2mm, gusts 21.6km/h, snow 0.0cm"
+2025-08-23,Man City,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 16.6km/h, snow 0.0cm"
+2025-08-24,Crystal Palace,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.02,0.0,"Weather: rain 0.0mm, gusts 25.9km/h, snow 0.0cm"
+2025-08-24,Everton,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.076,0.0,"Weather: rain 0.0mm, gusts 28.4km/h, snow 0.0cm"
+2025-08-24,Fulham,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 23.8km/h, snow 0.0cm"
+2025-08-25,Newcastle,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.309,0.0,"Weather: rain 0.0mm, gusts 38.9km/h, snow 0.0cm"
+2025-08-30,Chelsea,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.653,0.0,"Weather: rain 2.0mm, gusts 54.4km/h, snow 0.0cm"
+2025-08-30,Leeds,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.604,0.0,"Weather: rain 2.4mm, gusts 52.2km/h, snow 0.0cm"
+2025-08-30,Man United,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.733,0.0,"Weather: rain 3.0mm, gusts 58.0km/h, snow 0.0cm"
+2025-08-30,Sunderland,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.724,0.0,"Weather: rain 5.1mm, gusts 57.6km/h, snow 0.0cm"
+2025-08-30,Tottenham,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.709,0.0,"Weather: rain 3.6mm, gusts 56.9km/h, snow 0.0cm"
+2025-08-30,Wolves,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.773,0.0,"Weather: rain 1.1mm, gusts 59.8km/h, snow 0.0cm"
+2025-08-31,Aston Villa,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.829,0.0,"Weather: rain 1.9mm, gusts 62.3km/h, snow 0.0cm"
+2025-08-31,Brighton,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.66,0.0,"Weather: rain 2.1mm, gusts 54.7km/h, snow 0.0cm"
+2025-08-31,Liverpool,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.829,0.0,"Weather: rain 0.8mm, gusts 62.3km/h, snow 0.0cm"
+2025-08-31,Nott'm Forest,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.709,0.0,"Weather: rain 1.4mm, gusts 56.9km/h, snow 0.0cm"
+2025-09-13,Arsenal,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.484,0.0,"Weather: rain 6.6mm, gusts 46.8km/h, snow 0.0cm"
+2025-09-13,Bournemouth,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.804,0.0,"Weather: rain 2.3mm, gusts 61.2km/h, snow 0.0cm"
+2025-09-13,Brentford,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.453,0.0,"Weather: rain 3.7mm, gusts 45.4km/h, snow 0.0cm"
+2025-09-13,Crystal Palace,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.62,0.0,"Weather: rain 1.1mm, gusts 52.9km/h, snow 0.0cm"
+2025-09-13,Everton,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.589,0.0,"Weather: rain 5.1mm, gusts 51.5km/h, snow 0.0cm"
+2025-09-13,Fulham,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.453,0.0,"Weather: rain 3.0mm, gusts 45.4km/h, snow 0.0cm"
+2025-09-13,Newcastle,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.493,0.0,"Weather: rain 6.0mm, gusts 47.2km/h, snow 0.0cm"
+2025-09-13,West Ham,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.484,0.0,"Weather: rain 3.6mm, gusts 46.8km/h, snow 0.0cm"
+2025-09-14,Burnley,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.876,0.0,"Weather: rain 4.5mm, gusts 64.4km/h, snow 0.0cm"
+2025-09-14,Man City,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.604,0.0,"Weather: rain 8.0mm, gusts 52.2km/h, snow 0.0cm"
+2025-09-20,Brighton,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 1.2mm, gusts 74.9km/h, snow 0.0cm"
+2025-09-20,Burnley,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 40.8mm, gusts 58.3km/h, snow 0.0cm"
+2025-09-20,Fulham,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.9,0.0,"Weather: rain 0.0mm, gusts 65.5km/h, snow 0.0cm"
+2025-09-20,Liverpool,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 46.3mm, gusts 57.2km/h, snow 0.0cm"
+2025-09-20,Man United,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 43.1mm, gusts 61.2km/h, snow 0.0cm"
+2025-09-20,West Ham,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.78,0.0,"Weather: rain 0.0mm, gusts 60.1km/h, snow 0.0cm"
+2025-09-20,Wolves,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 11.8mm, gusts 71.3km/h, snow 0.0cm"
+2025-09-21,Arsenal,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.636,0.0,"Weather: rain 0.0mm, gusts 53.6km/h, snow 0.0cm"
+2025-09-21,Bournemouth,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.34,0.0,"Weather: rain 0.0mm, gusts 40.3km/h, snow 0.0cm"
+2025-09-21,Sunderland,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.893,0.0,"Weather: rain 7.1mm, gusts 65.2km/h, snow 0.0cm"
+2025-09-27,Brentford,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.284,0.0,"Weather: rain 0.1mm, gusts 37.8km/h, snow 0.0cm"
+2025-09-27,Chelsea,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.26,0.0,"Weather: rain 0.0mm, gusts 36.7km/h, snow 0.0cm"
+2025-09-27,Crystal Palace,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.309,0.0,"Weather: rain 0.1mm, gusts 38.9km/h, snow 0.0cm"
+2025-09-27,Leeds,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.413,0.0,"Weather: rain 1.2mm, gusts 43.6km/h, snow 0.0cm"
+2025-09-27,Man City,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.436,0.0,"Weather: rain 6.7mm, gusts 44.6km/h, snow 0.0cm"
+2025-09-27,Nott'm Forest,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.389,0.0,"Weather: rain 0.1mm, gusts 42.5km/h, snow 0.0cm"
+2025-09-27,Tottenham,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.276,0.0,"Weather: rain 0.0mm, gusts 37.4km/h, snow 0.0cm"
+2025-09-28,Aston Villa,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.236,0.0,"Weather: rain 3.3mm, gusts 35.6km/h, snow 0.0cm"
+2025-09-28,Newcastle,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.522,0.0,"Weather: rain 9.4mm, gusts 32.8km/h, snow 0.0cm"
+2025-09-29,Everton,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 18.0km/h, snow 0.0cm"
+2025-10-03,Bournemouth,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 13.6mm, gusts 77.8km/h, snow 0.0cm"
+2025-10-04,Arsenal,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 4.3mm, gusts 83.5km/h, snow 0.0cm"
+2025-10-04,Chelsea,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 4.4mm, gusts 81.4km/h, snow 0.0cm"
+2025-10-04,Leeds,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 4.6mm, gusts 73.4km/h, snow 0.0cm"
+2025-10-04,Man United,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 14.8mm, gusts 74.2km/h, snow 0.0cm"
+2025-10-05,Aston Villa,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.893,0.0,"Weather: rain 0.0mm, gusts 65.2km/h, snow 0.0cm"
+2025-10-05,Brentford,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.789,0.0,"Weather: rain 0.0mm, gusts 60.5km/h, snow 0.0cm"
+2025-10-05,Everton,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 0.4mm, gusts 85.0km/h, snow 0.0cm"
+2025-10-05,Newcastle,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 0.0mm, gusts 72.7km/h, snow 0.0cm"
+2025-10-05,Wolves,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.853,0.0,"Weather: rain 0.1mm, gusts 63.4km/h, snow 0.0cm"
+2025-10-18,Brighton,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.573,0.0,"Weather: rain 0.0mm, gusts 50.8km/h, snow 0.0cm"
+2025-10-18,Burnley,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.269,0.0,"Weather: rain 0.1mm, gusts 37.1km/h, snow 0.0cm"
+2025-10-18,Crystal Palace,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.244,0.0,"Weather: rain 0.0mm, gusts 36.0km/h, snow 0.0cm"
+2025-10-18,Fulham,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.236,0.0,"Weather: rain 0.0mm, gusts 35.6km/h, snow 0.0cm"
+2025-10-18,Man City,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.076,0.0,"Weather: rain 0.2mm, gusts 28.4km/h, snow 0.0cm"
+2025-10-18,Nott'm Forest,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.076,0.0,"Weather: rain 0.0mm, gusts 28.4km/h, snow 0.0cm"
+2025-10-18,Sunderland,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.084,0.0,"Weather: rain 0.0mm, gusts 28.8km/h, snow 0.0cm"
+2025-10-19,Liverpool,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.629,0.0,"Weather: rain 5.5mm, gusts 53.3km/h, snow 0.0cm"
+2025-10-19,Tottenham,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.373,0.0,"Weather: rain 3.3mm, gusts 41.8km/h, snow 0.0cm"
+2025-10-20,West Ham,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.404,0.0,"Weather: rain 2.4mm, gusts 43.2km/h, snow 0.0cm"
+2025-10-24,Leeds,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.516,0.0,"Weather: rain 1.0mm, gusts 48.2km/h, snow 0.0cm"
+2025-10-25,Brentford,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.364,0.0,"Weather: rain 0.7mm, gusts 41.4km/h, snow 0.0cm"
+2025-10-25,Chelsea,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.453,0.0,"Weather: rain 1.1mm, gusts 45.4km/h, snow 0.0cm"
+2025-10-25,Man United,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.484,0.0,"Weather: rain 0.0mm, gusts 46.8km/h, snow 0.0cm"
+2025-10-25,Newcastle,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.596,0.0,"Weather: rain 2.3mm, gusts 51.8km/h, snow 0.0cm"
+2025-10-26,Arsenal,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.509,0.0,"Weather: rain 0.5mm, gusts 47.9km/h, snow 0.0cm"
+2025-10-26,Aston Villa,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.58,0.0,"Weather: rain 0.8mm, gusts 51.1km/h, snow 0.0cm"
+2025-10-26,Bournemouth,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.709,0.0,"Weather: rain 1.2mm, gusts 56.9km/h, snow 0.0cm"
+2025-10-26,Everton,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 5.0mm, gusts 70.9km/h, snow 0.0cm"
+2025-10-26,Wolves,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.62,0.0,"Weather: rain 0.6mm, gusts 52.9km/h, snow 0.0cm"
+2025-11-01,Brighton,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 11.6mm, gusts 76.0km/h, snow 0.0cm"
+2025-11-01,Burnley,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 8.4mm, gusts 71.6km/h, snow 0.0cm"
+2025-11-01,Crystal Palace,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.909,0.0,"Weather: rain 6.3mm, gusts 65.9km/h, snow 0.0cm"
+2025-11-01,Fulham,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.869,0.0,"Weather: rain 4.7mm, gusts 64.1km/h, snow 0.0cm"
+2025-11-01,Liverpool,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.836,0.0,"Weather: rain 10.6mm, gusts 62.6km/h, snow 0.0cm"
+2025-11-01,Nott'm Forest,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.893,0.0,"Weather: rain 1.7mm, gusts 65.2km/h, snow 0.0cm"
+2025-11-01,Tottenham,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.804,0.0,"Weather: rain 6.8mm, gusts 61.2km/h, snow 0.0cm"
+2025-11-02,Man City,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.229,0.0,"Weather: rain 1.9mm, gusts 35.3km/h, snow 0.0cm"
+2025-11-02,West Ham,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.269,0.0,"Weather: rain 3.2mm, gusts 37.1km/h, snow 0.0cm"
+2025-11-03,Sunderland,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.82,0.0,"Weather: rain 3.2mm, gusts 61.9km/h, snow 0.0cm"
+2025-11-08,Chelsea,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.161,0.0,"Weather: rain 2.9mm, gusts 27.0km/h, snow 0.0cm"
+2025-11-08,Everton,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.213,0.0,"Weather: rain 0.1mm, gusts 34.6km/h, snow 0.0cm"
+2025-11-08,Sunderland,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.011,0.0,"Weather: rain 0.2mm, gusts 23.0km/h, snow 0.0cm"
+2025-11-08,Tottenham,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.156,0.0,"Weather: rain 0.4mm, gusts 32.0km/h, snow 0.0cm"
+2025-11-08,West Ham,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.144,0.0,"Weather: rain 2.6mm, gusts 27.7km/h, snow 0.0cm"
+2025-11-09,Aston Villa,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.42,0.0,"Weather: rain 6.1mm, gusts 43.9km/h, snow 0.0cm"
+2025-11-09,Brentford,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.269,0.0,"Weather: rain 0.2mm, gusts 37.1km/h, snow 0.0cm"
+2025-11-09,Crystal Palace,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.404,0.0,"Weather: rain 0.1mm, gusts 43.2km/h, snow 0.0cm"
+2025-11-09,Man City,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.3,0.0,"Weather: rain 3.6mm, gusts 38.5km/h, snow 0.0cm"
+2025-11-09,Nott'm Forest,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.364,0.0,"Weather: rain 0.2mm, gusts 41.4km/h, snow 0.0cm"
+2025-11-22,Bournemouth,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.916,0.0,"Weather: rain 12.5mm, gusts 66.2km/h, snow 0.0cm"
+2025-11-22,Brighton,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 19.0mm, gusts 67.3km/h, snow 0.0cm"
+2025-11-22,Burnley,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.82,0.0,"Weather: rain 5.9mm, gusts 61.9km/h, snow 0.8cm"
+2025-11-22,Fulham,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.578,0.0,"Weather: rain 10.4mm, gusts 45.0km/h, snow 0.0cm"
+2025-11-22,Liverpool,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.516,0.0,"Weather: rain 6.4mm, gusts 48.2km/h, snow 0.0cm"
+2025-11-22,Newcastle,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.269,0.0,"Weather: rain 2.7mm, gusts 37.1km/h, snow 0.0cm"
+2025-11-22,Wolves,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.58,0.0,"Weather: rain 3.6mm, gusts 51.1km/h, snow 0.0cm"
+2025-11-23,Arsenal,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 5.9mm, gusts 47.5km/h, snow 0.0cm"
+2025-11-23,Leeds,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.493,0.0,"Weather: rain 2.5mm, gusts 47.2km/h, snow 0.0cm"
+2025-11-24,Man United,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.244,0.0,"Weather: rain 1.0mm, gusts 36.0km/h, snow 0.0cm"
+2025-11-29,Brentford,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.733,0.0,"Weather: rain 4.3mm, gusts 58.0km/h, snow 0.0cm"
+2025-11-29,Everton,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.524,0.0,"Weather: rain 4.8mm, gusts 48.6km/h, snow 0.1cm"
+2025-11-29,Man City,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.483,0.0,"Weather: rain 8.7mm, gusts 29.5km/h, snow 0.2cm"
+2025-11-29,Sunderland,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.884,0.0,"Weather: rain 10.1mm, gusts 64.8km/h, snow 0.0cm"
+2025-11-29,Tottenham,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.693,0.0,"Weather: rain 4.5mm, gusts 56.2km/h, snow 0.0cm"
+2025-11-30,Aston Villa,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.364,0.0,"Weather: rain 0.3mm, gusts 41.4km/h, snow 0.0cm"
+2025-11-30,Chelsea,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.116,0.0,"Weather: rain 0.0mm, gusts 30.2km/h, snow 0.0cm"
+2025-11-30,Crystal Palace,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.156,0.0,"Weather: rain 0.0mm, gusts 32.0km/h, snow 0.0cm"
+2025-11-30,Nott'm Forest,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.42,0.0,"Weather: rain 1.3mm, gusts 43.9km/h, snow 0.0cm"
+2025-11-30,West Ham,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.229,0.0,"Weather: rain 0.0mm, gusts 35.3km/h, snow 0.0cm"
+2025-12-02,Bournemouth,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.444,0.0,"Weather: rain 3.0mm, gusts 45.0km/h, snow 0.0cm"
+2025-12-02,Fulham,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.789,0.0,"Weather: rain 3.8mm, gusts 60.5km/h, snow 0.0cm"
+2025-12-02,Newcastle,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.516,0.0,"Weather: rain 0.5mm, gusts 48.2km/h, snow 0.0cm"
+2025-12-03,Arsenal,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.069,0.0,"Weather: rain 0.2mm, gusts 28.1km/h, snow 0.0cm"
+2025-12-03,Brighton,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.436,0.0,"Weather: rain 3.7mm, gusts 44.6km/h, snow 0.0cm"
+2025-12-03,Burnley,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.429,0.0,"Weather: rain 0.0mm, gusts 44.3km/h, snow 0.0cm"
+2025-12-03,Leeds,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 22.0km/h, snow 0.0cm"
+2025-12-03,Liverpool,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.236,0.0,"Weather: rain 0.0mm, gusts 35.6km/h, snow 0.0cm"
+2025-12-03,Wolves,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.109,0.0,"Weather: rain 0.0mm, gusts 29.9km/h, snow 0.0cm"
+2025-12-04,Man United,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.506,0.0,"Weather: rain 9.1mm, gusts 38.5km/h, snow 0.0cm"
+2025-12-06,Aston Villa,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.693,0.0,"Weather: rain 1.3mm, gusts 56.2km/h, snow 0.0cm"
+2025-12-06,Bournemouth,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 2.7mm, gusts 70.9km/h, snow 0.0cm"
+2025-12-06,Everton,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.694,0.0,"Weather: rain 12.5mm, gusts 46.8km/h, snow 0.0cm"
+2025-12-06,Leeds,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.42,0.0,"Weather: rain 3.6mm, gusts 43.9km/h, snow 0.0cm"
+2025-12-06,Man City,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 8.2mm, gusts 47.5km/h, snow 0.0cm"
+2025-12-06,Newcastle,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.564,0.0,"Weather: rain 4.7mm, gusts 50.4km/h, snow 0.0cm"
+2025-12-06,Tottenham,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.636,0.0,"Weather: rain 1.8mm, gusts 53.6km/h, snow 0.0cm"
+2025-12-07,Brighton,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 12.2mm, gusts 81.0km/h, snow 0.0cm"
+2025-12-07,Fulham,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.74,0.0,"Weather: rain 4.3mm, gusts 58.3km/h, snow 0.0cm"
+2025-12-08,Wolves,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 0.4mm, gusts 47.5km/h, snow 0.0cm"
+2025-12-13,Arsenal,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.02,0.0,"Weather: rain 0.0mm, gusts 25.9km/h, snow 0.0cm"
+2025-12-13,Burnley,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.7,0.0,"Weather: rain 0.1mm, gusts 56.5km/h, snow 0.0cm"
+2025-12-13,Chelsea,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.004,0.0,"Weather: rain 0.0mm, gusts 25.2km/h, snow 0.0cm"
+2025-12-13,Liverpool,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.364,0.0,"Weather: rain 0.0mm, gusts 41.4km/h, snow 0.0cm"
+2025-12-14,Brentford,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.349,0.0,"Weather: rain 0.0mm, gusts 40.7km/h, snow 0.0cm"
+2025-12-14,Crystal Palace,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 0.0mm, gusts 47.5km/h, snow 0.0cm"
+2025-12-14,Nott'm Forest,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.549,0.0,"Weather: rain 0.0mm, gusts 49.7km/h, snow 0.0cm"
+2025-12-14,Sunderland,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 20.6mm, gusts 68.8km/h, snow 0.0cm"
+2025-12-14,West Ham,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.429,0.0,"Weather: rain 0.0mm, gusts 44.3km/h, snow 0.0cm"
+2025-12-15,Man United,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 31.0mm, gusts 54.0km/h, snow 0.0cm"
+2025-12-20,Bournemouth,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.62,0.0,"Weather: rain 0.4mm, gusts 52.9km/h, snow 0.0cm"
+2025-12-20,Brighton,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.404,0.0,"Weather: rain 0.6mm, gusts 43.2km/h, snow 0.0cm"
+2025-12-20,Everton,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.524,0.0,"Weather: rain 0.0mm, gusts 48.6km/h, snow 0.0cm"
+2025-12-20,Leeds,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.076,0.0,"Weather: rain 0.0mm, gusts 28.4km/h, snow 0.0cm"
+2025-12-20,Man City,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.22,0.0,"Weather: rain 0.0mm, gusts 34.9km/h, snow 0.0cm"
+2025-12-20,Newcastle,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.044,0.0,"Weather: rain 0.0mm, gusts 27.0km/h, snow 0.0cm"
+2025-12-20,Tottenham,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.06,0.0,"Weather: rain 0.0mm, gusts 27.7km/h, snow 0.0cm"
+2025-12-20,Wolves,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.269,0.0,"Weather: rain 0.1mm, gusts 37.1km/h, snow 0.0cm"
+2025-12-21,Aston Villa,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.244,0.0,"Weather: rain 2.9mm, gusts 36.0km/h, snow 0.0cm"
+2025-12-22,Fulham,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.18,0.0,"Weather: rain 1.7mm, gusts 33.1km/h, snow 0.0cm"
+2025-12-26,Man United,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.373,0.0,"Weather: rain 0.0mm, gusts 41.8km/h, snow 0.0cm"
+2025-12-27,Arsenal,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.58,0.0,"Weather: rain 0.0mm, gusts 51.1km/h, snow 0.0cm"
+2025-12-27,Brentford,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.524,0.0,"Weather: rain 0.0mm, gusts 48.6km/h, snow 0.0cm"
+2025-12-27,Burnley,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.756,0.0,"Weather: rain 0.0mm, gusts 59.0km/h, snow 0.0cm"
+2025-12-27,Chelsea,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.604,0.0,"Weather: rain 0.0mm, gusts 52.2km/h, snow 0.0cm"
+2025-12-27,Liverpool,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.125,0.0,"Weather: rain 0.0mm, gusts 22.3km/h, snow 0.0cm"
+2025-12-27,Nott'm Forest,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.34,0.0,"Weather: rain 0.0mm, gusts 40.3km/h, snow 0.0cm"
+2025-12-27,West Ham,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.54,0.0,"Weather: rain 0.0mm, gusts 49.3km/h, snow 0.0cm"
+2025-12-28,Crystal Palace,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.284,0.0,"Weather: rain 0.0mm, gusts 37.8km/h, snow 0.0cm"
+2025-12-28,Sunderland,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.14,0.0,"Weather: rain 0.1mm, gusts 31.3km/h, snow 0.0cm"
+2025-12-30,Arsenal,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.075,0.0,"Weather: rain 0.0mm, gusts 27.4km/h, snow 0.0cm"
+2025-12-30,Burnley,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.312,0.0,"Weather: rain 0.1mm, gusts 31.0km/h, snow 0.0cm"
+2025-12-30,Chelsea,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.053,0.0,"Weather: rain 0.0mm, gusts 27.4km/h, snow 0.0cm"
+2025-12-30,Man United,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.175,0.0,"Weather: rain 0.0mm, gusts 18.0km/h, snow 0.0cm"
+2025-12-30,Nott'm Forest,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.02,0.0,"Weather: rain 0.0mm, gusts 25.9km/h, snow 0.0cm"
+2025-12-30,West Ham,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.062,0.0,"Weather: rain 0.0mm, gusts 27.7km/h, snow 0.0cm"
+2026-01-01,Brentford,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.362,0.0,"Weather: rain 0.0mm, gusts 39.6km/h, snow 0.0cm"
+2026-01-01,Crystal Palace,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.4,0.0,"Weather: rain 0.0mm, gusts 40.0km/h, snow 0.0cm"
+2026-01-01,Liverpool,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.964,0.0,"Weather: rain 2.2mm, gusts 68.4km/h, snow 0.0cm"
+2026-01-01,Sunderland,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.804,0.0,"Weather: rain 0.0mm, gusts 61.2km/h, snow 0.0cm"
+2026-01-03,Aston Villa,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 0.0mm, gusts 37.1km/h, snow 0.0cm"
+2026-01-03,Bournemouth,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.35,0.0,"Weather: rain 0.0mm, gusts 40.0km/h, snow 0.0cm"
+2026-01-03,Brighton,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.533,0.0,"Weather: rain 0.0mm, gusts 49.0km/h, snow 0.0cm"
+2026-01-03,Wolves,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.625,0.0,"Weather: rain 0.0mm, gusts 35.6km/h, snow 0.0cm"
+2026-01-04,Everton,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.336,0.0,"Weather: rain 3.1mm, gusts 32.0km/h, snow 1.7cm"
+2026-01-04,Fulham,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.65,0.0,"Weather: rain 0.0mm, gusts 22.7km/h, snow 0.0cm"
+2026-01-04,Leeds,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.537,0.0,"Weather: rain 0.0mm, gusts 32.8km/h, snow 0.0cm"
+2026-01-04,Man City,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.854,0.0,"Weather: rain 6.1mm, gusts 19.4km/h, snow 4.3cm"
+2026-01-04,Newcastle,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.662,0.0,"Weather: rain 0.0mm, gusts 43.6km/h, snow 0.0cm"
+2026-01-04,Tottenham,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.65,0.0,"Weather: rain 0.0mm, gusts 27.7km/h, snow 0.0cm"
+2026-01-06,West Ham,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.9,0.0,"Weather: rain 1.1mm, gusts 43.6km/h, snow 0.1cm"
+2026-01-07,Bournemouth,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.82,0.0,"Weather: rain 4.8mm, gusts 61.9km/h, snow 0.0cm"
+2026-01-07,Brentford,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.448,0.0,"Weather: rain 8.0mm, gusts 41.4km/h, snow 2.2cm"
+2026-01-07,Burnley,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.676,0.0,"Weather: rain 3.7mm, gusts 55.4km/h, snow 2.4cm"
+2026-01-07,Crystal Palace,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.588,0.0,"Weather: rain 10.4mm, gusts 51.1km/h, snow 2.9cm"
+2026-01-07,Everton,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 3.2mm, gusts 70.2km/h, snow 0.8cm"
+2026-01-07,Fulham,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.484,0.0,"Weather: rain 7.6mm, gusts 46.8km/h, snow 1.4cm"
+2026-01-07,Man City,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.413,0.0,"Weather: rain 0.1mm, gusts 43.6km/h, snow 0.0cm"
+2026-01-07,Newcastle,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 1.9mm, gusts 47.5km/h, snow 0.8cm"
+2026-01-08,Arsenal,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.767,0.0,"Weather: rain 13.8mm, gusts 54.4km/h, snow 0.0cm"
+2026-01-17,Chelsea,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.072,0.0,"Weather: rain 1.3mm, gusts 28.1km/h, snow 0.0cm"
+2026-01-17,Leeds,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.133,0.0,"Weather: rain 2.4mm, gusts 28.1km/h, snow 0.0cm"
+2026-01-17,Liverpool,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.22,0.0,"Weather: rain 0.0mm, gusts 34.9km/h, snow 0.0cm"
+2026-01-17,Man United,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.378,0.0,"Weather: rain 6.8mm, gusts 32.0km/h, snow 0.0cm"
+2026-01-17,Nott'm Forest,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.172,0.0,"Weather: rain 3.1mm, gusts 30.6km/h, snow 0.0cm"
+2026-01-17,Sunderland,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.109,0.0,"Weather: rain 1.8mm, gusts 29.9km/h, snow 0.0cm"
+2026-01-17,Tottenham,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.053,0.0,"Weather: rain 0.5mm, gusts 27.4km/h, snow 0.0cm"
+2026-01-18,Aston Villa,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.267,0.0,"Weather: rain 4.8mm, gusts 20.9km/h, snow 0.0cm"
+2026-01-18,Wolves,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.35,0.0,"Weather: rain 6.3mm, gusts 19.1km/h, snow 0.0cm"
+2026-01-19,Brighton,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.349,0.0,"Weather: rain 1.0mm, gusts 40.7km/h, snow 0.0cm"
+2026-01-24,Bournemouth,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 10.5mm, gusts 93.2km/h, snow 0.0cm"
+2026-01-24,Burnley,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.813,0.0,"Weather: rain 1.3mm, gusts 61.6km/h, snow 0.1cm"
+2026-01-24,Fulham,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.453,0.0,"Weather: rain 3.9mm, gusts 45.4km/h, snow 0.0cm"
+2026-01-24,Man City,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.756,0.0,"Weather: rain 1.7mm, gusts 59.0km/h, snow 0.0cm"
+2026-01-24,West Ham,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.484,0.0,"Weather: rain 1.8mm, gusts 46.8km/h, snow 0.0cm"
+2026-01-25,Arsenal,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.396,0.0,"Weather: rain 4.4mm, gusts 42.8km/h, snow 0.0cm"
+2026-01-25,Brentford,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.269,0.0,"Weather: rain 3.4mm, gusts 37.1km/h, snow 0.0cm"
+2026-01-25,Crystal Palace,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.38,0.0,"Weather: rain 1.6mm, gusts 42.1km/h, snow 0.0cm"
+2026-01-25,Newcastle,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.684,0.0,"Weather: rain 2.4mm, gusts 55.8km/h, snow 0.0cm"
+2026-01-26,Everton,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.653,0.0,"Weather: rain 0.3mm, gusts 54.4km/h, snow 0.0cm"
+2026-01-31,Brighton,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.476,0.0,"Weather: rain 2.8mm, gusts 46.4km/h, snow 0.0cm"
+2026-01-31,Chelsea,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.156,0.0,"Weather: rain 0.6mm, gusts 32.0km/h, snow 0.0cm"
+2026-01-31,Leeds,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.453,0.0,"Weather: rain 4.9mm, gusts 45.4km/h, snow 0.0cm"
+2026-01-31,Liverpool,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.644,0.0,"Weather: rain 6.0mm, gusts 54.0km/h, snow 0.0cm"
+2026-01-31,Wolves,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.453,0.0,"Weather: rain 4.2mm, gusts 45.4km/h, snow 0.0cm"
+2026-02-01,Aston Villa,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.122,0.0,"Weather: rain 2.2mm, gusts 22.0km/h, snow 0.0cm"
+2026-02-01,Man United,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.083,0.0,"Weather: rain 1.5mm, gusts 21.6km/h, snow 0.0cm"
+2026-02-01,Nott'm Forest,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.044,0.0,"Weather: rain 0.8mm, gusts 23.0km/h, snow 0.0cm"
+2026-02-01,Tottenham,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.161,0.0,"Weather: rain 2.9mm, gusts 23.4km/h, snow 0.0cm"
+2026-02-02,Sunderland,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.596,0.0,"Weather: rain 2.6mm, gusts 51.8km/h, snow 0.0cm"
+2026-02-06,Leeds,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.744,0.0,"Weather: rain 13.4mm, gusts 37.1km/h, snow 0.3cm"
+2026-02-07,Arsenal,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.316,0.0,"Weather: rain 3.0mm, gusts 39.2km/h, snow 0.0cm"
+2026-02-07,Bournemouth,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.876,0.0,"Weather: rain 5.4mm, gusts 64.4km/h, snow 0.0cm"
+2026-02-07,Burnley,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.489,0.0,"Weather: rain 8.8mm, gusts 44.6km/h, snow 0.0cm"
+2026-02-07,Fulham,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.364,0.0,"Weather: rain 3.1mm, gusts 41.4km/h, snow 0.0cm"
+2026-02-07,Man United,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.911,0.0,"Weather: rain 16.4mm, gusts 37.4km/h, snow 0.0cm"
+2026-02-07,Newcastle,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.189,0.0,"Weather: rain 1.4mm, gusts 33.5km/h, snow 0.0cm"
+2026-02-07,Wolves,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.539,0.0,"Weather: rain 9.7mm, gusts 39.6km/h, snow 0.0cm"
+2026-02-08,Brighton,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.324,0.0,"Weather: rain 2.6mm, gusts 39.6km/h, snow 0.0cm"
+2026-02-08,Liverpool,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.189,0.0,"Weather: rain 1.9mm, gusts 33.5km/h, snow 0.0cm"
+2026-02-10,Chelsea,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.213,0.0,"Weather: rain 3.7mm, gusts 34.6km/h, snow 0.0cm"
+2026-02-10,Everton,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.436,0.0,"Weather: rain 4.8mm, gusts 44.6km/h, snow 0.0cm"
+2026-02-10,Tottenham,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.206,0.0,"Weather: rain 3.7mm, gusts 32.4km/h, snow 0.0cm"
+2026-02-10,West Ham,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.167,0.0,"Weather: rain 3.0mm, gusts 31.7km/h, snow 0.0cm"
+2026-02-11,Aston Villa,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.484,0.0,"Weather: rain 5.0mm, gusts 46.8km/h, snow 0.0cm"
+2026-02-11,Crystal Palace,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.62,0.0,"Weather: rain 3.0mm, gusts 52.9km/h, snow 0.0cm"
+2026-02-11,Man City,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 9.0mm, gusts 23.0km/h, snow 0.0cm"
+2026-02-11,Nott'm Forest,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.561,0.0,"Weather: rain 10.1mm, gusts 38.5km/h, snow 0.0cm"
+2026-02-11,Sunderland,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 23.0mm, gusts 61.2km/h, snow 0.0cm"
+2026-02-12,Brentford,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.256,0.0,"Weather: rain 4.6mm, gusts 30.2km/h, snow 0.0cm"
+2026-02-18,Wolves,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.94,0.0,"Weather: rain 3.2mm, gusts 67.3km/h, snow 1.0cm"
+2026-02-21,Aston Villa,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.604,0.0,"Weather: rain 1.0mm, gusts 52.2km/h, snow 0.0cm"
+2026-02-21,Brentford,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.58,0.0,"Weather: rain 2.5mm, gusts 51.1km/h, snow 0.0cm"
+2026-02-21,Chelsea,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.613,0.0,"Weather: rain 3.9mm, gusts 52.6km/h, snow 0.0cm"
+2026-02-21,Man City,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.483,0.0,"Weather: rain 8.7mm, gusts 42.8km/h, snow 0.0cm"
+2026-02-21,West Ham,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.604,0.0,"Weather: rain 3.6mm, gusts 52.2km/h, snow 0.0cm"
+2026-02-22,Crystal Palace,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.469,0.0,"Weather: rain 2.1mm, gusts 46.1km/h, snow 0.0cm"
+2026-02-22,Nott'm Forest,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.884,0.0,"Weather: rain 0.5mm, gusts 64.8km/h, snow 0.0cm"
+2026-02-22,Sunderland,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.66,0.0,"Weather: rain 0.4mm, gusts 54.7km/h, snow 0.0cm"
+2026-02-22,Tottenham,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.596,0.0,"Weather: rain 1.8mm, gusts 51.8km/h, snow 0.0cm"
+2026-02-23,Everton,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.813,0.0,"Weather: rain 2.7mm, gusts 61.6km/h, snow 0.0cm"
+2026-02-27,Wolves,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.689,0.0,"Weather: rain 12.4mm, gusts 32.8km/h, snow 0.0cm"
+2026-02-28,Bournemouth,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.589,0.0,"Weather: rain 9.4mm, gusts 51.5km/h, snow 0.0cm"
+2026-02-28,Burnley,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.204,0.0,"Weather: rain 1.2mm, gusts 34.2km/h, snow 0.1cm"
+2026-02-28,Leeds,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.133,0.0,"Weather: rain 0.9mm, gusts 31.0km/h, snow 0.0cm"
+2026-02-28,Liverpool,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.411,0.0,"Weather: rain 7.4mm, gusts 35.3km/h, snow 0.6cm"
+2026-02-28,Newcastle,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.062,0.0,"Weather: rain 1.0mm, gusts 24.5km/h, snow 0.0cm"
+2026-03-01,Arsenal,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.533,0.0,"Weather: rain 0.6mm, gusts 49.0km/h, snow 0.0cm"
+2026-03-01,Brighton,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.964,0.0,"Weather: rain 2.6mm, gusts 68.4km/h, snow 0.0cm"
+2026-03-01,Fulham,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.516,0.0,"Weather: rain 0.6mm, gusts 48.2km/h, snow 0.0cm"
+2026-03-01,Man United,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.62,0.0,"Weather: rain 3.0mm, gusts 52.9km/h, snow 0.0cm"
+2026-03-03,Bournemouth,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.036,0.0,"Weather: rain 0.0mm, gusts 26.6km/h, snow 0.0cm"
+2026-03-03,Everton,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.069,0.0,"Weather: rain 0.0mm, gusts 28.1km/h, snow 0.0cm"
+2026-03-03,Leeds,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 18.4km/h, snow 0.0cm"
+2026-03-03,Wolves,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.006,0.0,"Weather: rain 0.1mm, gusts 25.2km/h, snow 0.0cm"
+2026-03-04,Aston Villa,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.084,0.0,"Weather: rain 0.0mm, gusts 28.8km/h, snow 0.0cm"
+2026-03-04,Brighton,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.189,0.0,"Weather: rain 0.0mm, gusts 33.5km/h, snow 0.0cm"
+2026-03-04,Fulham,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 22.7km/h, snow 0.0cm"
+2026-03-04,Man City,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.069,0.0,"Weather: rain 0.0mm, gusts 28.1km/h, snow 0.0cm"
+2026-03-04,Newcastle,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.156,0.0,"Weather: rain 0.0mm, gusts 32.0km/h, snow 0.0cm"
+2026-03-05,Tottenham,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.093,0.0,"Weather: rain 0.0mm, gusts 29.2km/h, snow 0.0cm"
+2026-03-14,Arsenal,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.173,0.0,"Weather: rain 0.6mm, gusts 32.8km/h, snow 0.1cm"
+2026-03-14,Burnley,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.316,0.0,"Weather: rain 0.1mm, gusts 39.2km/h, snow 0.0cm"
+2026-03-14,Chelsea,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.156,0.0,"Weather: rain 0.7mm, gusts 32.0km/h, snow 0.2cm"
+2026-03-14,Sunderland,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.3,0.0,"Weather: rain 0.3mm, gusts 38.5km/h, snow 0.0cm"
+2026-03-14,West Ham,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.196,0.0,"Weather: rain 0.9mm, gusts 33.8km/h, snow 0.3cm"
+2026-03-15,Crystal Palace,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.836,0.0,"Weather: rain 1.8mm, gusts 62.6km/h, snow 0.0cm"
+2026-03-15,Liverpool,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.844,0.0,"Weather: rain 8.6mm, gusts 63.0km/h, snow 0.4cm"
+2026-03-15,Man United,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.876,0.0,"Weather: rain 6.7mm, gusts 64.4km/h, snow 0.1cm"
+2026-03-15,Nott'm Forest,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.924,0.0,"Weather: rain 2.6mm, gusts 66.6km/h, snow 0.0cm"
+2026-03-16,Brentford,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 0.1mm, gusts 47.5km/h, snow 0.0cm"
+2026-03-20,Bournemouth,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 24.8km/h, snow 0.0cm"
+2026-03-21,Brighton,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.116,0.0,"Weather: rain 0.0mm, gusts 30.2km/h, snow 0.0cm"
+2026-03-21,Everton,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 14.4km/h, snow 0.0cm"
+2026-03-21,Fulham,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 22.3km/h, snow 0.0cm"
+2026-03-21,Leeds,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 17.6km/h, snow 0.0cm"
+2026-03-22,Aston Villa,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.004,0.0,"Weather: rain 0.0mm, gusts 25.2km/h, snow 0.0cm"
+2026-03-22,Newcastle,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.213,0.0,"Weather: rain 0.0mm, gusts 34.6km/h, snow 0.0cm"
+2026-03-22,Tottenham,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.15,0.0,"Weather: rain 0.0mm, gusts 19.4km/h, snow 0.0cm"
+2026-04-10,West Ham,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.253,0.0,"Weather: rain 0.0mm, gusts 36.4km/h, snow 0.0cm"
+2026-04-11,Arsenal,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.829,0.0,"Weather: rain 0.2mm, gusts 62.3km/h, snow 0.0cm"
+2026-04-11,Brentford,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.796,0.0,"Weather: rain 0.3mm, gusts 60.8km/h, snow 0.0cm"
+2026-04-11,Burnley,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 10.6mm, gusts 76.0km/h, snow 2.4cm"
+2026-04-11,Liverpool,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.909,0.0,"Weather: rain 5.7mm, gusts 65.9km/h, snow 0.0cm"
+2026-04-12,Chelsea,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.669,0.0,"Weather: rain 0.3mm, gusts 55.1km/h, snow 0.0cm"
+2026-04-12,Crystal Palace,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.66,0.0,"Weather: rain 0.6mm, gusts 54.7km/h, snow 0.0cm"
+2026-04-12,Nott'm Forest,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.884,0.0,"Weather: rain 3.3mm, gusts 64.8km/h, snow 0.0cm"
+2026-04-12,Sunderland,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.94,0.0,"Weather: rain 0.1mm, gusts 67.3km/h, snow 0.0cm"
+2026-04-13,Man United,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.204,0.0,"Weather: rain 0.6mm, gusts 34.2km/h, snow 0.0cm"
+2026-04-18,Brentford,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.22,0.0,"Weather: rain 0.1mm, gusts 34.9km/h, snow 0.0cm"
+2026-04-18,Chelsea,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.204,0.0,"Weather: rain 0.1mm, gusts 34.2km/h, snow 0.0cm"
+2026-04-18,Leeds,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.476,0.0,"Weather: rain 0.4mm, gusts 46.4km/h, snow 0.0cm"
+2026-04-18,Newcastle,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.629,0.0,"Weather: rain 0.4mm, gusts 53.3km/h, snow 0.0cm"
+2026-04-18,Tottenham,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.244,0.0,"Weather: rain 0.1mm, gusts 36.0km/h, snow 0.0cm"
+2026-04-19,Aston Villa,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.22,0.0,"Weather: rain 0.0mm, gusts 34.9km/h, snow 0.0cm"
+2026-04-19,Everton,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.213,0.0,"Weather: rain 0.1mm, gusts 34.6km/h, snow 0.0cm"
+2026-04-19,Man City,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.069,0.0,"Weather: rain 0.1mm, gusts 28.1km/h, snow 0.0cm"
+2026-04-19,Nott'm Forest,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.109,0.0,"Weather: rain 0.2mm, gusts 29.9km/h, snow 0.0cm"
+2026-04-20,Crystal Palace,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.324,0.0,"Weather: rain 0.0mm, gusts 39.6km/h, snow 0.0cm"
+2026-04-21,Brighton,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.724,0.0,"Weather: rain 0.7mm, gusts 57.6km/h, snow 0.0cm"
+2026-04-22,Bournemouth,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,1.0,0.0,"Weather: rain 0.0mm, gusts 79.2km/h, snow 0.0cm"
+2026-04-22,Burnley,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.829,0.0,"Weather: rain 0.0mm, gusts 62.3km/h, snow 0.0cm"
+2026-04-24,Sunderland,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.075,0.0,"Weather: rain 0.0mm, gusts 26.6km/h, snow 0.0cm"
+2026-04-25,Arsenal,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 24.8km/h, snow 0.0cm"
+2026-04-25,Fulham,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 23.4km/h, snow 0.0cm"
+2026-04-25,Liverpool,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.204,0.0,"Weather: rain 0.0mm, gusts 34.2km/h, snow 0.0cm"
+2026-04-25,West Ham,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,"Weather: rain 0.0mm, gusts 24.1km/h, snow 0.0cm"
+2026-04-25,Wolves,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.244,0.0,"Weather: rain 0.0mm, gusts 36.0km/h, snow 0.0cm"
+2026-04-27,Man United,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.22,0.0,"Weather: rain 0.5mm, gusts 34.9km/h, snow 0.0cm"
+2026-05-01,Leeds,Burnley,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.213,0.0,"Weather: rain 0.6mm, gusts 34.6km/h, snow 0.0cm"
+2026-05-02,Arsenal,Fulham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.22,0.0,"Weather: rain 2.6mm, gusts 34.9km/h, snow 0.0cm"
+2026-05-02,Brentford,West Ham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.172,0.0,"Weather: rain 3.1mm, gusts 32.4km/h, snow 0.0cm"
+2026-05-02,Newcastle,Brighton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.309,0.0,"Weather: rain 0.7mm, gusts 38.9km/h, snow 0.0cm"
+2026-05-02,Wolves,Sunderland,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.35,0.0,"Weather: rain 6.3mm, gusts 25.2km/h, snow 0.0cm"
+2026-05-03,Aston Villa,Tottenham,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.173,0.0,"Weather: rain 2.3mm, gusts 32.8km/h, snow 0.0cm"
+2026-05-03,Bournemouth,Crystal Palace,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.204,0.0,"Weather: rain 0.0mm, gusts 34.2km/h, snow 0.0cm"
+2026-05-03,Man United,Liverpool,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.478,0.0,"Weather: rain 8.6mm, gusts 33.5km/h, snow 0.0cm"
+2026-05-04,Chelsea,Nott'm Forest,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.069,0.0,"Weather: rain 0.4mm, gusts 28.1km/h, snow 0.0cm"
+2026-05-04,Everton,Man City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.156,0.0,"Weather: rain 0.7mm, gusts 32.0km/h, snow 0.0cm"
+2026-05-09,Brighton,Wolves,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.404,0.0,"Weather: rain 0.0mm, gusts 43.2km/h, snow 0.0cm"
+2026-05-09,Fulham,Bournemouth,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.284,0.0,"Weather: rain 0.0mm, gusts 37.8km/h, snow 0.0cm"
+2026-05-09,Liverpool,Chelsea,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.34,0.0,"Weather: rain 2.2mm, gusts 40.3km/h, snow 0.0cm"
+2026-05-09,Man City,Brentford,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.404,0.0,"Weather: rain 5.6mm, gusts 43.2km/h, snow 0.0cm"
+2026-05-09,Sunderland,Man United,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.589,0.0,"Weather: rain 5.7mm, gusts 51.5km/h, snow 0.0cm"
+2026-05-10,Burnley,Aston Villa,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.309,0.0,"Weather: rain 0.0mm, gusts 38.9km/h, snow 0.0cm"
+2026-05-10,Crystal Palace,Everton,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.54,0.0,"Weather: rain 0.6mm, gusts 49.3km/h, snow 0.0cm"
+2026-05-10,Nott'm Forest,Newcastle,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.5,0.0,"Weather: rain 0.8mm, gusts 47.5km/h, snow 0.0cm"
+2026-05-10,West Ham,Arsenal,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.549,0.0,"Weather: rain 0.4mm, gusts 49.7km/h, snow 0.0cm"
+2026-05-11,Tottenham,Leeds,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.5,0.5,0.413,0.0,"Weather: rain 0.7mm, gusts 43.6km/h, snow 0.0cm"
+2026-05-13,Man City,Crystal Palace,8,12,0.109,0.229,0,0,0.978,0.954,1.0,1.0,0.0,0.5,0.5,0.0,0.0,FPL availability H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:37:03Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:42:13Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:43:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:28:38Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:32:30Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0]
