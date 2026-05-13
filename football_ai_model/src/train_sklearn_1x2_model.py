@@ -34,6 +34,7 @@ MODEL_PATH = MODELS_DIR / "sklearn_one_x_two_model.joblib"
 MODEL_META_PATH = MODELS_DIR / "sklearn_one_x_two_model_meta.json"
 OVER_25_MODEL_PATH = MODELS_DIR / "sklearn_over_25_model.joblib"
 OVER_25_META_PATH = MODELS_DIR / "sklearn_over_25_model_meta.json"
+DEFAULT_OVER_25_BET_THRESHOLD = float(os.getenv("OVER_25_BET_THRESHOLD", "0.10") or "0.10")
 
 
 def rows_to_matrix(rows, names):
@@ -192,7 +193,7 @@ def rolling_over_25_backtest(rows, names):
             continue
         model = train_classifier(train_rows, names, labels=over_25_labels(train_rows))
         probabilities = predict_over_25(model, test_rows, names)
-        summary = evaluate_over_25(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD)
+        summary = evaluate_over_25(test_rows, probabilities, threshold=DEFAULT_OVER_25_BET_THRESHOLD)
         season_summaries.append({
             "season": season,
             "training_matches": len(train_rows),
@@ -267,11 +268,17 @@ def main():
 
     over_model = train_classifier(train_rows, over_names, labels=over_25_labels(train_rows))
     over_probabilities = predict_over_25(over_model, test_rows, over_names)
-    over_summary = evaluate_over_25(test_rows, over_probabilities, threshold=DEFAULT_BET_THRESHOLD)
+    over_summary = evaluate_over_25(test_rows, over_probabilities, threshold=DEFAULT_OVER_25_BET_THRESHOLD)
     over_rolling_summaries = rolling_over_25_backtest(rows, over_names)
     over_rolling_average = average_summary(over_rolling_summaries)
 
-    write_predictions(test_rows, probabilities, over_probabilities)
+    write_predictions(
+        test_rows,
+        probabilities,
+        over_probabilities,
+        bet_threshold=DEFAULT_BET_THRESHOLD,
+        over_25_bet_threshold=DEFAULT_OVER_25_BET_THRESHOLD,
+    )
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, MODEL_PATH)
     joblib.dump(over_model, OVER_25_MODEL_PATH)
@@ -288,6 +295,7 @@ def main():
         "features": over_names,
         "test_season": test_season,
         "bet_threshold": DEFAULT_BET_THRESHOLD,
+        "over_25_bet_threshold": DEFAULT_OVER_25_BET_THRESHOLD,
         "training_window_seasons": TRAINING_WINDOW_SEASONS or "all",
         "model_type": "sklearn_calibrated_logistic_regression_binary_over_25",
     }, indent=2), encoding="utf-8")
@@ -316,7 +324,7 @@ def main():
         f"Over 2.5 test matches: {over_summary['matches']}",
         f"Over 2.5 accuracy: {over_summary['accuracy']:.2%}",
         f"Over 2.5 log loss: {over_summary['log_loss']:.4f}",
-        f"Over 2.5 value bets at {DEFAULT_BET_THRESHOLD:.0%}+ edge: {over_summary['bets']}",
+        f"Over 2.5 value bets at {DEFAULT_OVER_25_BET_THRESHOLD:.0%}+ edge: {over_summary['bets']}",
         f"Over 2.5 flat-stake profit: {over_summary['profit_units']:.2f} units",
         f"Over 2.5 ROI: {over_summary['roi']:.2%}",
         "",
@@ -325,7 +333,7 @@ def main():
         f"Over 2.5 rolling matches: {over_rolling_average['matches']}",
         f"Over 2.5 rolling accuracy: {over_rolling_average['accuracy']:.2%}",
         f"Over 2.5 rolling log loss: {over_rolling_average['log_loss']:.4f}",
-        f"Over 2.5 rolling value bets at {DEFAULT_BET_THRESHOLD:.0%}+ edge: {over_rolling_average['bets']}",
+        f"Over 2.5 rolling value bets at {DEFAULT_OVER_25_BET_THRESHOLD:.0%}+ edge: {over_rolling_average['bets']}",
         f"Over 2.5 rolling flat-stake profit: {over_rolling_average['profit_units']:.2f} units",
         f"Over 2.5 rolling ROI: {over_rolling_average['roi']:.2%}",
     ]

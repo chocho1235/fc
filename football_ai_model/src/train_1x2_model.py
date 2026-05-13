@@ -19,8 +19,8 @@ REPORTS_DIR = ROOT / "reports"
 
 LABELS = ["H", "D", "A"]
 ODDS_COLUMNS = [("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A")]
-BET_THRESHOLDS = [0.05, 0.08, 0.10, 0.12]
-DEFAULT_BET_THRESHOLD = float(os.getenv("BET_THRESHOLD", "0.08") or "0.08")
+BET_THRESHOLDS = [0.03, 0.05, 0.08, 0.10, 0.12, 0.15]
+DEFAULT_BET_THRESHOLD = float(os.getenv("BET_THRESHOLD", "0.05") or "0.05")
 TRAINING_WINDOW_SEASONS = int(os.getenv("TRAINING_WINDOW_SEASONS", "5") or "5")
 ENABLE_CONTEXT_FEATURES = os.getenv("ENABLE_CONTEXT_FEATURES", "0") == "1"
 ENABLE_WEATHER_FEATURES = os.getenv("ENABLE_WEATHER_FEATURES", "0") == "1"
@@ -785,7 +785,8 @@ def evaluate(rows, probabilities, threshold=0.08):
     }
 
 
-def write_predictions(rows, probabilities, over_25_probabilities=None):
+def write_predictions(rows, probabilities, over_25_probabilities=None, bet_threshold=DEFAULT_BET_THRESHOLD, over_25_bet_threshold=None):
+    over_25_bet_threshold = bet_threshold if over_25_bet_threshold is None else over_25_bet_threshold
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     path = PROCESSED_DIR / "predictions.csv"
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -835,7 +836,7 @@ def write_predictions(rows, probabilities, over_25_probabilities=None):
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         for index, (row, probs) in enumerate(zip(rows, probabilities)):
-            best_bet, best_edge = find_best_bet(row, probs, DEFAULT_BET_THRESHOLD)
+            best_bet, best_edge = find_best_bet(row, probs, bet_threshold)
             over_probability = (
                 over_25_probabilities[index]
                 if over_25_probabilities is not None
@@ -874,13 +875,13 @@ def write_predictions(rows, probabilities, over_25_probabilities=None):
                 "home_fair_odds": round(fair_odds(probs["H"]), 2),
                 "draw_fair_odds": round(fair_odds(probs["D"]), 2),
                 "away_fair_odds": round(fair_odds(probs["A"]), 2),
-                "home_value_odds": round(value_odds(probs["H"]), 2),
-                "draw_value_odds": round(value_odds(probs["D"]), 2),
-                "away_value_odds": round(value_odds(probs["A"]), 2),
+                "home_value_odds": round(value_odds(probs["H"], bet_threshold), 2),
+                "draw_value_odds": round(value_odds(probs["D"], bet_threshold), 2),
+                "away_value_odds": round(value_odds(probs["A"], bet_threshold), 2),
                 "over_25_probability": round(over_probability, 4),
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
-                "over_25_value_odds": round(value_odds(over_probability), 2),
+                "over_25_value_odds": round(value_odds(over_probability, over_25_bet_threshold), 2),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
@@ -895,7 +896,8 @@ def train_and_predict(train_rows, test_rows, names):
     return model, probabilities, stats
 
 
-def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None):
+def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, bet_threshold=DEFAULT_BET_THRESHOLD, over_25_bet_threshold=None):
+    over_25_bet_threshold = bet_threshold if over_25_bet_threshold is None else over_25_bet_threshold
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     path = PROCESSED_DIR / "upcoming_predictions.csv"
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -944,7 +946,7 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None):
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         for index, (row, probs) in enumerate(zip(rows, probabilities)):
-            best_bet, best_edge = find_best_bet(row, probs, DEFAULT_BET_THRESHOLD)
+            best_bet, best_edge = find_best_bet(row, probs, bet_threshold)
             over_probability = (
                 over_25_probabilities[index]
                 if over_25_probabilities is not None
@@ -981,13 +983,13 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None):
                 "home_fair_odds": round(fair_odds(probs["H"]), 2),
                 "draw_fair_odds": round(fair_odds(probs["D"]), 2),
                 "away_fair_odds": round(fair_odds(probs["A"]), 2),
-                "home_value_odds": round(value_odds(probs["H"]), 2),
-                "draw_value_odds": round(value_odds(probs["D"]), 2),
-                "away_value_odds": round(value_odds(probs["A"]), 2),
+                "home_value_odds": round(value_odds(probs["H"], bet_threshold), 2),
+                "draw_value_odds": round(value_odds(probs["D"], bet_threshold), 2),
+                "away_value_odds": round(value_odds(probs["A"], bet_threshold), 2),
                 "over_25_probability": round(over_probability, 4),
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
-                "over_25_value_odds": round(value_odds(over_probability), 2),
+                "over_25_value_odds": round(value_odds(over_probability, over_25_bet_threshold), 2),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",

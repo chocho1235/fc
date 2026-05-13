@@ -49,7 +49,8 @@ def predict_over_25(model, rows, feature_names):
     return [float(row[positive_index]) for row in probabilities]
 
 
-def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None):
+def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, over_25_threshold=None):
+    over_25_threshold = threshold if over_25_threshold is None else over_25_threshold
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     path = PROCESSED_DIR / "upcoming_predictions.csv"
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -112,7 +113,7 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None):
                 "over_25_probability": round(over_probability, 4),
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
-                "over_25_value_odds": round(value_odds(over_probability, threshold), 2),
+                "over_25_value_odds": round(value_odds(over_probability, over_25_threshold), 2),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
@@ -134,19 +135,22 @@ def main():
         over_model = joblib.load(OVER_25_MODEL_PATH)
         over_meta = json.loads(OVER_25_META_PATH.read_text(encoding="utf-8"))
         over_features = over_meta["features"]
+        over_25_threshold = float(over_meta.get("over_25_bet_threshold", over_meta.get("bet_threshold", threshold)))
+    else:
+        over_25_threshold = threshold
 
     matches = read_matches()
     latest_completed_date = max(match["ParsedDate"] for match in matches)
     fixtures = read_upcoming_fixtures(latest_completed_date)
     if not fixtures:
-        write_upcoming([], [], threshold)
+        write_upcoming([], [], threshold, over_25_threshold=over_25_threshold)
         return
 
     combined_rows = build_dataset(matches + fixtures)
     upcoming_rows = [row for row in combined_rows if row["season"] == "upcoming"]
     probabilities = predict_rows(model, upcoming_rows, features)
     over_probabilities = predict_over_25(over_model, upcoming_rows, over_features) if over_model else None
-    write_upcoming(upcoming_rows, probabilities, threshold, over_probabilities)
+    write_upcoming(upcoming_rows, probabilities, threshold, over_probabilities, over_25_threshold)
 
 
 if __name__ == "__main__":

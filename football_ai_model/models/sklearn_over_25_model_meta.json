@@ -63,7 +63,8 @@
     "under_25_odds"
   ],
   "test_season": "2526",
-  "bet_threshold": 0.08,
+  "bet_threshold": 0.05,
+  "over_25_bet_threshold": 0.1,
   "training_window_seasons": 5,
   "model_type": "sklearn_calibrated_logistic_regression_binary_over_25"
 }

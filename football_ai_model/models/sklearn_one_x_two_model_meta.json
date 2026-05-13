@@ -60,7 +60,7 @@
     "away_closing_prob"
   ],
   "test_season": "2526",
-  "bet_threshold": 0.08,
+  "bet_threshold": 0.05,
   "training_window_seasons": 5,
   "model_type": "sklearn_calibrated_logistic_regression"
 }

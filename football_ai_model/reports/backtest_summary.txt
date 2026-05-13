@@ -4,24 +4,24 @@ Test season: 2526
 Test matches: 709
 Accuracy: 52.33%
 Log loss: 0.9909
-Value bets at 8%+ edge: 17
-Flat-stake profit: -6.82 units
-ROI: -40.12%
+Value bets at 5%+ edge: 94
+Flat-stake profit: 17.04 units
+ROI: 18.13%
 
 Rolling season backtest
 Seasons tested: 6
 Rolling matches: 4509
 Rolling accuracy: 53.74%
 Rolling log loss: 0.9793
-Rolling value bets at 8%+ edge: 220
-Rolling flat-stake profit: -27.39 units
-Rolling ROI: -12.45%
+Rolling value bets at 5%+ edge: 788
+Rolling flat-stake profit: 35.16 units
+Rolling ROI: 4.46%
 
 Over 2.5 Backtest - scikit-learn calibrated logistic regression
 Over 2.5 test matches: 709
 Over 2.5 accuracy: 56.56%
 Over 2.5 log loss: 0.6819
-Over 2.5 value bets at 8%+ edge: 2
+Over 2.5 value bets at 10%+ edge: 2
 Over 2.5 flat-stake profit: -0.17 units
 Over 2.5 ROI: -8.50%
 
@@ -30,6 +30,6 @@ Over 2.5 rolling seasons tested: 6
 Over 2.5 rolling matches: 4509
 Over 2.5 rolling accuracy: 58.08%
 Over 2.5 rolling log loss: 0.6772
-Over 2.5 rolling value bets at 8%+ edge: 27
-Over 2.5 rolling flat-stake profit: -7.13 units
-Over 2.5 rolling ROI: -26.41%
+Over 2.5 rolling value bets at 10%+ edge: 10
+Over 2.5 rolling flat-stake profit: 3.38 units
+Over 2.5 rolling ROI: 33.80%
