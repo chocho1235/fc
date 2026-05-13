@@ -6,7 +6,7 @@ First version of a football prediction model for:
 - Draw
 - Away win
 
-It uses historical Premier League CSV data from football-data.co.uk and builds pre-match features from previous results, head-to-heads, rest days, and bookmaker odds where available.
+It uses historical Premier League and La Liga CSV data from football-data.co.uk and builds pre-match features from previous results, head-to-heads, rest days, and bookmaker odds where available.
 
 ## Quick Start
 
@@ -118,7 +118,7 @@ Do not train past matches with injury data that was only known later. Once a fix
 
 ## Current Scope
 
-This is intentionally narrow: Premier League 1X2 only. Once this is working, the next improvements are:
+This is intentionally narrow: Premier League and La Liga 1X2/Over 2.5. Once this is working, the next improvements are:
 
 1. Add over/under 2.5 goals.
 2. Add more leagues.

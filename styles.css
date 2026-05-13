@@ -113,7 +113,8 @@
   font-weight: 700;
 }
 
-.football-search input {
+.football-search input,
+.football-search select {
   width: 100%;
   min-height: 2.75rem;
   border: 1px solid rgba(16, 32, 24, 0.18);
@@ -124,7 +125,8 @@
   padding: 0.65rem 0.85rem;
 }
 
-.football-search input:focus {
+.football-search input:focus,
+.football-search select:focus {
   border-color: #0f766e;
   outline: 2px solid rgba(15, 118, 110, 0.16);
 }
@@ -819,4 +821,3 @@
   padding-left: env(safe-area-inset-left, 0px);
   padding-right: env(safe-area-inset-right, 0px);
 }
-

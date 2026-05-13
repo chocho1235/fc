@@ -54,7 +54,7 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None):
     path = PROCESSED_DIR / "upcoming_predictions.csv"
     with path.open("w", newline="", encoding="utf-8") as handle:
         fieldnames = [
-            "date", "time", "season", "home_team", "away_team", "context_summary", "context_notes",
+            "date", "time", "season", "league_code", "league", "home_team", "away_team", "context_summary", "context_notes",
             "h2h_home_form", "h2h_away_form",
             "home_auto_importance", "away_auto_importance", "home_motivation", "away_motivation",
             "home_lineup_strength", "away_lineup_strength",
@@ -79,6 +79,8 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None):
                 "date": row["date"],
                 "time": row.get("time", ""),
                 "season": row["season"],
+                "league_code": row.get("league_code", ""),
+                "league": row.get("league", ""),
                 "home_team": row["home_team"],
                 "away_team": row["away_team"],
                 "context_summary": row["context_summary"],

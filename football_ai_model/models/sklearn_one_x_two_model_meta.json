@@ -5,6 +5,7 @@
     "A"
   ],
   "features": [
+    "league_feature",
     "home_advantage",
     "home_rest_days",
     "away_rest_days",

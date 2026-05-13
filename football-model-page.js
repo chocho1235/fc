@@ -4,6 +4,7 @@ const countEl = document.querySelector("[data-football-count]");
 const upcomingRowsEl = document.querySelector("[data-upcoming-rows]");
 const upcomingCountEl = document.querySelector("[data-upcoming-count]");
 const searchEl = document.querySelector("[data-football-search]");
+const leagueEl = document.querySelector("[data-football-league]");
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const valueListEl = document.querySelector("[data-value-list]");
 const donutEl = document.querySelector("[data-football-donut]");
@@ -11,6 +12,7 @@ const donutEl = document.querySelector("[data-football-donut]");
 let matches = [];
 let upcomingMatches = [];
 let currentFilter = "all";
+let currentLeague = "all";
 
 const labelMap = {
   H: "Home",
@@ -313,8 +315,14 @@ function rowMatchesSearch(row) {
   return `${row.home_team} ${row.away_team}`.toLowerCase().includes(query);
 }
 
+function rowMatchesLeague(row) {
+  if (currentLeague === "all") return true;
+  return (row.league || row.league_code || "") === currentLeague;
+}
+
 function matchRowHtml(row, includeResult = true) {
     const detailParts = [row.date];
+    if (row.league) detailParts.unshift(row.league);
     if (row.time) detailParts.push(row.time);
 
     return `
@@ -341,14 +349,14 @@ function matchRowHtml(row, includeResult = true) {
 }
 
 function renderRows() {
-  const visible = matches.filter(rowMatchesFilter).filter(rowMatchesSearch).slice().reverse();
+  const visible = matches.filter(rowMatchesFilter).filter(rowMatchesSearch).filter(rowMatchesLeague).slice().reverse();
 
   countEl.textContent = `${visible.length} shown`;
   rowsEl.innerHTML = visible.map((row) => matchRowHtml(row, true)).join("");
 }
 
 function renderUpcoming() {
-  const visible = upcomingMatches.filter(rowMatchesSearch);
+  const visible = upcomingMatches.filter(rowMatchesSearch).filter(rowMatchesLeague);
   upcomingCountEl.textContent = `${visible.length} shown`;
   if (!visible.length) {
     upcomingRowsEl.innerHTML = `
@@ -400,6 +408,15 @@ function renderAverages(averages) {
   });
 }
 
+function renderLeagueOptions(leagues) {
+  if (!leagueEl) return;
+  const safeLeagues = (leagues || []).filter(Boolean);
+  leagueEl.innerHTML = [
+    `<option value="all">All leagues</option>`,
+    ...safeLeagues.map((league) => `<option value="${escapeHtml(league)}">${escapeHtml(league)}</option>`),
+  ].join("");
+}
+
 async function init() {
   try {
     const response = await fetch("/football-model-data.json", { cache: "no-store" });
@@ -407,6 +424,7 @@ async function init() {
     const data = await response.json();
     matches = data.latest_matches || [];
     upcomingMatches = data.upcoming || [];
+    renderLeagueOptions(data.leagues || []);
     setSummary(data.summary || {});
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);
@@ -436,5 +454,10 @@ filterButtons.forEach((button) => {
 
 searchEl.addEventListener("input", renderRows);
 searchEl.addEventListener("input", renderUpcoming);
+leagueEl?.addEventListener("change", () => {
+  currentLeague = leagueEl.value;
+  renderUpcoming();
+  renderRows();
+});
 
 init();

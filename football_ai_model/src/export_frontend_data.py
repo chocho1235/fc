@@ -52,9 +52,15 @@ def main():
     suggested = [row for row in predictions if row.get("suggested_bet")]
     latest = predictions[-40:]
 
+    leagues = sorted({
+        row.get("league") or row.get("league_code") or "Unknown"
+        for row in [*predictions, *upcoming]
+    })
+
     output = {
         "summary": parse_summary(),
         "generated_from": str(PREDICTIONS_PATH.relative_to(SITE_ROOT)),
+        "leagues": leagues,
         "matches": len(predictions),
         "upcoming_matches": len(upcoming),
         "value_bets": len(suggested),

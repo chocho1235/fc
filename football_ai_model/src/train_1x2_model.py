@@ -7,6 +7,8 @@ from collections import defaultdict, deque
 from datetime import datetime
 from pathlib import Path
 
+from leagues import DEFAULT_LEAGUE_CODES, league_feature, league_name
+
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW_DIR = ROOT / "data" / "raw"
@@ -78,8 +80,12 @@ def parse_date(value):
 
 def read_matches():
     matches = []
-    for path in sorted(RAW_DIR.glob("*_E0.csv")):
-        season = path.stem.split("_")[0]
+    for path in sorted(RAW_DIR.glob("*.csv")):
+        if path.name == "fixtures.csv" or "_" not in path.stem:
+            continue
+        season, league_code = path.stem.split("_", 1)
+        if league_code not in DEFAULT_LEAGUE_CODES:
+            continue
         with path.open(newline="", encoding="utf-8-sig") as handle:
             reader = csv.DictReader(handle)
             for row in reader:
@@ -89,12 +95,14 @@ def read_matches():
                     continue
 
                 row["Season"] = season
+                row["LeagueCode"] = league_code
+                row["LeagueName"] = league_name(league_code)
                 row["ParsedDate"] = parse_date(row["Date"])
                 row["FTHG"] = int(parse_float(row.get("FTHG")))
                 row["FTAG"] = int(parse_float(row.get("FTAG")))
                 matches.append(row)
 
-    return sorted(matches, key=lambda item: (item["ParsedDate"], item["HomeTeam"], item["AwayTeam"]))
+    return sorted(matches, key=lambda item: (item["ParsedDate"], item["LeagueCode"], item["HomeTeam"], item["AwayTeam"]))
 
 
 def read_upcoming_fixtures(latest_completed_date=None):
@@ -106,7 +114,8 @@ def read_upcoming_fixtures(latest_completed_date=None):
     with path.open(newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
         for row in reader:
-            if row.get("Div") != "E0":
+            league_code = row.get("Div")
+            if league_code not in DEFAULT_LEAGUE_CODES:
                 continue
             if not row.get("Date") or not row.get("HomeTeam") or not row.get("AwayTeam"):
                 continue
@@ -114,11 +123,13 @@ def read_upcoming_fixtures(latest_completed_date=None):
             if latest_completed_date and parsed_date <= latest_completed_date:
                 continue
             row["Season"] = "upcoming"
+            row["LeagueCode"] = league_code
+            row["LeagueName"] = league_name(league_code)
             row["ParsedDate"] = parsed_date
             row["FTR"] = ""
             fixtures.append(row)
 
-    return sorted(fixtures, key=lambda item: (item["ParsedDate"], item.get("Time", ""), item["HomeTeam"], item["AwayTeam"]))
+    return sorted(fixtures, key=lambda item: (item["ParsedDate"], item["LeagueCode"], item.get("Time", ""), item["HomeTeam"], item["AwayTeam"]))
 
 
 def read_external_context():
@@ -411,6 +422,9 @@ def build_dataset(matches):
 
         row = {
             "season": match["Season"],
+            "league_code": match.get("LeagueCode", match.get("Div", "")),
+            "league": match.get("LeagueName", league_name(match.get("LeagueCode", match.get("Div", "")))),
+            "league_feature": league_feature(match.get("LeagueCode", match.get("Div", ""))),
             "date": date.isoformat(),
             "time": match.get("Time", ""),
             "home_team": home,
@@ -558,6 +572,8 @@ def is_weather_feature(name):
 def feature_names(rows):
     excluded = {
         "season",
+        "league_code",
+        "league",
         "date",
         "time",
         "home_team",
@@ -777,6 +793,8 @@ def write_predictions(rows, probabilities, over_25_probabilities=None):
             "date",
             "time",
             "season",
+            "league_code",
+            "league",
             "home_team",
             "away_team",
             "result",
@@ -828,6 +846,8 @@ def write_predictions(rows, probabilities, over_25_probabilities=None):
                 "date": row["date"],
                 "time": row.get("time", ""),
                 "season": row["season"],
+                "league_code": row.get("league_code", ""),
+                "league": row.get("league", ""),
                 "home_team": row["home_team"],
                 "away_team": row["away_team"],
                 "result": row["result"],
@@ -883,6 +903,8 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None):
             "date",
             "time",
             "season",
+            "league_code",
+            "league",
             "home_team",
             "away_team",
             "context_summary",
@@ -932,6 +954,8 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None):
                 "date": row["date"],
                 "time": row.get("time", ""),
                 "season": row["season"],
+                "league_code": row.get("league_code", ""),
+                "league": row.get("league", ""),
                 "home_team": row["home_team"],
                 "away_team": row["away_team"],
                 "context_summary": row["context_summary"],
@@ -1133,7 +1157,7 @@ def main():
     }, indent=2), encoding="utf-8")
 
     report = [
-        "Premier League 1X2 Backtest",
+        "Multi-league 1X2 Backtest",
         f"Training matches: {len(train_rows)}",
         f"Test season: {test_season}",
         f"Test matches: {summary['matches']}",

@@ -1,6 +1,6 @@
 # Football Betting Model
 
-Standalone Premier League betting dashboard and model.
+Standalone multi-league betting dashboard and model for Premier League and La Liga.
 
 It predicts:
 
@@ -28,7 +28,7 @@ python3 -m pip install -r football_ai_model/requirements.txt
 python3 football_ai_model/src/refresh_upcoming.py
 ```
 
-This downloads current fixtures, fetches FPL availability for upcoming Premier League matches, updates `match_context.csv`, writes upcoming predictions, and exports `public/football-model-data.json`.
+This downloads current fixtures, fetches FPL availability for upcoming Premier League matches, plus fixture coverage for supported leagues, updates `match_context.csv`, writes upcoming predictions, and exports `public/football-model-data.json`.
 
 ## Full Training
 

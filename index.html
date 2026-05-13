@@ -7,7 +7,7 @@
     <title>Football betting model</title>
     <meta
       name="description"
-      content="Premier League betting model dashboard showing 1X2, over 2.5, bookmaker odds, injury context, H2H form and value thresholds."
+      content="Multi-league betting model dashboard showing 1X2, over 2.5, bookmaker odds, injury context, H2H form and value thresholds."
     />
     <meta name="robots" content="noindex, follow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
       <main class="football-app" data-football-app>
         <section class="football-hero" aria-labelledby="football-model-title">
           <div class="football-hero__copy">
-            <p class="football-kicker">Premier League model</p>
+            <p class="football-kicker">Multi-league model</p>
             <h1 id="football-model-title">Football betting command centre</h1>
             <p>
               Clear bet/no-bet calls for home win, draw and away win, showing our price, the bookmaker price and the
@@ -58,6 +58,12 @@
             <button type="button" data-filter="draw">Draw</button>
             <button type="button" data-filter="away">Away</button>
           </div>
+          <label class="football-search football-league-filter">
+            <span>League</span>
+            <select data-football-league>
+              <option value="all">All leagues</option>
+            </select>
+          </label>
         </section>
 
         <section class="football-overview" aria-label="Model overview">

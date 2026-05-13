@@ -293,7 +293,7 @@ def main():
     }, indent=2), encoding="utf-8")
 
     report = [
-        "Premier League 1X2 Backtest - scikit-learn calibrated logistic regression",
+        "Multi-league 1X2 Backtest - scikit-learn calibrated logistic regression",
         f"Training matches: {len(train_rows)}",
         f"Test season: {test_season}",
         f"Test matches: {summary['matches']}",
