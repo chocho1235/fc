@@ -270,7 +270,7 @@
 
 .football-table-wrap {
   width: 100%;
-  overflow-x: auto;
+  overflow-x: clip;
 }
 
 .football-table {
@@ -322,9 +322,9 @@
 
 .football-match-card__summary {
   display: grid;
-  grid-template-columns: minmax(16rem, 1.1fr) minmax(13rem, 0.72fr) minmax(18rem, 1.2fr) auto;
+  grid-template-columns: minmax(12rem, 1fr) minmax(11rem, 0.85fr) minmax(15rem, 1.15fr) minmax(6.8rem, 0.35fr);
   gap: 0.85rem;
-  align-items: stretch;
+  align-items: start;
   padding: 0.85rem;
 }
 
@@ -671,13 +671,15 @@
 }
 
 .football-expand {
-  min-width: 8rem;
+  display: contents;
+  min-width: 0;
 }
 
 .football-expand summary {
   display: inline-flex;
   width: 100%;
-  min-height: 100%;
+  min-width: 6.8rem;
+  min-height: 2.7rem;
   align-items: center;
   justify-content: center;
   padding: 0.45rem 0.8rem;
@@ -688,6 +690,7 @@
   cursor: pointer;
   font-weight: 900;
   list-style: none;
+  white-space: nowrap;
 }
 
 .football-expand summary::-webkit-details-marker {
@@ -701,11 +704,12 @@
 }
 
 .football-expand__grid {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(2, minmax(14rem, 1fr));
   gap: 0.75rem;
-  width: min(56rem, 76vw);
-  margin-top: 0.75rem;
+  width: 100%;
+  margin-top: 0;
   padding: 0.75rem;
   border: 1px solid rgba(16, 32, 24, 0.1);
   border-radius: 8px;
@@ -992,6 +996,7 @@
 
   .football-expand__grid {
     width: 100%;
+    grid-template-columns: 1fr;
   }
 }
 
