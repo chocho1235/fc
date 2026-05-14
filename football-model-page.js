@@ -181,6 +181,8 @@ function setSummary(summary) {
     const key = summaryKey(node.dataset.summary || "");
     node.textContent = summary[key] || "--";
   });
+  app.dataset.latestRoi = summary.roi || "";
+  app.dataset.rollingRoi = summary.rolling_roi || "";
 }
 
 function setClosingLineSummary(summary) {

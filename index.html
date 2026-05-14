@@ -26,8 +26,8 @@
             <p class="football-kicker">Multi-league model</p>
             <h1 id="football-model-title">Football betting command centre</h1>
             <p>
-              Clear bet/no-bet calls for home win, draw and away win, showing our price, the bookmaker price and the
-              minimum odds needed before a bet becomes worth taking.
+              Clear bet/no-bet calls with rolling backtest performance, active rule health, bookmaker prices and
+              expandable match detail. Latest-season ROI is shown as context, not a live guarantee.
             </p>
           </div>
           <div class="football-hero__panel" aria-label="Model status">
@@ -40,8 +40,8 @@
               <strong data-summary="accuracy">--</strong>
             </div>
             <div>
-              <span class="football-metric__label">ROI</span>
-              <strong data-summary="roi">--</strong>
+              <span class="football-metric__label">Rolling ROI</span>
+              <strong data-summary="rolling_roi">--</strong>
             </div>
             <div>
               <span class="football-metric__label">Updated</span>
@@ -72,20 +72,20 @@
 
         <section class="football-overview" aria-label="Model overview">
           <article class="football-stat">
-            <span class="football-stat__label">Test matches</span>
-            <strong data-summary="test_matches">--</strong>
+            <span class="football-stat__label">Rolling bets</span>
+            <strong data-summary="rolling_value_bets_at_5%+_edge">--</strong>
           </article>
           <article class="football-stat">
-            <span class="football-stat__label">Log loss</span>
-            <strong data-summary="log_loss">--</strong>
+            <span class="football-stat__label">Rolling profit</span>
+            <strong data-summary="rolling_flat_stake_profit">--</strong>
           </article>
           <article class="football-stat">
-            <span class="football-stat__label">Value bets</span>
-            <strong data-summary="value_bets_at_5%+_edge">--</strong>
+            <span class="football-stat__label">Latest ROI</span>
+            <strong data-summary="roi">--</strong>
           </article>
           <article class="football-stat">
-            <span class="football-stat__label">Flat stake</span>
-            <strong data-summary="flat_stake_profit">--</strong>
+            <span class="football-stat__label">Active rules</span>
+            <strong data-summary="active_betting_rules">--</strong>
           </article>
         </section>
 
