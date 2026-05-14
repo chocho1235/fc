@@ -183,6 +183,13 @@ function setSummary(summary) {
   });
 }
 
+function setClosingLineSummary(summary) {
+  document.querySelectorAll("[data-closing-line]").forEach((node) => {
+    const key = node.dataset.closingLine || "";
+    node.textContent = summary[key] || "--";
+  });
+}
+
 function probabilityBar(row) {
   const home = percent(row.home_win_probability);
   const draw = percent(row.draw_probability);
@@ -462,6 +469,7 @@ async function init() {
     upcomingMatches = data.upcoming || [];
     renderLeagueOptions(data.leagues || []);
     setSummary(data.summary || {});
+    setClosingLineSummary(data.closing_line_summary || {});
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);
     renderRuleList(data.betting_rules || []);

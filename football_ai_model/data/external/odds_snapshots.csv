@@ -1,0 +1,4 @@
+snapshot_at,date,time,league_code,league,home_team,away_team,predicted_result,suggested_bet,suggested_edge,home_bookmaker_odds,draw_bookmaker_odds,away_bookmaker_odds,over_25_bookmaker_odds,bet_rule
+2026-05-14T22:18:23Z,2026-05-14,18:00,SP1,La Liga,Valencia,Vallecano,H,H,0.0543,2.17,3.33,3.23,1.87,La Liga H mid 5%+
+2026-05-14T22:18:23Z,2026-05-14,19:00,SP1,La Liga,Girona,Sociedad,H,,,2.06,3.64,3.21,1.66,
+2026-05-14T22:18:23Z,2026-05-14,20:30,SP1,La Liga,Real Madrid,Oviedo,H,,,1.23,6.28,10.42,1.38,

@@ -42,6 +42,7 @@ jobs:
           git add football_ai_model/data/processed
           git add football_ai_model/models
           git add football_ai_model/reports
+          git add football_ai_model/src
           git add public/football-model-data.json
           git diff --cached --quiet || git commit -m "Refresh football model data"
           git push
