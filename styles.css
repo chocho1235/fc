@@ -1,10 +1,7 @@
 :root{--font-hatton:"Newsreader","Times New Roman",serif;--font-sans:"Inter",system-ui,-apple-system,sans-serif;--white:#fff;--grey-body:#1e293b}*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}body{margin:0;min-height:100vh;background:#fff;color:var(--grey-body);font-family:var(--font-sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-size-adjust:100%;overflow-x:clip}.shell{min-height:100vh}
 /* Football prediction model dashboard */
 .football-shell {
-  background:
-    radial-gradient(circle at 12% 8%, rgba(15, 118, 110, 0.17), transparent 22rem),
-    radial-gradient(circle at 88% 2%, rgba(196, 160, 53, 0.16), transparent 20rem),
-    linear-gradient(180deg, #eefdf6 0, #f8fafc 24rem, #f5f7f8 100%);
+  background: linear-gradient(180deg, #f4fbf7 0, #f8fafc 20rem, #f5f7f8 100%);
 }
 
 .football-app {
@@ -94,7 +91,7 @@
   top: 0;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(16rem, 0.8fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(16rem, 0.8fr) minmax(22rem, 1.2fr) minmax(12rem, 0.42fr);
   gap: 1rem;
   align-items: end;
   padding: 1rem 0;

@@ -9,6 +9,7 @@ const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const valueListEl = document.querySelector("[data-value-list]");
 const ruleListEl = document.querySelector("[data-rule-list]");
 const donutEl = document.querySelector("[data-football-donut]");
+const generatedAtEl = document.querySelector("[data-generated-at]");
 
 let matches = [];
 let upcomingMatches = [];
@@ -34,6 +35,18 @@ function percent(value) {
 function decimal(value) {
   const number = Number(value || 0);
   return number > 0 ? number.toFixed(2) : "--";
+}
+
+function formatGeneratedAt(value) {
+  if (!value) return "--";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "--";
+  return date.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 }
 
 function probabilityFor(row, label) {
@@ -363,7 +376,7 @@ function renderUpcoming() {
   if (!visible.length) {
     upcomingRowsEl.innerHTML = `
       <tr>
-        <td colspan="5"><span class="football-empty">No upcoming Premier League fixtures in the current feed.</span></td>
+        <td colspan="5"><span class="football-empty">No upcoming fixtures in the current feed.</span></td>
       </tr>
     `;
     return;
@@ -452,6 +465,7 @@ async function init() {
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);
     renderRuleList(data.betting_rules || []);
+    if (generatedAtEl) generatedAtEl.textContent = formatGeneratedAt(data.generated_at);
     renderUpcoming();
     renderRows();
     app.dataset.loaded = "true";

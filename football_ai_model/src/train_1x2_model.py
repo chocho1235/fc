@@ -4,7 +4,7 @@ import math
 import os
 import random
 from collections import defaultdict, deque
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 from leagues import DEFAULT_LEAGUE_CODES, league_feature, league_name
@@ -111,11 +111,19 @@ def read_matches():
     return sorted(matches, key=lambda item: (item["ParsedDate"], item["LeagueCode"], item["HomeTeam"], item["AwayTeam"]))
 
 
+def current_model_date():
+    override = os.getenv("MODEL_TODAY", "").strip()
+    if override:
+        return datetime.strptime(override, "%Y-%m-%d").date()
+    return date.today()
+
+
 def read_upcoming_fixtures(latest_completed_date=None):
     path = RAW_DIR / "fixtures.csv"
     fixtures = []
     if not path.exists():
         return fixtures
+    today = current_model_date()
 
     with path.open(newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
@@ -126,6 +134,8 @@ def read_upcoming_fixtures(latest_completed_date=None):
             if not row.get("Date") or not row.get("HomeTeam") or not row.get("AwayTeam"):
                 continue
             parsed_date = parse_date(row["Date"])
+            if parsed_date < today:
+                continue
             if latest_completed_date and parsed_date <= latest_completed_date:
                 continue
             row["Season"] = "upcoming"

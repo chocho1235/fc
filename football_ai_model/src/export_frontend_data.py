@@ -1,5 +1,6 @@
 import csv
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -66,6 +67,7 @@ def main():
 
     output = {
         "summary": parse_summary(),
+        "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "generated_from": str(PREDICTIONS_PATH.relative_to(SITE_ROOT)),
         "leagues": leagues,
         "matches": len(predictions),
