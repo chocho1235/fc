@@ -284,15 +284,22 @@ function builderHtml(row) {
   const totalSot = Number(row.total_expected_sot || 0);
   const totalCorners = Number(row.total_expected_corners || 0);
   const totalCards = Number(row.total_expected_cards || 0);
+  const bttsProbability = Number(row.btts_probability || 0);
+  const over15Probability = Number(row.over_15_probability || 0);
+  const over35Probability = Number(row.over_35_probability || 0);
+  const suggestion = row.builder_suggestion || "No builder lean";
+  const confidence = row.builder_confidence || "none";
   const sotLean = totalSot >= 8 ? "SOT lean: high" : totalSot >= 6 ? "SOT lean: normal" : "SOT lean: low";
   return `
-    <div class="football-builder ${hasValue ? "football-builder--value" : ""}">
-      <span>Over 2.5 goals</span>
-      <strong>${percent(probability)}</strong>
-      <span>Bookie ${decimal(bookOdds)} · bet from ${decimal(valueOdds)}</span>
-      <b>${hasValue ? "Possible value" : "No value"}</b>
+    <div class="football-builder ${hasValue ? "football-builder--value" : ""} football-builder--${escapeHtml(confidence)}">
+      <span>Combined builder</span>
+      <strong>${escapeHtml(suggestion)}</strong>
+      <span>${confidence === "strong" ? "Strong lean" : confidence === "lean" ? "Lean only" : "No clear combo"}</span>
+      <b>O2.5 ${percent(probability)} · BTTS ${percent(bttsProbability)}</b>
+      <small>O1.5 ${percent(over15Probability)} · O3.5 ${percent(over35Probability)}</small>
       <small>${sotLean} · ${escapeHtml(row.home_team)} ${decimal(homeSot)} / ${escapeHtml(row.away_team)} ${decimal(awaySot)}</small>
-      <small>Total SOT ${decimal(totalSot)} · corners ${decimal(totalCorners)} · cards ${decimal(totalCards)}</small>
+      <small>SOT ${decimal(totalSot)} · corners ${decimal(totalCorners)} · cards ${decimal(totalCards)}</small>
+      <small>${bookOdds ? `O2.5 bookie ${decimal(bookOdds)} · bet from ${decimal(valueOdds)}` : "Stat legs need bookmaker lines before value staking"}</small>
     </div>
   `;
 }
@@ -364,16 +371,33 @@ function matchRowHtml(row, includeResult = true) {
               <span>${escapeHtml(detailParts.join(" · "))}</span>
             </div>
             ${resultHtml(row, includeResult)}
-            ${h2hHtml(row)}
           </div>
         </td>
         <td>${decisionHtml(row)}</td>
-        <td>${oddsCard(row)}</td>
         <td>${builderHtml(row)}</td>
-        <td>${contextHtml(row)}</td>
-      </tr>
-      <tr class="football-prob-row">
-        <td colspan="5">${probabilityBar(row)}</td>
+        <td>
+          <details class="football-expand">
+            <summary>Match details</summary>
+            <div class="football-expand__grid">
+              <section>
+                <h3>1X2 prices</h3>
+                ${oddsCard(row)}
+              </section>
+              <section>
+                <h3>Context</h3>
+                ${contextHtml(row)}
+              </section>
+              <section>
+                <h3>Head to head</h3>
+                ${h2hHtml(row)}
+              </section>
+              <section>
+                <h3>Probabilities</h3>
+                ${probabilityBar(row)}
+              </section>
+            </div>
+          </details>
+        </td>
       </tr>
     `;
 }

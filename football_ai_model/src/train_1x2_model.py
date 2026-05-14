@@ -432,6 +432,15 @@ def performance_proxy(shots, shots_on_target, corners, goals):
 
 
 def add_bet_builder_estimates(row):
+    expected_home_goals = avg([
+        row.get("home_goals_for_last_10", 0),
+        row.get("away_goals_against_last_10", 0),
+    ])
+    expected_away_goals = avg([
+        row.get("away_goals_for_last_10", 0),
+        row.get("home_goals_against_last_10", 0),
+    ])
+    expected_total_goals = expected_home_goals + expected_away_goals
     home_sot = avg([
         row.get("home_shots_on_target_for_last_5", 0),
         row.get("away_shots_on_target_against_last_5", 0),
@@ -449,8 +458,35 @@ def add_bet_builder_estimates(row):
         row.get("home_corners_against_last_5", 0),
     ])
     total_cards = row.get("home_cards_last_5", 0) + row.get("away_cards_last_5", 0)
+    home_scores_probability = 1 - math.exp(-max(expected_home_goals, 0))
+    away_scores_probability = 1 - math.exp(-max(expected_away_goals, 0))
+    btts_probability = home_scores_probability * away_scores_probability
+    over_15_probability = poisson_over_probability(expected_total_goals, 1.5)
+    over_35_probability = poisson_over_probability(expected_total_goals, 3.5)
+    builder_legs = []
+    if over_15_probability >= 0.72:
+        builder_legs.append("Over 1.5 goals")
+    elif row.get("over_25_market_prob", 0) >= 0.58:
+        builder_legs.append("Over 2.5 goals")
+    if btts_probability >= 0.54:
+        builder_legs.append("BTTS yes")
+    if home_sot >= 4.2:
+        builder_legs.append(f"{row.get('home_team', 'Home')} 4+ SOT")
+    elif away_sot >= 4.2:
+        builder_legs.append(f"{row.get('away_team', 'Away')} 4+ SOT")
+    if home_corners + away_corners >= 9.5:
+        builder_legs.append("8+ corners")
+    if total_cards >= 4.2:
+        builder_legs.append("3+ cards")
+    builder_confidence = "strong" if len(builder_legs) >= 3 else "lean" if builder_legs else "none"
 
     row.update({
+        "expected_home_goals": expected_home_goals,
+        "expected_away_goals": expected_away_goals,
+        "expected_total_goals": expected_total_goals,
+        "btts_probability": btts_probability,
+        "over_15_probability": over_15_probability,
+        "over_35_probability": over_35_probability,
         "home_expected_sot": home_sot,
         "away_expected_sot": away_sot,
         "total_expected_sot": home_sot + away_sot,
@@ -458,7 +494,23 @@ def add_bet_builder_estimates(row):
         "away_expected_corners": away_corners,
         "total_expected_corners": home_corners + away_corners,
         "total_expected_cards": total_cards,
+        "builder_suggestion": " + ".join(builder_legs[:4]) if builder_legs else "No builder lean",
+        "builder_confidence": builder_confidence,
     })
+
+
+def poisson_over_probability(expected_goals, line):
+    expected_goals = min(max(expected_goals, 0.5), 5.5)
+    max_goals = int(math.floor(line))
+    probability = 0.0
+    term = math.exp(-expected_goals)
+    for goals in range(max_goals + 1):
+        if goals == 0:
+            term = math.exp(-expected_goals)
+        elif goals > 0:
+            term *= expected_goals / goals
+        probability += term
+    return 1 - probability
 
 
 def build_dataset(matches):
@@ -665,6 +717,19 @@ def feature_names(rows):
         "over_25_probability",
         "over_25_fair_odds",
         "over_25_value_odds",
+        "expected_home_goals",
+        "expected_away_goals",
+        "expected_total_goals",
+        "btts_probability",
+        "over_15_probability",
+        "over_35_probability",
+        "home_expected_sot",
+        "away_expected_sot",
+        "total_expected_sot",
+        "home_expected_corners",
+        "away_expected_corners",
+        "total_expected_corners",
+        "total_expected_cards",
         "total_goals",
         "actual_home_sot",
         "actual_away_sot",
@@ -675,6 +740,8 @@ def feature_names(rows):
         "context_notes",
         "h2h_home_form",
         "h2h_away_form",
+        "builder_suggestion",
+        "builder_confidence",
     }
     names = [key for key in rows[0].keys() if key not in excluded]
     if os.getenv("ENABLE_EXPERIMENTAL_PERFORMANCE_FEATURES") != "1":
@@ -965,11 +1032,19 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
             "over_25_bookmaker_odds",
             "over_25_fair_odds",
             "over_25_value_odds",
+            "expected_home_goals",
+            "expected_away_goals",
+            "expected_total_goals",
+            "btts_probability",
+            "over_15_probability",
+            "over_35_probability",
             "home_expected_sot",
             "away_expected_sot",
             "total_expected_sot",
             "total_expected_corners",
             "total_expected_cards",
+            "builder_suggestion",
+            "builder_confidence",
             "actual_total_sot",
             "actual_total_corners",
             "actual_total_cards",
@@ -1029,11 +1104,19 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
                 "over_25_value_odds": round(value_odds(over_probability, over_25_bet_threshold), 2),
+                "expected_home_goals": round(row["expected_home_goals"], 2),
+                "expected_away_goals": round(row["expected_away_goals"], 2),
+                "expected_total_goals": round(row["expected_total_goals"], 2),
+                "btts_probability": round(row["btts_probability"], 4),
+                "over_15_probability": round(row["over_15_probability"], 4),
+                "over_35_probability": round(row["over_35_probability"], 4),
                 "home_expected_sot": round(row["home_expected_sot"], 2),
                 "away_expected_sot": round(row["away_expected_sot"], 2),
                 "total_expected_sot": round(row["total_expected_sot"], 2),
                 "total_expected_corners": round(row["total_expected_corners"], 2),
                 "total_expected_cards": round(row["total_expected_cards"], 2),
+                "builder_suggestion": row["builder_suggestion"],
+                "builder_confidence": row["builder_confidence"],
                 "actual_total_sot": round(row["actual_total_sot"], 2),
                 "actual_total_corners": round(row["actual_total_corners"], 2),
                 "actual_total_cards": round(row["actual_total_cards"], 2),
@@ -1097,11 +1180,19 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
             "over_25_bookmaker_odds",
             "over_25_fair_odds",
             "over_25_value_odds",
+            "expected_home_goals",
+            "expected_away_goals",
+            "expected_total_goals",
+            "btts_probability",
+            "over_15_probability",
+            "over_35_probability",
             "home_expected_sot",
             "away_expected_sot",
             "total_expected_sot",
             "total_expected_corners",
             "total_expected_cards",
+            "builder_suggestion",
+            "builder_confidence",
             "predicted_result",
             "suggested_bet",
             "suggested_edge",
@@ -1156,11 +1247,19 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
                 "over_25_value_odds": round(value_odds(over_probability, over_25_bet_threshold), 2),
+                "expected_home_goals": round(row["expected_home_goals"], 2),
+                "expected_away_goals": round(row["expected_away_goals"], 2),
+                "expected_total_goals": round(row["expected_total_goals"], 2),
+                "btts_probability": round(row["btts_probability"], 4),
+                "over_15_probability": round(row["over_15_probability"], 4),
+                "over_35_probability": round(row["over_35_probability"], 4),
                 "home_expected_sot": round(row["home_expected_sot"], 2),
                 "away_expected_sot": round(row["away_expected_sot"], 2),
                 "total_expected_sot": round(row["total_expected_sot"], 2),
                 "total_expected_corners": round(row["total_expected_corners"], 2),
                 "total_expected_cards": round(row["total_expected_cards"], 2),
+                "builder_suggestion": row["builder_suggestion"],
+                "builder_confidence": row["builder_confidence"],
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
