@@ -24,6 +24,7 @@ MODEL_META_PATH = MODELS_DIR / "sklearn_one_x_two_model_meta.json"
 OVER_25_MODEL_PATH = MODELS_DIR / "sklearn_over_25_model.joblib"
 OVER_25_META_PATH = MODELS_DIR / "sklearn_over_25_model_meta.json"
 BETTING_RULES_PATH = MODELS_DIR / "betting_rules.json"
+ACTIVE_BETTING_RULES_PATH = MODELS_DIR / "betting_rules_active.json"
 
 
 def rows_to_matrix(rows, feature_names):
@@ -144,8 +145,9 @@ def main():
     else:
         over_25_threshold = threshold
     rules = []
-    if BETTING_RULES_PATH.exists():
-        rules = json.loads(BETTING_RULES_PATH.read_text(encoding="utf-8"))
+    rules_path = ACTIVE_BETTING_RULES_PATH if ACTIVE_BETTING_RULES_PATH.exists() else BETTING_RULES_PATH
+    if rules_path.exists():
+        rules = json.loads(rules_path.read_text(encoding="utf-8"))
 
     matches = read_matches()
     latest_completed_date = max(match["ParsedDate"] for match in matches)

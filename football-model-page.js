@@ -410,24 +410,34 @@ function renderValueList(rows) {
   `).join("");
 }
 
-function renderRuleList(rules) {
+function renderRuleList(rules, health = []) {
   if (!ruleListEl) return;
-  const visible = (rules || []).slice(0, 6);
+  const healthByName = new Map((health || []).map((rule) => [rule.name, rule]));
+  const active = (rules || []).map((rule) => ({ ...rule, status: "active" }));
+  const paused = (health || [])
+    .filter((rule) => rule.status === "paused")
+    .slice(0, 3);
+  const visible = [...active.slice(0, 5), ...paused];
   if (!visible.length) {
     ruleListEl.innerHTML = `<p class="football-empty">No qualified rules yet.</p>`;
     return;
   }
 
-  ruleListEl.innerHTML = visible.map((rule) => `
-    <article class="football-rule">
+  ruleListEl.innerHTML = visible.map((rule) => {
+    const name = rule.name || `${rule.league} ${rule.selection} ${rule.odds_band} ${percent(rule.min_edge)}+`;
+    const healthRow = healthByName.get(name) || rule;
+    const pausedRule = healthRow.status === "paused";
+    return `
+    <article class="football-rule ${pausedRule ? "football-rule--paused" : ""}">
       <div>
         <strong>${escapeHtml(rule.league)} · ${escapeHtml(labelMap[rule.selection] || rule.selection)} · ${escapeHtml(rule.odds_band)}</strong>
         <span>Edge ${percent(rule.min_edge)}+ · odds ${decimal(rule.min_odds)}-${decimal(rule.max_odds)}</span>
       </div>
-      <b>${percent(rule.roi)} ROI</b>
-      <small>${rule.bets} bets · ${decimal(rule.profit_units)} units</small>
+      <b>${pausedRule ? "Paused" : `${percent(rule.roi)} ROI`}</b>
+      <small>${pausedRule ? escapeHtml(healthRow.pause_reason) : `${rule.bets} bets · recent ${percent(healthRow.recent_roi)} ROI`}</small>
     </article>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function renderAverages(averages) {
@@ -472,7 +482,7 @@ async function init() {
     setClosingLineSummary(data.closing_line_summary || {});
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);
-    renderRuleList(data.betting_rules || []);
+    renderRuleList(data.betting_rules || [], data.betting_rule_health || []);
     if (generatedAtEl) generatedAtEl.textContent = formatGeneratedAt(data.generated_at);
     renderUpcoming();
     renderRows();

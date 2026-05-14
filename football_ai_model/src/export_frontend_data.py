@@ -10,6 +10,8 @@ PREDICTIONS_PATH = MODEL_ROOT / "data" / "processed" / "predictions.csv"
 UPCOMING_PATH = MODEL_ROOT / "data" / "processed" / "upcoming_predictions.csv"
 SUMMARY_PATH = MODEL_ROOT / "reports" / "backtest_summary.txt"
 BETTING_RULES_PATH = MODEL_ROOT / "models" / "betting_rules.json"
+ACTIVE_BETTING_RULES_PATH = MODEL_ROOT / "models" / "betting_rules_active.json"
+RULE_HEALTH_PATH = MODEL_ROOT / "reports" / "betting_rule_health.csv"
 CLOSING_LINE_PATH = MODEL_ROOT / "data" / "processed" / "closing_line_report.csv"
 OUTPUT_PATH = SITE_ROOT / "public" / "football-model-data.json"
 
@@ -43,6 +45,19 @@ def parse_betting_rules():
     if not BETTING_RULES_PATH.exists():
         return []
     return json.loads(BETTING_RULES_PATH.read_text(encoding="utf-8"))
+
+
+def parse_active_betting_rules():
+    if not ACTIVE_BETTING_RULES_PATH.exists():
+        return parse_betting_rules()
+    return json.loads(ACTIVE_BETTING_RULES_PATH.read_text(encoding="utf-8"))
+
+
+def parse_rule_health():
+    if not RULE_HEALTH_PATH.exists():
+        return []
+    with RULE_HEALTH_PATH.open(newline="", encoding="utf-8") as handle:
+        return list(csv.DictReader(handle))
 
 
 def parse_closing_line_report():
@@ -112,7 +127,8 @@ def main():
         "latest_matches": latest,
         "upcoming": upcoming,
         "suggested_bets": suggested[-20:],
-        "betting_rules": parse_betting_rules(),
+        "betting_rules": parse_active_betting_rules(),
+        "betting_rule_health": parse_rule_health(),
         "closing_line_summary": closing_line_summary(closing_lines),
         "closing_line_recent": closing_lines[-12:],
         "probability_average": {

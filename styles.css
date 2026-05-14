@@ -765,6 +765,15 @@
   font-size: 0.9rem;
 }
 
+.football-rule--paused {
+  border-color: rgba(148, 37, 37, 0.18);
+  background: #fff7f7;
+}
+
+.football-rule--paused b {
+  color: #991b1b;
+}
+
 .football-empty {
   display: block;
   margin: 0;

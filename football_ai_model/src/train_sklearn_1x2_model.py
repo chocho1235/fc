@@ -31,6 +31,7 @@ from train_1x2_model import (
     value_odds,
     write_predictions,
 )
+from update_rule_health import main as update_rule_health
 
 
 MODEL_PATH = MODELS_DIR / "sklearn_one_x_two_model.joblib"
@@ -378,6 +379,7 @@ def main():
         over_25_bet_threshold=DEFAULT_OVER_25_BET_THRESHOLD,
         rules=latest_rules,
     )
+    update_rule_health()
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, MODEL_PATH)
     joblib.dump(over_model, OVER_25_MODEL_PATH)

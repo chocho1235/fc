@@ -30,7 +30,7 @@
     "over_2.5_rolling_flat_stake_profit": "3.38 units",
     "over_2.5_rolling_roi": "33.80%"
   },
-  "generated_at": "2026-05-14T22:19:50Z",
+  "generated_at": "2026-05-14T22:23:14Z",
   "generated_from": "football_ai_model/data/processed/predictions.csv",
   "leagues": [
     "La Liga",
@@ -2814,7 +2814,12 @@
       "min_edge": 0.05,
       "bets": 23,
       "profit_units": 13.76,
-      "roi": 0.5982608695652174
+      "roi": 0.5982608695652174,
+      "name": "Premier League D all 5%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "Premier League",
@@ -2825,7 +2830,12 @@
       "min_edge": 0.05,
       "bets": 63,
       "profit_units": 37.27,
-      "roi": 0.5915873015873017
+      "roi": 0.5915873015873017,
+      "name": "Premier League A long 5%+",
+      "recent_bets": 5,
+      "recent_profit_units": 7.43,
+      "recent_roi": 1.486,
+      "recent_loss_streak": 2
     },
     {
       "league": "Premier League",
@@ -2836,18 +2846,12 @@
       "min_edge": 0.05,
       "bets": 20,
       "profit_units": 10.38,
-      "roi": 0.5189999999999999
-    },
-    {
-      "league": "all",
-      "selection": "D",
-      "odds_band": "all",
-      "min_odds": 1.01,
-      "max_odds": 100.0,
-      "min_edge": 0.05,
-      "bets": 78,
-      "profit_units": 30.15,
-      "roi": 0.3865384615384615
+      "roi": 0.5189999999999999,
+      "name": "Premier League D long 5%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "all",
@@ -2858,7 +2862,12 @@
       "min_edge": 0.05,
       "bets": 88,
       "profit_units": 28.78,
-      "roi": 0.3270454545454546
+      "roi": 0.3270454545454546,
+      "name": "all A long 5%+",
+      "recent_bets": 3,
+      "recent_profit_units": 2.11,
+      "recent_roi": 0.7033333333333335,
+      "recent_loss_streak": 0
     },
     {
       "league": "all",
@@ -2869,7 +2878,12 @@
       "min_edge": 0.05,
       "bets": 72,
       "profit_units": 21.86,
-      "roi": 0.3036111111111111
+      "roi": 0.3036111111111111,
+      "name": "all D long 5%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "La Liga",
@@ -2880,7 +2894,12 @@
       "min_edge": 0.05,
       "bets": 55,
       "profit_units": 16.39,
-      "roi": 0.298
+      "roi": 0.298,
+      "name": "La Liga D all 5%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "La Liga",
@@ -2891,18 +2910,12 @@
       "min_edge": 0.05,
       "bets": 52,
       "profit_units": 11.48,
-      "roi": 0.22076923076923077
-    },
-    {
-      "league": "Premier League",
-      "selection": "A",
-      "odds_band": "all",
-      "min_odds": 1.01,
-      "max_odds": 100.0,
-      "min_edge": 0.05,
-      "bets": 163,
-      "profit_units": 34.2,
-      "roi": 0.2098159509202454
+      "roi": 0.22076923076923077,
+      "name": "La Liga D long 5%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "all",
@@ -2913,7 +2926,12 @@
       "min_edge": 0.03,
       "bets": 21,
       "profit_units": 4.07,
-      "roi": 0.19380952380952382
+      "roi": 0.19380952380952382,
+      "name": "all A short 3%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "La Liga",
@@ -2924,7 +2942,12 @@
       "min_edge": 0.03,
       "bets": 44,
       "profit_units": 8.34,
-      "roi": 0.18954545454545454
+      "roi": 0.18954545454545454,
+      "name": "La Liga H short 3%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "La Liga",
@@ -2935,18 +2958,12 @@
       "min_edge": 0.05,
       "bets": 142,
       "profit_units": 20.1,
-      "roi": 0.1415492957746479
-    },
-    {
-      "league": "La Liga",
-      "selection": "A",
-      "odds_band": "mid",
-      "min_odds": 1.75,
-      "max_odds": 3.0,
-      "min_edge": 0.03,
-      "bets": 104,
-      "profit_units": 11.26,
-      "roi": 0.10826923076923078
+      "roi": 0.1415492957746479,
+      "name": "La Liga H mid 5%+",
+      "recent_bets": 5,
+      "recent_profit_units": 1.81,
+      "recent_roi": 0.36199999999999993,
+      "recent_loss_streak": 1
     },
     {
       "league": "all",
@@ -2957,7 +2974,12 @@
       "min_edge": 0.05,
       "bets": 260,
       "profit_units": 26.16,
-      "roi": 0.10061538461538462
+      "roi": 0.10061538461538462,
+      "name": "all H mid 5%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "all",
@@ -2968,7 +2990,12 @@
       "min_edge": 0.12,
       "bets": 21,
       "profit_units": 2.02,
-      "roi": 0.09619047619047622
+      "roi": 0.09619047619047622,
+      "name": "all H long 12%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
     },
     {
       "league": "all",
@@ -2979,7 +3006,238 @@
       "min_edge": 0.05,
       "bets": 226,
       "profit_units": 20.33,
-      "roi": 0.0899557522123894
+      "roi": 0.0899557522123894,
+      "name": "all A all 5%+",
+      "recent_bets": 0,
+      "recent_profit_units": 0,
+      "recent_roi": 0.0,
+      "recent_loss_streak": 0
+    }
+  ],
+  "betting_rule_health": [
+    {
+      "name": "Premier League D all 5%+",
+      "league": "Premier League",
+      "selection": "D",
+      "odds_band": "all",
+      "bets": "23",
+      "roi": "0.5982608695652174",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "Premier League A long 5%+",
+      "league": "Premier League",
+      "selection": "A",
+      "odds_band": "long",
+      "bets": "63",
+      "roi": "0.5915873015873017",
+      "recent_bets": "5",
+      "recent_profit_units": "7.43",
+      "recent_roi": "1.486",
+      "recent_loss_streak": "2",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "Premier League D long 5%+",
+      "league": "Premier League",
+      "selection": "D",
+      "odds_band": "long",
+      "bets": "20",
+      "roi": "0.5189999999999999",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "all D all 5%+",
+      "league": "all",
+      "selection": "D",
+      "odds_band": "all",
+      "bets": "78",
+      "roi": "0.3865384615384615",
+      "recent_bets": "1",
+      "recent_profit_units": "-1",
+      "recent_roi": "-1.0",
+      "recent_loss_streak": "1",
+      "status": "paused",
+      "pause_reason": "Recent ROI -100.00%, loss streak 1"
+    },
+    {
+      "name": "all A long 5%+",
+      "league": "all",
+      "selection": "A",
+      "odds_band": "long",
+      "bets": "88",
+      "roi": "0.3270454545454546",
+      "recent_bets": "3",
+      "recent_profit_units": "2.11",
+      "recent_roi": "0.7033333333333335",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "all D long 5%+",
+      "league": "all",
+      "selection": "D",
+      "odds_band": "long",
+      "bets": "72",
+      "roi": "0.3036111111111111",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "La Liga D all 5%+",
+      "league": "La Liga",
+      "selection": "D",
+      "odds_band": "all",
+      "bets": "55",
+      "roi": "0.298",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "La Liga D long 5%+",
+      "league": "La Liga",
+      "selection": "D",
+      "odds_band": "long",
+      "bets": "52",
+      "roi": "0.22076923076923077",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "Premier League A all 5%+",
+      "league": "Premier League",
+      "selection": "A",
+      "odds_band": "all",
+      "bets": "163",
+      "roi": "0.2098159509202454",
+      "recent_bets": "5",
+      "recent_profit_units": "-3.28",
+      "recent_roi": "-0.656",
+      "recent_loss_streak": "3",
+      "status": "paused",
+      "pause_reason": "Recent ROI -65.60%, loss streak 3"
+    },
+    {
+      "name": "all A short 3%+",
+      "league": "all",
+      "selection": "A",
+      "odds_band": "short",
+      "bets": "21",
+      "roi": "0.19380952380952382",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "La Liga H short 3%+",
+      "league": "La Liga",
+      "selection": "H",
+      "odds_band": "short",
+      "bets": "44",
+      "roi": "0.18954545454545454",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "La Liga H mid 5%+",
+      "league": "La Liga",
+      "selection": "H",
+      "odds_band": "mid",
+      "bets": "142",
+      "roi": "0.1415492957746479",
+      "recent_bets": "5",
+      "recent_profit_units": "1.81",
+      "recent_roi": "0.36199999999999993",
+      "recent_loss_streak": "1",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "La Liga A mid 3%+",
+      "league": "La Liga",
+      "selection": "A",
+      "odds_band": "mid",
+      "bets": "104",
+      "roi": "0.10826923076923078",
+      "recent_bets": "5",
+      "recent_profit_units": "-3.18",
+      "recent_roi": "-0.6359999999999999",
+      "recent_loss_streak": "1",
+      "status": "paused",
+      "pause_reason": "Recent ROI -63.60%, loss streak 1"
+    },
+    {
+      "name": "all H mid 5%+",
+      "league": "all",
+      "selection": "H",
+      "odds_band": "mid",
+      "bets": "260",
+      "roi": "0.10061538461538462",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "all H long 12%+",
+      "league": "all",
+      "selection": "H",
+      "odds_band": "long",
+      "bets": "21",
+      "roi": "0.09619047619047622",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
+    },
+    {
+      "name": "all A all 5%+",
+      "league": "all",
+      "selection": "A",
+      "odds_band": "all",
+      "bets": "226",
+      "roi": "0.0899557522123894",
+      "recent_bets": "0",
+      "recent_profit_units": "0",
+      "recent_roi": "0.0",
+      "recent_loss_streak": "0",
+      "status": "active",
+      "pause_reason": ""
     }
   ],
   "closing_line_summary": {
