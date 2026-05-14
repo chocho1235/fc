@@ -192,6 +192,19 @@ function setClosingLineSummary(summary) {
   });
 }
 
+function setBuilderSummary(summary, profile) {
+  document.querySelectorAll("[data-builder-summary]").forEach((node) => {
+    const key = node.dataset.builderSummary || "";
+    if (key === "active_legs") {
+      node.textContent = String((profile.allowed_leg_keys || []).length || "--");
+    } else if (key.endsWith("_rate")) {
+      node.textContent = percent(summary[key]);
+    } else {
+      node.textContent = summary[key] ?? "--";
+    }
+  });
+}
+
 function probabilityBar(row) {
   const home = percent(row.home_win_probability);
   const draw = percent(row.draw_probability);
@@ -220,6 +233,32 @@ function resultHtml(row, includeResult) {
       <span class="football-status ${statusClass}">${resultMap[row.result] || row.result}</span>
       <small>${modelText} · ${betText}</small>
     </div>
+  `;
+}
+
+function builderStatus(row) {
+  const result = row.builder_result || "";
+  const won = Number(row.builder_legs_won || 0);
+  const total = Number(row.builder_legs_total || 0);
+  if (result === "won") return { label: `Builder won · ${won}/${total}`, className: "football-status--won" };
+  if (result === "partial") return { label: `Builder partial · ${won}/${total}`, className: "football-status--partial" };
+  if (result === "lost") return { label: `Builder lost · ${won}/${total}`, className: "football-status--lost" };
+  return { label: "Not settled", className: "football-status--pending" };
+}
+
+function builderLegResultHtml(row) {
+  const parts = String(row.builder_leg_results || "")
+    .split(" | ")
+    .map((part) => part.trim())
+    .filter(Boolean);
+  if (!parts.length) return "";
+  return `
+    <ul class="football-builder-results">
+      ${parts.map((part) => {
+        const [label, status = "pending"] = part.split(":");
+        return `<li class="is-${escapeHtml(status)}"><span>${escapeHtml(label)}</span><b>${escapeHtml(status)}</b></li>`;
+      }).join("")}
+    </ul>
   `;
 }
 
@@ -293,15 +332,18 @@ function builderHtml(row) {
   const confidence = row.builder_confidence || "none";
   const legs = suggestion === "No builder lean" ? [] : suggestion.split(" + ").filter(Boolean);
   const confidenceText = confidence === "strong" ? "Strong lean" : confidence === "lean" ? "Lean only" : "No clear combo";
+  const settled = builderStatus(row);
   return `
     <div class="football-builder football-builder--${escapeHtml(confidence)} ${hasValue ? "football-builder--value" : ""}">
       <div class="football-builder__head">
         <span>Builder projection</span>
-        <b>${escapeHtml(confidenceText)} · not settled</b>
+        <b>${escapeHtml(confidenceText)}</b>
       </div>
+      <span class="football-status ${settled.className}">${escapeHtml(settled.label)}</span>
       <div class="football-builder__legs">
         ${legs.length ? legs.map((leg) => `<i>${escapeHtml(leg)}</i>`).join("") : `<em>No combined lean</em>`}
       </div>
+      ${builderLegResultHtml(row)}
       <dl class="football-builder__metrics">
         <div><dt>O2.5</dt><dd>${percent(probability)}</dd></div>
         <div><dt>BTTS</dt><dd>${percent(bttsProbability)}</dd></div>
@@ -525,6 +567,7 @@ async function init() {
     renderLeagueOptions(data.leagues || []);
     setSummary(data.summary || {});
     setClosingLineSummary(data.closing_line_summary || {});
+    setBuilderSummary(data.builder_summary || {}, data.builder_profile || {});
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);
     renderRuleList(data.betting_rules || [], data.betting_rule_health || []);
@@ -536,7 +579,7 @@ async function init() {
     countEl.textContent = "Data unavailable";
     rowsEl.innerHTML = `
       <tr>
-        <td colspan="5">
+        <td colspan="4">
           <span class="football-empty">Run the model export script to generate public/football-model-data.json.</span>
         </td>
       </tr>

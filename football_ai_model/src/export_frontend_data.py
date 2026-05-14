@@ -11,6 +11,7 @@ UPCOMING_PATH = MODEL_ROOT / "data" / "processed" / "upcoming_predictions.csv"
 SUMMARY_PATH = MODEL_ROOT / "reports" / "backtest_summary.txt"
 BETTING_RULES_PATH = MODEL_ROOT / "models" / "betting_rules.json"
 ACTIVE_BETTING_RULES_PATH = MODEL_ROOT / "models" / "betting_rules_active.json"
+BUILDER_PROFILE_PATH = MODEL_ROOT / "models" / "builder_profile.json"
 RULE_HEALTH_PATH = MODEL_ROOT / "reports" / "betting_rule_health.csv"
 CLOSING_LINE_PATH = MODEL_ROOT / "data" / "processed" / "closing_line_report.csv"
 OUTPUT_PATH = SITE_ROOT / "public" / "football-model-data.json"
@@ -51,6 +52,12 @@ def parse_active_betting_rules():
     if not ACTIVE_BETTING_RULES_PATH.exists():
         return parse_betting_rules()
     return json.loads(ACTIVE_BETTING_RULES_PATH.read_text(encoding="utf-8"))
+
+
+def parse_builder_profile():
+    if not BUILDER_PROFILE_PATH.exists():
+        return {}
+    return json.loads(BUILDER_PROFILE_PATH.read_text(encoding="utf-8"))
 
 
 def parse_rule_health():
@@ -94,6 +101,24 @@ def closing_line_summary(rows):
     }
 
 
+def builder_summary(rows):
+    settled = [row for row in rows if row.get("builder_result") in {"won", "partial", "lost"}]
+    won = [row for row in settled if row.get("builder_result") == "won"]
+    partial = [row for row in settled if row.get("builder_result") == "partial"]
+    lost = [row for row in settled if row.get("builder_result") == "lost"]
+    leg_total = sum(int(to_float(row.get("builder_legs_total"))) for row in settled)
+    leg_wins = sum(int(to_float(row.get("builder_legs_won"))) for row in settled)
+    return {
+        "settled": len(settled),
+        "won": len(won),
+        "partial": len(partial),
+        "lost": len(lost),
+        "win_rate": round(len(won) / len(settled), 4) if settled else 0.0,
+        "avoid_loss_rate": round((len(won) + len(partial)) / len(settled), 4) if settled else 0.0,
+        "leg_hit_rate": round(leg_wins / leg_total, 4) if leg_total else 0.0,
+    }
+
+
 def to_float(value):
     try:
         return float(value)
@@ -108,7 +133,9 @@ def main():
     predictions = parse_predictions()
     upcoming = parse_upcoming()
     closing_lines = parse_closing_line_report()
+    builder_profile = parse_builder_profile()
     suggested = [row for row in predictions if row.get("suggested_bet")]
+    settled_builders = [row for row in predictions if row.get("builder_result") in {"won", "partial", "lost"}]
     latest = predictions[-40:]
 
     leagues = sorted({
@@ -127,6 +154,9 @@ def main():
         "latest_matches": latest,
         "upcoming": upcoming,
         "suggested_bets": suggested[-20:],
+        "builder_summary": builder_summary(predictions),
+        "builder_profile": builder_profile,
+        "builder_history": settled_builders[-20:],
         "betting_rules": parse_active_betting_rules(),
         "betting_rule_health": parse_rule_health(),
         "closing_line_summary": closing_line_summary(closing_lines),

@@ -1,0 +1,74 @@
+{
+  "allowed_leg_keys": [
+    "away_4_sot",
+    "btts_yes",
+    "home_4_sot",
+    "over_15_goals",
+    "total_3_cards",
+    "total_8_corners"
+  ],
+  "min_samples": 20,
+  "min_hit_rate": 0.5,
+  "legs": {
+    "away_4_sot": {
+      "settled": 1125,
+      "won": 723,
+      "hit_rate": 0.6427,
+      "active": true
+    },
+    "btts_yes": {
+      "settled": 1700,
+      "won": 960,
+      "hit_rate": 0.5647,
+      "active": true
+    },
+    "home_4_sot": {
+      "settled": 1869,
+      "won": 1396,
+      "hit_rate": 0.7469,
+      "active": true
+    },
+    "over_15_goals": {
+      "settled": 2510,
+      "won": 1946,
+      "hit_rate": 0.7753,
+      "active": true
+    },
+    "over_25_goals": {
+      "settled": 73,
+      "won": 36,
+      "hit_rate": 0.4932,
+      "active": false
+    },
+    "total_3_cards": {
+      "settled": 2258,
+      "won": 1877,
+      "hit_rate": 0.8313,
+      "active": true
+    },
+    "total_8_corners": {
+      "settled": 2273,
+      "won": 1767,
+      "hit_rate": 0.7774,
+      "active": true
+    }
+  },
+  "builder_results": {
+    "lean": {
+      "settled": 1140,
+      "won": 713,
+      "partial": 290,
+      "lost": 137,
+      "win_rate": 0.6254,
+      "avoid_loss_rate": 0.8798
+    },
+    "strong": {
+      "settled": 2592,
+      "won": 986,
+      "partial": 1557,
+      "lost": 49,
+      "win_rate": 0.3804,
+      "avoid_loss_rate": 0.9811
+    }
+  }
+}

@@ -6,8 +6,10 @@ import numpy as np
 
 from train_1x2_model import (
     LABELS,
+    BUILDER_PROFILE_PATH,
     MODELS_DIR,
     PROCESSED_DIR,
+    apply_builder_profile,
     build_dataset,
     fair_odds,
     find_best_bet_with_rule,
@@ -71,7 +73,8 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
             "expected_home_goals", "expected_away_goals", "expected_total_goals",
             "btts_probability", "over_15_probability", "over_35_probability",
             "home_expected_sot", "away_expected_sot", "total_expected_sot", "total_expected_corners", "total_expected_cards",
-            "builder_suggestion", "builder_confidence",
+            "builder_leg_keys", "builder_suggestion", "builder_confidence",
+            "builder_leg_results", "builder_legs_won", "builder_legs_total", "builder_result",
             "predicted_result", "suggested_bet", "suggested_edge", "bet_rule", "bet_rule_bets", "bet_rule_roi",
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
@@ -132,8 +135,13 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
                 "total_expected_sot": round(row["total_expected_sot"], 2),
                 "total_expected_corners": round(row["total_expected_corners"], 2),
                 "total_expected_cards": round(row["total_expected_cards"], 2),
+                "builder_leg_keys": row.get("builder_leg_keys", ""),
                 "builder_suggestion": row["builder_suggestion"],
                 "builder_confidence": row["builder_confidence"],
+                "builder_leg_results": row.get("builder_leg_results", ""),
+                "builder_legs_won": row.get("builder_legs_won", ""),
+                "builder_legs_total": row.get("builder_legs_total", 0),
+                "builder_result": row.get("builder_result", ""),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
@@ -175,6 +183,8 @@ def main():
 
     combined_rows = build_dataset(matches + fixtures)
     upcoming_rows = [row for row in combined_rows if row["season"] == "upcoming"]
+    if BUILDER_PROFILE_PATH.exists():
+        apply_builder_profile(upcoming_rows, json.loads(BUILDER_PROFILE_PATH.read_text(encoding="utf-8")))
     probabilities = predict_rows(model, upcoming_rows, features)
     over_probabilities = predict_over_25(over_model, upcoming_rows, over_features) if over_model else None
     write_upcoming(upcoming_rows, probabilities, threshold, over_probabilities, over_25_threshold, rules)

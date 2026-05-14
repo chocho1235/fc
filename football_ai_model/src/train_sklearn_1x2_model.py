@@ -12,6 +12,7 @@ from sklearn.preprocessing import StandardScaler
 
 from train_1x2_model import (
     BET_THRESHOLDS,
+    BUILDER_PROFILE_PATH,
     DEFAULT_BET_THRESHOLD,
     LABELS,
     MODELS_DIR,
@@ -19,6 +20,7 @@ from train_1x2_model import (
     PROCESSED_DIR,
     REPORTS_DIR,
     TRAINING_WINDOW_SEASONS,
+    apply_builder_profile,
     average_summary,
     build_dataset,
     candidate_bets,
@@ -27,6 +29,7 @@ from train_1x2_model import (
     fair_odds,
     feature_names,
     find_best_bet,
+    learn_builder_profile,
     read_matches,
     value_odds,
     write_predictions,
@@ -358,6 +361,9 @@ def main():
     test_season = seasons[-1]
     train_rows = season_train_rows(rows, test_season, seasons)
     test_rows = [row for row in rows if row["season"] == test_season]
+    builder_profile = learn_builder_profile(train_rows)
+    apply_builder_profile(test_rows, builder_profile)
+    active_builder_legs = sum(1 for leg in builder_profile.get("legs", {}).values() if leg.get("active"))
 
     model = train_classifier(train_rows, names)
     probabilities = predict_rows(model, test_rows, names)
@@ -383,6 +389,7 @@ def main():
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, MODEL_PATH)
     joblib.dump(over_model, OVER_25_MODEL_PATH)
+    BUILDER_PROFILE_PATH.write_text(json.dumps(builder_profile, indent=2), encoding="utf-8")
     MODEL_META_PATH.write_text(json.dumps({
         "labels": LABELS,
         "features": names,
@@ -414,6 +421,8 @@ def main():
         f"Flat-stake profit: {summary['profit_units']:.2f} units",
         f"ROI: {summary['roi']:.2%}",
         f"Active betting rules: {len(final_rules)}",
+        f"Active builder legs: {active_builder_legs}",
+        f"Builder min leg hit rate: {builder_profile['min_hit_rate']:.0%}",
         "",
         "Rolling season backtest",
         f"Seasons tested: {rolling_average['seasons']}",

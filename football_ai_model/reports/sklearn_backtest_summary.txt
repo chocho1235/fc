@@ -8,6 +8,8 @@ Value bets at 5%+ edge: 72
 Flat-stake profit: 14.01 units
 ROI: 19.46%
 Active betting rules: 16
+Active builder legs: 6
+Builder min leg hit rate: 50%
 
 Rolling season backtest
 Seasons tested: 6

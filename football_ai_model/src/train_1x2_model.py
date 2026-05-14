@@ -17,12 +17,15 @@ EXTERNAL_DIR = ROOT / "data" / "external"
 PROCESSED_DIR = ROOT / "data" / "processed"
 MODELS_DIR = ROOT / "models"
 REPORTS_DIR = ROOT / "reports"
+BUILDER_PROFILE_PATH = MODELS_DIR / "builder_profile.json"
 
 LABELS = ["H", "D", "A"]
 ODDS_COLUMNS = [("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A")]
 BET_THRESHOLDS = [0.03, 0.05, 0.08, 0.10, 0.12, 0.15]
 DEFAULT_BET_THRESHOLD = float(os.getenv("BET_THRESHOLD", "0.05") or "0.05")
 TRAINING_WINDOW_SEASONS = int(os.getenv("TRAINING_WINDOW_SEASONS", "5") or "5")
+BUILDER_MIN_SAMPLES = int(os.getenv("BUILDER_MIN_SAMPLES", "20") or "20")
+BUILDER_MIN_HIT_RATE = float(os.getenv("BUILDER_MIN_HIT_RATE", "0.50") or "0.50")
 ODDS_BANDS = [
     {"name": "short", "min_odds": 1.01, "max_odds": 1.75},
     {"name": "mid", "min_odds": 1.75, "max_odds": 3.0},
@@ -431,6 +434,40 @@ def performance_proxy(shots, shots_on_target, corners, goals):
     return (shots * 0.03) + (shots_on_target * 0.12) + (corners * 0.025) + (goals * 0.18)
 
 
+def builder_candidate_legs(row):
+    legs = []
+    if row.get("over_15_probability", 0) >= 0.72:
+        legs.append({"key": "over_15_goals", "label": "Over 1.5 goals"})
+    elif row.get("over_25_market_prob", 0) >= 0.58:
+        legs.append({"key": "over_25_goals", "label": "Over 2.5 goals"})
+    if row.get("btts_probability", 0) >= 0.54:
+        legs.append({"key": "btts_yes", "label": "BTTS yes"})
+    if row.get("home_expected_sot", 0) >= 4.2:
+        legs.append({"key": "home_4_sot", "label": f"{row.get('home_team', 'Home')} 4+ SOT"})
+    elif row.get("away_expected_sot", 0) >= 4.2:
+        legs.append({"key": "away_4_sot", "label": f"{row.get('away_team', 'Away')} 4+ SOT"})
+    if row.get("total_expected_corners", 0) >= 9.5:
+        legs.append({"key": "total_8_corners", "label": "8+ corners"})
+    if row.get("total_expected_cards", 0) >= 4.2:
+        legs.append({"key": "total_3_cards", "label": "3+ cards"})
+    return legs
+
+
+def update_builder_fields(row, legs, profile=None):
+    if profile:
+        allowed = set(profile.get("allowed_leg_keys", []))
+        if allowed:
+            legs = [leg for leg in legs if leg["key"] in allowed]
+    builder_confidence = "strong" if len(legs) >= 3 else "lean" if legs else "none"
+    settled = settle_builder_legs(row, legs)
+    row.update({
+        "builder_leg_keys": "|".join(leg["key"] for leg in legs),
+        "builder_suggestion": " + ".join(leg["label"] for leg in legs[:4]) if legs else "No builder lean",
+        "builder_confidence": builder_confidence,
+        **settled,
+    })
+
+
 def add_bet_builder_estimates(row):
     expected_home_goals = avg([
         row.get("home_goals_for_last_10", 0),
@@ -463,23 +500,6 @@ def add_bet_builder_estimates(row):
     btts_probability = home_scores_probability * away_scores_probability
     over_15_probability = poisson_over_probability(expected_total_goals, 1.5)
     over_35_probability = poisson_over_probability(expected_total_goals, 3.5)
-    builder_legs = []
-    if over_15_probability >= 0.72:
-        builder_legs.append("Over 1.5 goals")
-    elif row.get("over_25_market_prob", 0) >= 0.58:
-        builder_legs.append("Over 2.5 goals")
-    if btts_probability >= 0.54:
-        builder_legs.append("BTTS yes")
-    if home_sot >= 4.2:
-        builder_legs.append(f"{row.get('home_team', 'Home')} 4+ SOT")
-    elif away_sot >= 4.2:
-        builder_legs.append(f"{row.get('away_team', 'Away')} 4+ SOT")
-    if home_corners + away_corners >= 9.5:
-        builder_legs.append("8+ corners")
-    if total_cards >= 4.2:
-        builder_legs.append("3+ cards")
-    builder_confidence = "strong" if len(builder_legs) >= 3 else "lean" if builder_legs else "none"
-
     row.update({
         "expected_home_goals": expected_home_goals,
         "expected_away_goals": expected_away_goals,
@@ -494,9 +514,126 @@ def add_bet_builder_estimates(row):
         "away_expected_corners": away_corners,
         "total_expected_corners": home_corners + away_corners,
         "total_expected_cards": total_cards,
-        "builder_suggestion": " + ".join(builder_legs[:4]) if builder_legs else "No builder lean",
-        "builder_confidence": builder_confidence,
     })
+    update_builder_fields(row, builder_candidate_legs(row))
+
+
+def settle_builder_leg(row, key):
+    if key == "over_15_goals":
+        return row.get("total_goals", 0) >= 2
+    if key == "over_25_goals":
+        return row.get("total_goals", 0) >= 3
+    if key == "btts_yes":
+        return row.get("home_goals", 0) > 0 and row.get("away_goals", 0) > 0
+    if key == "home_4_sot":
+        return row.get("actual_home_sot", 0) >= 4
+    if key == "away_4_sot":
+        return row.get("actual_away_sot", 0) >= 4
+    if key == "total_8_corners":
+        return row.get("actual_total_corners", 0) >= 8
+    if key == "total_3_cards":
+        return row.get("actual_total_cards", 0) >= 3
+    return None
+
+
+def settle_builder_legs(row, legs):
+    if not legs:
+        return {
+            "builder_leg_results": "",
+            "builder_legs_won": "",
+            "builder_legs_total": 0,
+            "builder_result": "",
+        }
+
+    results = []
+    wins = 0
+    settled = 0
+    for leg in legs:
+        won = settle_builder_leg(row, leg["key"])
+        if won is None:
+            results.append(f"{leg['label']}:pending")
+            continue
+        settled += 1
+        wins += 1 if won else 0
+        results.append(f"{leg['label']}:{'won' if won else 'lost'}")
+
+    if settled != len(legs):
+        builder_result = "pending"
+    elif wins == len(legs):
+        builder_result = "won"
+    elif wins == 0:
+        builder_result = "lost"
+    else:
+        builder_result = "partial"
+
+    return {
+        "builder_leg_results": " | ".join(results),
+        "builder_legs_won": wins if settled else "",
+        "builder_legs_total": len(legs),
+        "builder_result": builder_result,
+    }
+
+
+def builder_feedback(rows):
+    leg_stats = defaultdict(lambda: {"settled": 0, "won": 0})
+    builder_stats = defaultdict(lambda: {"settled": 0, "won": 0, "partial": 0, "lost": 0})
+
+    for row in rows:
+        keys = [key for key in str(row.get("builder_leg_keys", "")).split("|") if key]
+        if not keys:
+            continue
+        for key in keys:
+            won = settle_builder_leg(row, key)
+            if won is None:
+                continue
+            leg_stats[key]["settled"] += 1
+            leg_stats[key]["won"] += 1 if won else 0
+
+        result = row.get("builder_result")
+        if result in {"won", "partial", "lost"}:
+            confidence = row.get("builder_confidence", "unknown")
+            builder_stats[confidence]["settled"] += 1
+            builder_stats[confidence][result] += 1
+
+    return leg_stats, builder_stats
+
+
+def learn_builder_profile(rows):
+    leg_stats, builder_stats = builder_feedback(rows)
+    allowed = []
+    leg_report = {}
+    for key, stats in sorted(leg_stats.items()):
+        settled = stats["settled"]
+        hit_rate = stats["won"] / settled if settled else 0.0
+        if settled >= BUILDER_MIN_SAMPLES and hit_rate >= BUILDER_MIN_HIT_RATE:
+            allowed.append(key)
+        leg_report[key] = {
+            "settled": settled,
+            "won": stats["won"],
+            "hit_rate": round(hit_rate, 4),
+            "active": key in allowed,
+        }
+
+    profile = {
+        "allowed_leg_keys": allowed,
+        "min_samples": BUILDER_MIN_SAMPLES,
+        "min_hit_rate": BUILDER_MIN_HIT_RATE,
+        "legs": leg_report,
+        "builder_results": {
+            key: {
+                **stats,
+                "win_rate": round(stats["won"] / stats["settled"], 4) if stats["settled"] else 0.0,
+                "avoid_loss_rate": round((stats["won"] + stats["partial"]) / stats["settled"], 4) if stats["settled"] else 0.0,
+            }
+            for key, stats in sorted(builder_stats.items())
+        },
+    }
+    return profile
+
+
+def apply_builder_profile(rows, profile):
+    for row in rows:
+        update_builder_fields(row, builder_candidate_legs(row), profile)
 
 
 def poisson_over_probability(expected_goals, line):
@@ -557,6 +694,8 @@ def build_dataset(matches):
             "home_team": home,
             "away_team": away,
             "result": match.get("FTR", ""),
+            "home_goals": parse_float(match.get("FTHG")),
+            "away_goals": parse_float(match.get("FTAG")),
             "total_goals": parse_float(match.get("FTHG")) + parse_float(match.get("FTAG")),
             "actual_home_sot": home_sot,
             "actual_away_sot": away_sot,
@@ -701,6 +840,8 @@ def feature_names(rows):
         "home_team",
         "away_team",
         "result",
+        "home_goals",
+        "away_goals",
         "home_odds",
         "draw_odds",
         "away_odds",
@@ -740,6 +881,11 @@ def feature_names(rows):
         "context_notes",
         "h2h_home_form",
         "h2h_away_form",
+        "builder_leg_keys",
+        "builder_leg_results",
+        "builder_legs_won",
+        "builder_legs_total",
+        "builder_result",
         "builder_suggestion",
         "builder_confidence",
     }
@@ -1043,8 +1189,13 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
             "total_expected_sot",
             "total_expected_corners",
             "total_expected_cards",
+            "builder_leg_keys",
             "builder_suggestion",
             "builder_confidence",
+            "builder_leg_results",
+            "builder_legs_won",
+            "builder_legs_total",
+            "builder_result",
             "actual_total_sot",
             "actual_total_corners",
             "actual_total_cards",
@@ -1115,8 +1266,13 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
                 "total_expected_sot": round(row["total_expected_sot"], 2),
                 "total_expected_corners": round(row["total_expected_corners"], 2),
                 "total_expected_cards": round(row["total_expected_cards"], 2),
+                "builder_leg_keys": row.get("builder_leg_keys", ""),
                 "builder_suggestion": row["builder_suggestion"],
                 "builder_confidence": row["builder_confidence"],
+                "builder_leg_results": row.get("builder_leg_results", ""),
+                "builder_legs_won": row.get("builder_legs_won", ""),
+                "builder_legs_total": row.get("builder_legs_total", 0),
+                "builder_result": row.get("builder_result", ""),
                 "actual_total_sot": round(row["actual_total_sot"], 2),
                 "actual_total_corners": round(row["actual_total_corners"], 2),
                 "actual_total_cards": round(row["actual_total_cards"], 2),
@@ -1191,8 +1347,13 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
             "total_expected_sot",
             "total_expected_corners",
             "total_expected_cards",
+            "builder_leg_keys",
             "builder_suggestion",
             "builder_confidence",
+            "builder_leg_results",
+            "builder_legs_won",
+            "builder_legs_total",
+            "builder_result",
             "predicted_result",
             "suggested_bet",
             "suggested_edge",
@@ -1258,8 +1419,13 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
                 "total_expected_sot": round(row["total_expected_sot"], 2),
                 "total_expected_corners": round(row["total_expected_corners"], 2),
                 "total_expected_cards": round(row["total_expected_cards"], 2),
+                "builder_leg_keys": row.get("builder_leg_keys", ""),
                 "builder_suggestion": row["builder_suggestion"],
                 "builder_confidence": row["builder_confidence"],
+                "builder_leg_results": row.get("builder_leg_results", ""),
+                "builder_legs_won": row.get("builder_legs_won", ""),
+                "builder_legs_total": row.get("builder_legs_total", 0),
+                "builder_result": row.get("builder_result", ""),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",

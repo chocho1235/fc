@@ -454,6 +454,11 @@
   color: #991b1b !important;
 }
 
+.football-status--partial {
+  background: #fef3c7;
+  color: #92400e !important;
+}
+
 .football-table td strong,
 .football-table td span {
   display: block;
@@ -658,6 +663,47 @@
   color: #102018;
   font-size: 0.95rem;
   font-weight: 950;
+}
+
+.football-builder-results {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.football-builder-results li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+  padding: 0.32rem 0.45rem;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.football-builder-results li span {
+  min-width: 0;
+}
+
+.football-builder-results li b {
+  color: inherit;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+}
+
+.football-builder-results .is-won {
+  background: #ecfdf5;
+  color: #166534;
+}
+
+.football-builder-results .is-lost {
+  background: #fef2f2;
+  color: #991b1b;
 }
 
 .football-builder--strong {
