@@ -57,7 +57,13 @@
     "away_odds_move",
     "home_closing_prob",
     "draw_closing_prob",
-    "away_closing_prob"
+    "away_closing_prob",
+    "home_expected_sot",
+    "away_expected_sot",
+    "total_expected_sot",
+    "home_expected_corners",
+    "away_expected_corners",
+    "total_expected_corners"
   ],
   "test_season": "2526",
   "bet_threshold": 0.05,

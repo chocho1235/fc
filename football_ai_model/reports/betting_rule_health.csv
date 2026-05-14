@@ -1,17 +1,17 @@
 name,league,selection,odds_band,bets,roi,recent_bets,recent_profit_units,recent_roi,recent_loss_streak,status,pause_reason
-Premier League D all 5%+,Premier League,D,all,23,0.5982608695652174,0,0,0.0,0,active,
-Premier League A long 5%+,Premier League,A,long,63,0.5915873015873017,5,7.43,1.486,2,active,
-Premier League D long 5%+,Premier League,D,long,20,0.5189999999999999,0,0,0.0,0,active,
-all D all 5%+,all,D,all,78,0.3865384615384615,1,-1,-1.0,1,paused,"Recent ROI -100.00%, loss streak 1"
-all A long 5%+,all,A,long,88,0.3270454545454546,3,2.11,0.7033333333333335,0,active,
-all D long 5%+,all,D,long,72,0.3036111111111111,0,0,0.0,0,active,
-La Liga D all 5%+,La Liga,D,all,55,0.298,0,0,0.0,0,active,
-La Liga D long 5%+,La Liga,D,long,52,0.22076923076923077,0,0,0.0,0,active,
-Premier League A all 5%+,Premier League,A,all,163,0.2098159509202454,5,-3.28,-0.656,3,paused,"Recent ROI -65.60%, loss streak 3"
-all A short 3%+,all,A,short,21,0.19380952380952382,0,0,0.0,0,active,
-La Liga H short 3%+,La Liga,H,short,44,0.18954545454545454,0,0,0.0,0,active,
-La Liga H mid 5%+,La Liga,H,mid,142,0.1415492957746479,5,1.81,0.36199999999999993,1,active,
-La Liga A mid 3%+,La Liga,A,mid,104,0.10826923076923078,5,-3.18,-0.6359999999999999,1,paused,"Recent ROI -63.60%, loss streak 1"
-all H mid 5%+,all,H,mid,260,0.10061538461538462,0,0,0.0,0,active,
-all H long 12%+,all,H,long,21,0.09619047619047622,0,0,0.0,0,active,
-all A all 5%+,all,A,all,226,0.0899557522123894,0,0,0.0,0,active,
+Premier League A long 5%+,Premier League,A,long,76,0.47631578947368425,5,7.52,1.504,2,active,
+all H very_long 8%+,all,H,very_long,21,0.37,0,0,0.0,0,active,
+Premier League H all 10%+,Premier League,H,all,32,0.35124999999999995,0,0,0.0,0,active,
+La Liga H short 3%+,La Liga,H,short,36,0.26861111111111113,1,0.73,0.73,0,active,
+La Liga H mid 8%+,La Liga,H,mid,37,0.2591891891891892,4,3.22,0.8049999999999999,0,active,
+all A long 5%+,all,A,long,123,0.23650406504065044,0,0,0.0,0,active,
+all A short 3%+,all,A,short,20,0.1735,0,0,0.0,0,active,
+all H long 12%+,all,H,long,20,0.15100000000000002,0,0,0.0,0,active,
+Premier League A all 5%+,Premier League,A,all,177,0.14983050847457627,0,0,0.0,0,active,
+all H all 12%+,all,H,all,35,0.13685714285714287,0,0,0.0,0,active,
+all D all 5%+,all,D,all,60,0.09866666666666667,0,0,0.0,0,active,
+all H short 3%+,all,H,short,68,0.0964705882352941,2,-0.4,-0.19999999999999996,1,active,
+Premier League D all 3%+,Premier League,D,all,88,0.07806818181818183,0,0,0.0,0,active,
+all H mid 5%+,all,H,mid,280,0.06717857142857142,5,1.96,0.392,2,active,
+La Liga A mid 3%+,La Liga,A,mid,120,0.05833333333333334,5,-3.18,-0.6359999999999999,0,paused,"Recent ROI -63.60%, loss streak 0"
+all A all 5%+,all,A,all,273,0.05003663003663004,0,0,0.0,0,active,

@@ -556,6 +556,13 @@
   line-height: 1.25;
 }
 
+.football-builder small {
+  color: #475569;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
 .football-decision__label {
   color: #0f766e !important;
   letter-spacing: 0.05em;

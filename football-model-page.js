@@ -279,12 +279,20 @@ function builderHtml(row) {
   const bookOdds = Number(row.over_25_bookmaker_odds || 0);
   const valueOdds = Number(row.over_25_value_odds || 0);
   const hasValue = bookOdds > 0 && valueOdds > 0 && bookOdds >= valueOdds;
+  const homeSot = Number(row.home_expected_sot || 0);
+  const awaySot = Number(row.away_expected_sot || 0);
+  const totalSot = Number(row.total_expected_sot || 0);
+  const totalCorners = Number(row.total_expected_corners || 0);
+  const totalCards = Number(row.total_expected_cards || 0);
+  const sotLean = totalSot >= 8 ? "SOT lean: high" : totalSot >= 6 ? "SOT lean: normal" : "SOT lean: low";
   return `
     <div class="football-builder ${hasValue ? "football-builder--value" : ""}">
       <span>Over 2.5 goals</span>
       <strong>${percent(probability)}</strong>
       <span>Bookie ${decimal(bookOdds)} · bet from ${decimal(valueOdds)}</span>
       <b>${hasValue ? "Possible value" : "No value"}</b>
+      <small>${sotLean} · ${escapeHtml(row.home_team)} ${decimal(homeSot)} / ${escapeHtml(row.away_team)} ${decimal(awaySot)}</small>
+      <small>Total SOT ${decimal(totalSot)} · corners ${decimal(totalCorners)} · cards ${decimal(totalCards)}</small>
     </div>
   `;
 }

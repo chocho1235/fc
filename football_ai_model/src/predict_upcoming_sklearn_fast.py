@@ -68,6 +68,7 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
             "home_fair_odds", "draw_fair_odds", "away_fair_odds",
             "home_value_odds", "draw_value_odds", "away_value_odds",
             "over_25_probability", "over_25_bookmaker_odds", "over_25_fair_odds", "over_25_value_odds",
+            "home_expected_sot", "away_expected_sot", "total_expected_sot", "total_expected_corners", "total_expected_cards",
             "predicted_result", "suggested_bet", "suggested_edge", "bet_rule", "bet_rule_bets", "bet_rule_roi",
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
@@ -117,6 +118,11 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
                 "over_25_value_odds": round(value_odds(over_probability, over_25_threshold), 2),
+                "home_expected_sot": round(row["home_expected_sot"], 2),
+                "away_expected_sot": round(row["away_expected_sot"], 2),
+                "total_expected_sot": round(row["total_expected_sot"], 2),
+                "total_expected_corners": round(row["total_expected_corners"], 2),
+                "total_expected_cards": round(row["total_expected_cards"], 2),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",

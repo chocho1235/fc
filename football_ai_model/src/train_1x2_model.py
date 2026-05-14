@@ -431,6 +431,36 @@ def performance_proxy(shots, shots_on_target, corners, goals):
     return (shots * 0.03) + (shots_on_target * 0.12) + (corners * 0.025) + (goals * 0.18)
 
 
+def add_bet_builder_estimates(row):
+    home_sot = avg([
+        row.get("home_shots_on_target_for_last_5", 0),
+        row.get("away_shots_on_target_against_last_5", 0),
+    ])
+    away_sot = avg([
+        row.get("away_shots_on_target_for_last_5", 0),
+        row.get("home_shots_on_target_against_last_5", 0),
+    ])
+    home_corners = avg([
+        row.get("home_corners_for_last_5", 0),
+        row.get("away_corners_against_last_5", 0),
+    ])
+    away_corners = avg([
+        row.get("away_corners_for_last_5", 0),
+        row.get("home_corners_against_last_5", 0),
+    ])
+    total_cards = row.get("home_cards_last_5", 0) + row.get("away_cards_last_5", 0)
+
+    row.update({
+        "home_expected_sot": home_sot,
+        "away_expected_sot": away_sot,
+        "total_expected_sot": home_sot + away_sot,
+        "home_expected_corners": home_corners,
+        "away_expected_corners": away_corners,
+        "total_expected_corners": home_corners + away_corners,
+        "total_expected_cards": total_cards,
+    })
+
+
 def build_dataset(matches):
     external_context = read_external_context()
     team_history = defaultdict(lambda: deque(maxlen=30))
@@ -454,6 +484,16 @@ def build_dataset(matches):
         home_elo_with_advantage = home_elo + 65
         expected_home = 1 / (1 + 10 ** ((away_elo - home_elo_with_advantage) / 400))
         context_values, full_context = context_features(external_context, date, home, away)
+        home_shots = parse_float(match.get("HS"))
+        away_shots = parse_float(match.get("AS"))
+        home_sot = parse_float(match.get("HST"))
+        away_sot = parse_float(match.get("AST"))
+        home_corners = parse_float(match.get("HC"))
+        away_corners = parse_float(match.get("AC"))
+        home_yellow = parse_float(match.get("HY"))
+        away_yellow = parse_float(match.get("AY"))
+        home_red = parse_float(match.get("HR"))
+        away_red = parse_float(match.get("AR"))
 
         row = {
             "season": match["Season"],
@@ -466,6 +506,11 @@ def build_dataset(matches):
             "away_team": away,
             "result": match.get("FTR", ""),
             "total_goals": parse_float(match.get("FTHG")) + parse_float(match.get("FTAG")),
+            "actual_home_sot": home_sot,
+            "actual_away_sot": away_sot,
+            "actual_total_sot": home_sot + away_sot,
+            "actual_total_corners": home_corners + away_corners,
+            "actual_total_cards": home_yellow + away_yellow + ((home_red + away_red) * 2),
             "home_advantage": 1.0,
             "home_rest_days": min((date - last_played[home]).days, 14) / 14 if home in last_played else 1.0,
             "away_rest_days": min((date - last_played[away]).days, 14) / 14 if away in last_played else 1.0,
@@ -494,6 +539,7 @@ def build_dataset(matches):
         row.update(context_values)
         row.update(odds_features(match))
         row.update(over_under_odds_features(match))
+        add_bet_builder_estimates(row)
         rows.append(row)
 
         if match.get("FTR") not in LABELS:
@@ -502,17 +548,6 @@ def build_dataset(matches):
         home_goals = match["FTHG"]
         away_goals = match["FTAG"]
         result = match["FTR"]
-        home_shots = parse_float(match.get("HS"))
-        away_shots = parse_float(match.get("AS"))
-        home_sot = parse_float(match.get("HST"))
-        away_sot = parse_float(match.get("AST"))
-        home_corners = parse_float(match.get("HC"))
-        away_corners = parse_float(match.get("AC"))
-        home_yellow = parse_float(match.get("HY"))
-        away_yellow = parse_float(match.get("AY"))
-        home_red = parse_float(match.get("HR"))
-        away_red = parse_float(match.get("AR"))
-
         team_history[home].append({
             "date": date,
             "points": points_for(result, True),
@@ -631,6 +666,11 @@ def feature_names(rows):
         "over_25_fair_odds",
         "over_25_value_odds",
         "total_goals",
+        "actual_home_sot",
+        "actual_away_sot",
+        "actual_total_sot",
+        "actual_total_corners",
+        "actual_total_cards",
         "context_summary",
         "context_notes",
         "h2h_home_form",
@@ -925,6 +965,14 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
             "over_25_bookmaker_odds",
             "over_25_fair_odds",
             "over_25_value_odds",
+            "home_expected_sot",
+            "away_expected_sot",
+            "total_expected_sot",
+            "total_expected_corners",
+            "total_expected_cards",
+            "actual_total_sot",
+            "actual_total_corners",
+            "actual_total_cards",
             "predicted_result",
             "suggested_bet",
             "suggested_edge",
@@ -981,6 +1029,14 @@ def write_predictions(rows, probabilities, over_25_probabilities=None, bet_thres
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
                 "over_25_value_odds": round(value_odds(over_probability, over_25_bet_threshold), 2),
+                "home_expected_sot": round(row["home_expected_sot"], 2),
+                "away_expected_sot": round(row["away_expected_sot"], 2),
+                "total_expected_sot": round(row["total_expected_sot"], 2),
+                "total_expected_corners": round(row["total_expected_corners"], 2),
+                "total_expected_cards": round(row["total_expected_cards"], 2),
+                "actual_total_sot": round(row["actual_total_sot"], 2),
+                "actual_total_corners": round(row["actual_total_corners"], 2),
+                "actual_total_cards": round(row["actual_total_cards"], 2),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
@@ -1041,6 +1097,11 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
             "over_25_bookmaker_odds",
             "over_25_fair_odds",
             "over_25_value_odds",
+            "home_expected_sot",
+            "away_expected_sot",
+            "total_expected_sot",
+            "total_expected_corners",
+            "total_expected_cards",
             "predicted_result",
             "suggested_bet",
             "suggested_edge",
@@ -1095,6 +1156,11 @@ def write_upcoming_predictions(rows, probabilities, over_25_probabilities=None, 
                 "over_25_bookmaker_odds": round(row["over_25_odds"], 3) if row["over_25_odds"] else "",
                 "over_25_fair_odds": round(fair_odds(over_probability), 2),
                 "over_25_value_odds": round(value_odds(over_probability, over_25_bet_threshold), 2),
+                "home_expected_sot": round(row["home_expected_sot"], 2),
+                "away_expected_sot": round(row["away_expected_sot"], 2),
+                "total_expected_sot": round(row["total_expected_sot"], 2),
+                "total_expected_corners": round(row["total_expected_corners"], 2),
+                "total_expected_cards": round(row["total_expected_cards"], 2),
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
