@@ -291,17 +291,26 @@ function builderHtml(row) {
   const over35Probability = Number(row.over_35_probability || 0);
   const suggestion = row.builder_suggestion || "No builder lean";
   const confidence = row.builder_confidence || "none";
-  const sotLean = totalSot >= 8 ? "SOT lean: high" : totalSot >= 6 ? "SOT lean: normal" : "SOT lean: low";
+  const legs = suggestion === "No builder lean" ? [] : suggestion.split(" + ").filter(Boolean);
+  const confidenceText = confidence === "strong" ? "Strong lean" : confidence === "lean" ? "Lean only" : "No clear combo";
   return `
-    <div class="football-builder ${hasValue ? "football-builder--value" : ""} football-builder--${escapeHtml(confidence)}">
-      <span>Combined builder</span>
-      <strong>${escapeHtml(suggestion)}</strong>
-      <span>${confidence === "strong" ? "Strong lean" : confidence === "lean" ? "Lean only" : "No clear combo"}</span>
-      <b>O2.5 ${percent(probability)} · BTTS ${percent(bttsProbability)}</b>
-      <small>O1.5 ${percent(over15Probability)} · O3.5 ${percent(over35Probability)}</small>
-      <small>${sotLean} · ${escapeHtml(row.home_team)} ${decimal(homeSot)} / ${escapeHtml(row.away_team)} ${decimal(awaySot)}</small>
-      <small>SOT ${decimal(totalSot)} · corners ${decimal(totalCorners)} · cards ${decimal(totalCards)}</small>
-      <small>${bookOdds ? `O2.5 bookie ${decimal(bookOdds)} · bet from ${decimal(valueOdds)}` : "Stat legs need bookmaker lines before value staking"}</small>
+    <div class="football-builder football-builder--${escapeHtml(confidence)} ${hasValue ? "football-builder--value" : ""}">
+      <div class="football-builder__head">
+        <span>Builder projection</span>
+        <b>${escapeHtml(confidenceText)} · not settled</b>
+      </div>
+      <div class="football-builder__legs">
+        ${legs.length ? legs.map((leg) => `<i>${escapeHtml(leg)}</i>`).join("") : `<em>No combined lean</em>`}
+      </div>
+      <dl class="football-builder__metrics">
+        <div><dt>O2.5</dt><dd>${percent(probability)}</dd></div>
+        <div><dt>BTTS</dt><dd>${percent(bttsProbability)}</dd></div>
+        <div><dt>SOT</dt><dd>${decimal(totalSot)}</dd></div>
+      </dl>
+      <small>${escapeHtml(row.home_team)} SOT ${decimal(homeSot)} · ${escapeHtml(row.away_team)} SOT ${decimal(awaySot)}</small>
+      <small>Corners ${decimal(totalCorners)} · cards ${decimal(totalCards)} · O1.5 ${percent(over15Probability)} · O3.5 ${percent(over35Probability)}</small>
+      <small>Projection only. Colour means stronger model lean, not that the bet won.</small>
+      <small>${bookOdds ? `O2.5 odds ${decimal(bookOdds)} · value from ${decimal(valueOdds)}` : "Stat legs need bookmaker lines before staking"}</small>
     </div>
   `;
 }
@@ -366,39 +375,41 @@ function matchRowHtml(row, includeResult = true) {
 
     return `
       <tr class="football-match-row ${row.suggested_bet ? "football-match-row--value" : ""}">
-        <td>
-          <div class="football-fixture-card">
-            <div>
-              <strong>${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</strong>
-              <span>${escapeHtml(detailParts.join(" · "))}</span>
+        <td colspan="4">
+          <article class="football-match-card">
+            <div class="football-match-card__summary">
+              <div class="football-fixture-card">
+                <div>
+                  <strong>${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</strong>
+                  <span>${escapeHtml(detailParts.join(" · "))}</span>
+                </div>
+                ${resultHtml(row, includeResult)}
+              </div>
+              ${decisionHtml(row)}
+              ${builderHtml(row)}
+              <details class="football-expand">
+                <summary>Details</summary>
+                <div class="football-expand__grid">
+                  <section>
+                    <h3>1X2 prices</h3>
+                    ${oddsCard(row)}
+                  </section>
+                  <section>
+                    <h3>Context</h3>
+                    ${contextHtml(row)}
+                  </section>
+                  <section>
+                    <h3>Head to head</h3>
+                    ${h2hHtml(row)}
+                  </section>
+                  <section>
+                    <h3>Probabilities</h3>
+                    ${probabilityBar(row)}
+                  </section>
+                </div>
+              </details>
             </div>
-            ${resultHtml(row, includeResult)}
-          </div>
-        </td>
-        <td>${decisionHtml(row)}</td>
-        <td>${builderHtml(row)}</td>
-        <td>
-          <details class="football-expand">
-            <summary>Match details</summary>
-            <div class="football-expand__grid">
-              <section>
-                <h3>1X2 prices</h3>
-                ${oddsCard(row)}
-              </section>
-              <section>
-                <h3>Context</h3>
-                ${contextHtml(row)}
-              </section>
-              <section>
-                <h3>Head to head</h3>
-                ${h2hHtml(row)}
-              </section>
-              <section>
-                <h3>Probabilities</h3>
-                ${probabilityBar(row)}
-              </section>
-            </div>
-          </details>
+          </article>
         </td>
       </tr>
     `;
@@ -417,7 +428,7 @@ function renderUpcoming() {
   if (!visible.length) {
     upcomingRowsEl.innerHTML = `
       <tr>
-        <td colspan="5"><span class="football-empty">No upcoming fixtures in the current feed.</span></td>
+        <td colspan="4"><span class="football-empty">No upcoming fixtures in the current feed.</span></td>
       </tr>
     `;
     return;
