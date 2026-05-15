@@ -39,7 +39,11 @@ jobs:
       - name: Download latest results for all leagues
         run: python football_ai_model/src/download_data.py
 
-      - name: Full model retrain (LightGBM + isotonic calibration)
+      - name: Refresh xG data from understat.com
+        run: python football_ai_model/src/import_understat_xg.py
+        continue-on-error: true   # don't fail if understat is down
+
+      - name: Full model retrain (LightGBM + DC ensemble + isotonic calibration)
         run: python football_ai_model/src/train_sklearn_1x2_model.py
 
       - name: Refresh upcoming fixtures and predictions
@@ -85,11 +89,10 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
 
-      - name: Refresh upcoming predictions
-        run: python football_ai_model/src/predict_upcoming_sklearn_fast.py
-
-      - name: Export frontend data
-        run: python football_ai_model/src/export_frontend_data.py
+      - name: Refresh upcoming predictions (LightGBM + DC quick fit + ensemble blend)
+        run: python football_ai_model/src/refresh_upcoming_sklearn.py
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
 
       - name: Commit refreshed data
         run: |
@@ -99,6 +102,8 @@ jobs:
                   football_ai_model/data/processed \
                   football_ai_model/data/external/live_odds.json \
                   football_ai_model/models/builder_profile.json \
+                  football_ai_model/models/dixon_coles_*.json \
+                  football_ai_model/models/ensemble_meta.json \
                   football_ai_model/reports \
                   public/football-model-data.json
           git diff --cached --quiet || git commit -m "Refresh data $(date -u +%Y-%m-%dT%H:%M)Z"

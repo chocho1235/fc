@@ -15,6 +15,7 @@ ACTIVE_BETTING_RULES_PATH = MODEL_ROOT / "models" / "betting_rules_active.json"
 BUILDER_PROFILE_PATH = MODEL_ROOT / "models" / "builder_profile.json"
 RULE_HEALTH_PATH = MODEL_ROOT / "reports" / "betting_rule_health.csv"
 CLOSING_LINE_PATH = MODEL_ROOT / "data" / "processed" / "closing_line_report.csv"
+ENSEMBLE_META_PATH = MODEL_ROOT / "models" / "ensemble_meta.json"
 OUTPUT_PATH = SITE_ROOT / "public" / "football-model-data.json"
 
 
@@ -255,6 +256,7 @@ def main():
         "closing_line_recent": closing_lines[-12:],
         "value_bet_pnl": value_bet_pnl(),
         "passive_pnl": passive_pnl(),
+        "ensemble_meta": json.loads(ENSEMBLE_META_PATH.read_text()) if ENSEMBLE_META_PATH.exists() else None,
         "probability_average": {
             "home": round(sum(to_float(row["home_win_probability"]) for row in predictions) / len(predictions), 4),
             "draw": round(sum(to_float(row["draw_probability"]) for row in predictions) / len(predictions), 4),

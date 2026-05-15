@@ -35,6 +35,8 @@ from train_1x2_model import (
     value_odds,
     write_predictions,
 )
+from ensemble_predictions import main as ensemble_predictions
+from train_dixon_coles import main as train_dixon_coles
 from update_rule_health import main as update_rule_health
 
 
@@ -389,6 +391,8 @@ def main():
         rules=latest_rules,
     )
     update_rule_health()
+    train_dixon_coles(quick=False)   # full rolling backtest + final fit
+    ensemble_predictions()           # find best blend weight on backtest data
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, MODEL_PATH)
     joblib.dump(over_model, OVER_25_MODEL_PATH)

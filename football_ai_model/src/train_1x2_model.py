@@ -189,6 +189,71 @@ def read_external_context():
     return context
 
 
+def _xg_norm(name: str) -> str:
+    import re, unicodedata
+    nfkd = unicodedata.normalize("NFKD", name)
+    ascii_ = nfkd.encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]", "", ascii_.lower())
+
+
+# Same alias table used by import_understat_xg.py — keeps matching in sync.
+_XG_ALIASES: dict[str, str] = {
+    "manunited": "manchesterunited", "manutd": "manchesterunited",
+    "manchesterutd": "manchesterunited", "mancity": "manchestercity",
+    "wolves": "wolverhamptonwanderers", "wolverhampton": "wolverhamptonwanderers",
+    "nottmforest": "nottinghamforest", "tottenham": "tottenhamhotspur",
+    "spurs": "tottenhamhotspur", "brighton": "brightonandhovealbion",
+    "westbrom": "westbromwichalbion", "qpr": "queensparkrangers",
+    "sheffieldutd": "sheffieldunited", "newcastle": "newcastleunited",
+    "leicester": "leicestercity", "norwich": "norwichcity",
+    "cardiff": "cardiffcity", "hull": "hullcity", "stoke": "stokecity",
+    "swansea": "swanseacity", "atlmadrid": "atleticomadrid",
+    "atletico": "atleticomadrid", "realmadrid": "realmadriddcf",
+    "real": "realmadriddcf", "sociedad": "realsociedad",
+    "betis": "realbetis", "athbilbao": "athleticbilbao",
+    "espanyol": "rcdespanyol", "mallorca": "rcdmallorca",
+    "alaves": "deportivoalaves", "sampdoria": "ucsampdoria",
+    "verona": "hellasveronafc", "palermo": "uscitta palermo",
+    "inter": "internazionale", "intermilan": "internazionale",
+    "milan": "acmilan", "parisg": "parissaintgermain",
+    "psg": "parissaintgermain", "dortmund": "borussiadortmund",
+    "mgladbach": "borussiamonchengladbach", "gladbach": "borussiamonchengladbach",
+    "leipzig": "rbleipzig", "koln": "fccologne", "cologne": "fccologne",
+    "leverkusen": "bayer04leverkusen", "eintracht": "eintrachtfrankfurt",
+    "frankfurt": "eintrachtfrankfurt", "stuttgart": "vfbstuttgart",
+    "wolfsburg": "vflwolfsburg", "freiburg": "scfreiburg",
+    "augsburg": "fcaugsburg", "hoffenheim": "tsg1899hoffenheim",
+    "werder": "svwerderbremen", "werderbremen": "svwerderbremen",
+    "schalke": "fcschalke04", "hamburg": "hamburgsv",
+}
+
+
+def _xg_key(name: str) -> str:
+    n = _xg_norm(name)
+    return _XG_ALIASES.get(n, n)
+
+
+def load_xg_data() -> dict:
+    """Load understat xG lookup keyed by (date_str, league_code, home_norm, away_norm)."""
+    path = EXTERNAL_DIR / "understat_xg.csv"
+    if not path.exists():
+        return {}
+    lookup: dict = {}
+    with path.open(newline="", encoding="utf-8") as fh:
+        for row in csv.DictReader(fh):
+            try:
+                key = (
+                    row["date"],
+                    row["league_code"],
+                    row.get("home_team_norm", _xg_key(row["home_team"])),
+                    row.get("away_team_norm", _xg_key(row["away_team"])),
+                )
+                lookup[key] = (float(row["home_xg"]), float(row["away_xg"]))
+            except (KeyError, ValueError):
+                continue
+    return lookup
+
+
 def points_for(result, is_home):
     if result == "D":
         return 1
@@ -236,10 +301,33 @@ def avg(items):
 def team_features(history, prefix, match_date):
     last_5 = list(history)[-5:]
     last_10 = list(history)[-10:]
+    last_6 = list(history)[-6:]
     last_7_days = [item for item in history if (match_date - item["date"]).days <= 7]
     last_14_days = [item for item in history if (match_date - item["date"]).days <= 14]
 
-    return {
+    xg6 = [item["xg_for"] for item in last_6 if item.get("xg_for") is not None]
+    xga6 = [item["xg_against"] for item in last_6 if item.get("xg_against") is not None]
+    goals6 = [item["goals_for"] for item in last_6]
+    xg_features = {}
+    if xg6:
+        xg_avg = avg(xg6)
+        xga_avg = avg(xga6) if xga6 else 0.0
+        goals_avg = avg(goals6)
+        xg_features = {
+            f"{prefix}_xg_for_last_6": xg_avg,
+            f"{prefix}_xg_against_last_6": xga_avg,
+            f"{prefix}_xg_diff_last_6": xg_avg - xga_avg,
+            f"{prefix}_xg_overperformance": goals_avg - xg_avg,
+        }
+    else:
+        xg_features = {
+            f"{prefix}_xg_for_last_6": 0.0,
+            f"{prefix}_xg_against_last_6": 0.0,
+            f"{prefix}_xg_diff_last_6": 0.0,
+            f"{prefix}_xg_overperformance": 0.0,
+        }
+
+    features = {
         f"{prefix}_points_last_5": avg([item["points"] for item in last_5]),
         f"{prefix}_points_last_10": avg([item["points"] for item in last_10]),
         f"{prefix}_win_rate_last_5": avg([item["win"] for item in last_5]),
@@ -263,6 +351,8 @@ def team_features(history, prefix, match_date):
         f"{prefix}_games_last_14_days": min(len(last_14_days), 6) / 6,
         f"{prefix}_matches_played": min(len(history), 20) / 20,
     }
+    features.update(xg_features)
+    return features
 
 
 def odds_features(match):
@@ -660,6 +750,7 @@ def poisson_over_probability(expected_goals, line):
 
 def build_dataset(matches):
     external_context = read_external_context()
+    xg_lookup = load_xg_data()
     team_history = defaultdict(lambda: deque(maxlen=30))
     h2h_history = defaultdict(lambda: deque(maxlen=10))
     table = defaultdict(lambda: {"played": 0, "points": 0, "goal_diff": 0})
@@ -749,6 +840,14 @@ def build_dataset(matches):
         home_goals = match["FTHG"]
         away_goals = match["FTAG"]
         result = match["FTR"]
+
+        # xG lookup: try to find the pre-match xG for this fixture
+        league_code = match.get("LeagueCode", match.get("Div", ""))
+        xg_key = (date.isoformat(), league_code, _xg_key(home), _xg_key(away))
+        xg_pair = xg_lookup.get(xg_key)
+        home_xg = xg_pair[0] if xg_pair else None
+        away_xg = xg_pair[1] if xg_pair else None
+
         home_entry = {
             "date": date,
             "points": points_for(result, True),
@@ -765,6 +864,8 @@ def build_dataset(matches):
             "cards": home_yellow + (home_red * 2),
             "red_cards": home_red,
             "performance_proxy": performance_proxy(home_shots, home_sot, home_corners, home_goals),
+            "xg_for": home_xg,
+            "xg_against": away_xg,
         }
         away_entry = {
             "date": date,
@@ -782,6 +883,8 @@ def build_dataset(matches):
             "cards": away_yellow + (away_red * 2),
             "red_cards": away_red,
             "performance_proxy": performance_proxy(away_shots, away_sot, away_corners, away_goals),
+            "xg_for": away_xg,
+            "xg_against": home_xg,
         }
         team_history[home].append(home_entry)
         team_history[away].append(away_entry)
