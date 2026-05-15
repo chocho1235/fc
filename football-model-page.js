@@ -853,7 +853,7 @@ function renderRows() {
 }
 
 function renderUpcoming() {
-  const visible = upcomingMatches.filter(rowMatchesSearch).filter(rowMatchesLeague);
+  const visible = upcomingMatches.filter(rowMatchesFilter).filter(rowMatchesSearch).filter(rowMatchesLeague);
   if (upcomingCountEl) upcomingCountEl.textContent = `${visible.length} shown`;
   if (!upcomingRowsEl) return;
   if (!visible.length) {
@@ -1034,6 +1034,7 @@ filterButtons.forEach(btn => btn.addEventListener("click", () => {
   currentFilter = btn.dataset.filter;
   filterButtons.forEach(b => b.classList.toggle("is-active", b === btn));
   renderRows();
+  renderUpcoming();
 }));
 
 searchEl?.addEventListener("input", () => { renderRows(); renderUpcoming(); });
