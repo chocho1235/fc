@@ -1,8 +1,11 @@
 import csv
 import json
+import warnings
 
 import joblib
 import numpy as np
+
+warnings.filterwarnings("ignore", message="X does not have valid feature names")
 
 from train_1x2_model import (
     LABELS,

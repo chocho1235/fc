@@ -1,14 +1,15 @@
 import csv
 import json
 import os
+import warnings
 from pathlib import Path
 
 import joblib
+import lightgbm as lgb
 import numpy as np
 from sklearn.calibration import CalibratedClassifierCV
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
+
+warnings.filterwarnings("ignore", message="X does not have valid feature names")
 
 from train_1x2_model import (
     BET_THRESHOLDS,
@@ -58,22 +59,24 @@ def rows_to_labels(rows):
 def train_classifier(train_rows, names, labels=None):
     x_train = rows_to_matrix(train_rows, names)
     y_train = labels if labels is not None else rows_to_labels(train_rows)
-    class_weight = os.getenv("SKLEARN_CLASS_WEIGHT", "none")
-    if class_weight.lower() in {"none", "null", "0"}:
-        class_weight = None
-    base = Pipeline([
-        ("scale", StandardScaler()),
-        ("model", LogisticRegression(
-            C=float(os.getenv("SKLEARN_LOGISTIC_C", "0.10")),
-            class_weight=class_weight,
-            max_iter=3000,
-            solver="lbfgs",
-        )),
-    ])
+    is_binary = labels is not None
+    base = lgb.LGBMClassifier(
+        objective="binary" if is_binary else "multiclass",
+        num_class=1 if is_binary else 3,
+        n_estimators=int(os.getenv("LGBM_N_ESTIMATORS", "400")),
+        learning_rate=float(os.getenv("LGBM_LEARNING_RATE", "0.05")),
+        num_leaves=int(os.getenv("LGBM_NUM_LEAVES", "31")),
+        min_child_samples=int(os.getenv("LGBM_MIN_CHILD_SAMPLES", "20")),
+        subsample=float(os.getenv("LGBM_SUBSAMPLE", "0.8")),
+        colsample_bytree=float(os.getenv("LGBM_COLSAMPLE_BYTREE", "0.8")),
+        reg_alpha=float(os.getenv("LGBM_REG_ALPHA", "0.1")),
+        reg_lambda=float(os.getenv("LGBM_REG_LAMBDA", "0.1")),
+        verbose=-1,
+    )
     calibrated = CalibratedClassifierCV(
         estimator=base,
-        method=os.getenv("SKLEARN_CALIBRATION_METHOD", "sigmoid"),
-        cv=int(os.getenv("SKLEARN_CALIBRATION_CV", "3")),
+        method=os.getenv("LGBM_CALIBRATION_METHOD", "isotonic"),
+        cv=int(os.getenv("LGBM_CALIBRATION_CV", "3")),
     )
     calibrated.fit(x_train, y_train)
     return calibrated
@@ -396,7 +399,7 @@ def main():
         "test_season": test_season,
         "bet_threshold": DEFAULT_BET_THRESHOLD,
         "training_window_seasons": TRAINING_WINDOW_SEASONS or "all",
-        "model_type": "sklearn_calibrated_logistic_regression",
+        "model_type": "lightgbm_calibrated_isotonic",
         "rules_path": str(BETTING_RULES_PATH.relative_to(MODELS_DIR)),
         "active_rules": len(final_rules),
     }, indent=2), encoding="utf-8")
@@ -407,11 +410,11 @@ def main():
         "bet_threshold": DEFAULT_BET_THRESHOLD,
         "over_25_bet_threshold": DEFAULT_OVER_25_BET_THRESHOLD,
         "training_window_seasons": TRAINING_WINDOW_SEASONS or "all",
-        "model_type": "sklearn_calibrated_logistic_regression_binary_over_25",
+        "model_type": "lightgbm_calibrated_isotonic_binary_over_25",
     }, indent=2), encoding="utf-8")
 
     report = [
-        "Multi-league 1X2 Backtest - scikit-learn calibrated logistic regression",
+        "Multi-league 1X2 Backtest - LightGBM calibrated isotonic",
         f"Training matches: {len(train_rows)}",
         f"Test season: {test_season}",
         f"Test matches: {summary['matches']}",

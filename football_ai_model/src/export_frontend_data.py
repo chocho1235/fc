@@ -7,6 +7,7 @@ from pathlib import Path
 MODEL_ROOT = Path(__file__).resolve().parents[1]
 SITE_ROOT = MODEL_ROOT.parent
 PREDICTIONS_PATH = MODEL_ROOT / "data" / "processed" / "predictions.csv"
+ROLLING_PREDICTIONS_PATH = MODEL_ROOT / "data" / "processed" / "sklearn_rolling_predictions.csv"
 UPCOMING_PATH = MODEL_ROOT / "data" / "processed" / "upcoming_predictions.csv"
 SUMMARY_PATH = MODEL_ROOT / "reports" / "backtest_summary.txt"
 BETTING_RULES_PATH = MODEL_ROOT / "models" / "betting_rules.json"
@@ -72,6 +73,97 @@ def parse_closing_line_report():
         return []
     with CLOSING_LINE_PATH.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def _pnl_series_point(row, balance, won):
+    """Compact series point: [balance, date_str, match_str, won_bool]."""
+    return [round(balance, 2), row.get("date", ""), f"{row.get('home_team','')} v {row.get('away_team','')}", won]
+
+
+def passive_pnl():
+    """Simulate passive P&L: bet the highest-prob 1X2 outcome whenever model is >= 65% confident."""
+    if not ROLLING_PREDICTIONS_PATH.exists():
+        return {"starting_bank": 1000, "current_bank": 1000, "bets": 0, "wins": 0, "win_rate": 0.0, "roi": 0.0, "series": []}
+    with ROLLING_PREDICTIONS_PATH.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    STAKE = 10.0
+    STARTING_BANK = 1000.0
+    THRESHOLD = 0.65
+    balance = STARTING_BANK
+    bets = 0
+    wins = 0
+    series = []
+    settled = [r for r in rows if r.get("result")]
+    for row in settled:
+        probs = {
+            "H": to_float(row.get("home_win_probability", 0)),
+            "D": to_float(row.get("draw_probability", 0)),
+            "A": to_float(row.get("away_win_probability", 0)),
+        }
+        best_label = max(probs, key=probs.get)
+        best_prob = probs[best_label]
+        if best_prob < THRESHOLD:
+            continue
+        fair_odds = 1 / best_prob
+        bets += 1
+        won = row.get("result") == best_label
+        if won:
+            balance += STAKE * (fair_odds - 1)
+            wins += 1
+        else:
+            balance -= STAKE
+        series.append(_pnl_series_point(row, balance, won))
+    total_staked = bets * STAKE
+    roi = (balance - STARTING_BANK) / total_staked if total_staked > 0 else 0.0
+    return {
+        "starting_bank": STARTING_BANK,
+        "current_bank": round(balance, 2),
+        "bets": bets,
+        "wins": wins,
+        "win_rate": round(wins / bets, 4) if bets else 0.0,
+        "roi": round(roi, 4),
+        "series": series,
+    }
+
+
+def value_bet_pnl():
+    if not ROLLING_PREDICTIONS_PATH.exists():
+        return {"starting_bank": 1000, "current_bank": 1000, "bets": 0, "wins": 0, "win_rate": 0.0, "roi": 0.0, "series": []}
+    with ROLLING_PREDICTIONS_PATH.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    STAKE = 10.0
+    STARTING_BANK = 1000.0
+    balance = STARTING_BANK
+    bets = 0
+    wins = 0
+    series = []
+    settled = [r for r in rows if r.get("suggested_bet") and r.get("result")]
+    for row in settled:
+        suggested = row.get("suggested_bet", "")
+        result = row.get("result", "")
+        odds_key = {"H": "home_bookmaker_odds", "D": "draw_bookmaker_odds", "A": "away_bookmaker_odds"}.get(suggested, "")
+        odds = to_float(row.get(odds_key, 0))
+        if odds <= 1:
+            continue
+        bets += 1
+        won = result == suggested
+        if won:
+            balance += STAKE * (odds - 1)
+            wins += 1
+        else:
+            balance -= STAKE
+        series.append(_pnl_series_point(row, balance, won))
+    total_staked = bets * STAKE
+    roi = (balance - STARTING_BANK) / total_staked if total_staked > 0 else 0.0
+    return {
+        "starting_bank": STARTING_BANK,
+        "current_bank": round(balance, 2),
+        "bets": bets,
+        "wins": wins,
+        "win_rate": round(wins / bets, 4) if bets else 0.0,
+        "roi": round(roi, 4),
+        "series": series,
+    }
 
 
 def closing_line_summary(rows):
@@ -161,6 +253,8 @@ def main():
         "betting_rule_health": parse_rule_health(),
         "closing_line_summary": closing_line_summary(closing_lines),
         "closing_line_recent": closing_lines[-12:],
+        "value_bet_pnl": value_bet_pnl(),
+        "passive_pnl": passive_pnl(),
         "probability_average": {
             "home": round(sum(to_float(row["home_win_probability"]) for row in predictions) / len(predictions), 4),
             "draw": round(sum(to_float(row["draw_probability"]) for row in predictions) / len(predictions), 4),

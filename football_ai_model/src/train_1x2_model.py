@@ -8,7 +8,7 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from leagues import DEFAULT_LEAGUE_CODES, league_feature, league_name
+from leagues import BET_LEAGUE_CODES, DEFAULT_LEAGUE_CODES, league_feature, league_name
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +23,7 @@ LABELS = ["H", "D", "A"]
 ODDS_COLUMNS = [("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A")]
 BET_THRESHOLDS = [0.03, 0.05, 0.08, 0.10, 0.12, 0.15]
 DEFAULT_BET_THRESHOLD = float(os.getenv("BET_THRESHOLD", "0.05") or "0.05")
+MAX_BET_PROBABILITY = float(os.getenv("MAX_BET_PROBABILITY", "0.65") or "0.65")
 TRAINING_WINDOW_SEASONS = int(os.getenv("TRAINING_WINDOW_SEASONS", "5") or "5")
 BUILDER_MIN_SAMPLES = int(os.getenv("BUILDER_MIN_SAMPLES", "20") or "20")
 BUILDER_MIN_HIT_RATE = float(os.getenv("BUILDER_MIN_HIT_RATE", "0.50") or "0.50")
@@ -519,6 +520,8 @@ def add_bet_builder_estimates(row):
 
 
 def settle_builder_leg(row, key):
+    if not row.get("result"):
+        return None  # match not yet played
     if key == "over_15_goals":
         return row.get("total_goals", 0) >= 2
     if key == "over_25_goals":
@@ -656,6 +659,8 @@ def build_dataset(matches):
     h2h_history = defaultdict(lambda: deque(maxlen=10))
     table = defaultdict(lambda: {"played": 0, "points": 0, "goal_diff": 0})
     elo = defaultdict(lambda: 1500.0)
+    home_venue_history = defaultdict(lambda: deque(maxlen=20))
+    away_venue_history = defaultdict(lambda: deque(maxlen=20))
     last_played = {}
     rows = []
 
@@ -739,7 +744,7 @@ def build_dataset(matches):
         home_goals = match["FTHG"]
         away_goals = match["FTAG"]
         result = match["FTR"]
-        team_history[home].append({
+        home_entry = {
             "date": date,
             "points": points_for(result, True),
             "win": 1.0 if result == "H" else 0.0,
@@ -755,8 +760,8 @@ def build_dataset(matches):
             "cards": home_yellow + (home_red * 2),
             "red_cards": home_red,
             "performance_proxy": performance_proxy(home_shots, home_sot, home_corners, home_goals),
-        })
-        team_history[away].append({
+        }
+        away_entry = {
             "date": date,
             "points": points_for(result, False),
             "win": 1.0 if result == "A" else 0.0,
@@ -772,7 +777,11 @@ def build_dataset(matches):
             "cards": away_yellow + (away_red * 2),
             "red_cards": away_red,
             "performance_proxy": performance_proxy(away_shots, away_sot, away_corners, away_goals),
-        })
+        }
+        team_history[home].append(home_entry)
+        team_history[away].append(away_entry)
+        home_venue_history[home].append(home_entry)
+        away_venue_history[away].append(away_entry)
         h2h_history[pair_key].append({
             "home_team": home,
             "away_team": away,
@@ -1077,6 +1086,9 @@ def matching_betting_rule(row, candidate, rules):
 
 
 def find_best_bet_with_rule(row, probs, threshold, rules=None):
+    league_code = row.get("league_code", "")
+    if BET_LEAGUE_CODES and league_code and league_code not in BET_LEAGUE_CODES:
+        return None, 0.0, None
     best_edge = 0.0
     for candidate in candidate_bets(row, probs):
         best_edge = max(best_edge, candidate["edge"])

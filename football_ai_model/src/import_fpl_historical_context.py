@@ -62,8 +62,13 @@ def cached_csv(season, rel_path):
     url = f"{RAW_BASE}/{season}/{rel_path}"
     if not download(url, cache_path):
         return []
-    with cache_path.open(newline="", encoding="utf-8-sig") as handle:
-        return list(csv.DictReader(handle))
+    for enc in ("utf-8-sig", "latin-1"):
+        try:
+            with cache_path.open(newline="", encoding=enc) as handle:
+                return list(csv.DictReader(handle))
+        except UnicodeDecodeError:
+            continue
+    return []
 
 
 def read_context():
@@ -138,6 +143,13 @@ def season_matches(season_code):
         ]
 
 
+def player_roster_score(row):
+    """Score used only for ranking players on a roster — minutes-agnostic so absent players rank correctly."""
+    value = as_float(row.get("value")) or as_float(row.get("now_cost"))
+    selected = as_float(row.get("selected")) / 1_000_000
+    return (min(value / 120, 1) * 0.55) + (min(selected / 3, 1) * 0.45)
+
+
 def player_importance(row):
     minutes = as_float(row.get("minutes"))
     value = as_float(row.get("value")) or as_float(row.get("now_cost"))
@@ -163,22 +175,23 @@ def build_gameweek_team_rows(season):
 
     rows = {}
     for key, players in by_team_gw.items():
-        weighted_players = sorted(players, key=player_importance, reverse=True)
-        expected_core = weighted_players[:11]
+        # Rank by roster score (value + ownership) so absent stars still rank at top
+        expected_core = sorted(players, key=player_roster_score, reverse=True)[:11]
         important_missing = [
             player for player in expected_core
-            if as_float(player.get("minutes")) == 0 and player_importance(player) >= 0.72
+            if as_float(player.get("minutes")) == 0
         ]
         partial_core = [
             player for player in expected_core
-            if 0 < as_float(player.get("minutes")) < 45 and player_importance(player) >= 0.72
+            if 0 < as_float(player.get("minutes")) < 45
         ]
+        # Weight missing players by their roster score (0-1 scale)
         missing_score = round(
-            sum(player_importance(player) for player in important_missing)
-            + (0.45 * sum(player_importance(player) for player in partial_core)),
+            sum(player_roster_score(player) for player in important_missing)
+            + (0.45 * sum(player_roster_score(player) for player in partial_core)),
             3,
         )
-        lineup_strength = round(max(0.72, 1 - min(0.28, missing_score / 10)), 3)
+        lineup_strength = round(max(0.72, 1 - min(0.28, missing_score / 5)), 3)
         rotation_risk = round(min(1.0, (len(important_missing) + (0.5 * len(partial_core))) / 6), 3)
         rows[key] = {
             "injury_count": len(important_missing),

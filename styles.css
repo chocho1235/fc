@@ -11,17 +11,496 @@
   color: #102018;
 }
 
-.football-hero {
-  min-height: min(54vh, 32rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
-  align-items: end;
-  gap: clamp(1rem, 4vw, 4rem);
-  padding: clamp(1rem, 4vw, 4rem) 0 clamp(1.5rem, 4vw, 3rem);
+/* ── Compact header (replaces hero) ─────────────────────────────────── */
+.football-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0 0.75rem;
+  border-bottom: 1px solid rgba(16, 32, 24, 0.1);
+  margin-bottom: 0;
+  flex-wrap: wrap;
 }
 
-.football-hero__copy {
-  max-width: 54rem;
+.football-header__brand h1 {
+  margin: 0.2rem 0 0;
+  color: #102018;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.football-header__stats {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.football-header__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+}
+
+.football-header__stat span {
+  color: #64746c;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.football-header__stat strong {
+  color: #102018;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.football-header__refresh {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.football-header__refresh span {
+  color: #64746c;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.football-header__refresh button {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(16, 32, 24, 0.16);
+  border-radius: 999px;
+  background: #fff;
+  color: #0f766e;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.15s;
+}
+
+.football-header__refresh button:hover {
+  background: #ecfdf5;
+}
+
+/* ── Tab nav ─────────────────────────────────────────────────────────── */
+.football-tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.75rem 0 0;
+  border-bottom: 2px solid rgba(16, 32, 24, 0.1);
+  margin-bottom: 1rem;
+}
+
+.football-tabs button {
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  background: none;
+  color: #64746c;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 800;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.football-tabs button:hover {
+  color: #102018;
+}
+
+.football-tabs button.is-active {
+  color: #0f766e;
+  border-bottom-color: #0f766e;
+}
+
+.football-tab-panel {
+  display: block;
+}
+
+.football-tab-panel[hidden] {
+  display: none;
+}
+
+/* ── Passive betting layout ──────────────────────────────────────────── */
+.passive-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.passive-main {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.passive-intro {
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(16, 32, 24, 0.1);
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.passive-intro p {
+  margin: 0.3rem 0 0;
+}
+
+.passive-intro p:first-child {
+  margin-top: 0;
+}
+
+.passive-board {
+  border: 1px solid rgba(16, 32, 24, 0.13);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.06);
+}
+
+.passive-board__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(16, 32, 24, 0.11);
+}
+
+.passive-board__head h2 {
+  margin: 0;
+  color: #102018;
+  font-size: 1.35rem;
+  line-height: 1.05;
+}
+
+.passive-count {
+  margin: 0;
+  color: #64746c;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.passive-stack-summary {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.passive-stack-kpis {
+  display: flex;
+  gap: 1rem;
+}
+
+.passive-stack-kpis div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+}
+
+.passive-stack-kpis span {
+  color: #64746c;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.passive-stack-kpis strong {
+  color: #102018;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.passive-stack-legs {
+  display: grid;
+  gap: 0;
+}
+
+.passive-leg {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr) auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(16, 32, 24, 0.07);
+}
+
+.passive-leg:last-child {
+  border-bottom: none;
+}
+
+.passive-leg__rank {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  background: #0f766e;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.passive-leg__body strong {
+  display: block;
+  color: #102018;
+  font-size: 0.92rem;
+}
+
+.passive-leg__body span {
+  display: block;
+  color: #64746c;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.passive-leg__pick {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  text-align: right;
+}
+
+.passive-leg__pick b {
+  color: #102018;
+  font-size: 0.88rem;
+}
+
+.passive-leg__type {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.42rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.passive-leg__type--result {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.passive-leg__type--goals {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.passive-leg__type--sot {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.passive-leg__type--corners {
+  background: #faf5ff;
+  color: #6b21a8;
+}
+
+.passive-leg__type--builder {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.passive-stack-kpis .is-target-met strong {
+  color: #16a34a;
+}
+
+.passive-pick__alts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.passive-pick__alts span {
+  font-size: 0.72rem;
+  color: #64746c;
+  background: #f1f5f1;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+
+.passive-leg__prob {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1rem;
+  min-width: 3.5rem;
+  text-align: right;
+}
+
+.passive-leg__prob strong {
+  color: #102018;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.passive-leg__prob small {
+  color: #64746c;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.passive-picks-list {
+  display: grid;
+  gap: 0;
+}
+
+.passive-pick {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.72rem 1rem;
+  border-bottom: 1px solid rgba(16, 32, 24, 0.07);
+}
+
+.passive-pick:last-child {
+  border-bottom: none;
+}
+
+.passive-pick__fixture strong {
+  display: block;
+  color: #102018;
+  font-size: 0.88rem;
+}
+
+.passive-pick__fixture span {
+  display: block;
+  color: #64746c;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.passive-pick__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.22rem;
+  text-align: right;
+}
+
+.passive-pick__label b {
+  color: #102018;
+  font-size: 0.85rem;
+}
+
+.passive-pick__prob {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.passive-pick__prob strong {
+  color: #0f766e;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.passive-pick__prob small {
+  color: #64746c;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.passive-side {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.passive-side__intro {
+  margin: 0 0 0.65rem;
+  color: #64746c;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.passive-learning-list,
+.passive-history-list {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.passive-learn-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.42rem 0.6rem;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.passive-learn-row--total {
+  background: #ecfdf5;
+}
+
+.passive-learn-row span {
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.passive-learn-row div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.passive-learn-row strong {
+  color: #102018;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.passive-learn-row small {
+  color: #64746c;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.passive-history-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+}
+
+.passive-history-row.is-hit {
+  background: #f0fdf4;
+}
+
+.passive-history-row.is-miss {
+  background: #fff7f7;
+}
+
+.passive-history-row strong {
+  display: block;
+  color: #102018;
+  font-size: 0.82rem;
+}
+
+.passive-history-row span {
+  display: block;
+  color: #64746c;
+  font-size: 0.74rem;
+  font-weight: 700;
 }
 
 .football-kicker {
@@ -33,36 +512,6 @@
   text-transform: uppercase;
 }
 
-.football-hero h1 {
-  margin: 0;
-  max-width: 14ch;
-  color: #102018;
-  font-family: var(--font-hatton);
-  font-size: clamp(3.25rem, 8.2vw, 8.7rem);
-  font-weight: 500;
-  line-height: 0.86;
-  letter-spacing: 0;
-}
-
-.football-hero p:not(.football-kicker) {
-  max-width: 42rem;
-  margin: clamp(1.1rem, 2vw, 1.6rem) 0 0;
-  color: #3f5449;
-  font-size: clamp(1rem, 0.4vw + 0.95rem, 1.18rem);
-}
-
-.football-hero__panel {
-  display: grid;
-  gap: 0.75rem;
-  padding: clamp(1rem, 2vw, 1.4rem);
-  border: 1px solid rgba(16, 32, 24, 0.14);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.84);
-  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
-  backdrop-filter: blur(16px);
-}
-
-.football-hero__panel div,
 .football-stat {
   display: flex;
   align-items: baseline;
@@ -79,7 +528,6 @@
   text-transform: uppercase;
 }
 
-.football-hero__panel strong,
 .football-stat strong {
   color: #102018;
   font-size: clamp(1.35rem, 1.8vw, 2rem);
@@ -1009,15 +1457,24 @@
 }
 
 @media (max-width: 980px) {
-  .football-hero,
   .football-toolbar,
-  .football-layout {
+  .football-layout,
+  .passive-layout {
     grid-template-columns: 1fr;
   }
 
-  .football-hero {
-    min-height: 0;
-    align-items: start;
+  .football-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .football-header__stats {
+    justify-content: flex-start;
+  }
+
+  .football-header__stat {
+    align-items: flex-start;
   }
 
   .football-segments {
@@ -1051,10 +1508,6 @@
     padding: 0.85rem;
   }
 
-  .football-hero h1 {
-    font-size: clamp(2.65rem, 18vw, 4.3rem);
-  }
-
   .football-overview {
     grid-template-columns: 1fr;
   }
@@ -1062,6 +1515,145 @@
   .football-stat {
     min-height: 4.6rem;
   }
+}
+
+/* ── Virtual bank interactive chart ──────────────────────────────────── */
+.vb-chart-wrap {
+  position: relative;
+}
+
+.vb-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.vb-btn {
+  background: none;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.3rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #475569;
+  transition: background 0.1s;
+}
+
+.vb-btn:hover { background: #f1f5f9; }
+.vb-btn--right { margin-left: auto; }
+.vb-btn--right + .vb-btn--right { margin-left: 0; }
+
+.vb-zoom-label {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  min-width: 2.5rem;
+}
+
+.vb-svg {
+  display: block;
+  cursor: crosshair;
+  border-radius: 0.35rem;
+  overflow: visible;
+}
+
+.vb-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  background: #1e293b;
+  color: #f8fafc;
+  font-size: 0.7rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3rem;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  max-width: 22rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Virtual bank card ────────────────────────────────────────────────── */
+.virtual-bank {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.virtual-bank.is-positive {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.virtual-bank.is-negative {
+  border-color: #fecaca;
+  background: #fff5f5;
+}
+
+.virtual-bank__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.virtual-bank__head span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+}
+
+.virtual-bank__head strong {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #102018;
+}
+
+.virtual-bank__kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.75rem;
+}
+
+.virtual-bank__kpis > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.virtual-bank__kpis span {
+  color: #64748b;
+}
+
+.virtual-bank__kpis b {
+  font-weight: 700;
+}
+
+.virtual-bank__kpis b.is-positive { color: #16a34a; }
+.virtual-bank__kpis b.is-negative { color: #dc2626; }
+
+.virtual-sparkline {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.85;
+}
+
+.virtual-bank small {
+  font-size: 0.72rem;
+  color: #94a3b8;
 }
 
 .shell {

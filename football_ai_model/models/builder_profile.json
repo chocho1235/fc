@@ -4,6 +4,7 @@
     "btts_yes",
     "home_4_sot",
     "over_15_goals",
+    "over_25_goals",
     "total_3_cards",
     "total_8_corners"
   ],
@@ -11,64 +12,64 @@
   "min_hit_rate": 0.5,
   "legs": {
     "away_4_sot": {
-      "settled": 1125,
-      "won": 723,
-      "hit_rate": 0.6427,
+      "settled": 2522,
+      "won": 1648,
+      "hit_rate": 0.6534,
       "active": true
     },
     "btts_yes": {
-      "settled": 1700,
-      "won": 960,
-      "hit_rate": 0.5647,
+      "settled": 4692,
+      "won": 2705,
+      "hit_rate": 0.5765,
       "active": true
     },
     "home_4_sot": {
-      "settled": 1869,
-      "won": 1396,
-      "hit_rate": 0.7469,
+      "settled": 4918,
+      "won": 3635,
+      "hit_rate": 0.7391,
       "active": true
     },
     "over_15_goals": {
-      "settled": 2510,
-      "won": 1946,
-      "hit_rate": 0.7753,
+      "settled": 6480,
+      "won": 5154,
+      "hit_rate": 0.7954,
       "active": true
     },
     "over_25_goals": {
-      "settled": 73,
-      "won": 36,
-      "hit_rate": 0.4932,
-      "active": false
+      "settled": 145,
+      "won": 80,
+      "hit_rate": 0.5517,
+      "active": true
     },
     "total_3_cards": {
-      "settled": 2258,
-      "won": 1877,
-      "hit_rate": 0.8313,
+      "settled": 5194,
+      "won": 4241,
+      "hit_rate": 0.8165,
       "active": true
     },
     "total_8_corners": {
-      "settled": 2273,
-      "won": 1767,
-      "hit_rate": 0.7774,
+      "settled": 4927,
+      "won": 3702,
+      "hit_rate": 0.7514,
       "active": true
     }
   },
   "builder_results": {
     "lean": {
-      "settled": 1140,
-      "won": 713,
-      "partial": 290,
-      "lost": 137,
-      "win_rate": 0.6254,
-      "avoid_loss_rate": 0.8798
+      "settled": 2314,
+      "won": 1422,
+      "partial": 557,
+      "lost": 335,
+      "win_rate": 0.6145,
+      "avoid_loss_rate": 0.8552
     },
     "strong": {
-      "settled": 2592,
-      "won": 986,
-      "partial": 1557,
-      "lost": 49,
-      "win_rate": 0.3804,
-      "avoid_loss_rate": 0.9811
+      "settled": 6516,
+      "won": 2412,
+      "partial": 3954,
+      "lost": 150,
+      "win_rate": 0.3702,
+      "avoid_loss_rate": 0.977
     }
   }
 }

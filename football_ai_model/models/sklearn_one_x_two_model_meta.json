@@ -62,7 +62,7 @@
   "test_season": "2526",
   "bet_threshold": 0.05,
   "training_window_seasons": 5,
-  "model_type": "sklearn_calibrated_logistic_regression",
+  "model_type": "lightgbm_calibrated_isotonic",
   "rules_path": "betting_rules.json",
   "active_rules": 16
 }

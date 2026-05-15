@@ -5,212 +5,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>Football betting model</title>
-    <meta
-      name="description"
-      content="Multi-league betting model dashboard showing 1X2, over 2.5, bookmaker odds, injury context, H2H form and value thresholds."
-    />
+    <meta name="description" content="Multi-league betting model dashboard showing 1X2, over 2.5, bookmaker odds, injury context, H2H form and value thresholds." />
     <meta name="robots" content="noindex, follow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <div class="shell football-shell">
       <main class="football-app" data-football-app>
-        <section class="football-hero" aria-labelledby="football-model-title">
-          <div class="football-hero__copy">
-            <p class="football-kicker">Multi-league model</p>
-            <h1 id="football-model-title">Football betting command centre</h1>
-            <p>
-              Clear bet/no-bet calls with rolling backtest performance, active rule health, bookmaker prices and
-              expandable match detail. Latest-season ROI is shown as context, not a live guarantee.
-            </p>
+
+        <header class="football-header">
+          <div class="football-header__brand">
+            <span class="football-kicker">Multi-league model</span>
+            <h1>Football Command Centre</h1>
           </div>
-          <div class="football-hero__panel" aria-label="Model status">
-            <div>
-              <span class="football-metric__label">Test season</span>
+          <div class="football-header__stats">
+            <div class="football-header__stat">
+              <span>Season</span>
               <strong data-summary="test_season">--</strong>
             </div>
-            <div>
-              <span class="football-metric__label">Accuracy</span>
+            <div class="football-header__stat">
+              <span>Accuracy</span>
               <strong data-summary="accuracy">--</strong>
             </div>
-            <div>
-              <span class="football-metric__label">Rolling ROI</span>
+            <div class="football-header__stat">
+              <span>Rolling ROI</span>
               <strong data-summary="rolling_roi">--</strong>
             </div>
-            <div>
-              <span class="football-metric__label">Updated</span>
+            <div class="football-header__stat">
+              <span>Updated</span>
               <strong data-generated-at>--</strong>
             </div>
+            <div class="football-header__refresh">
+              <span data-refresh-status>Live</span>
+              <button type="button" data-refresh-btn title="Refresh now">↻</button>
+            </div>
           </div>
-        </section>
+        </header>
 
-        <section class="football-toolbar" aria-label="Model controls">
-          <label class="football-search">
-            <span>Search teams</span>
-            <input type="search" data-football-search placeholder="Arsenal, Chelsea, Man City" />
-          </label>
-          <div class="football-segments" role="tablist" aria-label="Match filter">
-            <button type="button" class="is-active" data-filter="all">All</button>
-            <button type="button" data-filter="suggested">Value</button>
-            <button type="button" data-filter="home">Home</button>
-            <button type="button" data-filter="draw">Draw</button>
-            <button type="button" data-filter="away">Away</button>
-          </div>
-          <label class="football-search football-league-filter">
-            <span>League</span>
-            <select data-football-league>
-              <option value="all">All leagues</option>
-            </select>
-          </label>
-        </section>
+        <nav class="football-tabs" role="tablist">
+          <button type="button" class="is-active" role="tab" data-tab="fixtures" aria-selected="true">Fixtures</button>
+          <button type="button" role="tab" data-tab="passive" aria-selected="false">Passive Betting</button>
+        </nav>
 
-        <section class="football-overview" aria-label="Model overview">
-          <article class="football-stat">
-            <span class="football-stat__label">Rolling bets</span>
-            <strong data-summary="rolling_value_bets_at_5%+_edge">--</strong>
-          </article>
-          <article class="football-stat">
-            <span class="football-stat__label">Rolling profit</span>
-            <strong data-summary="rolling_flat_stake_profit">--</strong>
-          </article>
-          <article class="football-stat">
-            <span class="football-stat__label">Latest ROI</span>
-            <strong data-summary="roi">--</strong>
-          </article>
-          <article class="football-stat">
-            <span class="football-stat__label">Active rules</span>
-            <strong data-summary="active_betting_rules">--</strong>
-          </article>
-        </section>
+        <!-- FIXTURES TAB -->
+        <div id="panel-fixtures" class="football-tab-panel is-active" role="tabpanel">
 
-        <section class="football-strip" aria-label="Betting workflow">
-          <div><span>1</span><strong>Read the call</strong><small>Bet or pass.</small></div>
-          <div><span>2</span><strong>Check the price</strong><small>Bookie versus fair odds.</small></div>
-          <div><span>3</span><strong>Respect the edge</strong><small>Only bet at or above bet-from odds.</small></div>
-        </section>
+          <section class="football-toolbar" aria-label="Model controls">
+            <label class="football-search">
+              <span>Search teams</span>
+              <input type="search" data-football-search placeholder="Arsenal, Chelsea, Man City" />
+            </label>
+            <div class="football-segments" role="tablist" aria-label="Match filter">
+              <button type="button" class="is-active" data-filter="all">All</button>
+              <button type="button" data-filter="suggested">Value</button>
+              <button type="button" data-filter="home">Home</button>
+              <button type="button" data-filter="draw">Draw</button>
+              <button type="button" data-filter="away">Away</button>
+            </div>
+            <label class="football-search football-league-filter">
+              <span>League</span>
+              <select data-football-league>
+                <option value="all">All leagues</option>
+              </select>
+            </label>
+          </section>
 
-        <section class="football-layout">
-          <div class="football-main-stack">
-          <div class="football-board">
-            <div class="football-section-head">
-              <div>
-                <p class="football-kicker">Upcoming</p>
-                <h2>Next fixtures</h2>
+          <section class="football-overview" aria-label="Model overview">
+            <article class="football-stat">
+              <span class="football-stat__label">Rolling bets</span>
+              <strong data-summary="rolling_value_bets_at_5%+_edge">--</strong>
+            </article>
+            <article class="football-stat">
+              <span class="football-stat__label">Rolling profit</span>
+              <strong data-summary="rolling_flat_stake_profit">--</strong>
+            </article>
+            <article class="football-stat">
+              <span class="football-stat__label">Latest ROI</span>
+              <strong data-summary="roi">--</strong>
+            </article>
+            <article class="football-stat">
+              <span class="football-stat__label">Active rules</span>
+              <strong data-summary="active_betting_rules">--</strong>
+            </article>
+          </section>
+
+          <section class="football-layout">
+            <div class="football-main-stack">
+              <div class="football-board">
+                <div class="football-section-head">
+                  <div>
+                    <p class="football-kicker">Upcoming</p>
+                    <h2>Next fixtures</h2>
+                  </div>
+                  <p data-upcoming-count>Loading...</p>
+                </div>
+                <div class="football-table-wrap">
+                  <table class="football-table">
+                    <thead>
+                      <tr>
+                        <th>Fixture</th><th>Decision</th><th>Builder</th><th>Expand</th>
+                      </tr>
+                    </thead>
+                    <tbody data-upcoming-rows></tbody>
+                  </table>
+                </div>
               </div>
-              <p data-upcoming-count>Loading...</p>
-            </div>
-            <div class="football-table-wrap">
-              <table class="football-table">
-                <thead>
-                  <tr>
-                    <th>Fixture</th>
-                    <th>Decision</th>
-                    <th>Builder</th>
-                    <th>Expand</th>
-                  </tr>
-                </thead>
-                <tbody data-upcoming-rows></tbody>
-              </table>
-            </div>
-          </div>
 
-          <div class="football-board">
-            <div class="football-section-head">
-              <div>
-                <p class="football-kicker">Predictions</p>
-                <h2>Latest matches</h2>
+              <div class="football-board">
+                <div class="football-section-head">
+                  <div>
+                    <p class="football-kicker">Predictions</p>
+                    <h2>Latest matches</h2>
+                  </div>
+                  <p data-football-count>Loading...</p>
+                </div>
+                <div class="football-table-wrap">
+                  <table class="football-table">
+                    <thead>
+                      <tr>
+                        <th>Fixture</th><th>Decision</th><th>Builder</th><th>Expand</th>
+                      </tr>
+                    </thead>
+                    <tbody data-football-rows></tbody>
+                  </table>
+                </div>
               </div>
-              <p data-football-count>Loading...</p>
             </div>
-            <div class="football-table-wrap">
-              <table class="football-table">
-                <thead>
-                  <tr>
-                    <th>Fixture</th>
-                    <th>Decision</th>
-                    <th>Builder</th>
-                    <th>Expand</th>
-                  </tr>
-                </thead>
-                <tbody data-football-rows></tbody>
-              </table>
-            </div>
-          </div>
-          </div>
 
-          <aside class="football-side" aria-label="Model insight">
-            <div class="football-side__block">
-              <p class="football-kicker">Probability mix</p>
-              <div class="football-donut" data-football-donut>
-                <span data-average="home">--</span>
+            <aside class="football-side" aria-label="Model insight">
+              <div class="football-side__block">
+                <p class="football-kicker">Probability mix</p>
+                <div class="football-donut" data-football-donut>
+                  <span data-average="home">--</span>
+                </div>
+                <dl class="football-legend">
+                  <div><dt>Home</dt><dd data-average="home">--</dd></div>
+                  <div><dt>Draw</dt><dd data-average="draw">--</dd></div>
+                  <div><dt>Away</dt><dd data-average="away">--</dd></div>
+                </dl>
               </div>
-              <dl class="football-legend">
-                <div><dt>Home</dt><dd data-average="home">--</dd></div>
-                <div><dt>Draw</dt><dd data-average="draw">--</dd></div>
-                <div><dt>Away</dt><dd data-average="away">--</dd></div>
-              </dl>
+
+              <div class="football-side__block">
+                <p class="football-kicker">Value watch</p>
+                <div data-value-list class="football-value-list"></div>
+              </div>
+
+              <div class="football-side__block">
+                <p class="football-kicker">Qualified rules</p>
+                <div data-rule-list class="football-rule-list"></div>
+              </div>
+
+              <div class="football-side__block">
+                <p class="football-kicker">Closing line</p>
+                <dl class="football-legend">
+                  <div><dt>Scored</dt><dd data-closing-line="snapshots_scored">--</dd></div>
+                  <div><dt>CLV hit rate</dt><dd data-closing-line="clv_hit_rate">--</dd></div>
+                  <div><dt>Avg CLV</dt><dd data-closing-line="average_clv">--</dd></div>
+                  <div><dt>Tracked ROI</dt><dd data-closing-line="roi">--</dd></div>
+                </dl>
+              </div>
+
+              <div class="football-side__block">
+                <p class="football-kicker">Over 2.5 model</p>
+                <dl class="football-legend">
+                  <div><dt>Rolling accuracy</dt><dd data-summary="over_2.5_rolling_accuracy">--</dd></div>
+                  <div><dt>Rolling bets</dt><dd data-summary="over_2.5_rolling_value_bets_at_10%+_edge">--</dd></div>
+                  <div><dt>Rolling ROI</dt><dd data-summary="over_2.5_rolling_roi">--</dd></div>
+                </dl>
+              </div>
+
+              <div class="football-side__block">
+                <p class="football-kicker">Builder learning</p>
+                <dl class="football-legend">
+                  <div><dt>Settled</dt><dd data-builder-summary="settled">--</dd></div>
+                  <div><dt>Won all legs</dt><dd data-builder-summary="win_rate">--</dd></div>
+                  <div><dt>Leg hit rate</dt><dd data-builder-summary="leg_hit_rate">--</dd></div>
+                  <div><dt>Active legs</dt><dd data-builder-summary="active_legs">--</dd></div>
+                </dl>
+              </div>
+
+              <div class="football-side__block">
+                <p class="football-kicker">Virtual bank</p>
+                <p class="passive-side__intro">£10 flat stake on every qualified value bet. Tracks historical performance from rolling predictions.</p>
+                <div data-fixture-pnl></div>
+              </div>
+            </aside>
+          </section>
+        </div>
+
+        <!-- PASSIVE BETTING TAB -->
+        <div id="panel-passive" class="football-tab-panel" role="tabpanel" hidden>
+          <div class="passive-layout">
+            <div class="passive-main">
+
+              <div class="passive-intro">
+                <p class="football-kicker">Low odds · high probability · stacked accumulator</p>
+                <p>Only picks above <strong>80% confidence</strong>. The model scans all upcoming fixtures for the single most likely outcome per match — results or builder legs — ranks them, and stacks the top picks into a suggested accumulator. Hit rates are tracked from settled history.</p>
+              </div>
+
+              <section class="passive-board">
+                <div class="passive-board__head">
+                  <div>
+                    <p class="football-kicker">Smart stack</p>
+                    <h2>Suggested accumulator</h2>
+                  </div>
+                  <div data-passive-stack-summary class="passive-stack-summary"></div>
+                </div>
+                <div data-passive-stack class="passive-stack-legs"></div>
+              </section>
+
+              <section class="passive-board">
+                <div class="passive-board__head">
+                  <div>
+                    <p class="football-kicker">All picks ≥ 80%</p>
+                    <h2>High-confidence list</h2>
+                  </div>
+                  <p data-passive-picks-count class="passive-count">--</p>
+                </div>
+                <div data-passive-picks class="passive-picks-list"></div>
+              </section>
+
             </div>
 
-            <div class="football-side__block">
-              <p class="football-kicker">Value watch</p>
-              <div data-value-list class="football-value-list"></div>
-            </div>
+            <aside class="passive-side">
+              <div class="football-side__block">
+                <p class="football-kicker">Model learning</p>
+                <p class="passive-side__intro">Historical hit rates from settled matches. The accumulator picks prefer outcomes the model has historically got right at high confidence.</p>
+                <div data-passive-learning class="passive-learning-list"></div>
+              </div>
 
-            <div class="football-side__block">
-              <p class="football-kicker">Qualified rules</p>
-              <div data-rule-list class="football-rule-list"></div>
-            </div>
+              <div class="football-side__block">
+                <p class="football-kicker">Track record</p>
+                <p class="passive-side__intro">Recent high-probability picks from completed matches.</p>
+                <div data-passive-history class="passive-history-list"></div>
+              </div>
 
-            <div class="football-side__block">
-              <p class="football-kicker">Closing line</p>
-              <dl class="football-legend">
-                <div><dt>Scored</dt><dd data-closing-line="snapshots_scored">--</dd></div>
-                <div><dt>CLV hit rate</dt><dd data-closing-line="clv_hit_rate">--</dd></div>
-                <div><dt>Avg CLV</dt><dd data-closing-line="average_clv">--</dd></div>
-                <div><dt>Tracked ROI</dt><dd data-closing-line="roi">--</dd></div>
-              </dl>
-            </div>
+              <div class="football-side__block">
+                <p class="football-kicker">Virtual bank</p>
+                <p class="passive-side__intro">Simulated £10 stake on every high-confidence 1X2 pick from recent matches. Uses fair odds at time of pick.</p>
+                <div data-passive-pnl></div>
+              </div>
 
-            <div class="football-side__block">
-              <p class="football-kicker">Over 2.5 model</p>
-              <dl class="football-legend">
-                <div><dt>Rolling accuracy</dt><dd data-summary="over_2.5_rolling_accuracy">--</dd></div>
-                <div><dt>Rolling bets</dt><dd data-summary="over_2.5_rolling_value_bets_at_10%+_edge">--</dd></div>
-                <div><dt>Rolling ROI</dt><dd data-summary="over_2.5_rolling_roi">--</dd></div>
-              </dl>
-            </div>
+              <div class="football-side__block">
+                <p class="football-kicker">How it works</p>
+                <ul class="football-context-list">
+                  <li><strong>80%+</strong> is roughly odds of 1.25 or shorter.</li>
+                  <li>One pick per fixture — always the highest-probability outcome, whether result or builder leg.</li>
+                  <li>The <strong>smart stack</strong> multiplies probabilities — each extra leg reduces combined confidence, so fewer legs often beats more.</li>
+                  <li>Hit rates update every time the model retrains on settled results.</li>
+                  <li><strong>Never chase</strong> a losing stack — each is independent.</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
 
-            <div class="football-side__block">
-              <p class="football-kicker">Builder learning</p>
-              <dl class="football-legend">
-                <div><dt>Settled</dt><dd data-builder-summary="settled">--</dd></div>
-                <div><dt>Won all legs</dt><dd data-builder-summary="win_rate">--</dd></div>
-                <div><dt>Leg hit rate</dt><dd data-builder-summary="leg_hit_rate">--</dd></div>
-                <div><dt>Active legs</dt><dd data-builder-summary="active_legs">--</dd></div>
-              </dl>
-            </div>
-
-            <div class="football-side__block">
-              <p class="football-kicker">How to read it</p>
-              <ul class="football-context-list">
-                <li><strong>Bookie</strong> is the current decimal price from the fixture feed.</li>
-                <li><strong>Fair</strong> is the model's break-even price.</li>
-                <li><strong>Bet from</strong> adds the value margin, so lower odds are a pass.</li>
-                <li><strong>Key out</strong> means higher-impact unavailable players.</li>
-                <li><strong>Total out</strong> is wider squad availability and can include lower-impact players.</li>
-                <li><strong>Availability not loaded</strong> means we do not have injury data for that match.</li>
-                <li><strong>Importance</strong> runs low to high; high usually means title, Europe or relegation pressure.</li>
-                <li><strong>Over 2.5</strong> is now a separate calibrated model, but the value-bet sample is still small.</li>
-              </ul>
-            </div>
-          </aside>
-        </section>
       </main>
     </div>
     <script type="module" src="/football-model-page.js"></script>
