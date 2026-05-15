@@ -75,20 +75,32 @@
 
           <section class="football-overview" aria-label="Model overview">
             <article class="football-stat">
-              <span class="football-stat__label">Rolling bets</span>
-              <strong data-summary="rolling_value_bets_at_5%+_edge">--</strong>
+              <div class="football-stat__meta">
+                <span class="football-stat__label">Rolling ROI</span>
+                <small class="football-stat__sub">6 seasons · out-of-sample</small>
+              </div>
+              <strong data-summary="rolling_roi">--</strong>
             </article>
             <article class="football-stat">
-              <span class="football-stat__label">Rolling profit</span>
+              <div class="football-stat__meta">
+                <span class="football-stat__label">Profit (flat stake)</span>
+                <small class="football-stat__sub">1 unit = 1 stake · Pinnacle odds</small>
+              </div>
               <strong data-summary="rolling_flat_stake_profit">--</strong>
             </article>
             <article class="football-stat">
-              <span class="football-stat__label">Latest ROI</span>
-              <strong data-summary="roi">--</strong>
+              <div class="football-stat__meta">
+                <span class="football-stat__label">Value bets found</span>
+                <small class="football-stat__sub">5%+ edge vs Pinnacle · rolling</small>
+              </div>
+              <strong data-summary="rolling_value_bets_at_5%+_edge">--</strong>
             </article>
             <article class="football-stat">
-              <span class="football-stat__label">Active rules</span>
-              <strong data-summary="active_betting_rules">--</strong>
+              <div class="football-stat__meta">
+                <span class="football-stat__label">This season ROI</span>
+                <small class="football-stat__sub">current season test only</small>
+              </div>
+              <strong data-summary="roi">--</strong>
             </article>
           </section>
 

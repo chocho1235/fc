@@ -618,7 +618,7 @@ function virtualBankHtml(pnl, chartId) {
       <div><span>Win rate</span><b>${percent(pnl.win_rate)}</b></div>
     </div>
     <div class="vb-chart-container" data-vb-chart="${id}"></div>
-    <small>Start £${pnl.starting_bank} · £10 flat stake · dots = individual bets</small>
+    <div class="virtual-bank__method">£10 flat stake · win = Pinnacle odds × stake − stake · loss = −£10 · each dot = one bet</div>
   </div>`;
 }
 

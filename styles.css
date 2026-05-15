@@ -514,9 +514,23 @@
 
 .football-stat {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.football-stat__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.football-stat__sub {
+  font-size: 0.68rem;
+  color: #94a3b8;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .football-metric__label,
@@ -1651,9 +1665,11 @@
   opacity: 0.85;
 }
 
-.virtual-bank small {
+.virtual-bank small,
+.virtual-bank__method {
   font-size: 0.72rem;
   color: #94a3b8;
+  line-height: 1.4;
 }
 
 .shell {
