@@ -147,7 +147,8 @@ def main() -> None:
     w_dc, best_ll, matched = find_best_blend(lgbm_rolling, dc_rolling)
     n_matched = len(matched)
 
-    print(f"ensemble: w_dc={w_dc:.1f}, log_loss={best_ll:.4f if best_ll else 'N/A'}, n_matched={n_matched}")
+    ll_str = f"{best_ll:.4f}" if best_ll is not None else "N/A"
+    print(f"ensemble: w_dc={w_dc:.1f}, log_loss={ll_str}, n_matched={n_matched}")
 
     calibrators: dict = {}
     if matched and len(matched) >= MIN_CALIBRATION_ROWS:
