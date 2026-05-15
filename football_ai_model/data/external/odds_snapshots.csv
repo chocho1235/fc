@@ -2,3 +2,21 @@ snapshot_at,date,time,league_code,league,home_team,away_team,predicted_result,su
 2026-05-14T22:18:23Z,2026-05-14,18:00,SP1,La Liga,Valencia,Vallecano,H,H,0.0543,2.17,3.33,3.23,1.87,La Liga H mid 5%+
 2026-05-14T22:18:23Z,2026-05-14,19:00,SP1,La Liga,Girona,Sociedad,H,,,2.06,3.64,3.21,1.66,
 2026-05-14T22:18:23Z,2026-05-14,20:30,SP1,La Liga,Real Madrid,Oviedo,H,,,1.23,6.28,10.42,1.38,
+2026-05-15T09:24:40Z,2026-05-15,20:00,E0,Premier League,Aston Villa,Liverpool,H,H,0.137,2.76,3.44,2.43,1.68,all H mid 5%+
+2026-05-15T09:24:40Z,2026-05-17,12:30,E0,Premier League,Man United,Nott'm Forest,H,A,0.0781,1.58,4.23,4.94,1.57,Premier League A long 5%+
+2026-05-15T09:24:40Z,2026-05-17,15:00,E0,Premier League,Brentford,Crystal Palace,H,,,1.71,4.09,4.17,1.65,
+2026-05-15T09:24:40Z,2026-05-17,15:00,E0,Premier League,Everton,Sunderland,H,,,1.81,3.63,4.18,1.88,
+2026-05-15T09:24:40Z,2026-05-17,15:00,E0,Premier League,Leeds,Brighton,A,,,3.09,3.57,2.14,1.65,
+2026-05-15T09:24:40Z,2026-05-17,15:00,E0,Premier League,Wolves,Fulham,A,,,3.68,3.78,1.87,1.68,
+2026-05-15T09:24:40Z,2026-05-17,17:30,E0,Premier League,Newcastle,West Ham,H,,,2.05,3.78,3.15,1.47,
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Ath Bilbao,Celta,H,H,0.0519,2.15,3.11,3.42,2.07,La Liga H mid 5%+
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Ath Madrid,Girona,H,A,0.0562,1.74,3.74,4.25,1.67,all A long 5%+
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Elche,Getafe,H,H,0.0735,2.2,2.91,3.57,2.62,La Liga H mid 5%+
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Levante,Mallorca,H,,,2.12,3.33,3.27,1.83,
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Osasuna,Espanol,H,H,0.0617,2.05,3.11,3.7,2.17,La Liga H mid 5%+
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Oviedo,Alaves,H,,,3.69,3.56,1.9,1.8,
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Sevilla,Real Madrid,H,H,0.1212,3.03,3.5,2.16,1.71,all H long 12%+
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Sociedad,Valencia,H,H,0.0755,2.13,3.37,3.21,1.84,La Liga H mid 5%+
+2026-05-15T09:24:40Z,2026-05-17,18:00,SP1,La Liga,Vallecano,Villarreal,H,H,0.0661,2.38,3.48,2.69,1.71,La Liga H mid 5%+
+2026-05-15T09:24:40Z,2026-05-17,20:15,SP1,La Liga,Barcelona,Betis,H,,,1.33,5.5,7.08,1.31,
+2026-05-15T09:24:40Z,2026-05-18,20:00,E0,Premier League,Arsenal,Burnley,H,,,1.08,10.12,22.13,1.33,
