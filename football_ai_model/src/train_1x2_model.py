@@ -20,7 +20,7 @@ REPORTS_DIR = ROOT / "reports"
 BUILDER_PROFILE_PATH = MODELS_DIR / "builder_profile.json"
 
 LABELS = ["H", "D", "A"]
-ODDS_COLUMNS = [("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A")]
+ODDS_COLUMNS = [("PSH", "PSD", "PSA"), ("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A")]
 BET_THRESHOLDS = [0.03, 0.05, 0.08, 0.10, 0.12, 0.15]
 DEFAULT_BET_THRESHOLD = float(os.getenv("BET_THRESHOLD", "0.05") or "0.05")
 MAX_BET_PROBABILITY = float(os.getenv("MAX_BET_PROBABILITY", "0.65") or "0.65")
@@ -323,9 +323,14 @@ def first_valid_odds(match, columns):
 
 
 def odds_movement_features(match, home_odds, draw_odds, away_odds):
-    close_home = parse_float(match.get("AvgCH"))
-    close_draw = parse_float(match.get("AvgCD"))
-    close_away = parse_float(match.get("AvgCA"))
+    # Pinnacle closing is the sharpest signal; fall back to market average then B365
+    close_home = parse_float(match.get("PSCH"))
+    close_draw = parse_float(match.get("PSCD"))
+    close_away = parse_float(match.get("PSCA"))
+    if close_home <= 1 or close_draw <= 1 or close_away <= 1:
+        close_home = parse_float(match.get("AvgCH"))
+        close_draw = parse_float(match.get("AvgCD"))
+        close_away = parse_float(match.get("AvgCA"))
     if close_home <= 1 or close_draw <= 1 or close_away <= 1:
         close_home = parse_float(match.get("B365CH"))
         close_draw = parse_float(match.get("B365CD"))
