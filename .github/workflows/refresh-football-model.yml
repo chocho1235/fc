@@ -57,6 +57,7 @@ jobs:
           git config user.email "football-model-bot@users.noreply.github.com"
           git add football_ai_model/data football_ai_model/models football_ai_model/reports football_ai_model/src public/football-model-data.json
           git diff --cached --quiet || git commit -m "Weekly retrain $(date -u +%Y-%m-%d)"
+          git pull --rebase origin main
           git push
 
   # ── 6-hourly data refresh (fixtures + upcoming + export) ─────────────────────
@@ -98,13 +99,17 @@ jobs:
         run: |
           git config user.name "football-model-bot"
           git config user.email "football-model-bot@users.noreply.github.com"
+          # Add files that are guaranteed to exist
           git add football_ai_model/data/raw/fixtures.csv \
                   football_ai_model/data/processed \
-                  football_ai_model/data/external/live_odds.json \
                   football_ai_model/models/builder_profile.json \
                   football_ai_model/models/dixon_coles_*.json \
                   football_ai_model/models/ensemble_meta.json \
                   football_ai_model/reports \
                   public/football-model-data.json
+          # Add optional files only if they exist (odds API may be skipped)
+          git add football_ai_model/data/external/live_odds.json 2>/dev/null || true
+          git add football_ai_model/data/external/understat_xg.csv 2>/dev/null || true
           git diff --cached --quiet || git commit -m "Refresh data $(date -u +%Y-%m-%dT%H:%M)Z"
+          git pull --rebase origin main
           git push
