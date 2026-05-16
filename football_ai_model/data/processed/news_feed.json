@@ -1,9 +1,84 @@
 [
   {
+    "id": "preview_pari_pari",
+    "type": "preview",
+    "headline": "Model spots opportunity: Paris FC at 5.15 carries 15.8% edge",
+    "body": "The model has identified 15.8% edge on Paris FC ahead of their clash with Paris SG on 2026-05-17. Bookie odds: 5.15. The Ligue 1 H long 8%+ rule \u2014 with 36 bets and 40% historical ROI \u2014 qualifies this as a value play.",
+    "league": "Ligue 1",
+    "date": "2026-05-17",
+    "teams": [
+      "Paris FC",
+      "Paris SG"
+    ],
+    "badge": "\ud83d\udc40 Value watch"
+  },
+  {
+    "id": "win_2026-05-10_hamb_frei",
+    "type": "win",
+    "headline": "Backed at value, delivered on cue: Hamburg wins",
+    "body": "Our model identified 8.3% edge on Hamburg at 2.74. The Bundesliga H all 8%+ rule (historical ROI: 38%) fired \u2014 and it delivered. Running P&L: +3.8 units on this rule.",
+    "league": "Bundesliga",
+    "date": "2026-05-10",
+    "teams": [
+      "Hamburg",
+      "Freiburg"
+    ],
+    "badge": "\u2713 Value win"
+  },
+  {
+    "id": "nailed_2026-05-10_parm_roma",
+    "type": "nailed",
+    "headline": "High confidence, high result: Roma at 70% comes through",
+    "body": "The model was confident here, giving Roma a 70% chance. They delivered, reinforcing the signal in Serie A.",
+    "league": "Serie A",
+    "date": "2026-05-10",
+    "teams": [
+      "Parma",
+      "Roma"
+    ],
+    "badge": "\ud83c\udfaf Model called it"
+  },
+  {
+    "id": "nailed_2026-05-13_man__crys",
+    "type": "nailed",
+    "headline": "Man City dominant: model called it at 68%",
+    "body": "The model loaded up on Man City at 68% probability in Premier League. The result matched the expectation. Another tick on the accuracy sheet.",
+    "league": "Premier League",
+    "date": "2026-05-13",
+    "teams": [
+      "Man City",
+      "Crystal Palace"
+    ],
+    "badge": "\ud83c\udfaf Model called it"
+  },
+  {
+    "id": "nailed_2026-05-14_real_ovie",
+    "type": "nailed",
+    "headline": "Exactly as predicted: Real Madrid seal it in La Liga",
+    "body": "The model loaded up on Real Madrid at 71% probability in La Liga. The result matched the expectation. Another tick on the accuracy sheet.",
+    "league": "La Liga",
+    "date": "2026-05-14",
+    "teams": [
+      "Real Madrid",
+      "Oviedo"
+    ],
+    "badge": "\ud83c\udfaf Model called it"
+  },
+  {
+    "id": "form_ligue_1",
+    "type": "form",
+    "headline": "Model form check: Ligue 1 leading accuracy this week",
+    "body": "Across the past 10 Ligue 1 matches, the model correctly called 8 results (80% accuracy). Outperforming all other leagues in the current window.",
+    "league": "Ligue 1",
+    "date": "2026-05-16",
+    "teams": [],
+    "badge": "\ud83d\udcca Form"
+  },
+  {
     "id": "upset_2026-05-11_napo_bolo",
     "type": "upset",
     "headline": "Bologna produce one of the week's biggest upsets against Napoli",
-    "body": "Our model gave Bologna just a 12% chance at Napoli's ground. Napoli were priced at 1.52, but Bologna produced one of the weekend's biggest upsets. The model's expected goals had Napoli projected at 0.80 goals \u2014 reality told a very different story.",
+    "body": "A 12% probability \u2014 that's all the model assigned Bologna heading into this one at Napoli's ground. Napoli at 1.52 looked the banker pick. Instead, Bologna rewrote the script.",
     "league": "Serie A",
     "date": "2026-05-11",
     "teams": [
@@ -16,7 +91,7 @@
     "id": "upset_2026-05-12_celt_leva",
     "type": "upset",
     "headline": "Against all odds: Levante topple Celta at Celta's ground",
-    "body": "Our model gave Levante just a 19% chance at Celta's ground. Celta were priced at 1.78, but Levante produced one of the weekend's biggest upsets. The model's expected goals had Celta projected at 1.60 goals \u2014 reality told a very different story.",
+    "body": "A 19% probability \u2014 that's all the model assigned Levante heading into this one at Celta's ground. Celta at 1.78 looked the banker pick. Instead, Levante rewrote the script.",
     "league": "La Liga",
     "date": "2026-05-12",
     "teams": [
@@ -37,15 +112,5 @@
       "Sevilla"
     ],
     "badge": "\u26a1 Upset"
-  },
-  {
-    "id": "form_ligue_1",
-    "type": "form",
-    "headline": "Model form check: Ligue 1 leading accuracy this week",
-    "body": "Ligue 1 accuracy stands at 86% from 7 recent predictions. Ahead of the pack in the recent 30-match window. The model's European data set remains its strongest suit.",
-    "league": "Ligue 1",
-    "date": "2026-05-16",
-    "teams": [],
-    "badge": "\ud83d\udcca Form"
   }
 ]
