@@ -894,7 +894,7 @@ body {
   color: var(--text-0);
   line-height: 1.35;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 0.3rem;
@@ -904,10 +904,6 @@ body {
   font-size: 0.75rem;
   color: var(--text-1);
   line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
   margin-bottom: 0.35rem;
 }
 
