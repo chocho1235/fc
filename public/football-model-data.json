@@ -32,7 +32,7 @@
     "over_2.5_rolling_flat_stake_profit": "-35.98 units",
     "over_2.5_rolling_roi": "-12.28%"
   },
-  "generated_at": "2026-05-15T17:37:23Z",
+  "generated_at": "2026-05-16T11:11:55Z",
   "generated_from": "football_ai_model/data/processed/predictions.csv",
   "leagues": [
     "Bundesliga",
@@ -2788,7 +2788,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "",
+      "dc_mu": ""
     },
     {
       "date": "2026-05-16",
@@ -2812,9 +2814,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.562",
-      "draw_probability": "0.2216",
-      "away_win_probability": "0.2163",
+      "home_win_probability": "0.793666",
+      "draw_probability": "0.121708",
+      "away_win_probability": "0.084627",
       "home_bookmaker_odds": "1.14",
       "draw_bookmaker_odds": "8.71",
       "away_bookmaker_odds": "12.84",
@@ -2851,7 +2853,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "3.7516",
+      "dc_mu": "0.8937"
     },
     {
       "date": "2026-05-16",
@@ -2875,9 +2879,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4784",
-      "draw_probability": "0.2159",
-      "away_win_probability": "0.3057",
+      "home_win_probability": "0.412229",
+      "draw_probability": "0.244891",
+      "away_win_probability": "0.34288",
       "home_bookmaker_odds": "3.35",
       "draw_bookmaker_odds": "4.22",
       "away_bookmaker_odds": "1.86",
@@ -2914,7 +2918,9 @@
       "suggested_edge": "0.1442",
       "bet_rule": "Bundesliga H all 8%+",
       "bet_rule_bets": "88",
-      "bet_rule_roi": "0.4011"
+      "bet_rule_roi": "0.4011",
+      "dc_lambda": "1.7566",
+      "dc_mu": "1.8946"
     },
     {
       "date": "2026-05-16",
@@ -2938,9 +2944,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.508",
-      "draw_probability": "0.2169",
-      "away_win_probability": "0.2751",
+      "home_win_probability": "0.392686",
+      "draw_probability": "0.251759",
+      "away_win_probability": "0.355555",
       "home_bookmaker_odds": "2.65",
       "draw_bookmaker_odds": "3.88",
       "away_bookmaker_odds": "2.28",
@@ -2977,7 +2983,9 @@
       "suggested_edge": "0.1127",
       "bet_rule": "Bundesliga H all 8%+",
       "bet_rule_bets": "88",
-      "bet_rule_roi": "0.4011"
+      "bet_rule_roi": "0.4011",
+      "dc_lambda": "1.2959",
+      "dc_mu": "1.7532"
     },
     {
       "date": "2026-05-16",
@@ -3001,9 +3009,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.445",
-      "draw_probability": "0.2068",
-      "away_win_probability": "0.3482",
+      "home_win_probability": "0.317253",
+      "draw_probability": "0.245844",
+      "away_win_probability": "0.436903",
       "home_bookmaker_odds": "1.88",
       "draw_bookmaker_odds": "4.14",
       "away_bookmaker_odds": "3.35",
@@ -3040,7 +3048,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.2836",
+      "dc_mu": "1.526"
     },
     {
       "date": "2026-05-16",
@@ -3064,9 +3074,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5188",
-      "draw_probability": "0.2281",
-      "away_win_probability": "0.253",
+      "home_win_probability": "0.654243",
+      "draw_probability": "0.22439",
+      "away_win_probability": "0.121367",
       "home_bookmaker_odds": "1.25",
       "draw_bookmaker_odds": "6.29",
       "away_bookmaker_odds": "8.83",
@@ -3103,7 +3113,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "2.3302",
+      "dc_mu": "0.902"
     },
     {
       "date": "2026-05-16",
@@ -3127,9 +3139,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4348",
-      "draw_probability": "0.2112",
-      "away_win_probability": "0.354",
+      "home_win_probability": "0.393891",
+      "draw_probability": "0.252532",
+      "away_win_probability": "0.353577",
       "home_bookmaker_odds": "4.1",
       "draw_bookmaker_odds": "4.4",
       "away_bookmaker_odds": "1.67",
@@ -3166,7 +3178,9 @@
       "suggested_edge": "0.1489",
       "bet_rule": "Bundesliga H all 8%+",
       "bet_rule_bets": "88",
-      "bet_rule_roi": "0.4011"
+      "bet_rule_roi": "0.4011",
+      "dc_lambda": "1.6359",
+      "dc_mu": "1.6825"
     },
     {
       "date": "2026-05-16",
@@ -3190,9 +3204,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.368",
-      "draw_probability": "0.2166",
-      "away_win_probability": "0.4154",
+      "home_win_probability": "0.263426",
+      "draw_probability": "0.268424",
+      "away_win_probability": "0.468149",
       "home_bookmaker_odds": "2.78",
       "draw_bookmaker_odds": "3.63",
       "away_bookmaker_odds": "2.28",
@@ -3229,7 +3243,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.0214",
+      "dc_mu": "1.1658"
     },
     {
       "date": "2026-05-16",
@@ -3253,9 +3269,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4211",
-      "draw_probability": "0.2316",
-      "away_win_probability": "0.3473",
+      "home_win_probability": "0.381492",
+      "draw_probability": "0.27606",
+      "away_win_probability": "0.342448",
       "home_bookmaker_odds": "2.57",
       "draw_bookmaker_odds": "3.77",
       "away_bookmaker_odds": "2.39",
@@ -3292,7 +3308,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.2952",
+      "dc_mu": "1.1739"
     },
     {
       "date": "2026-05-16",
@@ -3316,9 +3334,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4054",
-      "draw_probability": "0.2164",
-      "away_win_probability": "0.3782",
+      "home_win_probability": "0.195268",
+      "draw_probability": "0.243849",
+      "away_win_probability": "0.560883",
       "home_bookmaker_odds": "3.3",
       "draw_bookmaker_odds": "3.97",
       "away_bookmaker_odds": "1.93",
@@ -3355,7 +3373,9 @@
       "suggested_edge": "0.0885",
       "bet_rule": "Bundesliga H all 8%+",
       "bet_rule_bets": "88",
-      "bet_rule_roi": "0.4011"
+      "bet_rule_roi": "0.4011",
+      "dc_lambda": "1.1068",
+      "dc_mu": "2.0125"
     },
     {
       "date": "2026-05-17",
@@ -3379,9 +3399,9 @@
       "away_key_absences": "1.645",
       "home_injury_count": "11.0",
       "away_injury_count": "16.0",
-      "home_win_probability": "0.5237",
-      "draw_probability": "0.1768",
-      "away_win_probability": "0.2995",
+      "home_win_probability": "0.509",
+      "draw_probability": "0.233265",
+      "away_win_probability": "0.257735",
       "home_bookmaker_odds": "1.58",
       "draw_bookmaker_odds": "4.23",
       "away_bookmaker_odds": "4.94",
@@ -3418,7 +3438,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.5604",
+      "dc_mu": "1.1721"
     },
     {
       "date": "2026-05-17",
@@ -3442,9 +3464,9 @@
       "away_key_absences": "0.226",
       "home_injury_count": "16.0",
       "away_injury_count": "12.0",
-      "home_win_probability": "0.4803",
-      "draw_probability": "0.2002",
-      "away_win_probability": "0.3195",
+      "home_win_probability": "0.481318",
+      "draw_probability": "0.246416",
+      "away_win_probability": "0.272265",
       "home_bookmaker_odds": "1.71",
       "draw_bookmaker_odds": "4.09",
       "away_bookmaker_odds": "4.17",
@@ -3481,7 +3503,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.5645",
+      "dc_mu": "1.1149"
     },
     {
       "date": "2026-05-17",
@@ -3505,9 +3529,9 @@
       "away_key_absences": "0.973",
       "home_injury_count": "10.0",
       "away_injury_count": "22.0",
-      "home_win_probability": "0.5063",
-      "draw_probability": "0.1907",
-      "away_win_probability": "0.303",
+      "home_win_probability": "0.481318",
+      "draw_probability": "0.246416",
+      "away_win_probability": "0.272265",
       "home_bookmaker_odds": "1.81",
       "draw_bookmaker_odds": "3.63",
       "away_bookmaker_odds": "4.18",
@@ -3544,7 +3568,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.1399",
+      "dc_mu": "0.838"
     },
     {
       "date": "2026-05-17",
@@ -3568,9 +3594,9 @@
       "away_key_absences": "0.776",
       "home_injury_count": "13.0",
       "away_injury_count": "20.0",
-      "home_win_probability": "0.3697",
-      "draw_probability": "0.2147",
-      "away_win_probability": "0.4156",
+      "home_win_probability": "0.279388",
+      "draw_probability": "0.236779",
+      "away_win_probability": "0.483833",
       "home_bookmaker_odds": "3.09",
       "draw_bookmaker_odds": "3.57",
       "away_bookmaker_odds": "2.14",
@@ -3607,7 +3633,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.3981",
+      "dc_mu": "1.5196"
     },
     {
       "date": "2026-05-17",
@@ -3631,9 +3659,9 @@
       "away_key_absences": "1.063",
       "home_injury_count": "15.0",
       "away_injury_count": "6.0",
-      "home_win_probability": "0.4265",
-      "draw_probability": "0.1821",
-      "away_win_probability": "0.3913",
+      "home_win_probability": "0.266842",
+      "draw_probability": "0.240901",
+      "away_win_probability": "0.492257",
       "home_bookmaker_odds": "3.68",
       "draw_bookmaker_odds": "3.78",
       "away_bookmaker_odds": "1.87",
@@ -3670,7 +3698,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.0683",
+      "dc_mu": "1.4246"
     },
     {
       "date": "2026-05-17",
@@ -3694,9 +3724,9 @@
       "away_key_absences": "0.681",
       "home_injury_count": "12.0",
       "away_injury_count": "15.0",
-      "home_win_probability": "0.4353",
-      "draw_probability": "0.2165",
-      "away_win_probability": "0.3482",
+      "home_win_probability": "0.546125",
+      "draw_probability": "0.241452",
+      "away_win_probability": "0.212423",
       "home_bookmaker_odds": "2.05",
       "draw_bookmaker_odds": "3.78",
       "away_bookmaker_odds": "3.15",
@@ -3733,7 +3763,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "2.0809",
+      "dc_mu": "1.1222"
     },
     {
       "date": "2026-05-17",
@@ -3757,9 +3789,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4746",
-      "draw_probability": "0.2049",
-      "away_win_probability": "0.3205",
+      "home_win_probability": "0.546125",
+      "draw_probability": "0.241452",
+      "away_win_probability": "0.212423",
       "home_bookmaker_odds": "1.79",
       "draw_bookmaker_odds": "3.64",
       "away_bookmaker_odds": "4.16",
@@ -3796,7 +3828,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.6156",
+      "dc_mu": "0.8675"
     },
     {
       "date": "2026-05-17",
@@ -3820,9 +3854,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.532",
-      "draw_probability": "0.2335",
-      "away_win_probability": "0.2345",
+      "home_win_probability": "0.622082",
+      "draw_probability": "0.242394",
+      "away_win_probability": "0.135524",
       "home_bookmaker_odds": "1.36",
       "draw_bookmaker_odds": "4.77",
       "away_bookmaker_odds": "7.87",
@@ -3859,7 +3893,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.6137",
+      "dc_mu": "0.7482"
     },
     {
       "date": "2026-05-17",
@@ -3883,9 +3919,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.3902",
-      "draw_probability": "0.1734",
-      "away_win_probability": "0.4364",
+      "home_win_probability": "0.503948",
+      "draw_probability": "0.198841",
+      "away_win_probability": "0.297211",
       "home_bookmaker_odds": "2.55",
       "draw_bookmaker_odds": "3.43",
       "away_bookmaker_odds": "2.56",
@@ -3922,7 +3958,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.6715",
+      "dc_mu": "0.9942"
     },
     {
       "date": "2026-05-17",
@@ -3946,9 +3984,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4804",
-      "draw_probability": "0.1847",
-      "away_win_probability": "0.3349",
+      "home_win_probability": "0.448677",
+      "draw_probability": "0.229705",
+      "away_win_probability": "0.321618",
       "home_bookmaker_odds": "1.73",
       "draw_bookmaker_odds": "4.03",
       "away_bookmaker_odds": "4.04",
@@ -3985,7 +4023,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.4691",
+      "dc_mu": "1.3009"
     },
     {
       "date": "2026-05-17",
@@ -4009,9 +4049,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5582",
-      "draw_probability": "0.1977",
-      "away_win_probability": "0.2441",
+      "home_win_probability": "0.578613",
+      "draw_probability": "0.212601",
+      "away_win_probability": "0.208786",
       "home_bookmaker_odds": "1.99",
       "draw_bookmaker_odds": "3.69",
       "away_bookmaker_odds": "3.33",
@@ -4048,7 +4088,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.9848",
+      "dc_mu": "1.4602"
     },
     {
       "date": "2026-05-17",
@@ -4072,9 +4114,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.356",
-      "draw_probability": "0.2165",
-      "away_win_probability": "0.4275",
+      "home_win_probability": "0.251303",
+      "draw_probability": "0.246007",
+      "away_win_probability": "0.50269",
       "home_bookmaker_odds": "2.52",
       "draw_bookmaker_odds": "3.51",
       "away_bookmaker_odds": "2.55",
@@ -4111,7 +4153,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.0297",
+      "dc_mu": "1.3048"
     },
     {
       "date": "2026-05-17",
@@ -4135,9 +4179,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5984",
-      "draw_probability": "0.207",
-      "away_win_probability": "0.1946",
+      "home_win_probability": "0.7165",
+      "draw_probability": "0.182996",
+      "away_win_probability": "0.100505",
       "home_bookmaker_odds": "1.34",
       "draw_bookmaker_odds": "5.09",
       "away_bookmaker_odds": "7.75",
@@ -4174,7 +4218,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "2.2506",
+      "dc_mu": "0.9136"
     },
     {
       "date": "2026-05-17",
@@ -4198,9 +4244,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4002",
-      "draw_probability": "0.2679",
-      "away_win_probability": "0.3318",
+      "home_win_probability": "0.192311",
+      "draw_probability": "0.240157",
+      "away_win_probability": "0.567532",
       "home_bookmaker_odds": "5.15",
       "draw_bookmaker_odds": "4.54",
       "away_bookmaker_odds": "1.52",
@@ -4237,7 +4283,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.0427",
+      "dc_mu": "2.1044"
     },
     {
       "date": "2026-05-17",
@@ -4261,9 +4309,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4389",
-      "draw_probability": "0.2091",
-      "away_win_probability": "0.352",
+      "home_win_probability": "0.412229",
+      "draw_probability": "0.244891",
+      "away_win_probability": "0.34288",
       "home_bookmaker_odds": "2.86",
       "draw_bookmaker_odds": "3.83",
       "away_bookmaker_odds": "2.15",
@@ -4300,7 +4348,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.6289",
+      "dc_mu": "1.5191"
     },
     {
       "date": "2026-05-17",
@@ -4324,9 +4374,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.6309",
-      "draw_probability": "0.1802",
-      "away_win_probability": "0.1889",
+      "home_win_probability": "0.7165",
+      "draw_probability": "0.182996",
+      "away_win_probability": "0.100505",
       "home_bookmaker_odds": "1.24",
       "draw_bookmaker_odds": "5.69",
       "away_bookmaker_odds": "11.34",
@@ -4363,7 +4413,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.7574",
+      "dc_mu": "0.6718"
     },
     {
       "date": "2026-05-17",
@@ -4387,9 +4439,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.3406",
-      "draw_probability": "0.2185",
-      "away_win_probability": "0.4409",
+      "home_win_probability": "0.202069",
+      "draw_probability": "0.252343",
+      "away_win_probability": "0.545588",
       "home_bookmaker_odds": "4.65",
       "draw_bookmaker_odds": "3.69",
       "away_bookmaker_odds": "1.71",
@@ -4426,7 +4478,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "0.9636",
+      "dc_mu": "1.4623"
     },
     {
       "date": "2026-05-17",
@@ -4450,9 +4504,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.6603",
-      "draw_probability": "0.1868",
-      "away_win_probability": "0.1529",
+      "home_win_probability": "0.693669",
+      "draw_probability": "0.206325",
+      "away_win_probability": "0.100006",
       "home_bookmaker_odds": "1.31",
       "draw_bookmaker_odds": "5.28",
       "away_bookmaker_odds": "8.38",
@@ -4489,7 +4543,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.6296",
+      "dc_mu": "0.8565"
     },
     {
       "date": "2026-05-17",
@@ -4513,9 +4569,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4756",
-      "draw_probability": "0.1927",
-      "away_win_probability": "0.3316",
+      "home_win_probability": "0.137227",
+      "draw_probability": "0.217216",
+      "away_win_probability": "0.645557",
       "home_bookmaker_odds": "8.06",
       "draw_bookmaker_odds": "4.63",
       "away_bookmaker_odds": "1.37",
@@ -4552,7 +4608,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "0.5641",
+      "dc_mu": "2.1306"
     },
     {
       "date": "2026-05-17",
@@ -4576,9 +4634,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5415",
-      "draw_probability": "0.2307",
-      "away_win_probability": "0.2278",
+      "home_win_probability": "0.552857",
+      "draw_probability": "0.244428",
+      "away_win_probability": "0.202714",
       "home_bookmaker_odds": "1.52",
       "draw_bookmaker_odds": "4.09",
       "away_bookmaker_odds": "6.0",
@@ -4615,7 +4673,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.4421",
+      "dc_mu": "0.933"
     },
     {
       "date": "2026-05-17",
@@ -4639,9 +4699,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5753",
-      "draw_probability": "0.2351",
-      "away_win_probability": "0.1896",
+      "home_win_probability": "0.793223",
+      "draw_probability": "0.150164",
+      "away_win_probability": "0.056612",
       "home_bookmaker_odds": "1.18",
       "draw_bookmaker_odds": "6.85",
       "away_bookmaker_odds": "12.88",
@@ -4678,7 +4738,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "2.9282",
+      "dc_mu": "0.5311"
     },
     {
       "date": "2026-05-17",
@@ -4702,9 +4764,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5577",
-      "draw_probability": "0.2157",
-      "away_win_probability": "0.2267",
+      "home_win_probability": "0.575233",
+      "draw_probability": "0.238286",
+      "away_win_probability": "0.18648",
       "home_bookmaker_odds": "1.64",
       "draw_bookmaker_odds": "4.06",
       "away_bookmaker_odds": "4.65",
@@ -4741,7 +4803,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.698",
+      "dc_mu": "1.0247"
     },
     {
       "date": "2026-05-17",
@@ -4765,9 +4829,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.3653",
-      "draw_probability": "0.2322",
-      "away_win_probability": "0.4025",
+      "home_win_probability": "0.323591",
+      "draw_probability": "0.283026",
+      "away_win_probability": "0.393383",
       "home_bookmaker_odds": "2.35",
       "draw_bookmaker_odds": "3.11",
       "away_bookmaker_odds": "3.08",
@@ -4804,7 +4868,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.1935",
+      "dc_mu": "1.2129"
     },
     {
       "date": "2026-05-17",
@@ -4828,9 +4894,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.3862",
-      "draw_probability": "0.2282",
-      "away_win_probability": "0.3855",
+      "home_win_probability": "0.46771",
+      "draw_probability": "0.243013",
+      "away_win_probability": "0.289277",
       "home_bookmaker_odds": "2.67",
       "draw_bookmaker_odds": "3.18",
       "away_bookmaker_odds": "2.61",
@@ -4867,7 +4933,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.4029",
+      "dc_mu": "0.7799"
     },
     {
       "date": "2026-05-17",
@@ -4891,9 +4959,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4491",
-      "draw_probability": "0.2499",
-      "away_win_probability": "0.301",
+      "home_win_probability": "0.547274",
+      "draw_probability": "0.24196",
+      "away_win_probability": "0.210766",
       "home_bookmaker_odds": "2.34",
       "draw_bookmaker_odds": "3.26",
       "away_bookmaker_odds": "2.97",
@@ -4930,7 +4998,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.5493",
+      "dc_mu": "0.8371"
     },
     {
       "date": "2026-05-17",
@@ -4954,9 +5024,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4738",
-      "draw_probability": "0.2188",
-      "away_win_probability": "0.3074",
+      "home_win_probability": "0.481318",
+      "draw_probability": "0.246416",
+      "away_win_probability": "0.272265",
       "home_bookmaker_odds": "2.15",
       "draw_bookmaker_odds": "3.11",
       "away_bookmaker_odds": "3.42",
@@ -4993,7 +5063,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.4975",
+      "dc_mu": "1.0893"
     },
     {
       "date": "2026-05-17",
@@ -5017,9 +5089,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5367",
-      "draw_probability": "0.2037",
-      "away_win_probability": "0.2596",
+      "home_win_probability": "0.682317",
+      "draw_probability": "0.189757",
+      "away_win_probability": "0.127926",
       "home_bookmaker_odds": "1.74",
       "draw_bookmaker_odds": "3.74",
       "away_bookmaker_odds": "4.25",
@@ -5056,7 +5128,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "2.1483",
+      "dc_mu": "0.8802"
     },
     {
       "date": "2026-05-17",
@@ -5080,9 +5154,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4427",
-      "draw_probability": "0.2767",
-      "away_win_probability": "0.2806",
+      "home_win_probability": "0.466524",
+      "draw_probability": "0.26958",
+      "away_win_probability": "0.263896",
       "home_bookmaker_odds": "2.2",
       "draw_bookmaker_odds": "2.91",
       "away_bookmaker_odds": "3.57",
@@ -5119,7 +5193,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.1611",
+      "dc_mu": "0.9168"
     },
     {
       "date": "2026-05-17",
@@ -5143,9 +5219,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4348",
-      "draw_probability": "0.1981",
-      "away_win_probability": "0.3671",
+      "home_win_probability": "0.458392",
+      "draw_probability": "0.234679",
+      "away_win_probability": "0.306929",
       "home_bookmaker_odds": "2.12",
       "draw_bookmaker_odds": "3.33",
       "away_bookmaker_odds": "3.27",
@@ -5182,7 +5258,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.4624",
+      "dc_mu": "1.1427"
     },
     {
       "date": "2026-05-17",
@@ -5206,9 +5284,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5072",
-      "draw_probability": "0.2471",
-      "away_win_probability": "0.2457",
+      "home_win_probability": "0.547274",
+      "draw_probability": "0.24196",
+      "away_win_probability": "0.210766",
       "home_bookmaker_odds": "2.05",
       "draw_bookmaker_odds": "3.11",
       "away_bookmaker_odds": "3.7",
@@ -5245,7 +5323,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.4993",
+      "dc_mu": "0.9591"
     },
     {
       "date": "2026-05-17",
@@ -5269,9 +5349,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.4955",
-      "draw_probability": "0.1937",
-      "away_win_probability": "0.3108",
+      "home_win_probability": "0.393891",
+      "draw_probability": "0.252532",
+      "away_win_probability": "0.353577",
       "home_bookmaker_odds": "3.69",
       "draw_bookmaker_odds": "3.56",
       "away_bookmaker_odds": "1.9",
@@ -5308,7 +5388,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "0.9038",
+      "dc_mu": "1.0546"
     },
     {
       "date": "2026-05-17",
@@ -5332,9 +5414,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.455",
-      "draw_probability": "0.2406",
-      "away_win_probability": "0.3044",
+      "home_win_probability": "0.251303",
+      "draw_probability": "0.246007",
+      "away_win_probability": "0.50269",
       "home_bookmaker_odds": "3.03",
       "draw_bookmaker_odds": "3.5",
       "away_bookmaker_odds": "2.16",
@@ -5371,7 +5453,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "0.9925",
+      "dc_mu": "1.9537"
     },
     {
       "date": "2026-05-17",
@@ -5395,9 +5479,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5151",
-      "draw_probability": "0.2252",
-      "away_win_probability": "0.2597",
+      "home_win_probability": "0.552857",
+      "draw_probability": "0.244428",
+      "away_win_probability": "0.202714",
       "home_bookmaker_odds": "2.13",
       "draw_bookmaker_odds": "3.37",
       "away_bookmaker_odds": "3.21",
@@ -5434,7 +5518,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.5365",
+      "dc_mu": "0.9599"
     },
     {
       "date": "2026-05-17",
@@ -5458,9 +5544,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5255",
-      "draw_probability": "0.2022",
-      "away_win_probability": "0.2724",
+      "home_win_probability": "0.393891",
+      "draw_probability": "0.252532",
+      "away_win_probability": "0.353577",
       "home_bookmaker_odds": "2.38",
       "draw_bookmaker_odds": "3.48",
       "away_bookmaker_odds": "2.69",
@@ -5497,7 +5583,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "1.1469",
+      "dc_mu": "1.432"
     },
     {
       "date": "2026-05-17",
@@ -5521,9 +5609,9 @@
       "away_key_absences": "0.0",
       "home_injury_count": "0.0",
       "away_injury_count": "0.0",
-      "home_win_probability": "0.5655",
-      "draw_probability": "0.1694",
-      "away_win_probability": "0.2651",
+      "home_win_probability": "0.752059",
+      "draw_probability": "0.119636",
+      "away_win_probability": "0.128305",
       "home_bookmaker_odds": "1.33",
       "draw_bookmaker_odds": "5.5",
       "away_bookmaker_odds": "7.08",
@@ -5560,7 +5648,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "2.5643",
+      "dc_mu": "0.9342"
     },
     {
       "date": "2026-05-18",
@@ -5584,9 +5674,9 @@
       "away_key_absences": "0.501",
       "home_injury_count": "10.0",
       "away_injury_count": "15.0",
-      "home_win_probability": "0.6703",
-      "draw_probability": "0.2087",
-      "away_win_probability": "0.121",
+      "home_win_probability": "0.816514",
+      "draw_probability": "0.125212",
+      "away_win_probability": "0.058275",
       "home_bookmaker_odds": "1.08",
       "draw_bookmaker_odds": "10.12",
       "away_bookmaker_odds": "22.13",
@@ -5623,7 +5713,9 @@
       "suggested_edge": "",
       "bet_rule": "",
       "bet_rule_bets": "",
-      "bet_rule_roi": ""
+      "bet_rule_roi": "",
+      "dc_lambda": "2.8596",
+      "dc_mu": "0.5614"
     }
   ],
   "suggested_bets": [
@@ -21752,6 +21844,13 @@
         true
       ]
     ]
+  },
+  "ensemble_meta": {
+    "w_dc": 0.3,
+    "best_log_loss": 0.983348,
+    "n_matched_backtest": 10656,
+    "upcoming_updated": 45,
+    "calibrated": true
   },
   "probability_average": {
     "home": 0.4216,
