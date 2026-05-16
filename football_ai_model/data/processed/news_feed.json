@@ -1,0 +1,51 @@
+[
+  {
+    "id": "upset_2026-05-11_napo_bolo",
+    "type": "upset",
+    "headline": "Bologna produce one of the week's biggest upsets against Napoli",
+    "body": "Our model gave Bologna just a 12% chance at Napoli's ground. Napoli were priced at 1.52, but Bologna produced one of the weekend's biggest upsets. The model's expected goals had Napoli projected at 0.80 goals \u2014 reality told a very different story.",
+    "league": "Serie A",
+    "date": "2026-05-11",
+    "teams": [
+      "Napoli",
+      "Bologna"
+    ],
+    "badge": "\u26a1 Upset"
+  },
+  {
+    "id": "upset_2026-05-12_celt_leva",
+    "type": "upset",
+    "headline": "Against all odds: Levante topple Celta at Celta's ground",
+    "body": "Our model gave Levante just a 19% chance at Celta's ground. Celta were priced at 1.78, but Levante produced one of the weekend's biggest upsets. The model's expected goals had Celta projected at 1.60 goals \u2014 reality told a very different story.",
+    "league": "La Liga",
+    "date": "2026-05-12",
+    "teams": [
+      "Celta",
+      "Levante"
+    ],
+    "badge": "\u26a1 Upset"
+  },
+  {
+    "id": "upset_2026-05-13_vill_sevi",
+    "type": "upset",
+    "headline": "Shock result: Sevilla stun Villarreal despite 29% odds",
+    "body": "Our model gave Sevilla just a 29% chance at Villarreal's ground. Villarreal were priced at 2.09, but Sevilla produced one of the weekend's biggest upsets. The model's expected goals had Villarreal projected at 1.20 goals \u2014 reality told a very different story.",
+    "league": "La Liga",
+    "date": "2026-05-13",
+    "teams": [
+      "Villarreal",
+      "Sevilla"
+    ],
+    "badge": "\u26a1 Upset"
+  },
+  {
+    "id": "form_ligue_1",
+    "type": "form",
+    "headline": "Model form check: Ligue 1 leading accuracy this week",
+    "body": "Ligue 1 accuracy stands at 86% from 7 recent predictions. Ahead of the pack in the recent 30-match window. The model's European data set remains its strongest suit.",
+    "league": "Ligue 1",
+    "date": "2026-05-16",
+    "teams": [],
+    "badge": "\ud83d\udcca Form"
+  }
+]

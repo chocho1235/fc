@@ -8,12 +8,13 @@ const leagueEl = document.querySelector("[data-football-league]");
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const valueListEl = document.querySelector("[data-value-list]");
 const ruleListEl = document.querySelector("[data-rule-list]");
+const newsFeedEl = document.querySelector("[data-news-feed]");
 const donutEl = document.querySelector("[data-football-donut]");
 const generatedAtEl = document.querySelector("[data-generated-at]");
 const refreshStatusEl = document.querySelector("[data-refresh-status]");
 const refreshBtn = document.querySelector("[data-refresh-btn]");
 const tabButtons = [...document.querySelectorAll("[data-tab]")];
-const tabPanels = [...document.querySelectorAll(".football-tab-panel")];
+const tabPanels = [...document.querySelectorAll(".fm-tab-panel")];
 
 const PASSIVE_MIN_PROB = 0.70;       // minimum calibrated per-leg probability to include
 const PASSIVE_TARGET_ODDS = 2.0;     // target combined fair odds for the stack
@@ -281,28 +282,28 @@ function contextHtml(row) {
 
 function matchRowHtml(row, includeResult = true) {
   const isCup = row.is_cup === "1" || row.is_cup === true || row.league_code === "CUP";
-  const parts = [row.date];
-  if (row.league) parts.unshift(row.league);
-  if (row.time) parts.push(row.time);
+  const metaParts = [];
+  if (row.league) metaParts.push(row.league);
+  if (row.date) metaParts.push(row.date);
+  if (row.time) metaParts.push(row.time);
   const cupWarning = isCup
-    ? `<p class="cup-caveat">⚠️ Cup match — model trained on league data only. Treat probabilities as indicative.</p>`
+    ? `<p class="cup-caveat">⚠️ Cup match — model trained on league data only.</p>`
     : "";
-  return `<tr class="football-match-row ${row.suggested_bet ? "football-match-row--value" : ""} ${isCup ? "football-match-row--cup" : ""}">
-    <td colspan="4">
-      <article class="football-match-card">
-        <div class="football-match-card__summary">
-          <div class="football-fixture-card">
-            <div>
-              <strong>${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</strong>
-              <span>${isCup ? `<span class="cup-badge">${escapeHtml(row.league || "Cup")}</span> ` : ""}${escapeHtml(parts.join(" · "))}</span>
-            </div>
+  const isValue = Boolean(row.suggested_bet);
+  return `<tr class="fm-match-row">
+    <td>
+      <article class="fm-match-card${isValue ? " fm-match-card--value" : ""}${isCup ? " fm-match-card--cup" : ""}">
+        <div class="fm-match-main">
+          <div class="fm-fixture">
+            <span class="fm-fixture__teams">${isCup ? `<span class="cup-badge">${escapeHtml(row.league || "Cup")}</span> ` : ""}${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</span>
+            <span class="fm-fixture__meta">${escapeHtml(metaParts.join(" · "))}</span>
             ${resultHtml(row, includeResult)}
           </div>
           ${cupWarning}
           ${decisionHtml(row)}
           ${builderHtml(row)}
           <details class="football-expand">
-            <summary>Details</summary>
+            <summary>Analysis</summary>
             <div class="football-expand__grid">
               <section><h3>1X2 prices</h3>${oddsCard(row)}</section>
               <section><h3>Context</h3>${contextHtml(row)}</section>
@@ -965,9 +966,39 @@ function switchTab(tabName) {
   tabPanels.forEach(panel => {
     const active = panel.id === `panel-${tabName}`;
     panel.classList.toggle("is-active", active);
-    panel.hidden = !active;
+    // Use display flex/block rather than hidden attr for fm-tab-panel
+    if (!active) panel.style.display = "none";
+    else panel.style.display = "";
   });
   if (tabName === "passive" && currentData) renderPassive(currentData);
+}
+
+// ─── News feed ────────────────────────────────────────────────────────────────
+
+const NEWS_TYPE_CLASS = {
+  win:    "win",
+  loss:   "loss",
+  upset:  "upset",
+  nailed: "nailed",
+  goals:  "goals",
+  form:   "form",
+};
+
+function renderNewsFeed(articles) {
+  if (!newsFeedEl) return;
+  if (!articles || !articles.length) {
+    newsFeedEl.innerHTML = `<p class="football-empty" style="padding:1rem">No analysis generated yet — run refresh to populate.</p>`;
+    return;
+  }
+  newsFeedEl.innerHTML = articles.map(a => {
+    const cls = NEWS_TYPE_CLASS[a.type] || "form";
+    return `<article class="fm-news-item">
+      <div class="fm-news-item__badge fm-badge--${cls}">${escapeHtml(a.badge || "")}</div>
+      <p class="fm-news-item__headline">${escapeHtml(a.headline || "")}</p>
+      <p class="fm-news-item__body">${escapeHtml(a.body || "")}</p>
+      <span class="fm-news-item__meta">${escapeHtml([a.league, a.date, a.teams].filter(Boolean).join(" · "))}</span>
+    </article>`;
+  }).join("");
 }
 
 // ─── Auto-refresh ─────────────────────────────────────────────────────────────
@@ -1009,6 +1040,7 @@ async function loadData() {
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);
     renderRuleList(data.betting_rules || [], data.betting_rule_health || []);
+    renderNewsFeed(data.news_feed || []);
     if (generatedAtEl) generatedAtEl.textContent = formatGeneratedAt(data.generated_at);
     renderUpcoming();
     renderRows();

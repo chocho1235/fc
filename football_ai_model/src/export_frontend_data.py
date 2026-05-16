@@ -3,8 +3,11 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from generate_news import generate_news_feed
+
 
 MODEL_ROOT = Path(__file__).resolve().parents[1]
+NEWS_FEED_PATH = MODEL_ROOT / "data" / "processed" / "news_feed.json"
 SITE_ROOT = MODEL_ROOT.parent
 PREDICTIONS_PATH = MODEL_ROOT / "data" / "processed" / "predictions.csv"
 ROLLING_PREDICTIONS_PATH = MODEL_ROOT / "data" / "processed" / "sklearn_rolling_predictions.csv"
@@ -262,6 +265,7 @@ def main():
             "draw": round(sum(to_float(row["draw_probability"]) for row in predictions) / len(predictions), 4),
             "away": round(sum(to_float(row["away_win_probability"]) for row in predictions) / len(predictions), 4),
         },
+        "news_feed": json.loads(NEWS_FEED_PATH.read_text()) if NEWS_FEED_PATH.exists() else generate_news_feed(PREDICTIONS_PATH),
     }
 
     OUTPUT_PATH.write_text(json.dumps(output, indent=2), encoding="utf-8")

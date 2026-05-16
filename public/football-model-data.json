@@ -32,7 +32,7 @@
     "over_2.5_rolling_flat_stake_profit": "-35.98 units",
     "over_2.5_rolling_roi": "-12.28%"
   },
-  "generated_at": "2026-05-16T16:22:56Z",
+  "generated_at": "2026-05-16T20:27:10Z",
   "generated_from": "football_ai_model/data/processed/predictions.csv",
   "leagues": [
     "Bundesliga",
@@ -2065,7 +2065,7 @@
       "away_team": "Crystal Palace",
       "result": "H",
       "context_summary": "Key absences H0-A0; Injuries H8-A12",
-      "context_notes": "FPL availability H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:37:03Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:42:13Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:43:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:28:38Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:32:30Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:17:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:53:48Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T20:07:54Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0]",
+      "context_notes": "FPL availability H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:37:03Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:42:13Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:43:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:28:38Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:32:30Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:17:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:53:48Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T20:07:54Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0]",
       "h2h_home_form": "D W D W W",
       "h2h_away_form": "D L D L L",
       "home_auto_importance": "1.0",
@@ -2803,7 +2803,7 @@
       "home_team": "Brentford",
       "away_team": "Crystal Palace",
       "context_summary": "Key absences H0-A0; Injuries H16-A12",
-      "context_notes": "FPL live snapshot 2026-05-15T09:24:38Z H[Cox u 0; Henry i 0; Roerslev u 0; Arthur u 0; Fredrick u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0]",
+      "context_notes": "FPL live snapshot 2026-05-15T09:24:38Z H[Cox u 0; Henry i 0; Roerslev u 0; Arthur u 0; Fredrick u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0]",
       "h2h_home_form": "D L W W L",
       "h2h_away_form": "D W L L W",
       "home_auto_importance": "0.0",
@@ -2935,7 +2935,7 @@
       "home_team": "Leeds",
       "away_team": "Brighton",
       "context_summary": "Key absences H1-A1; Injuries H13-A20",
-      "context_notes": "FPL live snapshot 2026-05-15T09:24:38Z H[Buonanotte n 0; Schmidt u 0; Harrison u 0; Greenwood u 0; Gruev i 0] A[Rushworth u 0; Scherpen u 0; Coppola u 0; Estupi\u00f1an u 0; Lamptey u 0]",
+      "context_notes": "FPL live snapshot 2026-05-15T09:24:38Z H[Buonanotte n 0; Schmidt u 0; Harrison u 0; Greenwood u 0; Gruev i 0] A[Rushworth u 0; Scherpen u 0; Coppola u 0; Estupiñan u 0; Lamptey u 0]",
       "h2h_home_form": "D D L D L",
       "h2h_away_form": "D D W D W",
       "home_auto_importance": "0.0",
@@ -3067,7 +3067,7 @@
       "home_team": "Newcastle",
       "away_team": "West Ham",
       "context_summary": "Key absences H1-A1; Injuries H12-A15",
-      "context_notes": "FPL live snapshot 2026-05-15T09:24:38Z H[Odysseas u 0; Sch\u00e4r i 0; Livramento i 0; Krafth i 0; Lascelles u 0] A[Foderingham u 0; Hegyi u 0; Emerson u 0; N.Aguerd u 0; Casey u 0]",
+      "context_notes": "FPL live snapshot 2026-05-15T09:24:38Z H[Odysseas u 0; Schär i 0; Livramento i 0; Krafth i 0; Lascelles u 0] A[Foderingham u 0; Hegyi u 0; Emerson u 0; N.Aguerd u 0; Casey u 0]",
       "h2h_home_form": "D W L W L",
       "h2h_away_form": "D L W L W",
       "home_auto_importance": "0.0",
@@ -7211,7 +7211,7 @@
       "away_team": "Crystal Palace",
       "result": "H",
       "context_summary": "Key absences H0-A0; Injuries H8-A12",
-      "context_notes": "FPL availability H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:37:03Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:42:13Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:43:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:28:38Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:32:30Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:17:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:53:48Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T20:07:54Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; G\u00fcndo\u011fan u 0; Echeverri u 0] A[Holding u 0; Doucour\u00e9 i 0; Esse u 0; Ahamada u 0; Ebiowei u 0]",
+      "context_notes": "FPL availability H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:37:03Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:42:13Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T13:43:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:28:38Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T14:32:30Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:17:11Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T15:53:48Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0] | FPL live snapshot 2026-05-13T20:07:54Z H[Ederson M. u 0; Akanji u 0; Vitor Reis u 0; Gündoğan u 0; Echeverri u 0] A[Holding u 0; Doucouré i 0; Esse u 0; Ahamada u 0; Ebiowei u 0]",
       "h2h_home_form": "D W D W W",
       "h2h_away_form": "D L D L L",
       "home_auto_importance": "1.0",
@@ -21242,5 +21242,56 @@
     "home": 0.4216,
     "draw": 0.2618,
     "away": 0.3166
-  }
+  },
+  "news_feed": [
+    {
+      "id": "upset_2026-05-11_napo_bolo",
+      "type": "upset",
+      "headline": "Bologna produce one of the week's biggest upsets against Napoli",
+      "body": "Our model gave Bologna just a 12% chance at Napoli's ground. Napoli were priced at 1.52, but Bologna produced one of the weekend's biggest upsets. The model's expected goals had Napoli projected at 0.80 goals — reality told a very different story.",
+      "league": "Serie A",
+      "date": "2026-05-11",
+      "teams": [
+        "Napoli",
+        "Bologna"
+      ],
+      "badge": "⚡ Upset"
+    },
+    {
+      "id": "upset_2026-05-12_celt_leva",
+      "type": "upset",
+      "headline": "Against all odds: Levante topple Celta at Celta's ground",
+      "body": "Our model gave Levante just a 19% chance at Celta's ground. Celta were priced at 1.78, but Levante produced one of the weekend's biggest upsets. The model's expected goals had Celta projected at 1.60 goals — reality told a very different story.",
+      "league": "La Liga",
+      "date": "2026-05-12",
+      "teams": [
+        "Celta",
+        "Levante"
+      ],
+      "badge": "⚡ Upset"
+    },
+    {
+      "id": "upset_2026-05-13_vill_sevi",
+      "type": "upset",
+      "headline": "Shock result: Sevilla stun Villarreal despite 29% odds",
+      "body": "Our model gave Sevilla just a 29% chance at Villarreal's ground. Villarreal were priced at 2.09, but Sevilla produced one of the weekend's biggest upsets. The model's expected goals had Villarreal projected at 1.20 goals — reality told a very different story.",
+      "league": "La Liga",
+      "date": "2026-05-13",
+      "teams": [
+        "Villarreal",
+        "Sevilla"
+      ],
+      "badge": "⚡ Upset"
+    },
+    {
+      "id": "form_ligue_1",
+      "type": "form",
+      "headline": "Model form check: Ligue 1 leading accuracy this week",
+      "body": "Ligue 1 accuracy stands at 86% from 7 recent predictions. Ahead of the pack in the recent 30-match window. The model's European data set remains its strongest suit.",
+      "league": "Ligue 1",
+      "date": "2026-05-16",
+      "teams": [],
+      "badge": "📊 Form"
+    }
+  ]
 }
