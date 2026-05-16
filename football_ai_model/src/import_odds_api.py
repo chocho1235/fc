@@ -27,6 +27,7 @@ MODEL_ROOT = Path(__file__).resolve().parents[1]
 EXTERNAL_DIR = MODEL_ROOT / "data" / "external"
 UPCOMING_PATH = MODEL_ROOT / "data" / "processed" / "upcoming_predictions.csv"
 LIVE_ODDS_PATH = EXTERNAL_DIR / "live_odds.json"
+CUP_FIXTURES_PATH = EXTERNAL_DIR / "cup_fixtures.json"
 
 BASE_URL = "https://api.the-odds-api.com/v4"
 
@@ -37,6 +38,88 @@ LEAGUE_SPORT_MAP = {
     "I1": "soccer_italy_serie_a",
     "F1": "soccer_france_ligue_one",
     "SP1": "soccer_spain_la_liga",
+}
+
+# Cup competitions to also fetch — mapped to (league_code, display_name)
+CUP_SPORT_MAP = {
+    "soccer_england_league_cup":     ("CUP", "Carabao Cup"),
+    "soccer_england_fa_cup":         ("CUP", "FA Cup"),
+    "soccer_germany_cup":            ("CUP", "DFB Pokal"),
+    "soccer_spain_copa_del_rey":     ("CUP", "Copa del Rey"),
+    "soccer_italy_coppa_italia":     ("CUP", "Coppa Italia"),
+    "soccer_france_coupe_de_france": ("CUP", "Coupe de France"),
+}
+
+# Map The Odds API team names → football-data.co.uk team names
+# Add entries here whenever a cup team name doesn't match automatically
+_CUP_TEAM_ALIASES = {
+    "manchester city": "Man City",
+    "manchester united": "Man United",
+    "chelsea fc": "Chelsea",
+    "arsenal fc": "Arsenal",
+    "liverpool fc": "Liverpool",
+    "tottenham hotspur": "Tottenham",
+    "newcastle united": "Newcastle",
+    "west ham united": "West Ham",
+    "aston villa": "Aston Villa",
+    "nottingham forest": "Nott'm Forest",
+    "wolverhampton wanderers": "Wolves",
+    "brighton & hove albion": "Brighton",
+    "brighton and hove albion": "Brighton",
+    "crystal palace": "Crystal Palace",
+    "brentford fc": "Brentford",
+    "leicester city": "Leicester",
+    "leeds united": "Leeds",
+    "everton fc": "Everton",
+    "fulham fc": "Fulham",
+    "burnley fc": "Burnley",
+    "sheffield united": "Sheffield United",
+    "luton town": "Luton",
+    "bournemouth": "Bournemouth",
+    "ipswich town": "Ipswich",
+    "sunderland afc": "Sunderland",
+    "southampton fc": "Southampton",
+    # German
+    "bayer leverkusen": "Leverkusen",
+    "borussia dortmund": "Dortmund",
+    "rb leipzig": "RB Leipzig",
+    "eintracht frankfurt": "Ein Frankfurt",
+    "vfb stuttgart": "Stuttgart",
+    "sc freiburg": "Freiburg",
+    "union berlin": "Union Berlin",
+    "vfl wolfsburg": "Wolfsburg",
+    "fc augsburg": "Augsburg",
+    "1. fc heidenheim": "Heidenheim",
+    "1. fsv mainz 05": "Mainz",
+    "hamburger sv": "Hamburg",
+    "fc koln": "FC Koln",
+    "1. fc cologne": "FC Koln",
+    # Spanish
+    "atletico madrid": "Ath Madrid",
+    "real madrid": "Real Madrid",
+    "fc barcelona": "Barcelona",
+    "real sociedad": "Sociedad",
+    "athletic bilbao": "Ath Bilbao",
+    "real betis": "Betis",
+    "villarreal cf": "Villarreal",
+    # Italian
+    "ac milan": "Milan",
+    "inter milan": "Inter",
+    "juventus fc": "Juventus",
+    "as roma": "Roma",
+    "ss lazio": "Lazio",
+    "ssc napoli": "Napoli",
+    "atalanta bc": "Atalanta",
+    "acf fiorentina": "Fiorentina",
+    # French
+    "paris saint-germain": "Paris SG",
+    "olympique de marseille": "Marseille",
+    "olympique lyonnais": "Lyon",
+    "as monaco": "Monaco",
+    "stade rennais fc": "Rennes",
+    "lille osc": "Lille",
+    "rc lens": "Lens",
+    "ogc nice": "Nice",
 }
 
 PREFERRED_BOOKMAKERS = ["bet365", "betfair", "williamhill", "paddypower", "unibet"]
@@ -211,6 +294,61 @@ def patch_upcoming_with_live_odds(odds: list[dict]) -> int:
     return patched
 
 
+def _resolve_cup_team(api_name: str) -> str:
+    """Map an Odds API team name to our football-data.co.uk canonical name."""
+    lower = api_name.lower().strip()
+    if lower in _CUP_TEAM_ALIASES:
+        return _CUP_TEAM_ALIASES[lower]
+    # Strip common suffixes and try again
+    for suffix in (" fc", " afc", " cf", " bc", " sc"):
+        if lower.endswith(suffix):
+            stripped = lower[: -len(suffix)].strip()
+            if stripped in _CUP_TEAM_ALIASES:
+                return _CUP_TEAM_ALIASES[stripped]
+    # Fall back: title-case the API name as-is
+    return api_name.title()
+
+
+def fetch_cup_fixtures() -> list[dict]:
+    """Fetch upcoming cup fixtures from The Odds API and save to cup_fixtures.json."""
+    api_key = os.environ.get("ODDS_API_KEY", "")
+    if not api_key:
+        return []
+    cup_fixtures = []
+    for sport_key, (league_code, cup_name) in CUP_SPORT_MAP.items():
+        try:
+            odds = fetch_odds_for_sport(sport_key)
+            for o in odds:
+                home = _resolve_cup_team(o["home_team"])
+                away = _resolve_cup_team(o["away_team"])
+                cup_fixtures.append({
+                    "sport_key": sport_key,
+                    "league_code": league_code,
+                    "cup_name": cup_name,
+                    "home_team": home,
+                    "away_team": away,
+                    "home_team_raw": o["home_team"],
+                    "away_team_raw": o["away_team"],
+                    "commence_time": o["commence_time"],
+                    "home_odds": o["home_odds"],
+                    "draw_odds": o["draw_odds"],
+                    "away_odds": o["away_odds"],
+                    "over_25_odds": o.get("over_25_odds", 0.0),
+                })
+            if odds:
+                print(f"  {cup_name}: {len(odds)} fixture(s)")
+        except Exception as exc:
+            print(f"  {cup_name}: skipped ({exc})")
+
+    EXTERNAL_DIR.mkdir(parents=True, exist_ok=True)
+    CUP_FIXTURES_PATH.write_text(json.dumps({
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "fixtures": cup_fixtures,
+    }, indent=2), encoding="utf-8")
+    print(f"Saved {len(cup_fixtures)} cup fixture(s) → {CUP_FIXTURES_PATH}")
+    return cup_fixtures
+
+
 def main():
     print("Importing live bookmaker odds from The Odds API ...")
     odds = fetch_all_odds()
@@ -219,6 +357,8 @@ def main():
         return
     save_live_odds(odds)
     patch_upcoming_with_live_odds(odds)
+    print("Fetching cup fixtures ...")
+    fetch_cup_fixtures()
 
 
 if __name__ == "__main__":

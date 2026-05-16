@@ -1,6 +1,7 @@
 import csv
 import json
 import warnings
+from datetime import datetime, timezone
 
 import joblib
 import numpy as np
@@ -10,6 +11,7 @@ warnings.filterwarnings("ignore", message="X does not have valid feature names")
 from train_1x2_model import (
     LABELS,
     BUILDER_PROFILE_PATH,
+    EXTERNAL_DIR,
     MODELS_DIR,
     PROCESSED_DIR,
     apply_builder_profile,
@@ -17,11 +19,75 @@ from train_1x2_model import (
     fair_odds,
     find_best_bet_with_rule,
     over_25_probability,
+    parse_date,
     read_matches,
     read_upcoming_fixtures,
     rule_name,
     value_odds,
 )
+
+CUP_FIXTURES_PATH = EXTERNAL_DIR / "cup_fixtures.json"
+
+
+def load_cup_fixtures() -> list[dict]:
+    """
+    Read cup_fixtures.json (written by import_odds_api.py) and convert each
+    entry to a pseudo-fixture row matching the format read_upcoming_fixtures()
+    returns so it can be passed straight into build_dataset().
+    """
+    if not CUP_FIXTURES_PATH.exists():
+        return []
+    try:
+        data = json.loads(CUP_FIXTURES_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+    now = datetime.now(timezone.utc)
+    rows = []
+    for fix in data.get("fixtures", []):
+        try:
+            commence = datetime.fromisoformat(fix["commence_time"].replace("Z", "+00:00"))
+        except Exception:
+            continue
+        if commence <= now:
+            continue  # already kicked off
+
+        date_str = commence.strftime("%d/%m/%Y")
+        time_str = commence.strftime("%H:%M")
+        try:
+            parsed_date = parse_date(date_str)
+        except Exception:
+            continue
+
+        home_odds = float(fix.get("home_odds") or 0)
+        draw_odds = float(fix.get("draw_odds") or 0)
+        away_odds = float(fix.get("away_odds") or 0)
+
+        row = {
+            # Fields consumed by build_dataset()
+            "Div": "CUP",
+            "Date": date_str,
+            "Time": time_str,
+            "HomeTeam": fix["home_team"],
+            "AwayTeam": fix["away_team"],
+            "FTR": "",
+            "FTHG": "",
+            "FTAG": "",
+            "Season": "upcoming",
+            "LeagueCode": "CUP",
+            "LeagueName": fix.get("cup_name", "Cup"),
+            "ParsedDate": parsed_date,
+            # Odds columns — used by odds_features() inside build_dataset()
+            "B365H": home_odds, "B365D": draw_odds, "B365A": away_odds,
+            "PSH":   home_odds, "PSD":   draw_odds, "PSA":   away_odds,
+            "AvgH":  home_odds, "AvgD":  draw_odds, "AvgA":  away_odds,
+            # Cup metadata passed through to the output row
+            "_cup_name": fix.get("cup_name", "Cup"),
+            "_is_cup": True,
+        }
+        rows.append(row)
+
+    return rows
 
 
 MODEL_PATH = MODELS_DIR / "sklearn_one_x_two_model.joblib"
@@ -63,7 +129,7 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
     path = PROCESSED_DIR / "upcoming_predictions.csv"
     with path.open("w", newline="", encoding="utf-8") as handle:
         fieldnames = [
-            "date", "time", "season", "league_code", "league", "home_team", "away_team", "context_summary", "context_notes",
+            "date", "time", "season", "league_code", "league", "is_cup", "home_team", "away_team", "context_summary", "context_notes",
             "h2h_home_form", "h2h_away_form",
             "home_auto_importance", "away_auto_importance", "home_motivation", "away_motivation",
             "home_lineup_strength", "away_lineup_strength",
@@ -95,6 +161,7 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
                 "season": row["season"],
                 "league_code": row.get("league_code", ""),
                 "league": row.get("league", ""),
+                "is_cup": "1" if row.get("_is_cup") else "",
                 "home_team": row["home_team"],
                 "away_team": row["away_team"],
                 "context_summary": row["context_summary"],
@@ -180,12 +247,29 @@ def main():
     matches = read_matches()
     latest_completed_date = max(match["ParsedDate"] for match in matches)
     fixtures = read_upcoming_fixtures(latest_completed_date)
-    if not fixtures:
+
+    # Inject cup fixtures from The Odds API (tagged with _is_cup=True)
+    cup_fixtures = load_cup_fixtures()
+    if cup_fixtures:
+        print(f"Injecting {len(cup_fixtures)} cup fixture(s) into predictions")
+    all_fixtures = fixtures + cup_fixtures
+
+    if not all_fixtures:
         write_upcoming([], [], threshold, over_25_threshold=over_25_threshold, rules=rules)
         return
 
-    combined_rows = build_dataset(matches + fixtures)
+    combined_rows = build_dataset(matches + all_fixtures)
     upcoming_rows = [row for row in combined_rows if row["season"] == "upcoming"]
+
+    # Propagate cup metadata from fixture rows into dataset rows
+    cup_lookup = {(f["HomeTeam"], f["AwayTeam"]): f for f in cup_fixtures}
+    for row in upcoming_rows:
+        key = (row.get("home_team", ""), row.get("away_team", ""))
+        cup_fix = cup_lookup.get(key)
+        if cup_fix:
+            row["_is_cup"] = True
+            row["league_code"] = "CUP"
+            row["league"] = cup_fix.get("_cup_name", "Cup")
     if BUILDER_PROFILE_PATH.exists():
         apply_builder_profile(upcoming_rows, json.loads(BUILDER_PROFILE_PATH.read_text(encoding="utf-8")))
     probabilities = predict_rows(model, upcoming_rows, features)

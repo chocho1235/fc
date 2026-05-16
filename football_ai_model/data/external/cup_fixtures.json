@@ -1,0 +1,19 @@
+{
+  "fetched_at": "2026-05-16T13:51:00+00:00",
+  "fixtures": [
+    {
+      "sport_key": "soccer_england_league_cup",
+      "league_code": "CUP",
+      "cup_name": "Carabao Cup Final",
+      "home_team": "Chelsea",
+      "away_team": "Man City",
+      "home_team_raw": "Chelsea FC",
+      "away_team_raw": "Manchester City",
+      "commence_time": "2026-05-16T16:30:00Z",
+      "home_odds": 2.1,
+      "draw_odds": 3.4,
+      "away_odds": 3.2,
+      "over_25_odds": 1.85
+    }
+  ]
+}

@@ -2,6 +2,6 @@
   "w_dc": 0.3,
   "best_log_loss": 0.983348,
   "n_matched_backtest": 10656,
-  "upcoming_updated": 45,
+  "upcoming_updated": 36,
   "calibrated": true
 }

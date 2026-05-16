@@ -280,20 +280,25 @@ function contextHtml(row) {
 }
 
 function matchRowHtml(row, includeResult = true) {
+  const isCup = row.is_cup === "1" || row.is_cup === true || row.league_code === "CUP";
   const parts = [row.date];
   if (row.league) parts.unshift(row.league);
   if (row.time) parts.push(row.time);
-  return `<tr class="football-match-row ${row.suggested_bet ? "football-match-row--value" : ""}">
+  const cupWarning = isCup
+    ? `<p class="cup-caveat">⚠️ Cup match — model trained on league data only. Treat probabilities as indicative.</p>`
+    : "";
+  return `<tr class="football-match-row ${row.suggested_bet ? "football-match-row--value" : ""} ${isCup ? "football-match-row--cup" : ""}">
     <td colspan="4">
       <article class="football-match-card">
         <div class="football-match-card__summary">
           <div class="football-fixture-card">
             <div>
               <strong>${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</strong>
-              <span>${escapeHtml(parts.join(" · "))}</span>
+              <span>${isCup ? `<span class="cup-badge">${escapeHtml(row.league || "Cup")}</span> ` : ""}${escapeHtml(parts.join(" · "))}</span>
             </div>
             ${resultHtml(row, includeResult)}
           </div>
+          ${cupWarning}
           ${decisionHtml(row)}
           ${builderHtml(row)}
           <details class="football-expand">
