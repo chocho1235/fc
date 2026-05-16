@@ -482,16 +482,13 @@ body {
 .football-builder--strong { border-color: rgba(88,166,255,0.35); }
 .football-builder--lean { border-color: rgba(210,153,34,0.25); }
 
-/* ── Expand / details ───────────────────────────────────────────────────── */
-.football-expand { display: block; }
-
-.football-expand summary {
+/* ── Analysis toggle button ──────────────────────────────────────────────── */
+.fm-analysis-toggle {
   display: inline-flex;
-  width: 100%;
-  min-height: 2.4rem;
   align-items: center;
   justify-content: center;
-  padding: 0.38rem 0.7rem;
+  min-height: 2.4rem;
+  padding: 0.38rem 0.9rem;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--bg-2);
@@ -500,23 +497,23 @@ body {
   font: inherit;
   font-size: 0.78rem;
   font-weight: 600;
-  list-style: none;
   white-space: nowrap;
   transition: background 0.13s, color 0.13s;
+  flex-shrink: 0;
 }
+.fm-analysis-toggle:hover  { background: var(--bg-3); color: var(--text-0); }
+.fm-analysis-toggle.is-active { background: var(--green-d); color: #fff; border-color: var(--green-d); }
 
-.football-expand summary::-webkit-details-marker { display: none; }
-.football-expand[open] summary { background: var(--green-d); color: #fff; border-color: var(--green-d); }
-
+/* ── Analysis expanded grid (sits below fm-match-main, full card width) ─── */
 .football-expand__grid {
-  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(2, minmax(12rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.65rem;
   padding: 0.75rem 1rem;
   background: var(--bg-0);
   border-top: 1px solid var(--border);
 }
+.football-expand__grid[hidden] { display: none; }
 
 .football-expand__grid h3 {
   margin: 0 0 0.4rem;

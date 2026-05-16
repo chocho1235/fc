@@ -302,15 +302,13 @@ function matchRowHtml(row, includeResult = true) {
           ${cupWarning}
           ${decisionHtml(row)}
           ${builderHtml(row)}
-          <details class="football-expand">
-            <summary>Analysis</summary>
-            <div class="football-expand__grid">
-              <section><h3>1X2 prices</h3>${oddsCard(row)}</section>
-              <section><h3>Context</h3>${contextHtml(row)}</section>
-              <section><h3>Head to head</h3>${h2hHtml(row)}</section>
-              <section><h3>Probabilities</h3>${probabilityBar(row)}</section>
-            </div>
-          </details>
+          <button class="fm-analysis-toggle" type="button">Analysis</button>
+        </div>
+        <div class="football-expand__grid" hidden>
+          <section><h3>1X2 prices</h3>${oddsCard(row)}</section>
+          <section><h3>Context</h3>${contextHtml(row)}</section>
+          <section><h3>Head to head</h3>${h2hHtml(row)}</section>
+          <section><h3>Probabilities</h3>${probabilityBar(row)}</section>
         </div>
       </article>
     </td>
@@ -1086,6 +1084,19 @@ refreshBtn?.addEventListener("click", async () => {
   if (refreshTimer) clearTimeout(refreshTimer);
   await loadData();
   startRefreshTimer();
+});
+
+// ─── Analysis panel toggle (delegated) ───────────────────────────────────────
+document.addEventListener("click", e => {
+  const btn = e.target.closest(".fm-analysis-toggle");
+  if (!btn) return;
+  const card = btn.closest(".fm-match-card");
+  if (!card) return;
+  const grid = card.querySelector(".football-expand__grid");
+  if (!grid) return;
+  const isOpen = !grid.hidden;
+  grid.hidden = isOpen;
+  btn.classList.toggle("is-active", !isOpen);
 });
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
