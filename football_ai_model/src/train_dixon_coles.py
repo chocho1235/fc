@@ -132,7 +132,7 @@ def _neg_log_likelihood(params, matches, teams, ref_date, xi):
     return -total
 
 
-def fit_league(matches: list, xi: float = XI) -> dict:
+def fit_league(matches: list, xi: float = XI, quick: bool = False) -> dict:
     teams = sorted({m["home"] for m in matches} | {m["away"] for m in matches})
     n = len(teams)
     ref_date = max(m["date"] for m in matches)
@@ -150,13 +150,18 @@ def fit_league(matches: list, xi: float = XI) -> dict:
         + [(-0.99, 0.99)]
     )
 
+    # Quick mode: looser tolerances for the 6-hourly refresh (much faster,
+    # negligible accuracy loss for short-horizon predictions).
+    # Full mode: tight tolerances for the weekly retrain.
+    opts = {"maxiter": 400, "ftol": 1e-7, "gtol": 1e-5} if quick else {"maxiter": 2000, "ftol": 1e-9, "gtol": 1e-6}
+
     result = minimize(
         _neg_log_likelihood,
         x0,
         args=(matches, teams, ref_date, xi),
         method="L-BFGS-B",
         bounds=bounds,
-        options={"maxiter": 2000, "ftol": 1e-9, "gtol": 1e-6},
+        options=opts,
     )
 
     attack_raw = np.concatenate([[0.0], result.x[: n - 1]])
@@ -265,7 +270,7 @@ def main(quick: bool = QUICK) -> None:
         # Final fit on last 5 seasons of completed matches
         train_seasons = seasons[-5:]
         train = [m for m in league_matches if m["season"] in train_seasons]
-        params = fit_league(train)
+        params = fit_league(train, quick=quick)
         MODELS_DIR.mkdir(parents=True, exist_ok=True)
         out_path = MODELS_DIR / f"dixon_coles_{league_code}.json"
         out_path.write_text(json.dumps(params, indent=2), encoding="utf-8")
