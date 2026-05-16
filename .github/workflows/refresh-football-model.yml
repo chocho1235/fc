@@ -14,6 +14,12 @@ on:
 permissions:
   contents: write
 
+# Only one run at a time. A new push to main cancels any in-flight
+# scheduled run so Actions never commits on top of your code changes.
+concurrency:
+  group: football-model
+  cancel-in-progress: true
+
 jobs:
   # ── Full weekly retrain (Sundays 03:00 UTC) ───────────────────────────────────
   retrain:
