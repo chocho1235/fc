@@ -219,6 +219,14 @@ def main() -> None:
         row["away_win_probability"] = round(blended["A"], 6)
         row["dc_lambda"] = dc_r.get("dc_lambda", "")
         row["dc_mu"] = dc_r.get("dc_mu", "")
+        # NOTE: suggested_bet / suggested_edge / bet_rule are intentionally NOT
+        # recalculated here. The active betting rules were calibrated against the
+        # LGBM-only predictions (predict_upcoming_sklearn_fast), so edge
+        # thresholds must be evaluated with those probabilities. The ensemble
+        # blend is used only for display probabilities and DC goal estimates.
+        # After a full retrain the rules will be re-calibrated against the
+        # ensemble baseline automatically.
+
         updated += 1
 
     if updated == 0:

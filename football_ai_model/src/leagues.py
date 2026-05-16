@@ -29,7 +29,7 @@ LEAGUES = {
 DEFAULT_LEAGUE_CODES = ["E0", "SP1", "D1", "I1", "F1"]
 
 # Leagues where we place bets; others contribute training data only
-BET_LEAGUE_CODES = ["E0", "D1", "I1"]
+BET_LEAGUE_CODES = ["E0", "SP1", "D1", "I1", "F1"]
 
 
 def league_name(code):
