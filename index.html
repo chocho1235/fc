@@ -225,22 +225,40 @@
 
           <div class="fm-passive-grid">
 
+            <!-- Accumulator stack -->
             <div class="fm-passive-card">
               <h3>Tonight's accumulator</h3>
               <p>Only picks above <strong>80% confidence</strong>. The model scans all upcoming fixtures for the single most likely outcome per match, ranks them, and stacks the top picks into a suggested accumulator.</p>
               <div data-passive-stack></div>
+              <div data-passive-stack-summary class="passive-stack-summary"></div>
             </div>
 
+            <!-- Individual picks -->
             <div class="fm-passive-card">
-              <h3>Individual picks</h3>
+              <h3>Individual picks <span data-passive-picks-count class="fm-count"></span></h3>
               <p>All qualifying picks above threshold, sorted by confidence.</p>
-              <div data-picks-list></div>
+              <div data-passive-picks></div>
             </div>
 
+            <!-- Virtual bank chart -->
             <div class="fm-passive-card">
               <h3>Virtual bank</h3>
-              <p class="passive-side__intro">£10 flat stake on every qualified value bet. Tracks historical performance from rolling predictions.</p>
-              <svg data-vb-pnl id="vb-fixtures" height="120" style="width:100%"></svg>
+              <p>£10 flat stake on every qualified high-confidence pick. Tracks historical performance from rolling predictions.</p>
+              <div data-passive-pnl></div>
+            </div>
+
+            <!-- Leg hit rates (learning) -->
+            <div class="fm-passive-card">
+              <h3>Leg hit rates</h3>
+              <p>How often each bet type lands across settled history (5+ bets required).</p>
+              <div data-passive-learning></div>
+            </div>
+
+            <!-- Track record -->
+            <div class="fm-passive-card">
+              <h3>Recent track record</h3>
+              <p>Last 12 high-confidence picks and whether they landed.</p>
+              <div data-passive-history></div>
             </div>
 
           </div>
