@@ -1,3 +1,1 @@
 date,league_code,home_team,away_team,dc_home_prob,dc_draw_prob,dc_away_prob,dc_lambda,dc_mu
-2026-05-19,E0,Bournemouth,Man City,0.199525,0.236188,0.564286,1.073,1.926
-2026-05-19,E0,Chelsea,Tottenham,0.520395,0.236673,0.242932,1.9354,1.2744
