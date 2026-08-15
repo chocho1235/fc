@@ -1,1 +1,6 @@
 date,league_code,home_team,away_team,dc_home_prob,dc_draw_prob,dc_away_prob,dc_lambda,dc_mu
+2026-08-15,SP1,Alaves,Getafe,0.395882,0.322744,0.281374,1.0161,0.8052
+2026-08-15,SP1,Sevilla,Vallecano,0.435224,0.280405,0.284371,1.2882,0.9831
+2026-08-16,SP1,Santander,Villarreal,0.322233,0.240374,0.437393,1.3627,1.6247
+2026-08-16,SP1,Espanol,Levante,0.4597,0.24876,0.29154,1.5669,1.1962
+2026-08-17,SP1,Dep. A Coruna,Elche,0.488877,0.246035,0.265089,1.6176,1.1239
