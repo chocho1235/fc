@@ -1,3 +1,2 @@
 date,league_code,home_team,away_team,dc_home_prob,dc_draw_prob,dc_away_prob,dc_lambda,dc_mu
-2026-08-19,SP1,Atl. Madrid,Malaga,0.45117,0.263816,0.285015,1.4262,1.0756
 2026-08-20,SP1,Rayo Vallecano,Alaves,0.471544,0.267058,0.261399,1.4207,0.9835
