@@ -1,1 +1,4 @@
 date,league_code,home_team,away_team,dc_home_prob,dc_draw_prob,dc_away_prob,dc_lambda,dc_mu
+2026-08-26,SP1,Real Madrid,Sociedad,0.711481,0.173885,0.114633,2.3055,0.8047
+2026-08-27,SP1,Celta,Osasuna,0.499047,0.246419,0.254534,1.6193,1.0823
+2026-08-27,SP1,Barcelona,Ath Bilbao,0.732386,0.163709,0.103905,2.4055,0.7874
