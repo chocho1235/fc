@@ -1,1 +1,7 @@
 date,league_code,home_team,away_team,dc_home_prob,dc_draw_prob,dc_away_prob,dc_lambda,dc_mu
+2026-09-16,SP1,Ath Madrid,Osasuna,0.644525,0.207882,0.147593,1.9674,0.8144
+2026-09-16,SP1,La Coruna,Sevilla,0.476756,0.252317,0.270927,1.5489,1.1022
+2026-09-16,SP1,Barcelona,Santander,0.798669,0.12815,0.073181,2.8095,0.7528
+2026-09-16,SP1,Levante,Ath Bilbao,0.361176,0.261283,0.377541,1.2954,1.3304
+2026-09-17,SP1,Betis,Getafe,0.522547,0.276753,0.2007,1.3794,0.7378
+2026-09-17,SP1,Malaga,Villarreal,0.322233,0.240374,0.437393,1.3627,1.6247
