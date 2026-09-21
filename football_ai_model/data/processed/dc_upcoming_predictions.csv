@@ -1,3 +1,1 @@
 date,league_code,home_team,away_team,dc_home_prob,dc_draw_prob,dc_away_prob,dc_lambda,dc_mu
-2026-09-17,SP1,Betis,Getafe,0.522547,0.276753,0.2007,1.3794,0.7378
-2026-09-17,SP1,Malaga,Villarreal,0.322233,0.240374,0.437393,1.3627,1.6247
