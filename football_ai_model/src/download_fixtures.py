@@ -37,7 +37,7 @@ ODDS_API_CACHE_PATH = EXTERNAL_DIR / "odds_api_cache.json"
 SOURCES_REPORT_PATH = EXTERNAL_DIR / "fixture_sources.json"
 
 FOOTBALL_DATA_URL = "https://www.football-data.co.uk/fixtures.csv"
-ESPN_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={start}-{end}&limit=300"
+ESPN_URL = "https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={dates}"
 ODDS_API_URL = "https://api.the-odds-api.com/v4/sports/{sport}/odds?regions=eu&markets=h2h&oddsFormat=decimal&apiKey={key}"
 ODDS_API_MAX_AGE_HOURS = 20
 DAYS_AHEAD = 10
@@ -170,19 +170,38 @@ def espn_prices(competition: dict) -> dict:
     return {}
 
 
+def espn_events(slug: str, today: date) -> list:
+    """Upcoming ESPN events for one league: one ranged request, or a request
+    per day if ESPN rejects the range."""
+    end = today + timedelta(days=DAYS_AHEAD)
+    try:
+        url = ESPN_URL.format(slug=slug, dates=f"{today:%Y%m%d}-{end:%Y%m%d}")
+        return json.loads(fetch(url, retries=2, timeout=30)).get("events", [])
+    except HTTPError as exc:
+        print(f"  ESPN {slug}: date range refused ({exc.code}), asking day by day")
+    events = []
+    for offset in range(DAYS_AHEAD + 1):
+        day = today + timedelta(days=offset)
+        try:
+            url = ESPN_URL.format(slug=slug, dates=f"{day:%Y%m%d}")
+            events.extend(json.loads(fetch(url, retries=2, timeout=30)).get("events", []))
+        except HTTPError as exc:
+            body = exc.read()[:200] if hasattr(exc, "read") else b""
+            raise OSError(f"HTTP {exc.code} for {url.split('?')[0]}: {body!r}") from exc
+    return events
+
+
 def from_espn(fixtures: Fixtures):
     today = datetime.now(UK).date()
-    start, end = today.strftime("%Y%m%d"), (today + timedelta(days=DAYS_AHEAD)).strftime("%Y%m%d")
     with_odds = 0
     for league_code, league in LEAGUES.items():
-        url = ESPN_URL.format(slug=league["espn"], start=start, end=end)
         try:
-            payload = json.loads(fetch(url, retries=2, timeout=30))
+            events = espn_events(league["espn"], today)
         except (OSError, ValueError) as exc:
             print(f"  ESPN {league_code}: skipped ({exc})")
             continue
         count = 0
-        for event in payload.get("events", []):
+        for event in events:
             competition = (event.get("competitions") or [{}])[0]
             state = ((competition.get("status") or event.get("status") or {}).get("type") or {}).get("state")
             if state and state != "pre":

@@ -144,11 +144,14 @@ def fixture_datetime(row):
 
 
 def read_upcoming_fixtures(latest_completed_date=None):
+    # latest_completed_date is kept for callers but no longer used: filtering
+    # on it dropped every fixture on the same day as the latest result.
     path = RAW_DIR / "fixtures.csv"
     fixtures = []
     if not path.exists():
         return fixtures
     now = current_model_datetime()
+    completed = {(m["ParsedDate"], m["HomeTeam"], m["AwayTeam"]) for m in read_matches()}
 
     with path.open(newline="", encoding="utf-8-sig") as handle:
         reader = csv.DictReader(handle)
@@ -161,8 +164,8 @@ def read_upcoming_fixtures(latest_completed_date=None):
             parsed_date = parse_date(row["Date"])
             if fixture_datetime(row) <= now:
                 continue
-            if latest_completed_date and parsed_date <= latest_completed_date:
-                continue
+            if (parsed_date, row["HomeTeam"], row["AwayTeam"]) in completed:
+                continue  # already played and in the results
             row["Season"] = "upcoming"
             row["LeagueCode"] = league_code
             row["LeagueName"] = league_name(league_code)
