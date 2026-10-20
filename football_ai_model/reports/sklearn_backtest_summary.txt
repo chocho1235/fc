@@ -1,38 +1,37 @@
-Multi-league 1X2 Backtest - LightGBM calibrated isotonic
+Multi-league 1X2 Backtest - LightGBM anchored on bookmaker odds
 Training matches: 8982
 Test season: 2526
 Test matches: 1674
-Accuracy: 53.64%
-Log loss: 0.9886
-Value bets at 5%+ edge: 32
-Flat-stake profit: 13.20 units
-ROI: 41.25%
-Active betting rules: 16
+Accuracy: 53.70%
+Log loss: 0.9735 (bookmaker: 0.9737, lower is better)
+Value bets at 5%+ edge: 659
+Flat-stake profit: 37.91 units
+ROI: 5.75%
 Active builder legs: 7
 Builder min leg hit rate: 50%
 
 Rolling season backtest
 Seasons tested: 6
 Rolling matches: 10656
-Rolling accuracy: 53.01%
-Rolling log loss: 0.9860
-Rolling value bets at 5%+ edge: 825
-Rolling flat-stake profit: 71.26 units
-Rolling ROI: 8.64%
+Rolling accuracy: 53.64%
+Rolling log loss: 0.9723 (bookmaker: 0.9715, lower is better)
+Rolling value bets at 5%+ edge: 5243
+Rolling flat-stake profit: 218.14 units
+Rolling ROI: 4.16%
 
-Over 2.5 Backtest - scikit-learn calibrated logistic regression
+Over 2.5 Backtest - LightGBM anchored on bookmaker odds
 Over 2.5 test matches: 1674
-Over 2.5 accuracy: 55.97%
-Over 2.5 log loss: 0.6821
-Over 2.5 value bets at 10%+ edge: 26
-Over 2.5 flat-stake profit: -7.06 units
-Over 2.5 ROI: -27.15%
+Over 2.5 accuracy: 58.12%
+Over 2.5 log loss: 0.6768
+Over 2.5 value bets at 10%+ edge: 0
+Over 2.5 flat-stake profit: 0.00 units
+Over 2.5 ROI: 0.00%
 
 Over 2.5 rolling season backtest
 Over 2.5 rolling seasons tested: 6
 Over 2.5 rolling matches: 10656
-Over 2.5 rolling accuracy: 56.38%
-Over 2.5 rolling log loss: 0.6797
-Over 2.5 rolling value bets at 10%+ edge: 293
-Over 2.5 rolling flat-stake profit: -35.98 units
-Over 2.5 rolling ROI: -12.28%
+Over 2.5 rolling accuracy: 57.97%
+Over 2.5 rolling log loss: 0.6739
+Over 2.5 rolling value bets at 10%+ edge: 3
+Over 2.5 rolling flat-stake profit: 2.10 units
+Over 2.5 rolling ROI: 70.00%

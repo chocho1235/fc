@@ -27,6 +27,10 @@
     "home_goals_against_last_10",
     "home_goal_diff_last_10",
     "home_matches_played",
+    "home_xg_for_last_6",
+    "home_xg_against_last_6",
+    "home_xg_diff_last_6",
+    "home_xg_overperformance",
     "away_points_last_5",
     "away_points_last_10",
     "away_win_rate_last_5",
@@ -38,6 +42,10 @@
     "away_goals_against_last_10",
     "away_goal_diff_last_10",
     "away_matches_played",
+    "away_xg_for_last_6",
+    "away_xg_against_last_6",
+    "away_xg_diff_last_6",
+    "away_xg_overperformance",
     "home_ppg",
     "away_ppg",
     "ppg_difference",
@@ -51,18 +59,11 @@
     "importance_difference",
     "market_home_prob",
     "market_draw_prob",
-    "market_away_prob",
-    "home_odds_move",
-    "draw_odds_move",
-    "away_odds_move",
-    "home_closing_prob",
-    "draw_closing_prob",
-    "away_closing_prob"
+    "market_away_prob"
   ],
   "test_season": "2526",
   "bet_threshold": 0.05,
   "training_window_seasons": 5,
-  "model_type": "lightgbm_calibrated_isotonic",
-  "rules_path": "betting_rules.json",
-  "active_rules": 16
+  "model_type": "lightgbm_market_anchored",
+  "training_matches": 8830
 }
