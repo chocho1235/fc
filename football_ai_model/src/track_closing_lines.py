@@ -27,6 +27,7 @@ SNAPSHOT_FIELDS = [
     "draw_bookmaker_odds",
     "away_bookmaker_odds",
     "over_25_bookmaker_odds",
+    "bet_odds",
     "bet_rule",
 ]
 
@@ -91,6 +92,8 @@ def append_prediction_snapshot():
     snapshot_at = now_utc()
     additions = []
     for row in upcoming:
+        if not row.get("suggested_bet"):
+            continue  # only bets are tracked, to keep the log small
         snapshot = {field: row.get(field, "") for field in SNAPSHOT_FIELDS}
         snapshot["snapshot_at"] = snapshot_at
         if snapshot_identity(snapshot) in existing:
@@ -108,7 +111,7 @@ def append_prediction_snapshot():
 def completed_match_index():
     completed = {}
     for row in read_matches():
-        completed[(row["Date"], row["LeagueCode"], row["HomeTeam"], row["AwayTeam"])] = row
+        completed[(row["ParsedDate"].isoformat(), row["LeagueCode"], row["HomeTeam"], row["AwayTeam"])] = row
     return completed
 
 
@@ -131,6 +134,8 @@ def selection_odds(row, prefix):
 
 
 def snapshot_selection_odds(row):
+    if decimal(row.get("bet_odds")) > 1:
+        return decimal(row.get("bet_odds"))
     selection = row.get("suggested_bet") or row.get("predicted_result")
     if selection == "H":
         return decimal(row.get("home_bookmaker_odds"))
@@ -148,36 +153,41 @@ def profit(result, selection, odds):
 
 
 def score_snapshots():
+    """One row per bet: the first time the model suggested it, settled once
+    the result is in. Closing line value compares the price we took with
+    Pinnacle's closing price (market average if Pinnacle is missing)."""
     snapshots = read_csv(SNAPSHOT_PATH)
     completed = completed_match_index()
     scored = []
     seen = set()
 
-    for snapshot in snapshots:
+    for snapshot in sorted(snapshots, key=lambda row: row.get("snapshot_at", "")):
+        selection = snapshot.get("suggested_bet")
+        if not selection:
+            continue
+        identity = (*row_key(snapshot), selection)
+        if identity in seen:
+            continue
+        seen.add(identity)
         match = completed.get(row_key(snapshot))
         if not match:
             continue
-        selection = snapshot.get("suggested_bet") or snapshot.get("predicted_result")
         taken_odds = snapshot_selection_odds(snapshot)
-        closing_odds = selection_odds(match, "AvgC")
+        closing_odds = selection_odds(match, "PSC")
         if closing_odds <= 1:
-            closing_odds = selection_odds(match, "Avg")
+            closing_odds = selection_odds(match, "AvgC")
         report_row = {field: snapshot.get(field, "") for field in SNAPSHOT_FIELDS}
         report_row.update({
             "result": match.get("FTR", ""),
             "selection_odds": round(taken_odds, 3) if taken_odds else "",
-            "closing_selection_odds": round(closing_odds, 3) if closing_odds else "",
-            "closing_line_value": round((taken_odds / closing_odds) - 1, 4) if taken_odds and closing_odds else "",
+            "closing_selection_odds": round(closing_odds, 3) if closing_odds > 1 else "",
+            "closing_line_value": round((taken_odds / closing_odds) - 1, 4) if taken_odds and closing_odds > 1 else "",
             "profit_units": round(profit(match.get("FTR", ""), selection, taken_odds), 3),
         })
-        identity = (snapshot.get("snapshot_at"), *row_key(snapshot), selection)
-        if identity in seen:
-            continue
         scored.append(report_row)
-        seen.add(identity)
 
     write_csv(REPORT_PATH, scored, REPORT_FIELDS)
-    print(f"Scored {len(scored)} completed odds snapshot(s)")
+    print(f"Settled {len(scored)} bet(s) out of {len(seen)} suggested")
 
 
 def main():

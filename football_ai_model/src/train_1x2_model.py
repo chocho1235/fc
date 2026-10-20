@@ -20,10 +20,12 @@ REPORTS_DIR = ROOT / "reports"
 BUILDER_PROFILE_PATH = MODELS_DIR / "builder_profile.json"
 
 LABELS = ["H", "D", "A"]
-ODDS_COLUMNS = [("PSH", "PSD", "PSA"), ("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A")]
+# Sharpest first. Mkt is a single bookmaker price from ESPN (live games only).
+ODDS_COLUMNS = [("PSH", "PSD", "PSA"), ("AvgH", "AvgD", "AvgA"), ("B365H", "B365D", "B365A"), ("MktH", "MktD", "MktA")]
 BET_THRESHOLDS = [0.03, 0.05, 0.08, 0.10, 0.12, 0.15]
 DEFAULT_BET_THRESHOLD = float(os.getenv("BET_THRESHOLD", "0.05") or "0.05")
 MAX_BET_PROBABILITY = float(os.getenv("MAX_BET_PROBABILITY", "0.65") or "0.65")
+MIN_BET_PROBABILITY = float(os.getenv("MIN_BET_PROBABILITY", "0.22") or "0.22")
 TRAINING_WINDOW_SEASONS = int(os.getenv("TRAINING_WINDOW_SEASONS", "5") or "5")
 BUILDER_MIN_SAMPLES = int(os.getenv("BUILDER_MIN_SAMPLES", "20") or "20")
 BUILDER_MIN_HIT_RATE = float(os.getenv("BUILDER_MIN_HIT_RATE", "0.50") or "0.50")
@@ -355,7 +357,23 @@ def team_features(history, prefix, match_date):
     return features
 
 
+# Columns holding the best price we could actually bet at. "Best" is written by
+# fetch_fixtures.py for live games; Max is football-data's best price across
+# bookmakers for past games.
+BEST_ODDS_COLUMNS = [("BestH", "BestD", "BestA"), ("MaxH", "MaxD", "MaxA"), *ODDS_COLUMNS]
+
+
 def odds_features(match):
+    # Closing odds are deliberately not used: they are only known at kick-off,
+    # so using them would leak information we can't have when placing a bet.
+    features = {
+        "market_home_prob": 0.0,
+        "market_draw_prob": 0.0,
+        "market_away_prob": 0.0,
+        "home_odds": 0.0,
+        "draw_odds": 0.0,
+        "away_odds": 0.0,
+    }
     for home_col, draw_col, away_col in ODDS_COLUMNS:
         home_odds = parse_float(match.get(home_col))
         draw_odds = parse_float(match.get(draw_col))
@@ -371,23 +389,11 @@ def odds_features(match):
                 "draw_odds": draw_odds,
                 "away_odds": away_odds,
             }
-            features.update(odds_movement_features(match, home_odds, draw_odds, away_odds))
-            return features
-
-    return {
-        "market_home_prob": 0.0,
-        "market_draw_prob": 0.0,
-        "market_away_prob": 0.0,
-        "home_odds": 0.0,
-        "draw_odds": 0.0,
-        "away_odds": 0.0,
-        "home_odds_move": 0.0,
-        "draw_odds_move": 0.0,
-        "away_odds_move": 0.0,
-        "home_closing_prob": 0.0,
-        "draw_closing_prob": 0.0,
-        "away_closing_prob": 0.0,
-    }
+            break
+    for side, columns in zip(("home", "draw", "away"), zip(*BEST_ODDS_COLUMNS)):
+        prices = [parse_float(match.get(column)) for column in columns]
+        features[f"{side}_best_odds"] = max([price for price in prices if price > 1], default=0.0)
+    return features
 
 
 def over_under_odds_features(match):
@@ -410,42 +416,6 @@ def first_valid_odds(match, columns):
         if odds > 1:
             return odds
     return 0.0
-
-
-def odds_movement_features(match, home_odds, draw_odds, away_odds):
-    # Pinnacle closing is the sharpest signal; fall back to market average then B365
-    close_home = parse_float(match.get("PSCH"))
-    close_draw = parse_float(match.get("PSCD"))
-    close_away = parse_float(match.get("PSCA"))
-    if close_home <= 1 or close_draw <= 1 or close_away <= 1:
-        close_home = parse_float(match.get("AvgCH"))
-        close_draw = parse_float(match.get("AvgCD"))
-        close_away = parse_float(match.get("AvgCA"))
-    if close_home <= 1 or close_draw <= 1 or close_away <= 1:
-        close_home = parse_float(match.get("B365CH"))
-        close_draw = parse_float(match.get("B365CD"))
-        close_away = parse_float(match.get("B365CA"))
-
-    if close_home <= 1 or close_draw <= 1 or close_away <= 1:
-        return {
-            "home_odds_move": 0.0,
-            "draw_odds_move": 0.0,
-            "away_odds_move": 0.0,
-            "home_closing_prob": 0.0,
-            "draw_closing_prob": 0.0,
-            "away_closing_prob": 0.0,
-        }
-
-    raw = [1 / close_home, 1 / close_draw, 1 / close_away]
-    total = sum(raw)
-    return {
-        "home_odds_move": (home_odds - close_home) / home_odds,
-        "draw_odds_move": (draw_odds - close_draw) / draw_odds,
-        "away_odds_move": (away_odds - close_away) / away_odds,
-        "home_closing_prob": raw[0] / total,
-        "draw_closing_prob": raw[1] / total,
-        "away_closing_prob": raw[2] / total,
-    }
 
 
 def table_features(table, home, away):
@@ -962,6 +932,9 @@ def feature_names(rows):
         "home_odds",
         "draw_odds",
         "away_odds",
+        "home_best_odds",
+        "draw_best_odds",
+        "away_best_odds",
         "home_fair_odds",
         "draw_fair_odds",
         "away_fair_odds",
@@ -1129,11 +1102,12 @@ def no_vig_market_probabilities(row):
     return {label: value / total for label, value in raw.items()}
 
 
-def bet_probability(row, model_probabilities, label):
-    market = no_vig_market_probabilities(row)
-    if market[label] <= 0:
-        return model_probabilities[label]
-    return (model_probabilities[label] * 0.72) + (market[label] * 0.28)
+def best_odds(row):
+    return {
+        "H": row.get("home_best_odds") or row["home_odds"],
+        "D": row.get("draw_best_odds") or row["draw_odds"],
+        "A": row.get("away_best_odds") or row["away_odds"],
+    }
 
 
 def decimal_return(result, selection, odds):
@@ -1150,20 +1124,23 @@ def odds_band(odds):
 
 
 def candidate_bets(row, probs):
-    odds_by_label = {"H": row["home_odds"], "D": row["draw_odds"], "A": row["away_odds"]}
+    """Selections where the model's probability times the best price beats 1.
+
+    edge is the expected profit per unit staked, e.g. 0.05 = +5%.
+    """
+    if row["home_odds"] <= 1:
+        return []  # no market price, so the model has nothing to anchor on
     market = no_vig_market_probabilities(row)
     candidates = []
 
-    for label in LABELS:
-        adjusted_probability = bet_probability(row, probs, label)
-        edge = adjusted_probability - market[label]
-        odds = odds_by_label[label]
-        if odds > 1 and adjusted_probability >= 0.22:
+    for label, odds in best_odds(row).items():
+        probability = probs[label]
+        if odds > 1 and MIN_BET_PROBABILITY <= probability <= MAX_BET_PROBABILITY:
             candidates.append({
                 "selection": label,
                 "odds": odds,
-                "edge": edge,
-                "adjusted_probability": adjusted_probability,
+                "edge": probability * odds - 1,
+                "adjusted_probability": probability,
                 "market_probability": market[label],
                 "odds_band": odds_band(odds),
             })
@@ -1218,26 +1195,30 @@ def evaluate(rows, probabilities, threshold=0.08, rules=None):
     correct = 0
     bets = []
     losses = []
+    market_losses = []
 
     for row, probs in zip(rows, probabilities):
         prediction = max(probs, key=probs.get)
         if prediction == row["result"]:
             correct += 1
 
-        odds_by_label = {"H": row["home_odds"], "D": row["draw_odds"], "A": row["away_odds"]}
         best_bet, _best_edge = find_best_bet(row, probs, threshold, rules)
         if best_bet:
-            profit = decimal_return(row["result"], best_bet, odds_by_label[best_bet])
+            profit = decimal_return(row["result"], best_bet, best_odds(row)[best_bet])
             bets.append(profit)
 
         actual_prob = max(probs[row["result"]], 0.000001)
         losses.append(-math.log(actual_prob))
+        market = no_vig_market_probabilities(row)
+        if market[row["result"]] > 0:
+            market_losses.append(-math.log(market[row["result"]]))
 
     profit = sum(bets)
     return {
         "matches": len(rows),
         "accuracy": correct / len(rows),
         "log_loss": avg(losses),
+        "market_log_loss": avg(market_losses),
         "bets": len(bets),
         "profit_units": profit,
         "roi": profit / len(bets) if bets else 0.0,
@@ -1648,12 +1629,14 @@ def average_summary(season_summaries):
     total_profit = sum(item["profit_units"] for item in season_summaries)
     weighted_accuracy = sum(item["accuracy"] * item["matches"] for item in season_summaries) / total_matches
     weighted_log_loss = sum(item["log_loss"] * item["matches"] for item in season_summaries) / total_matches
+    weighted_market_log_loss = sum(item.get("market_log_loss", 0.0) * item["matches"] for item in season_summaries) / total_matches
 
     return {
         "seasons": len(season_summaries),
         "matches": total_matches,
         "accuracy": weighted_accuracy,
         "log_loss": weighted_log_loss,
+        "market_log_loss": weighted_market_log_loss,
         "bets": total_bets,
         "profit_units": total_profit,
         "roi": total_profit / total_bets if total_bets else 0.0,

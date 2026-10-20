@@ -225,7 +225,7 @@ function decisionHtml(row) {
     <strong>${labelMap[label]} ${percent(probabilityFor(row, label))}</strong>
     <span>Bookie ${decimal(bookmakerOddsFor(row, label))} · fair ${decimal(fairOddsFor(row, label))}</span>
     <b>${isValue ? `Edge +${percent(row.suggested_edge)}` : `Only bet if ${labelMap[label]} reaches ${decimal(valueOddsFor(row, label))}`}</b>
-    ${isValue && row.bet_rule ? `<small>Qualified by ${escapeHtml(row.bet_rule)} · ${row.bet_rule_bets} bets · ${percent(row.bet_rule_roi)} ROI</small>` : ""}
+    ${isValue && row.bet_odds ? `<small>Best price found ${decimal(row.bet_odds)}. Only bet at this price or better.</small>` : ""}
   </div>`;
 }
 
@@ -879,7 +879,7 @@ function renderValueList(rows) {
       <div>
         <strong>${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</strong>
         <span>${escapeHtml(row.date)} · bookie ${decimal(bookmakerOddsFor(row, row.suggested_bet))} · bet from ${decimal(valueOddsFor(row, row.suggested_bet))}</span>
-        ${row.bet_rule ? `<small>${escapeHtml(row.bet_rule)} · ${row.bet_rule_bets} bets · ${percent(row.bet_rule_roi)} ROI</small>` : ""}
+        ${row.bet_odds ? `<small>Best price found ${decimal(row.bet_odds)}</small>` : ""}
       </div>
       <b>${labelMap[row.suggested_bet]} +${percent(row.suggested_edge)}</b>
     </article>`).join("");
@@ -892,7 +892,7 @@ function renderRuleList(rules, health = []) {
   const paused = (health || []).filter(r => r.status === "paused").slice(0, 3);
   const visible = [...active.slice(0, 5), ...paused];
   if (!visible.length) {
-    ruleListEl.innerHTML = `<p class="football-empty">No qualified rules yet.</p>`;
+    ruleListEl.innerHTML = `<p class="football-empty">One rule for every bet: at least 5% expected profit at the best price available.</p>`;
     return;
   }
   ruleListEl.innerHTML = visible.map(rule => {

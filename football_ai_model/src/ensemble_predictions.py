@@ -7,10 +7,10 @@ Reads:
   data/processed/sklearn_rolling_predictions.csv (backtest for blend calibration)
   data/processed/dc_rolling_predictions.csv (backtest for blend calibration)
 
-Overwrites home_win_probability / draw_probability / away_win_probability
-in upcoming_predictions.csv with the calibrated ensemble blend.
-
-Saves models/ensemble_meta.json with w_dc, log-loss, and match count.
+Adds the Dixon-Coles goal estimates (dc_lambda / dc_mu) to
+upcoming_predictions.csv. The 1X2 probabilities are left as the main model
+produced them. The best blend weight is still measured on the backtest and
+saved to models/ensemble_meta.json for reference.
 """
 
 import csv
@@ -150,33 +150,6 @@ def main() -> None:
     ll_str = f"{best_ll:.4f}" if best_ll is not None else "N/A"
     print(f"ensemble: w_dc={w_dc:.1f}, log_loss={ll_str}, n_matched={n_matched}")
 
-    calibrators: dict = {}
-    if matched and len(matched) >= MIN_CALIBRATION_ROWS:
-        blended_probs = []
-        results = []
-        for lgbm_r, dc_r in matched:
-            p_lgbm = {
-                "H": float(lgbm_r["home_win_probability"]),
-                "D": float(lgbm_r["draw_probability"]),
-                "A": float(lgbm_r["away_win_probability"]),
-            }
-            p_dc = {
-                "H": float(dc_r["dc_home_prob"]),
-                "D": float(dc_r["dc_draw_prob"]),
-                "A": float(dc_r["dc_away_prob"]),
-            }
-            result = lgbm_r["result"]
-            if result not in LABELS:
-                continue
-            blended_probs.append(logodds_blend(p_lgbm, p_dc, w_dc))
-            results.append(result)
-
-        if len(blended_probs) >= MIN_CALIBRATION_ROWS:
-            for label in LABELS:
-                ir = _fit_isotonic(blended_probs, results, label)
-                if ir is not None:
-                    calibrators[label] = ir
-
     # Load upcoming data
     upcoming = _read_csv(UPCOMING_PATH)
     dc_upcoming = _read_csv(DC_UPCOMING_PATH)
@@ -196,36 +169,12 @@ def main() -> None:
         dc_r = dc_lookup.get(k)
         if dc_r is None:
             continue
-        try:
-            p_lgbm = {
-                "H": float(row["home_win_probability"]),
-                "D": float(row["draw_probability"]),
-                "A": float(row["away_win_probability"]),
-            }
-            p_dc = {
-                "H": float(dc_r["dc_home_prob"]),
-                "D": float(dc_r["dc_draw_prob"]),
-                "A": float(dc_r["dc_away_prob"]),
-            }
-        except (ValueError, KeyError):
-            continue
-
-        blended = logodds_blend(p_lgbm, p_dc, w_dc)
-        if calibrators:
-            blended = _apply_isotonic(blended, calibrators)
-
-        row["home_win_probability"] = round(blended["H"], 6)
-        row["draw_probability"] = round(blended["D"], 6)
-        row["away_win_probability"] = round(blended["A"], 6)
+        # The main model starts from the bookmaker's odds and bets are decided
+        # on its probabilities. Dixon-Coles ignores the market, so blending it
+        # in here would show probabilities the bets weren't based on. It is
+        # only used for its goal estimates now.
         row["dc_lambda"] = dc_r.get("dc_lambda", "")
         row["dc_mu"] = dc_r.get("dc_mu", "")
-        # NOTE: suggested_bet / suggested_edge / bet_rule are intentionally NOT
-        # recalculated here. The active betting rules were calibrated against the
-        # LGBM-only predictions (predict_upcoming_sklearn_fast), so edge
-        # thresholds must be evaluated with those probabilities. The ensemble
-        # blend is used only for display probabilities and DC goal estimates.
-        # After a full retrain the rules will be re-calibrated against the
-        # ensemble baseline automatically.
 
         updated += 1
 
@@ -251,7 +200,7 @@ def main() -> None:
         "best_log_loss": round(best_ll, 6) if best_ll is not None else None,
         "n_matched_backtest": n_matched,
         "upcoming_updated": updated,
-        "calibrated": bool(calibrators),
+        "blend_applied": False,
     }
     META_PATH.parent.mkdir(parents=True, exist_ok=True)
     META_PATH.write_text(json.dumps(meta, indent=2), encoding="utf-8")

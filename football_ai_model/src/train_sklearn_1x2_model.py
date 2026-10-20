@@ -5,9 +5,7 @@ import warnings
 from pathlib import Path
 
 import joblib
-import lightgbm as lgb
 import numpy as np
-from sklearn.calibration import CalibratedClassifierCV
 
 warnings.filterwarnings("ignore", message="X does not have valid feature names")
 
@@ -17,18 +15,16 @@ from train_1x2_model import (
     DEFAULT_BET_THRESHOLD,
     LABELS,
     MODELS_DIR,
-    ODDS_BANDS,
     PROCESSED_DIR,
     REPORTS_DIR,
     TRAINING_WINDOW_SEASONS,
     apply_builder_profile,
     average_summary,
     build_dataset,
-    candidate_bets,
-    decimal_return,
     evaluate,
     fair_odds,
     feature_names,
+    best_odds,
     find_best_bet,
     learn_builder_profile,
     read_matches,
@@ -36,6 +32,7 @@ from train_1x2_model import (
     write_predictions,
 )
 from ensemble_predictions import main as ensemble_predictions
+from market_anchored import MarketAnchoredBinaryClassifier, MarketAnchoredClassifier
 from train_dixon_coles import main as train_dixon_coles
 from update_rule_health import main as update_rule_health
 
@@ -46,8 +43,6 @@ OVER_25_MODEL_PATH = MODELS_DIR / "sklearn_over_25_model.joblib"
 OVER_25_META_PATH = MODELS_DIR / "sklearn_over_25_model_meta.json"
 BETTING_RULES_PATH = MODELS_DIR / "betting_rules.json"
 DEFAULT_OVER_25_BET_THRESHOLD = float(os.getenv("OVER_25_BET_THRESHOLD", "0.10") or "0.10")
-MIN_RULE_BETS = int(os.getenv("MIN_RULE_BETS", "20") or "20")
-MIN_RULE_ROI = float(os.getenv("MIN_RULE_ROI", "0.03") or "0.03")
 
 
 def rows_to_matrix(rows, names):
@@ -60,28 +55,11 @@ def rows_to_labels(rows):
 
 def train_classifier(train_rows, names, labels=None):
     x_train = rows_to_matrix(train_rows, names)
-    y_train = labels if labels is not None else rows_to_labels(train_rows)
-    is_binary = labels is not None
-    base = lgb.LGBMClassifier(
-        objective="binary" if is_binary else "multiclass",
-        num_class=1 if is_binary else 3,
-        n_estimators=int(os.getenv("LGBM_N_ESTIMATORS", "400")),
-        learning_rate=float(os.getenv("LGBM_LEARNING_RATE", "0.05")),
-        num_leaves=int(os.getenv("LGBM_NUM_LEAVES", "31")),
-        min_child_samples=int(os.getenv("LGBM_MIN_CHILD_SAMPLES", "20")),
-        subsample=float(os.getenv("LGBM_SUBSAMPLE", "0.8")),
-        colsample_bytree=float(os.getenv("LGBM_COLSAMPLE_BYTREE", "0.8")),
-        reg_alpha=float(os.getenv("LGBM_REG_ALPHA", "0.1")),
-        reg_lambda=float(os.getenv("LGBM_REG_LAMBDA", "0.1")),
-        verbose=-1,
-    )
-    calibrated = CalibratedClassifierCV(
-        estimator=base,
-        method=os.getenv("LGBM_CALIBRATION_METHOD", "isotonic"),
-        cv=int(os.getenv("LGBM_CALIBRATION_CV", "3")),
-    )
-    calibrated.fit(x_train, y_train)
-    return calibrated
+    if labels is not None:
+        model = MarketAnchoredBinaryClassifier(names.index("over_25_market_prob"))
+        return model.fit(x_train, labels)
+    market_columns = [names.index(name) for name in ("market_home_prob", "market_draw_prob", "market_away_prob")]
+    return MarketAnchoredClassifier(market_columns).fit(x_train, rows_to_labels(train_rows))
 
 
 def predict_rows(model, rows, names):
@@ -150,87 +128,6 @@ def evaluate_over_25(rows, probabilities, threshold=DEFAULT_BET_THRESHOLD):
     }
 
 
-def rolling_candidate_rows(test_rows, probabilities):
-    rows = []
-    for row, probs in zip(test_rows, probabilities):
-        for candidate in candidate_bets(row, probs):
-            rows.append({
-                "season": row["season"],
-                "league": row.get("league") or row.get("league_code") or "",
-                "selection": candidate["selection"],
-                "odds_band": candidate["odds_band"],
-                "odds": candidate["odds"],
-                "edge": candidate["edge"],
-                "profit": decimal_return(row["result"], candidate["selection"], candidate["odds"]),
-            })
-    return rows
-
-
-def aggregate_rule(candidates, league, selection, odds_band, min_edge):
-    band = next((item for item in ODDS_BANDS if item["name"] == odds_band), None)
-    matches = []
-    for item in candidates:
-        if league != "all" and item["league"] != league:
-            continue
-        if selection != "all" and item["selection"] != selection:
-            continue
-        if odds_band != "all" and item["odds_band"] != odds_band:
-            continue
-        if item["edge"] < min_edge:
-            continue
-        matches.append(item)
-
-    if not matches:
-        return None
-
-    profit = sum(item["profit"] for item in matches)
-    bets = len(matches)
-    return {
-        "league": league,
-        "selection": selection,
-        "odds_band": odds_band,
-        "min_odds": band["min_odds"] if band else 1.01,
-        "max_odds": band["max_odds"] if band else 100.0,
-        "min_edge": min_edge,
-        "bets": bets,
-        "profit_units": round(profit, 2),
-        "roi": profit / bets if bets else 0.0,
-    }
-
-
-def optimize_betting_rules(candidates):
-    if not candidates:
-        return []
-
-    leagues = sorted({item["league"] for item in candidates if item["league"]})
-    selections = LABELS
-    odds_bands = [item["name"] for item in ODDS_BANDS]
-    rules = []
-
-    for league in [*leagues, "all"]:
-        for selection in selections:
-            for odds_band in [*odds_bands, "all"]:
-                for threshold in BET_THRESHOLDS:
-                    rule = aggregate_rule(candidates, league, selection, odds_band, threshold)
-                    if not rule:
-                        continue
-                    if rule["bets"] >= MIN_RULE_BETS and rule["roi"] >= MIN_RULE_ROI and rule["profit_units"] > 0:
-                        rules.append(rule)
-
-    rules.sort(key=lambda item: (item["roi"], item["profit_units"], item["bets"]), reverse=True)
-    selected = []
-    covered = set()
-    for rule in rules:
-        key = (rule["league"], rule["selection"], rule["odds_band"])
-        if key in covered:
-            continue
-        selected.append(rule)
-        covered.add(key)
-        if len(selected) >= 16:
-            break
-    return selected
-
-
 def season_train_rows(rows, season, seasons):
     previous_seasons = [item for item in seasons if item < season]
     if TRAINING_WINDOW_SEASONS > 0:
@@ -239,11 +136,10 @@ def season_train_rows(rows, season, seasons):
 
 
 def rolling_backtest(rows, names):
+    """Walk-forward test: for each season, train only on earlier seasons."""
     seasons = sorted({row["season"] for row in rows})
     season_summaries = []
     all_rows = []
-    all_candidates = []
-    latest_rules = []
     for season in seasons[3:]:
         train_rows = season_train_rows(rows, season, seasons)
         test_rows = [row for row in rows if row["season"] == season]
@@ -251,9 +147,7 @@ def rolling_backtest(rows, names):
             continue
         model = train_classifier(train_rows, names)
         probabilities = predict_rows(model, test_rows, names)
-        rules = optimize_betting_rules(all_candidates)
-        latest_rules = rules
-        summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD, rules=rules)
+        summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD)
         threshold_summaries = {
             f"{threshold:.2f}": evaluate(test_rows, probabilities, threshold=threshold)
             for threshold in BET_THRESHOLDS
@@ -265,7 +159,7 @@ def rolling_backtest(rows, names):
             "thresholds": threshold_summaries,
         })
         for row, probs in zip(test_rows, probabilities):
-            best_bet, best_edge = find_best_bet(row, probs, DEFAULT_BET_THRESHOLD, rules)
+            best_bet, best_edge = find_best_bet(row, probs, DEFAULT_BET_THRESHOLD)
             all_rows.append({
                 "season": season,
                 "date": row["date"],
@@ -282,12 +176,10 @@ def rolling_backtest(rows, names):
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
+                "bet_odds": best_odds(row)[best_bet] if best_bet else "",
             })
-        all_candidates.extend(rolling_candidate_rows(test_rows, probabilities))
     write_rolling_outputs(season_summaries, all_rows)
-    final_rules = optimize_betting_rules(all_candidates)
-    BETTING_RULES_PATH.write_text(json.dumps(final_rules, indent=2), encoding="utf-8")
-    return season_summaries, latest_rules, final_rules
+    return season_summaries
 
 
 def rolling_over_25_backtest(rows, names):
@@ -314,7 +206,7 @@ def write_rolling_outputs(season_summaries, all_rows):
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     with (REPORTS_DIR / "sklearn_rolling_backtest.csv").open("w", newline="", encoding="utf-8") as handle:
-        fieldnames = ["season", "training_matches", "matches", "accuracy", "log_loss", "bets", "profit_units", "roi"]
+        fieldnames = ["season", "training_matches", "matches", "accuracy", "log_loss", "market_log_loss", "bets", "profit_units", "roi"]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         for summary in season_summaries:
@@ -324,6 +216,7 @@ def write_rolling_outputs(season_summaries, all_rows):
                 "matches": summary["matches"],
                 "accuracy": round(summary["accuracy"], 4),
                 "log_loss": round(summary["log_loss"], 4),
+                "market_log_loss": round(summary["market_log_loss"], 4),
                 "bets": summary["bets"],
                 "profit_units": round(summary["profit_units"], 2),
                 "roi": round(summary["roi"], 4),
@@ -370,14 +263,20 @@ def main():
     apply_builder_profile(test_rows, builder_profile)
     active_builder_legs = sum(1 for leg in builder_profile.get("legs", {}).values() if leg.get("active"))
 
-    model = train_classifier(train_rows, names)
-    probabilities = predict_rows(model, test_rows, names)
-    rolling_summaries, latest_rules, final_rules = rolling_backtest(rows, names)
-    summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD, rules=latest_rules)
+    test_model = train_classifier(train_rows, names)
+    probabilities = predict_rows(test_model, test_rows, names)
+    rolling_summaries = rolling_backtest(rows, names)
+    summary = evaluate(test_rows, probabilities, threshold=DEFAULT_BET_THRESHOLD)
     rolling_average = average_summary(rolling_summaries)
 
-    over_model = train_classifier(train_rows, over_names, labels=over_25_labels(train_rows))
-    over_probabilities = predict_over_25(over_model, test_rows, over_names)
+    test_over_model = train_classifier(train_rows, over_names, labels=over_25_labels(train_rows))
+    over_probabilities = predict_over_25(test_over_model, test_rows, over_names)
+
+    # The live models are trained on the most recent seasons, including the
+    # one used as the test season above (and the current season so far).
+    live_rows = [row for row in rows if row["season"] in seasons[-TRAINING_WINDOW_SEASONS:]] if TRAINING_WINDOW_SEASONS > 0 else rows
+    model = train_classifier(live_rows, names)
+    over_model = train_classifier(live_rows, over_names, labels=over_25_labels(live_rows))
     over_summary = evaluate_over_25(test_rows, over_probabilities, threshold=DEFAULT_OVER_25_BET_THRESHOLD)
     over_rolling_summaries = rolling_over_25_backtest(rows, over_names)
     over_rolling_average = average_summary(over_rolling_summaries)
@@ -388,8 +287,10 @@ def main():
         over_probabilities,
         bet_threshold=DEFAULT_BET_THRESHOLD,
         over_25_bet_threshold=DEFAULT_OVER_25_BET_THRESHOLD,
-        rules=latest_rules,
     )
+    # Hand-picked betting rules have been retired: they were chosen because
+    # they looked good on past data and did not hold up going forward.
+    BETTING_RULES_PATH.write_text("[]\n", encoding="utf-8")
     update_rule_health()
     train_dixon_coles(quick=False)   # full rolling backtest + final fit
     ensemble_predictions()           # find best blend weight on backtest data
@@ -403,9 +304,8 @@ def main():
         "test_season": test_season,
         "bet_threshold": DEFAULT_BET_THRESHOLD,
         "training_window_seasons": TRAINING_WINDOW_SEASONS or "all",
-        "model_type": "lightgbm_calibrated_isotonic",
-        "rules_path": str(BETTING_RULES_PATH.relative_to(MODELS_DIR)),
-        "active_rules": len(final_rules),
+        "model_type": "lightgbm_market_anchored",
+        "training_matches": len(live_rows),
     }, indent=2), encoding="utf-8")
     OVER_25_META_PATH.write_text(json.dumps({
         "labels": ["Under 2.5", "Over 2.5"],
@@ -414,20 +314,19 @@ def main():
         "bet_threshold": DEFAULT_BET_THRESHOLD,
         "over_25_bet_threshold": DEFAULT_OVER_25_BET_THRESHOLD,
         "training_window_seasons": TRAINING_WINDOW_SEASONS or "all",
-        "model_type": "lightgbm_calibrated_isotonic_binary_over_25",
+        "model_type": "lightgbm_market_anchored_binary_over_25",
     }, indent=2), encoding="utf-8")
 
     report = [
-        "Multi-league 1X2 Backtest - LightGBM calibrated isotonic",
+        "Multi-league 1X2 Backtest - LightGBM anchored on bookmaker odds",
         f"Training matches: {len(train_rows)}",
         f"Test season: {test_season}",
         f"Test matches: {summary['matches']}",
         f"Accuracy: {summary['accuracy']:.2%}",
-        f"Log loss: {summary['log_loss']:.4f}",
+        f"Log loss: {summary['log_loss']:.4f} (bookmaker: {summary['market_log_loss']:.4f}, lower is better)",
         f"Value bets at {DEFAULT_BET_THRESHOLD:.0%}+ edge: {summary['bets']}",
         f"Flat-stake profit: {summary['profit_units']:.2f} units",
         f"ROI: {summary['roi']:.2%}",
-        f"Active betting rules: {len(final_rules)}",
         f"Active builder legs: {active_builder_legs}",
         f"Builder min leg hit rate: {builder_profile['min_hit_rate']:.0%}",
         "",
@@ -435,12 +334,12 @@ def main():
         f"Seasons tested: {rolling_average['seasons']}",
         f"Rolling matches: {rolling_average['matches']}",
         f"Rolling accuracy: {rolling_average['accuracy']:.2%}",
-        f"Rolling log loss: {rolling_average['log_loss']:.4f}",
+        f"Rolling log loss: {rolling_average['log_loss']:.4f} (bookmaker: {rolling_average['market_log_loss']:.4f}, lower is better)",
         f"Rolling value bets at {DEFAULT_BET_THRESHOLD:.0%}+ edge: {rolling_average['bets']}",
         f"Rolling flat-stake profit: {rolling_average['profit_units']:.2f} units",
         f"Rolling ROI: {rolling_average['roi']:.2%}",
         "",
-        "Over 2.5 Backtest - scikit-learn calibrated logistic regression",
+        "Over 2.5 Backtest - LightGBM anchored on bookmaker odds",
         f"Over 2.5 test matches: {over_summary['matches']}",
         f"Over 2.5 accuracy: {over_summary['accuracy']:.2%}",
         f"Over 2.5 log loss: {over_summary['log_loss']:.4f}",

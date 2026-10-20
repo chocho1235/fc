@@ -15,6 +15,7 @@ from train_1x2_model import (
     MODELS_DIR,
     PROCESSED_DIR,
     apply_builder_profile,
+    best_odds,
     build_dataset,
     fair_odds,
     find_best_bet_with_rule,
@@ -94,8 +95,6 @@ MODEL_PATH = MODELS_DIR / "sklearn_one_x_two_model.joblib"
 MODEL_META_PATH = MODELS_DIR / "sklearn_one_x_two_model_meta.json"
 OVER_25_MODEL_PATH = MODELS_DIR / "sklearn_over_25_model.joblib"
 OVER_25_META_PATH = MODELS_DIR / "sklearn_over_25_model_meta.json"
-BETTING_RULES_PATH = MODELS_DIR / "betting_rules.json"
-ACTIVE_BETTING_RULES_PATH = MODELS_DIR / "betting_rules_active.json"
 
 
 def rows_to_matrix(rows, feature_names):
@@ -144,7 +143,7 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
             "home_expected_sot", "away_expected_sot", "total_expected_sot", "total_expected_corners", "total_expected_cards",
             "builder_leg_keys", "builder_suggestion", "builder_confidence",
             "builder_leg_results", "builder_legs_won", "builder_legs_total", "builder_result",
-            "predicted_result", "suggested_bet", "suggested_edge", "bet_rule", "bet_rule_bets", "bet_rule_roi",
+            "predicted_result", "suggested_bet", "suggested_edge", "bet_odds", "bet_rule", "bet_rule_bets", "bet_rule_roi",
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
@@ -215,6 +214,7 @@ def write_upcoming(rows, probabilities, threshold, over_25_probabilities=None, o
                 "predicted_result": max(probs, key=probs.get),
                 "suggested_bet": best_bet or "",
                 "suggested_edge": round(best_edge, 4) if best_bet else "",
+                "bet_odds": round(best_odds(row)[best_bet], 3) if best_bet else "",
                 "bet_rule": rule_name(bet_rule),
                 "bet_rule_bets": bet_rule.get("bets", "") if bet_rule else "",
                 "bet_rule_roi": round(float(bet_rule.get("roi", 0.0)), 4) if bet_rule else "",
@@ -239,10 +239,7 @@ def main():
         over_25_threshold = float(over_meta.get("over_25_bet_threshold", over_meta.get("bet_threshold", threshold)))
     else:
         over_25_threshold = threshold
-    rules = []
-    rules_path = ACTIVE_BETTING_RULES_PATH if ACTIVE_BETTING_RULES_PATH.exists() else BETTING_RULES_PATH
-    if rules_path.exists():
-        rules = json.loads(rules_path.read_text(encoding="utf-8"))
+    rules = []  # hand-picked rules retired; bets use a single edge threshold
 
     matches = read_matches()
     latest_completed_date = max(match["ParsedDate"] for match in matches)

@@ -146,7 +146,7 @@ def value_bet_pnl():
         suggested = row.get("suggested_bet", "")
         result = row.get("result", "")
         odds_key = {"H": "home_bookmaker_odds", "D": "draw_bookmaker_odds", "A": "away_bookmaker_odds"}.get(suggested, "")
-        odds = to_float(row.get(odds_key, 0))
+        odds = to_float(row.get("bet_odds")) or to_float(row.get(odds_key, 0))
         if odds <= 1:
             continue
         bets += 1
@@ -181,8 +181,8 @@ def closing_line_summary(rows):
             "roi": "--",
         }
 
-    scored = [row for row in rows if to_float(row.get("closing_selection_odds")) > 1]
-    bets = [row for row in scored if row.get("suggested_bet")]
+    bets = [row for row in rows if row.get("suggested_bet")]
+    scored = [row for row in bets if to_float(row.get("closing_selection_odds")) > 1]
     clv_values = [to_float(row.get("closing_line_value")) for row in scored if row.get("closing_line_value") not in ("", None)]
     bet_profit = sum(to_float(row.get("profit_units")) for row in bets)
     positive_clv = [value for value in clv_values if value > 0]

@@ -2,8 +2,10 @@ name: Refresh football model
 
 on:
   schedule:
-    # Refresh fixtures + upcoming predictions every 6 hours
+    # Refresh results, fixtures, odds and predictions every 6 hours
     - cron: "17 */6 * * *"
+    # Full retrain every Sunday 03:00 UTC
+    - cron: "0 3 * * 0"
   workflow_dispatch:
     inputs:
       retrain:
@@ -14,46 +16,41 @@ on:
 permissions:
   contents: write
 
-# Only one run at a time. A new push to main cancels any in-flight
-# scheduled run so Actions never commits on top of your code changes.
+# One run at a time. Runs queue rather than cancel each other, so a refresh
+# never kills the weekly retrain halfway through.
 concurrency:
-  group: football-model
-  cancel-in-progress: true
+  group: football-model-${{ github.ref_name }}
+  cancel-in-progress: false
 
 jobs:
-  # ── Full weekly retrain (Sundays 03:00 UTC) ───────────────────────────────────
+  # ── Weekly full retrain ──────────────────────────────────────────────────────
   retrain:
-    if: github.event_name == 'schedule' && startsWith(github.event.schedule, '0 3 * * 0') || (github.event_name == 'workflow_dispatch' && inputs.retrain == true)
+    if: (github.event_name == 'schedule' && github.event.schedule == '0 3 * * 0') || (github.event_name == 'workflow_dispatch' && inputs.retrain == true)
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-${{ hashFiles('football_ai_model/requirements.txt') }}
-          restore-keys: pip-
+          cache: pip
+          cache-dependency-path: football_ai_model/requirements.txt
 
       - name: Install Python dependencies
         run: pip install -r football_ai_model/requirements.txt
 
-      - name: Download latest results for all leagues
+      - name: Download results for every league and season
         run: python football_ai_model/src/download_data.py
 
       - name: Refresh xG data from understat.com
         run: python football_ai_model/src/import_understat_xg.py
         continue-on-error: true   # don't fail if understat is down
 
-      - name: Full model retrain (LightGBM + DC ensemble + isotonic calibration)
+      - name: Full retrain and walk-forward backtest
         run: python football_ai_model/src/train_sklearn_1x2_model.py
 
-      - name: Refresh upcoming fixtures and predictions
+      - name: Refresh fixtures, odds and predictions
         run: python football_ai_model/src/refresh_upcoming_sklearn.py
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
@@ -62,43 +59,29 @@ jobs:
         run: |
           git config user.name "football-model-bot"
           git config user.email "football-model-bot@users.noreply.github.com"
-          git add football_ai_model/data football_ai_model/models football_ai_model/reports football_ai_model/src public/football-model-data.json
+          git add football_ai_model/data football_ai_model/models football_ai_model/reports public/football-model-data.json
           git diff --cached --quiet || git commit -m "Weekly retrain $(date -u +%Y-%m-%d)"
-          git pull --rebase --autostash origin main
-          git push
+          git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
 
-  # ── 6-hourly data refresh (fixtures + upcoming + export) ─────────────────────
+  # ── 6-hourly refresh (results, fixtures, odds, predictions, bet tracking) ────
   refresh:
-    if: github.event_name != 'schedule' || !startsWith(github.event.schedule, '0 3 * * 0')
+    if: (github.event_name == 'schedule' && github.event.schedule != '0 3 * * 0') || (github.event_name == 'workflow_dispatch' && inputs.retrain != true)
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
-
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-${{ hashFiles('football_ai_model/requirements.txt') }}
-          restore-keys: pip-
+          cache: pip
+          cache-dependency-path: football_ai_model/requirements.txt
 
       - name: Install Python dependencies
         run: pip install -r football_ai_model/requirements.txt
 
-      - name: Download latest fixtures
-        run: python football_ai_model/src/download_fixtures.py
-
-      - name: Import live bookmaker odds
-        run: python football_ai_model/src/import_odds_api.py
-        continue-on-error: true   # don't fail the run if API quota is hit
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-
-      - name: Refresh upcoming predictions (LightGBM + DC quick fit + ensemble blend)
+      - name: Refresh results, fixtures, odds and predictions
         run: python football_ai_model/src/refresh_upcoming_sklearn.py
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
@@ -107,18 +90,7 @@ jobs:
         run: |
           git config user.name "football-model-bot"
           git config user.email "football-model-bot@users.noreply.github.com"
-          # Add files that are guaranteed to exist
-          git add football_ai_model/data/raw/fixtures.csv \
-                  football_ai_model/data/processed \
-                  football_ai_model/models/builder_profile.json \
-                  football_ai_model/models/dixon_coles_*.json \
-                  football_ai_model/models/ensemble_meta.json \
-                  football_ai_model/data/external/match_context.csv \
-                  football_ai_model/reports \
-                  public/football-model-data.json
-          # Add optional files only if they exist (odds API may be skipped)
-          git add football_ai_model/data/external/live_odds.json 2>/dev/null || true
-          git add football_ai_model/data/external/understat_xg.csv 2>/dev/null || true
+          git add football_ai_model/data football_ai_model/models football_ai_model/reports public/football-model-data.json
           git diff --cached --quiet || git commit -m "Refresh data $(date -u +%Y-%m-%dT%H:%M)Z"
-          git pull --rebase --autostash origin main
-          git push
+          git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
