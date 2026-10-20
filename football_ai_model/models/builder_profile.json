@@ -12,64 +12,64 @@
   "min_hit_rate": 0.5,
   "legs": {
     "away_4_sot": {
-      "settled": 2522,
-      "won": 1648,
-      "hit_rate": 0.6534,
+      "settled": 7208,
+      "won": 4275,
+      "hit_rate": 0.5931,
       "active": true
     },
     "btts_yes": {
-      "settled": 4692,
-      "won": 2705,
-      "hit_rate": 0.5765,
+      "settled": 10401,
+      "won": 5809,
+      "hit_rate": 0.5585,
       "active": true
     },
     "home_4_sot": {
-      "settled": 4918,
-      "won": 3635,
-      "hit_rate": 0.7391,
+      "settled": 11943,
+      "won": 8563,
+      "hit_rate": 0.717,
       "active": true
     },
     "over_15_goals": {
-      "settled": 6480,
-      "won": 5154,
-      "hit_rate": 0.7954,
+      "settled": 15258,
+      "won": 11714,
+      "hit_rate": 0.7677,
       "active": true
     },
     "over_25_goals": {
-      "settled": 145,
-      "won": 80,
-      "hit_rate": 0.5517,
+      "settled": 234,
+      "won": 136,
+      "hit_rate": 0.5812,
       "active": true
     },
     "total_3_cards": {
-      "settled": 5194,
-      "won": 4241,
-      "hit_rate": 0.8165,
+      "settled": 14710,
+      "won": 11997,
+      "hit_rate": 0.8156,
       "active": true
     },
     "total_8_corners": {
-      "settled": 4927,
-      "won": 3702,
-      "hit_rate": 0.7514,
+      "settled": 15388,
+      "won": 11701,
+      "hit_rate": 0.7604,
       "active": true
     }
   },
   "builder_results": {
     "lean": {
-      "settled": 2314,
-      "won": 1422,
-      "partial": 557,
-      "lost": 335,
-      "win_rate": 0.6145,
-      "avoid_loss_rate": 0.8552
+      "settled": 9013,
+      "won": 5500,
+      "partial": 2143,
+      "lost": 1370,
+      "win_rate": 0.6102,
+      "avoid_loss_rate": 0.848
     },
     "strong": {
-      "settled": 6516,
-      "won": 2412,
-      "partial": 3954,
-      "lost": 150,
-      "win_rate": 0.3702,
-      "avoid_loss_rate": 0.977
+      "settled": 15920,
+      "won": 5754,
+      "partial": 9764,
+      "lost": 402,
+      "win_rate": 0.3614,
+      "avoid_loss_rate": 0.9747
     }
   }
 }

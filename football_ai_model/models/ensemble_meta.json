@@ -1,7 +1,7 @@
 {
-  "w_dc": 0.3,
-  "best_log_loss": 0.983348,
-  "n_matched_backtest": 10656,
+  "w_dc": 0.0,
+  "best_log_loss": 1.010409,
+  "n_matched_backtest": 32159,
   "upcoming_updated": 2,
-  "calibrated": true
+  "blend_applied": false
 }

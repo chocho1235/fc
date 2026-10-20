@@ -61,9 +61,9 @@
     "market_draw_prob",
     "market_away_prob"
   ],
-  "test_season": "2526",
+  "test_season": "2627",
   "bet_threshold": 0.05,
   "training_window_seasons": 5,
   "model_type": "lightgbm_market_anchored",
-  "training_matches": 8830
+  "training_matches": 21683
 }

@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-10-20T19:39:01+00:00",
+  "fixtures": 26,
+  "fixtures_with_odds": 26,
+  "by_league": {
+    "E1": 1,
+    "E2": 12,
+    "E3": 12,
+    "SP1": 1
+  },
+  "rows_per_source": {
+    "football-data": 26
+  },
+  "errors": [],
+  "unmatched_team_names": {}
+}
