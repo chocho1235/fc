@@ -21,3 +21,4 @@ snapshot_at,date,time,league_code,league,home_team,away_team,predicted_result,su
 2026-05-15T09:24:40Z,2026-05-17,20:15,SP1,La Liga,Barcelona,Betis,H,,,1.33,5.5,7.08,1.31,,
 2026-05-15T09:24:40Z,2026-05-18,20:00,E0,Premier League,Arsenal,Burnley,H,,,1.08,10.12,22.13,1.33,,
 2026-10-20T19:39:21Z,2026-10-21,19:00,SP1,La Liga,Levante,Ath Bilbao,A,D,0.0654,3.42,3.29,2.15,1.91,3.5,
+2026-10-20T19:46:41Z,2026-10-24,14:30,D1,Bundesliga,Mainz,Werder Bremen,H,D,0.0831,1.69,3.95,4.1,,3.95,

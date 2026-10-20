@@ -1,16 +1,22 @@
 {
-  "fetched_at": "2026-10-20T19:39:01+00:00",
-  "fixtures": 26,
-  "fixtures_with_odds": 26,
+  "fetched_at": "2026-10-20T19:46:20+00:00",
+  "fixtures": 72,
+  "fixtures_with_odds": 71,
   "by_league": {
     "E1": 1,
     "E2": 12,
     "E3": 12,
-    "SP1": 1
+    "SP1": 12,
+    "D1": 10,
+    "I1": 15,
+    "E0": 10
   },
   "rows_per_source": {
-    "football-data": 26
+    "football-data": 26,
+    "espn": 47
   },
-  "errors": [],
+  "errors": [
+    "espn: 'NoneType' object has no attribute 'get'"
+  ],
   "unmatched_team_names": {}
 }
