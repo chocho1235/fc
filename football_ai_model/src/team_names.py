@@ -77,7 +77,7 @@ ALIASES = {
     "st pauli": ["St Pauli"], "fc st pauli": ["St Pauli"],
     "hertha berlin": ["Hertha"], "hertha bsc": ["Hertha"],
     "union berlin": ["Union Berlin"], "1 fc union berlin": ["Union Berlin"],
-    "eintracht braunschweig": ["Braunschweig"], "arminia bielefeld": ["Bielefeld"],
+    "eintracht braunschweig": ["Braunschweig"], "tsv eintracht braunschweig": ["Braunschweig"], "arminia bielefeld": ["Bielefeld"],
     "dynamo dresden": ["Dresden"], "energie cottbus": ["Cottbus"], "hannover 96": ["Hannover"],
     "karlsruher sc": ["Karlsruhe"], "greuther furth": ["Greuther Furth"], "spvgg greuther furth": ["Greuther Furth"],
     "preussen munster": ["Preußen Münster"], "sc preussen munster": ["Preußen Münster"],
