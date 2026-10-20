@@ -25,6 +25,7 @@ from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
+from download_data import decode_csv
 from leagues import LEAGUES
 from team_names import canonical_team
 
@@ -136,7 +137,7 @@ class Fixtures:
 
 def from_football_data(fixtures: Fixtures):
     print(f"football-data: downloading {FOOTBALL_DATA_URL}")
-    content = fetch(FOOTBALL_DATA_URL).decode("utf-8-sig", errors="replace")
+    content = decode_csv(fetch(FOOTBALL_DATA_URL))
     reader = csv.DictReader(content.splitlines())
     if not reader.fieldnames or "Div" not in reader.fieldnames:
         raise ValueError(f"unexpected fixtures CSV header: {content[:120]!r}")

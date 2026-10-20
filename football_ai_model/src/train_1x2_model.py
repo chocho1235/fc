@@ -99,7 +99,7 @@ def read_matches():
         season, league_code = path.stem.split("_", 1)
         if league_code not in DEFAULT_LEAGUE_CODES:
             continue
-        with path.open(newline="", encoding="utf-8-sig") as handle:
+        with path.open(newline="", encoding="utf-8-sig", errors="replace") as handle:
             reader = csv.DictReader(handle)
             for row in reader:
                 if not row.get("Date") or not row.get("HomeTeam") or not row.get("AwayTeam"):

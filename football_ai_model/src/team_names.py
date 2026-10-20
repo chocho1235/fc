@@ -118,7 +118,7 @@ def known_teams() -> dict:
         season, league_code = path.stem.split("_", 1)
         if season not in seasons or league_code not in LEAGUES:
             continue
-        with path.open(newline="", encoding="utf-8-sig") as handle:
+        with path.open(newline="", encoding="utf-8-sig", errors="replace") as handle:
             for row in csv.DictReader(handle):
                 for column in ("HomeTeam", "AwayTeam"):
                     if row.get(column):

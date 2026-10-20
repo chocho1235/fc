@@ -41,6 +41,14 @@ def fetch(url: str) -> bytes:
     raise RuntimeError("unreachable")
 
 
+def decode_csv(content: bytes) -> str:
+    """football-data serves some files as Latin-1; store everything as UTF-8."""
+    try:
+        return content.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        return content.decode("cp1252", errors="replace")
+
+
 def download_csv(season: str, league_code: str) -> bool:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     url = f"{BASE_URL}/{season}/{league_code}.csv"
@@ -58,7 +66,7 @@ def download_csv(season: str, league_code: str) -> bool:
         print(f"  skipped: unexpected response {first_line[:80]!r}")
         return False
 
-    output_path.write_bytes(content)
+    output_path.write_text(decode_csv(content), encoding="utf-8")
     print(f"  saved {output_path.name}")
     return True
 
