@@ -21,6 +21,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.optimize import minimize
+from scipy.special import gammaln
 from scipy.stats import poisson
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -102,34 +103,65 @@ def to_dc_format(matches: list, league_code: str) -> list:
 
 # ── Fitting ──────────────────────────────────────────────────────────────────
 
-def _neg_log_likelihood(params, matches, teams, ref_date, xi):
-    n = len(teams)
+def _prepare_arrays(matches, teams, ref_date, xi):
+    idx = {t: i for i, t in enumerate(teams)}
+    home = np.array([idx[m["home"]] for m in matches], dtype=np.intp)
+    away = np.array([idx[m["away"]] for m in matches], dtype=np.intp)
+    x = np.array([m["home_goals"] for m in matches], dtype=float)
+    y = np.array([m["away_goals"] for m in matches], dtype=float)
+    w = np.array([decay_weight(m["date"], ref_date, xi) for m in matches], dtype=float)
+    const = gammaln(x + 1) + gammaln(y + 1)
+    return {
+        "n": len(teams), "home": home, "away": away, "x": x, "y": y, "w": w, "const": const,
+        "m00": (x == 0) & (y == 0), "m01": (x == 0) & (y == 1),
+        "m10": (x == 1) & (y == 0), "m11": (x == 1) & (y == 1),
+    }
+
+
+def _neg_log_likelihood(params, data):
+    """Vectorised weighted DC negative log-likelihood and its analytic gradient."""
+    n = data["n"]
+    home, away, x, y, w = data["home"], data["away"], data["x"], data["y"], data["w"]
+    m00, m01, m10, m11 = data["m00"], data["m01"], data["m10"], data["m11"]
     attack = np.concatenate([[0.0], params[: n - 1]])
     defence = params[n - 1 : 2 * n - 1]
     home_adv = params[2 * n - 1]
     rho = params[2 * n]
 
-    idx = {t: i for i, t in enumerate(teams)}
-    total = 0.0
+    log_lam = attack[home] + defence[away] + home_adv
+    log_mu = attack[away] + defence[home]
+    lam = np.exp(log_lam)
+    mu = np.exp(log_mu)
 
-    for m in matches:
-        i = idx[m["home"]]
-        j = idx[m["away"]]
-        x = m["home_goals"]
-        y = m["away_goals"]
-        w = decay_weight(m["date"], ref_date, xi)
+    t = np.ones_like(lam)
+    t[m00] = 1.0 - rho * lam[m00] * mu[m00]
+    t[m01] = 1.0 + rho * lam[m01]
+    t[m10] = 1.0 + rho * mu[m10]
+    t[m11] = 1.0 - rho
+    if np.any(t <= 0):
+        return 1e12, np.zeros_like(params)
 
-        lam = math.exp(attack[i] + defence[j] + home_adv)
-        mu = math.exp(attack[j] + defence[i])
+    ll = w * (np.log(t) + x * log_lam - lam + y * log_mu - mu - data["const"])
 
-        t = tau(x, y, lam, mu, rho)
-        if t <= 0:
-            return 1e12
+    # d tau / d(log lam), d(log mu), d rho
+    dt_lam = np.zeros_like(lam)
+    dt_mu = np.zeros_like(lam)
+    dt_rho = np.zeros_like(lam)
+    dt_lam[m00] = dt_mu[m00] = -rho * lam[m00] * mu[m00]
+    dt_rho[m00] = -lam[m00] * mu[m00]
+    dt_lam[m01] = rho * lam[m01]
+    dt_rho[m01] = lam[m01]
+    dt_mu[m10] = rho * mu[m10]
+    dt_rho[m10] = mu[m10]
+    dt_rho[m11] = -1.0
 
-        ll = w * (math.log(t) + poisson.logpmf(x, lam) + poisson.logpmf(y, mu))
-        total += ll
+    g_lam = w * (x - lam + dt_lam / t)
+    g_mu = w * (y - mu + dt_mu / t)
+    g_attack = np.bincount(home, g_lam, n) + np.bincount(away, g_mu, n)
+    g_defence = np.bincount(away, g_lam, n) + np.bincount(home, g_mu, n)
+    grad = np.concatenate([g_attack[1:], g_defence, [g_lam.sum()], [np.sum(w * dt_rho / t)]])
 
-    return -total
+    return -ll.sum(), -grad
 
 
 def fit_league(matches: list, xi: float = XI, quick: bool = False) -> dict:
@@ -158,8 +190,9 @@ def fit_league(matches: list, xi: float = XI, quick: bool = False) -> dict:
     result = minimize(
         _neg_log_likelihood,
         x0,
-        args=(matches, teams, ref_date, xi),
+        args=(_prepare_arrays(matches, teams, ref_date, xi),),
         method="L-BFGS-B",
+        jac=True,
         bounds=bounds,
         options=opts,
     )
