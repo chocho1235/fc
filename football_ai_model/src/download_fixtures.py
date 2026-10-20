@@ -152,17 +152,22 @@ def from_football_data(fixtures: Fixtures):
         fixtures.add("football-data", league_code, kickoff, row.get("HomeTeam", ""), row.get("AwayTeam", ""), prices)
 
 
+def _dict(value) -> dict:
+    return value if isinstance(value, dict) else {}
+
+
 def espn_prices(competition: dict) -> dict:
     """1X2 decimal prices from an ESPN competition, if it carries any odds."""
     for odds in competition.get("odds") or []:
-        home = american_to_decimal((odds.get("homeTeamOdds") or {}).get("moneyLine"))
-        away = american_to_decimal((odds.get("awayTeamOdds") or {}).get("moneyLine"))
-        draw = american_to_decimal((odds.get("drawOdds") or {}).get("moneyLine"))
-        moneyline = odds.get("moneyline") or {}
-        if not (home and away and draw) and moneyline:
+        odds = _dict(odds)
+        home = american_to_decimal(_dict(odds.get("homeTeamOdds")).get("moneyLine"))
+        away = american_to_decimal(_dict(odds.get("awayTeamOdds")).get("moneyLine"))
+        draw = american_to_decimal(_dict(odds.get("drawOdds")).get("moneyLine"))
+        moneyline = _dict(odds.get("moneyline"))
+        if not (home > 1 and away > 1 and draw > 1) and moneyline:
             def line(side):
-                entry = moneyline.get(side) or {}
-                current = entry.get("close") or entry.get("current") or entry.get("open") or {}
+                entry = _dict(moneyline.get(side))
+                current = _dict(entry.get("close")) or _dict(entry.get("current")) or _dict(entry.get("open"))
                 return american_to_decimal(current.get("odds"))
             home, away, draw = line("home"), line("away"), line("draw")
         if home > 1 and away > 1 and draw > 1:
@@ -200,23 +205,29 @@ def from_espn(fixtures: Fixtures):
         except (OSError, ValueError) as exc:
             print(f"  ESPN {league_code}: skipped ({exc})")
             continue
-        count = 0
+        count = skipped = 0
         for event in events:
-            competition = (event.get("competitions") or [{}])[0]
-            state = ((competition.get("status") or event.get("status") or {}).get("type") or {}).get("state")
-            if state and state != "pre":
+            try:
+                competition = _dict((event.get("competitions") or [{}])[0])
+                state = _dict(_dict(competition.get("status") or event.get("status")).get("type")).get("state")
+                if state and state != "pre":
+                    continue
+                teams = {_dict(c).get("homeAway"): _dict(_dict(c).get("team")) for c in competition.get("competitors") or []}
+                if "home" not in teams or "away" not in teams:
+                    continue
+                kickoff = datetime.fromisoformat(event["date"].replace("Z", "+00:00")).astimezone(UK)
+                prices = espn_prices(competition)
+                home = teams["home"].get("displayName") or teams["home"].get("name", "")
+                away = teams["away"].get("displayName") or teams["away"].get("name", "")
+            except (AttributeError, KeyError, TypeError, ValueError, IndexError) as exc:
+                skipped += 1
+                if skipped == 1:
+                    print(f"  ESPN {league_code}: could not read an event ({exc!r})")
                 continue
-            teams = {c.get("homeAway"): (c.get("team") or {}) for c in competition.get("competitors", [])}
-            if "home" not in teams or "away" not in teams:
-                continue
-            kickoff = datetime.fromisoformat(event["date"].replace("Z", "+00:00")).astimezone(UK)
-            prices = espn_prices(competition)
             with_odds += bool(prices)
-            home = teams["home"].get("displayName") or teams["home"].get("name", "")
-            away = teams["away"].get("displayName") or teams["away"].get("name", "")
             fixtures.add("espn", league_code, kickoff, home, away, prices)
             count += 1
-        print(f"  ESPN {league_code}: {count} upcoming")
+        print(f"  ESPN {league_code}: {count} upcoming" + (f", {skipped} unreadable" if skipped else ""))
     print(f"ESPN: {with_odds} match(es) came with odds")
 
 
