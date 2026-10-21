@@ -1,0 +1,43 @@
+name: Line-up watch
+
+# Every 10 minutes: look for newly announced line-ups in games kicking off
+# soon, re-price them and alert on value. Standard library only, so each run
+# takes seconds. GitHub may start scheduled runs a few minutes late.
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/lineup-watch.yml"]  # test run when the watcher itself changes
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lineup-watch-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Check line-ups and re-price
+        run: python3 football_ai_model/src/lineup_watch.py
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+
+      - name: Commit any new line-ups or bets
+        run: |
+          git config user.name "football-model-bot"
+          git config user.email "football-model-bot@users.noreply.github.com"
+          git add football_ai_model/data/external public/lineup-watch.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Line-up watch $(date -u +%Y-%m-%dT%H:%M)Z"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "$GITHUB_REF_NAME" && git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
+            sleep 10
+          done
+          exit 1

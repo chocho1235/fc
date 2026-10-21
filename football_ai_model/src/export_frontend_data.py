@@ -18,6 +18,7 @@ ACTIVE_BETTING_RULES_PATH = MODEL_ROOT / "models" / "betting_rules_active.json"
 BUILDER_PROFILE_PATH = MODEL_ROOT / "models" / "builder_profile.json"
 RULE_HEALTH_PATH = MODEL_ROOT / "reports" / "betting_rule_health.csv"
 CLOSING_LINE_PATH = MODEL_ROOT / "data" / "processed" / "closing_line_report.csv"
+LINEUP_EVENTS_PATH = MODEL_ROOT / "data" / "external" / "lineup_events.csv"
 ENSEMBLE_META_PATH = MODEL_ROOT / "models" / "ensemble_meta.json"
 OUTPUT_PATH = SITE_ROOT / "public" / "football-model-data.json"
 
@@ -70,6 +71,14 @@ def parse_rule_health():
         return []
     with RULE_HEALTH_PATH.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def parse_lineup_events(limit=8):
+    if not LINEUP_EVENTS_PATH.exists():
+        return []
+    with LINEUP_EVENTS_PATH.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    return list(reversed(rows[-limit:]))
 
 
 def parse_closing_line_report():
@@ -255,6 +264,7 @@ def main():
         "builder_history": settled_builders[-20:],
         "betting_rules": parse_active_betting_rules(),
         "betting_rule_health": parse_rule_health(),
+        "lineup_events": parse_lineup_events(),
         "closing_line_summary": closing_line_summary(closing_lines),
         "closing_line_recent": closing_lines[-12:],
         "value_bet_pnl": value_bet_pnl(),

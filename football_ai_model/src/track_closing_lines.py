@@ -9,6 +9,9 @@ ROOT = Path(__file__).resolve().parents[1]
 EXTERNAL_DIR = ROOT / "data" / "external"
 PROCESSED_DIR = ROOT / "data" / "processed"
 SNAPSHOT_PATH = EXTERNAL_DIR / "odds_snapshots.csv"
+# Bets from the line-up watcher are kept in their own file so the watcher and
+# the 6-hourly refresh never edit the same file.
+LINEUP_SNAPSHOT_PATH = EXTERNAL_DIR / "lineup_bet_snapshots.csv"
 REPORT_PATH = PROCESSED_DIR / "closing_line_report.csv"
 UPCOMING_PATH = PROCESSED_DIR / "upcoming_predictions.csv"
 
@@ -156,7 +159,7 @@ def score_snapshots():
     """One row per bet: the first time the model suggested it, settled once
     the result is in. Closing line value compares the price we took with
     Pinnacle's closing price (market average if Pinnacle is missing)."""
-    snapshots = read_csv(SNAPSHOT_PATH)
+    snapshots = read_csv(SNAPSHOT_PATH) + read_csv(LINEUP_SNAPSHOT_PATH)
     completed = completed_match_index()
     scored = []
     seen = set()
@@ -165,7 +168,7 @@ def score_snapshots():
         selection = snapshot.get("suggested_bet")
         if not selection:
             continue
-        identity = (*row_key(snapshot), selection)
+        identity = (*row_key(snapshot), selection, snapshot.get("bet_rule") == "line-up")
         if identity in seen:
             continue
         seen.add(identity)

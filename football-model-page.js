@@ -7,6 +7,7 @@ const searchEl = document.querySelector("[data-football-search]");
 const leagueEl = document.querySelector("[data-football-league]");
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
 const valueListEl = document.querySelector("[data-value-list]");
+const lineupListEl = document.querySelector("[data-lineup-list]");
 const ruleListEl = document.querySelector("[data-rule-list]");
 const newsFeedEl = document.querySelector("[data-news-feed]");
 const donutEl = document.querySelector("[data-football-donut]");
@@ -867,6 +868,25 @@ function renderUpcoming() {
   upcomingRowsEl.innerHTML = visible.map(row => matchRowHtml(row, false)).join("");
 }
 
+function renderLineupList(rows) {
+  if (!lineupListEl) return;
+  if (!rows.length) {
+    lineupListEl.innerHTML = `<p class="football-empty">No line-ups checked yet. Games are checked from 100 minutes before kick-off.</p>`;
+    return;
+  }
+  lineupListEl.innerHTML = rows.map(row => {
+    const out = `${escapeHtml(row.home_team)} ${Number(row.home_missing || 0)} regulars out · ${escapeHtml(row.away_team)} ${Number(row.away_missing || 0)} out`;
+    return `<article class="football-value">
+      <div>
+        <strong>${escapeHtml(row.home_team)} v ${escapeHtml(row.away_team)}</strong>
+        <span>${escapeHtml(row.date)} ${escapeHtml(row.time)} · line-ups ${escapeHtml(row.minutes_before_kickoff)} min before</span>
+        <small>${out}</small>
+      </div>
+      <b>${row.bet ? `${labelMap[row.bet]} @ ${decimal(row.bet_odds)} +${percent(row.edge)}` : "No bet"}</b>
+    </article>`;
+  }).join("");
+}
+
 function renderValueList(rows) {
   if (!valueListEl) return;
   const suggested = rows.filter(r => r.suggested_bet).slice(-6).reverse();
@@ -1020,6 +1040,19 @@ function startRefreshTimer() {
 
 // ─── Data loading ─────────────────────────────────────────────────────────────
 
+// The line-up watcher runs every 10 minutes and writes its own small file,
+// so it never clashes with the 6-hourly data refresh.
+async function loadLineupWatch() {
+  try {
+    const response = await fetch("/lineup-watch.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const watch = await response.json();
+    renderLineupList(watch.events || []);
+  } catch (error) {
+    // file not there yet: keep whatever the main data file had
+  }
+}
+
 async function loadData() {
   if (refreshStatusEl) refreshStatusEl.textContent = "Refreshing…";
   try {
@@ -1034,6 +1067,8 @@ async function loadData() {
     renderLeagueOptions(data.leagues || []);
     setSummary(data.summary || {});
     setClosingLineSummary(data.closing_line_summary || {});
+    renderLineupList(data.lineup_events || []);
+    loadLineupWatch();
     setBuilderSummary(data.builder_summary || {}, data.builder_profile || {});
     renderAverages(data.probability_average || {});
     renderValueList(data.suggested_bets || []);

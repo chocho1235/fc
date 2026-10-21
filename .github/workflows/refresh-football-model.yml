@@ -43,12 +43,20 @@ jobs:
       - name: Download results for every league and season
         run: python football_ai_model/src/download_data.py
 
+      - name: Collect starting line-ups (back-fills past seasons on first run)
+        run: python football_ai_model/src/lineups.py --backfill
+        continue-on-error: true   # ESPN being down must not block the retrain
+
       - name: Refresh xG data from understat.com
         run: python football_ai_model/src/import_understat_xg.py
         continue-on-error: true   # don't fail if understat is down
 
       - name: Full retrain and walk-forward backtest
         run: python football_ai_model/src/train_sklearn_1x2_model.py
+
+      - name: Train and test the line-up layer
+        run: python football_ai_model/src/train_lineup_layer.py
+        continue-on-error: true
 
       - name: Refresh fixtures, odds and predictions
         run: python football_ai_model/src/refresh_upcoming_sklearn.py
@@ -80,6 +88,10 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install -r football_ai_model/requirements.txt
+
+      - name: Collect recent starting line-ups
+        run: python football_ai_model/src/lineups.py
+        continue-on-error: true
 
       - name: Refresh results, fixtures, odds and predictions
         run: python football_ai_model/src/refresh_upcoming_sklearn.py

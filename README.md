@@ -47,6 +47,17 @@ This downloads the current season's results, builds the fixture list with the be
 - The backtest is walk-forward: each season is predicted by a model trained only on earlier seasons. `reports/backtest_summary.txt` shows the model's log loss next to the bookmaker's. If the model's number isn't lower, it isn't beating the market.
 - Live bets are logged in `data/external/odds_snapshots.csv` and settled in `data/processed/closing_line_report.csv`, including closing line value (the price we took vs Pinnacle's closing price).
 
+## Line-up watch (being faster than the bookies)
+
+Official line-ups come out about an hour before kick-off. In smaller leagues prices often take a while to react, so knowing that regulars are missing can be worth something.
+
+- `lineups.py` saves every match's starting XI from ESPN (free, no key) into `data/external/lineups/`, plus ESPN's opening and closing odds.
+- `lineup_features.py` works out each team's usual XI from recent games and scores a line-up: share of the usual XI starting, regulars missing, keeper changed, changes from last game.
+- `train_lineup_layer.py` learns how much those should move the pre-line-up price and tests it season by season (`reports/lineup_layer_report.txt`). If it doesn't beat the pre-line-up price, the watcher only logs and never suggests bets.
+- `lineup_watch.py` runs every 10 minutes (`.github/workflows/lineup-watch.yml`). When line-ups appear for a game kicking off soon, it re-prices it and compares with the current price. Value is logged as a "line-up" bet and tracked against the closing price like every other bet.
+
+**Phone alerts (optional):** install the free ntfy app, subscribe to a topic name only you know (e.g. `fc-alerts-8k2m9q`), and save the same name as the `NTFY_TOPIC` repository secret. GitHub's scheduler can start runs a few minutes late, so for the fastest alerts run `python3 football_ai_model/src/lineup_watch.py` every few minutes on your own computer.
+
 ## Full Training
 
 Only run this when changing features or adding historical data:
