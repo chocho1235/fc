@@ -1,24 +1,27 @@
 Line-up layer: walk-forward test
-Matches with line-ups and pre-line-up odds: 15443
+Matches with line-ups and Pinnacle prices before line-ups and at close: 11276
 
-season  matches  pre-lineup logloss  with line-ups  bets@best  ROI@best  bets@close  ROI@close
-2425       4980              1.0067         1.0070       1818     +5.8%         868      -1.1%
-2526       5090              1.0102         1.0106        643     +2.0%         681     -12.9%
-2627       1092              1.0208         1.0220        135     -1.2%         237      -3.0%
+How well each predicts Pinnacle's closing price (lower is better), and bets at the
+best pre-line-up price with 3%+ value. 'Value vs close' is the average
+edge against Pinnacle's closing price: the best long-run guide to profit.
 
-All test seasons: 11162 matches
-  log loss before line-ups 1.0097, with line-up layer 1.0101 (lower is better)
-  bets at best pre-line-up price: 2596, ROI +4.5%
-  bets at closing price (after line-ups): 1786, ROI -5.9%
+season  matches  pre-line-up  with line-ups  bets  value vs close  ROI   | no line-up info: bets  value vs close  ROI
+2425       4978      1.01359        1.01326  1041           +4.1%  +5.7% |  634           +3.3%  +5.6%
+2526       2018      1.02340        1.02343   376           +3.1%  -10.1% |  211           +4.1%  +0.3%
 
-Coefficients (positive = more likely; draw is the reference):
-  home_strength_deficit    home win -0.326   away win +0.301
-  home_missing             home win -0.009   away win -0.023
-  home_gk                  home win -0.004   away win +0.065
-  home_changes             home win +0.011   away win -0.001
-  away_strength_deficit    home win -0.107   away win -0.265
-  away_missing             home win +0.024   away win +0.019
-  away_gk                  home win +0.090   away win +0.117
-  away_changes             home win -0.006   away win -0.017
+All test seasons: 6996 matches
+  closing-price score: pre-line-up 1.01642, with line-ups 1.01619
+  with line-ups       : 1417 bets, value vs close +3.9%, beat the close 71%, ROI +1.5%
+  price shopping only : 845 bets, value vs close +3.5%, beat the close 70%, ROI +4.3%
 
-Validated for live betting: no (logging only)
+Coefficients (positive = closing price moves towards it; draw is the reference):
+  home_strength_deficit    home win -0.219   away win +0.194
+  home_missing             home win -0.002   away win -0.002
+  home_gk                  home win +0.017   away win +0.006
+  home_changes             home win +0.001   away win -0.003
+  away_strength_deficit    home win +0.210   away win -0.174
+  away_missing             home win -0.001   away win -0.003
+  away_gk                  home win +0.005   away win +0.010
+  away_changes             home win -0.003   away win -0.000
+
+Validated for live betting: yes
