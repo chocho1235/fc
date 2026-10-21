@@ -1,0 +1,34 @@
+{
+  "validated": false,
+  "features": [
+    "home_strength_deficit",
+    "home_missing",
+    "home_gk",
+    "home_changes",
+    "away_strength_deficit",
+    "away_missing",
+    "away_gk",
+    "away_changes"
+  ],
+  "beta_home_win": [
+    -0.326171,
+    -0.008538,
+    -0.003507,
+    0.011049,
+    -0.107226,
+    0.023767,
+    0.090376,
+    -0.00642
+  ],
+  "beta_away_win": [
+    0.301082,
+    -0.022776,
+    0.064921,
+    -0.001435,
+    -0.265205,
+    0.018668,
+    0.117459,
+    -0.016892
+  ],
+  "trained_matches": 15443
+}

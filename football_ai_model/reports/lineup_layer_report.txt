@@ -1,0 +1,24 @@
+Line-up layer: walk-forward test
+Matches with line-ups and pre-line-up odds: 15443
+
+season  matches  pre-lineup logloss  with line-ups  bets@best  ROI@best  bets@close  ROI@close
+2425       4980              1.0067         1.0070       1818     +5.8%         868      -1.1%
+2526       5090              1.0102         1.0106        643     +2.0%         681     -12.9%
+2627       1092              1.0208         1.0220        135     -1.2%         237      -3.0%
+
+All test seasons: 11162 matches
+  log loss before line-ups 1.0097, with line-up layer 1.0101 (lower is better)
+  bets at best pre-line-up price: 2596, ROI +4.5%
+  bets at closing price (after line-ups): 1786, ROI -5.9%
+
+Coefficients (positive = more likely; draw is the reference):
+  home_strength_deficit    home win -0.326   away win +0.301
+  home_missing             home win -0.009   away win -0.023
+  home_gk                  home win -0.004   away win +0.065
+  home_changes             home win +0.011   away win -0.001
+  away_strength_deficit    home win -0.107   away win -0.265
+  away_missing             home win +0.024   away win +0.019
+  away_gk                  home win +0.090   away win +0.117
+  away_changes             home win -0.006   away win -0.017
+
+Validated for live betting: no (logging only)
